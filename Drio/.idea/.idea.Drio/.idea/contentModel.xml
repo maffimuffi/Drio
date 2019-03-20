@@ -10,6 +10,11 @@
         <e p="Scripts" t="Include">
           <e p="Character_Movement.cs" t="Include" />
         </e>
+        <e p="Stylized Mushroom" t="Include">
+          <e p="Shader" t="Include">
+            <e p="mushroom.shader" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Drio.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
