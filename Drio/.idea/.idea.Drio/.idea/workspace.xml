@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +22,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="536" />
+          <entry key="cs" value="623" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="536" />
+          <entry key="C#" value="623" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -74,16 +74,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="450">
+              <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
               <folding>
-                <marker date="1553082691264" expanded="true" signature="6:78" ph="..." />
-                <marker date="1553082691264" expanded="true" signature="126:954" ph="{...}" />
-                <marker date="1553082691264" expanded="true" signature="272:359" ph="/* float verticalSpeed = 2.0f; ... */" />
-                <marker date="1553082691264" expanded="true" signature="376:488" ph="{...}" />
-                <marker date="1553082691264" expanded="true" signature="546:952" ph="{...}" />
-                <marker date="1553082691264" expanded="true" signature="713:798" ph="{...}" />
-                <marker date="1553082691264" expanded="true" signature="837:946" ph="/* kommentoitu kameran liikutus ... */" />
+                <marker date="1553083514770" expanded="true" signature="6:78" ph="..." />
+                <marker date="1553083514770" expanded="true" signature="126:839" ph="{...}" />
+                <marker date="1553083514770" expanded="true" signature="298:366" ph="{...}" />
+                <marker date="1553083514770" expanded="true" signature="424:837" ph="{...}" />
+                <marker date="1553083514770" expanded="true" signature="533:618" ph="{...}" />
+                <marker date="1553083514770" expanded="true" signature="696:831" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -178,12 +177,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553077281983</updated>
       <workItem from="1553077287366" duration="694000" />
-      <workItem from="1553080348817" duration="2478000" />
+      <workItem from="1553080348817" duration="3047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3172000" />
+    <option name="totallyTimeSpent" value="3741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,16 +288,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="450">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
           <folding>
-            <marker date="1553082691264" expanded="true" signature="6:78" ph="..." />
-            <marker date="1553082691264" expanded="true" signature="126:954" ph="{...}" />
-            <marker date="1553082691264" expanded="true" signature="272:359" ph="/* float verticalSpeed = 2.0f; ... */" />
-            <marker date="1553082691264" expanded="true" signature="376:488" ph="{...}" />
-            <marker date="1553082691264" expanded="true" signature="546:952" ph="{...}" />
-            <marker date="1553082691264" expanded="true" signature="713:798" ph="{...}" />
-            <marker date="1553082691264" expanded="true" signature="837:946" ph="/* kommentoitu kameran liikutus ... */" />
+            <marker date="1553083514770" expanded="true" signature="6:78" ph="..." />
+            <marker date="1553083514770" expanded="true" signature="126:839" ph="{...}" />
+            <marker date="1553083514770" expanded="true" signature="298:366" ph="{...}" />
+            <marker date="1553083514770" expanded="true" signature="424:837" ph="{...}" />
+            <marker date="1553083514770" expanded="true" signature="533:618" ph="{...}" />
+            <marker date="1553083514770" expanded="true" signature="696:831" ph="{...}" />
           </folding>
         </state>
       </provider>
