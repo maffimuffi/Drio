@@ -7,8 +7,13 @@
     <e p="C:\Users\joona\Documents\Unity\git\Drio\Drio" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FantasyEnvironments" t="Include">
+          <e p="Environments" t="Include">
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
-          <e p="Character_Movement.cs" t="Include" />
+          <e p="CharacterMovement.cs" t="Include" />
         </e>
         <e p="Stylized Mushroom" t="Include">
           <e p="Shader" t="Include">
