@@ -7,7 +7,8 @@ public class CharacterMovement : MonoBehaviour
     
     float moveSpeed = 0.4f;
     float jumpSpeed = 5f;
-    float horizontalSpeed = 2.0f;
+    private float rotateSpeed = 5f;
+    public GameObject playerTransform;
     
     // Start is called before the first frame update
     void Start()
@@ -18,18 +19,38 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = horizontalSpeed * Input.GetAxis("Mouse X");
+        
    
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.forward * moveSpeed;
+            transform.position += playerTransform.transform.forward * moveSpeed;
+            transform.rotation = playerTransform.transform.rotation;
         }
-        transform.Rotate(0,h,0);
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.position += -playerTransform.transform.forward * moveSpeed;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.position += -playerTransform.transform.right * moveSpeed;
+        }
+        
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.position += playerTransform.transform.right * moveSpeed;
+        }
+       
+        //RaycastHit ground;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed,ForceMode.Impulse);
-            
+            //not working
+            /*Debug.DrawRay(transform.position,Vector3.down,Color.red,0.2f);
+            Debug.Log(Physics.Raycast(transform.position, Vector3.down, out ground, 0.2f));
+            if (Physics.Raycast(transform.position, Vector3.down, out ground, 0.2f))
+            {*/
+                gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
+            //}
         }
     }
 }

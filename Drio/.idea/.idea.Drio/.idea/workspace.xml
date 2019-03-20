@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="" />
+    <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,23 +23,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="655" />
+          <entry key="cs" value="1176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="655" />
+          <entry key="C#" value="1176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="3" />
+          <entry key="cs" value="4" />
           <entry key="shader" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="3" />
+          <entry key="C#" value="4" />
           <entry key="ShaderLab" value="1" />
         </counts>
       </usages-collector>
@@ -72,15 +75,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="150">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
-                <marker date="1553083624785" expanded="true" signature="6:78" ph="..." />
-                <marker date="1553083624785" expanded="true" signature="126:809" ph="{...}" />
-                <marker date="1553083624785" expanded="true" signature="296:324" ph="{...}" />
-                <marker date="1553083624785" expanded="true" signature="382:807" ph="{...}" />
-                <marker date="1553083624785" expanded="true" signature="491:576" ph="{...}" />
-                <marker date="1553083624785" expanded="true" signature="654:801" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="6:78" ph="..." />
+                <marker date="1553087152962" expanded="true" signature="126:1465" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="336:364" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="422:1463" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="478:563" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="600:686" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="724:808" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="854:937" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="1019:1457" ph="{...}" />
+                <marker date="1553087152962" expanded="true" signature="1068:1325" ph="/* Debug.DrawRay(transform.position,Vector3.down,Color.red,0.2f); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+              <folding>
+                <marker date="1553086678745" expanded="false" signature="6:78" ph="..." />
+                <marker date="1553086678745" expanded="true" signature="123:663" ph="{...}" />
+                <marker date="1553086678745" expanded="true" signature="308:371" ph="{...}" />
+                <marker date="1553086678745" expanded="true" signature="429:661" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -95,12 +117,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Stylized Mushroom/Shader/mushroom.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shooting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Testikansio/Testi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character_Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" />
       </list>
     </option>
@@ -175,12 +199,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553077281983</updated>
       <workItem from="1553077287366" duration="694000" />
-      <workItem from="1553080348817" duration="3483000" />
+      <workItem from="1553080348817" duration="6680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4177000" />
+    <option name="totallyTimeSpent" value="7374000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,17 +308,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <marker date="1553086678745" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553086678745" expanded="true" signature="123:663" ph="{...}" />
+            <marker date="1553086678745" expanded="true" signature="308:371" ph="{...}" />
+            <marker date="1553086678745" expanded="true" signature="429:661" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding>
-            <marker date="1553083624785" expanded="true" signature="6:78" ph="..." />
-            <marker date="1553083624785" expanded="true" signature="126:809" ph="{...}" />
-            <marker date="1553083624785" expanded="true" signature="296:324" ph="{...}" />
-            <marker date="1553083624785" expanded="true" signature="382:807" ph="{...}" />
-            <marker date="1553083624785" expanded="true" signature="491:576" ph="{...}" />
-            <marker date="1553083624785" expanded="true" signature="654:801" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="6:78" ph="..." />
+            <marker date="1553087152962" expanded="true" signature="126:1465" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="336:364" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="422:1463" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="478:563" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="600:686" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="724:808" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="854:937" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="1019:1457" ph="{...}" />
+            <marker date="1553087152962" expanded="true" signature="1068:1325" ph="/* Debug.DrawRay(transform.position,Vector3.down,Color.red,0.2f); ... */" />
           </folding>
         </state>
       </provider>
