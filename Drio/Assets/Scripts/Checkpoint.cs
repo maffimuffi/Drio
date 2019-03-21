@@ -5,39 +5,73 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
 
-    private bool triggered;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        triggered = false;
-    }
+    // Is checkpoint activated
+    public bool Activated = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static Vector3 originalPos;
 
-    private void OnTriggerEnter(Collider other)
+    private GameObject player;
+
+    private Animator thisAnimator;
+
+    
+    // List with all checkpoints in the scene
+    public static GameObject[] CheckPointsList;
+
+
+    /// Get position of the last activated checkpoint
+    public static Vector3 GetActiveCheckPointPosition()
     {
-        if(!triggered)
+        // If player die without activate any checkpoint, we will return a default position
+        Vector3 result = originalPos;
+
+        if (CheckPointsList != null)
         {
-            if(other.gameObject.tag == "Player")
+            foreach (GameObject cp in CheckPointsList)
             {
-                //Trigger();
+                // We search the activated checkpoint to get its position
+                if (cp.GetComponent<Checkpoint>().Activated)
+                {
+                    result = cp.transform.position;
+                    break;
+                }
             }
         }
+
+        return result;
     }
 
-    private void Trigger(Collider collider)
+    /// Activate the checkpoint
+    private void ActivateCheckPoint()
     {
-        Player_Stats player = collider.GetComponent<Player_Stats>();
-        player.onDeath += OnCharacterDeath;
-        triggered = true;
+        // We deactive all checkpoints in the scene
+        foreach (GameObject cp in CheckPointsList)
+        {
+            cp.GetComponent<Checkpoint>().Activated = false;
+            cp.GetComponent<Animator>().SetBool("Active", false);
+        }
+
+        // We activated the current checkpoint
+        Activated = true;
+        thisAnimator.SetBool("Active", true);
     }
 
-    void OnCharacterDeath()
+    void Start()
     {
+        thisAnimator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        originalPos = player.transform.position;
 
+        // We search all the checkpoints in the current scene
+        CheckPointsList = GameObject.FindGameObjectsWithTag("CheckPoint");
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // If the player passes through the checkpoint, we activate it
+        if (other.tag == "Player")
+        {
+            ActivateCheckPoint();
+        }
     }
 }
