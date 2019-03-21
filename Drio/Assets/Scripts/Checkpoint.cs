@@ -10,7 +10,9 @@ public class Checkpoint : MonoBehaviour
 
     public static Vector3 originalPos;
 
-    private GameObject player;
+    private GameObject[] players;
+    public GameObject currentPlayer;
+
 
     //private Animator thisAnimator;
 
@@ -48,7 +50,7 @@ public class Checkpoint : MonoBehaviour
         foreach (GameObject cp in CheckPointsList)
         {
             cp.GetComponent<Checkpoint>().Activated = false;
-            cp.GetComponent<Animator>().SetBool("Active", false);
+            //cp.GetComponent<Animator>().SetBool("Active", false);
         }
 
         // We activated the current checkpoint
@@ -58,9 +60,10 @@ public class Checkpoint : MonoBehaviour
 
     void Start()
     {
+        currentPlayer = PlayerChanger.ActivePlayer;
         //thisAnimator = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        originalPos = player.transform.position;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        originalPos = currentPlayer.transform.position;
 
         // We search all the checkpoints in the current scene
         CheckPointsList = GameObject.FindGameObjectsWithTag("Checkpoint");
