@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     float moveSpeed = 0.2f;
     float jumpSpeed = 150f;
     private float rotateSpeed = 5f;
-    public GameObject playerTransform;
+    private GameObject playerTransform;
     private bool jumpedCounter = false;
     private bool jumped = false;
     private float timer = 0;
@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {       
-        
+        playerTransform = GameObject.FindWithTag("PlayerTransformPoint");
     }
 
     // Update is called once per frame
@@ -54,7 +54,8 @@ public class CharacterMovement : MonoBehaviour
                 jumpedCounter = false;
             }
         }
-        Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
+        //Debuggaus speed yms
+        //Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
         if (jumped && gameObject.GetComponent<Rigidbody>().velocity.magnitude >= 0 && gameObject.GetComponent<Rigidbody>().velocity.magnitude <= 0.5 )
         { //impulse huono. näyttää epärealistiselta.
             gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * (jumpSpeed / 2), ForceMode.Impulse);
