@@ -10,6 +10,13 @@ public class PlayerChanger : MonoBehaviour
     public GameObject WindCamera;
     public GameObject EarthCamera;
     public GameObject FireCamera;
+
+    public GameObject WindDragon;
+    public GameObject EarthDragon;
+    public GameObject FireDragon;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +43,31 @@ public class PlayerChanger : MonoBehaviour
     public void ChangePlayer(int playerSelect)
     {
         CharacterSelect = playerSelect;
+        
+        //player Movement
+        WindDragon.GetComponent<CharacterMovement>().setPlayerActive();
+        EarthDragon.GetComponent<CharacterMovement>().setPlayerActive();
+        FireDragon.GetComponent<CharacterMovement>().setPlayerActive();
         SetCamera();
     }
 
+    public void SetNavMesh()
+    {
+        if (CharacterSelect == 1)
+        {
+           
+
+        } else if (CharacterSelect == 2)
+        {
+            
+        } else if (CharacterSelect == 3)
+        {
+            
+        }
+        
+        
+    }
+    
     public void SetCamera()
     {
         if (CharacterSelect == 1)
