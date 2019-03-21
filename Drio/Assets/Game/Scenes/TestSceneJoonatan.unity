@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 20de6aaba6e129c4686b3cfc8d27580d, type: 2}
 --- !u!1 &134685459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9107039482490295818, guid: a7b7b19fc8ab73642babaf694f588165,
@@ -389,55 +389,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!1 &939112178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 939112180}
-  - component: {fileID: 939112179}
-  m_Layer: 0
-  m_Name: PlayerChanger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &939112179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939112178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 259a41103c02c9f4ca3bcdfd1f157ac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WindCamera: {fileID: 1028244350}
-  EarthCamera: {fileID: 2044889705}
-  FireCamera: {fileID: 1584699891}
-  WindDragon: {fileID: 2038312015}
-  EarthDragon: {fileID: 550626905}
-  FireDragon: {fileID: 134685459}
---- !u!4 &939112180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939112178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2507299, y: -24.431005, z: 1.2303388}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028244350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5025756045318016387, guid: 46fa66ff4932fea449a1626a11b55aa3,
@@ -546,11 +497,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plane
-      objectReference: {fileID: 0}
-    - target: {fileID: 991134788018033390, guid: f287546dfcaf8ed4080b914f868e7dbc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 991134788018033362, guid: f287546dfcaf8ed4080b914f868e7dbc,
         type: 3}
@@ -706,6 +652,105 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46fa66ff4932fea449a1626a11b55aa3, type: 3}
+--- !u!1001 &1408885022352514767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1408885022530283581, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2507299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.431005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2303388
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283579, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: WindCamera
+      value: 
+      objectReference: {fileID: 1028244350}
+    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: EarthCamera
+      value: 
+      objectReference: {fileID: 2044889705}
+    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: FireCamera
+      value: 
+      objectReference: {fileID: 1584699891}
+    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: WindDragon
+      value: 
+      objectReference: {fileID: 2038312015}
+    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: EarthDragon
+      value: 
+      objectReference: {fileID: 550626905}
+    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
+        type: 3}
+      propertyPath: FireDragon
+      value: 
+      objectReference: {fileID: 134685459}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 119904ce5cc1c474390cb9a8331776da, type: 3}
 --- !u!1001 &5025756043814124664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -778,11 +823,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2038312015}
-    - target: {fileID: 5025756045318016387, guid: 46fa66ff4932fea449a1626a11b55aa3,
-        type: 3}
-      propertyPath: m_Name
-      value: WindCam
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46fa66ff4932fea449a1626a11b55aa3, type: 3}
 --- !u!1001 &9107039482146576388
@@ -857,20 +897,5 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 292500341}
-    - target: {fileID: 9107039482490295824, guid: a7b7b19fc8ab73642babaf694f588165,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9107039482490295824, guid: a7b7b19fc8ab73642babaf694f588165,
-        type: 3}
-      propertyPath: thisPlayer
-      value: 
-      objectReference: {fileID: 2038312015}
-    - target: {fileID: 9107039482490295828, guid: a7b7b19fc8ab73642babaf694f588165,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9cab8ac6530dc2d4385f807d0b73b2e5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7b7b19fc8ab73642babaf694f588165, type: 3}
