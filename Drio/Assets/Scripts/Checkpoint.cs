@@ -63,7 +63,7 @@ public class Checkpoint : MonoBehaviour
         originalPos = player.transform.position;
 
         // We search all the checkpoints in the current scene
-        CheckPointsList = GameObject.FindGameObjectsWithTag("CheckPoint");
+        CheckPointsList = GameObject.FindGameObjectsWithTag("Checkpoint");
     }
 
     void OnTriggerEnter(Collider other)
