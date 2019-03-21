@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
 
     private GameObject player;
 
-    private Animator thisAnimator;
+    //private Animator thisAnimator;
 
     
     // List with all checkpoints in the scene
@@ -53,12 +53,12 @@ public class Checkpoint : MonoBehaviour
 
         // We activated the current checkpoint
         Activated = true;
-        thisAnimator.SetBool("Active", true);
+        //thisAnimator.SetBool("Active", true);
     }
 
     void Start()
     {
-        thisAnimator = GetComponent<Animator>();
+        //thisAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         originalPos = player.transform.position;
 
