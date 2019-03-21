@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnvironmentMoveTest : MonoBehaviour
 {
 
-    public Transform rock;
+    public Transform obstacle;
 
     //public float moveTime = 2;
     public float smoothTime = 0.5f;
@@ -13,16 +13,16 @@ public class EnvironmentMoveTest : MonoBehaviour
     public bool onTrigger;
 
     private Vector3 velocity = Vector3.zero;
-    public Vector3 rockTargetOffset;
-    public Vector3 rockStart;
-    public Vector3 rockTarget;
-    public Vector3 rockTargetNew;
+    public Vector3 obstacleTargetOffset;
+    public Vector3 obstacleStart;
+    public Vector3 obstacleTarget;
+    public Vector3 obstacleTargetNew;
 
     void Start()
     {
-        rockStart = rock.transform.position;
-        rockTarget = rockStart + rockTargetOffset;
-        rockTargetNew = rockTarget - rockTargetOffset;
+        obstacleStart = obstacle.transform.position;
+        obstacleTarget = obstacleStart + obstacleTargetOffset;
+        obstacleTargetNew = obstacleTarget - obstacleTargetOffset;
         onTrigger = false;
     }
 
@@ -30,12 +30,12 @@ public class EnvironmentMoveTest : MonoBehaviour
     {
         if(!onTrigger)
         {
-            rock.transform.position = Vector3.SmoothDamp(rock.transform.position, rockTargetNew, ref velocity, smoothTime);
+            obstacle.transform.position = Vector3.SmoothDamp(obstacle.transform.position, obstacleTargetNew, ref velocity, smoothTime);
         }
 
         else if(onTrigger)
         {
-            rock.transform.position = Vector3.SmoothDamp(rock.transform.position, rockTarget, ref velocity, smoothTime);
+            obstacle.transform.position = Vector3.SmoothDamp(obstacle.transform.position, obstacleTarget, ref velocity, smoothTime);
         }
     }
 
