@@ -24,7 +24,7 @@ public class Checkpoint : MonoBehaviour
         {
             if(other.gameObject.tag == "Player")
             {
-                Trigger();
+                //Trigger();
             }
         }
     }
