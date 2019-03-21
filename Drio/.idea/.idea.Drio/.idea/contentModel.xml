@@ -21,7 +21,6 @@
           <e p="Kill.cs" t="Include" />
           <e p="Player_Stats.cs" t="Include" />
           <e p="PlayerChanger.cs" t="Include" />
-          <e p="Respawn_Controller.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
         </e>
         <e p="Stylized Mushroom" t="Include">
