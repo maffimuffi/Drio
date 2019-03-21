@@ -259,6 +259,11 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 991134788018033389, guid: f287546dfcaf8ed4080b914f868e7dbc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f287546dfcaf8ed4080b914f868e7dbc, type: 3}
 --- !u!1001 &5025756043814124664
@@ -350,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 9107039482490295830, guid: a7b7b19fc8ab73642babaf694f588165,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -25.34
       objectReference: {fileID: 0}
     - target: {fileID: 9107039482490295830, guid: a7b7b19fc8ab73642babaf694f588165,
         type: 3}
@@ -402,5 +407,30 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 292500341}
+    - target: {fileID: 9107039482490295831, guid: a7b7b19fc8ab73642babaf694f588165,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107039482490295831, guid: a7b7b19fc8ab73642babaf694f588165,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107039482490295831, guid: a7b7b19fc8ab73642babaf694f588165,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107039482490295831, guid: a7b7b19fc8ab73642babaf694f588165,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107039482490295831, guid: a7b7b19fc8ab73642babaf694f588165,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7b7b19fc8ab73642babaf694f588165, type: 3}

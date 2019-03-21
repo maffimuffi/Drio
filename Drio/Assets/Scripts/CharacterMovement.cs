@@ -5,10 +5,13 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     
-    float moveSpeed = 0.4f;
-    float jumpSpeed = 5f;
+    float moveSpeed = 0.2f;
+    float jumpSpeed = 150f;
     private float rotateSpeed = 5f;
     public GameObject playerTransform;
+    private bool jumpedCounter = false;
+    private bool jumped = false;
+    private float timer = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -40,17 +43,36 @@ public class CharacterMovement : MonoBehaviour
         {
             transform.position += playerTransform.transform.right * moveSpeed;
         }
-       
-        //RaycastHit ground;
+
+        if (jumpedCounter)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 0.5)
+            {
+                timer = 0;
+                jumped = true;
+                jumpedCounter = false;
+            }
+        }
+        Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
+        if (jumped && gameObject.GetComponent<Rigidbody>().velocity.magnitude >= 0 && gameObject.GetComponent<Rigidbody>().velocity.magnitude <= 0.5 )
+        { //impulse huono. näyttää epärealistiselta.
+            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * (jumpSpeed / 2), ForceMode.Impulse);
+            jumped = false;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //not working
-            /*Debug.DrawRay(transform.position,Vector3.down,Color.red,0.2f);
-            Debug.Log(Physics.Raycast(transform.position, Vector3.down, out ground, 0.2f));
-            if (Physics.Raycast(transform.position, Vector3.down, out ground, 0.2f))
-            {*/
+            Debug.DrawRay(transform.position,Vector3.down,Color.green,0.5f);
+            RaycastHit ground;
+            
+            if (Physics.Raycast(transform.position, Vector3.down, out ground, 0.5f))
+            {
+                
                 gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
-            //}
+                
+                jumpedCounter = true;
+            }
         }
     }
 }
