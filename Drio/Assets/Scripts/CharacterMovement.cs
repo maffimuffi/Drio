@@ -45,7 +45,16 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (jumpedCounter)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 0.5)
+            {
+                timer = 0;
+                jumped = true;
+                jumpedCounter = false;
+            }
+        }
         if (characterMovementActive)
         {
             if (Input.GetKey(KeyCode.W))
@@ -72,16 +81,7 @@ public class CharacterMovement : MonoBehaviour
                 transform.rotation = playerTransform.transform.rotation;
             }
 
-            if (jumpedCounter)
-            {
-                timer += Time.deltaTime;
-                if (timer >= 0.5)
-                {
-                    timer = 0;
-                    jumped = true;
-                    jumpedCounter = false;
-                }
-            }
+           
 
             //Debuggaus speed yms
             //Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
