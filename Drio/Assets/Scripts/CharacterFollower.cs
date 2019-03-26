@@ -25,8 +25,7 @@ public class CharacterFollower : MonoBehaviour
 
     void Chase()
     {
-        Debug.Log("this " + gameObject.name);
-        //Debug.Log("nottthis " + PlayerChanger.ActivePlayer.name);
+       
         if (gameObject != PlayerChanger.ActivePlayer)
         {
             if (PlayerChanger.CharacterSelect == 1)
@@ -64,7 +63,8 @@ public class CharacterFollower : MonoBehaviour
                 }
             }
 
-            Debug.Log("Liikutaan");
+           
+            
             navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + newPosition;
             navMeshAgent.isStopped = false;
             navMeshAgent.updateRotation = true;
