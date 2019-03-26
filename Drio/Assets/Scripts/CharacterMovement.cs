@@ -117,7 +117,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 movement.y = 0f;
                 jCounter = 0;
-
+            
                 if (Input.GetButtonDown("Jump"))
                 {
                     movement.y = jumpForce;
