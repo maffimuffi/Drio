@@ -77,17 +77,20 @@ SetNavMesh();
             WindNav.updateRotation = false;
             WindNav.updatePosition = false;
             WindNav.isStopped = true;
+            WindDragon.GetComponent<NavMeshObstacle>().enabled = true;
 
         } else if (CharacterSelect == 2)
         {
             EarthNav.updateRotation = false;
             EarthNav.updatePosition = false;
             EarthNav.isStopped = true;
+            EarthDragon.GetComponent<NavMeshObstacle>().enabled = true;
         } else if (CharacterSelect == 3)
         {
             FireNav.updateRotation = false;
             FireNav.updatePosition = false;
             FireNav.isStopped = true;
+            FireDragon.GetComponent<NavMeshObstacle>().enabled = true;
         }
         
         

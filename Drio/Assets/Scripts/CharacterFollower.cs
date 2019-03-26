@@ -63,10 +63,11 @@ public class CharacterFollower : MonoBehaviour
             }
 
             Debug.Log("Liikutaan");
-            navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + newPosition;
+            navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.forward + newPosition;
             navMeshAgent.isStopped = false;
             navMeshAgent.updateRotation = true;
             navMeshAgent.updatePosition = true;
+            gameObject.GetComponent<NavMeshObstacle>().enabled = false;
         }
         else
         {
