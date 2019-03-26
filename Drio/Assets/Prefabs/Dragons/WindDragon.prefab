@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1631948025990190233}
   - component: {fileID: 1631948025990190214}
   - component: {fileID: 1631948025990190237}
-  - component: {fileID: 1631948025990190234}
   - component: {fileID: 2235050815078959034}
   - component: {fileID: 361188886}
+  - component: {fileID: 361188887}
+  - component: {fileID: 361188888}
   m_Layer: 9
   m_Name: WindDragon
   m_TagString: Player
@@ -109,23 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   controller: {fileID: 0}
-  gravityScale: 0
---- !u!54 &1631948025990190234
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631948025990190215}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 1
 --- !u!114 &2235050815078959034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +141,39 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &361188887
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631948025990190215}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &361188888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631948025990190215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248f254ca1df29d4389e81a3f368d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseTPoint: {fileID: 0}
+  navMeshAgent: {fileID: 0}

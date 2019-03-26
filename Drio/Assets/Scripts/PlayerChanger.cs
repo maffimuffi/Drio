@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class PlayerChanger : MonoBehaviour
 {
     ///<see cref="1=Wind,2=Earth,3=Fire"/>
@@ -15,14 +15,21 @@ public class PlayerChanger : MonoBehaviour
     public GameObject EarthDragon;
     public GameObject FireDragon;
 
+    public NavMeshAgent WindNav;
+    public NavMeshAgent EarthNav;
+    public NavMeshAgent FireNav;
+
     public static GameObject ActivePlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        FireNav = FireDragon.GetComponent<NavMeshAgent>();
+        EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
+        WindNav = WindDragon.GetComponent<NavMeshAgent>();
      SetCamera();
-        
+        ChangePlayer(1);
+SetNavMesh();        
     }
 
     // Update is called once per frame
@@ -43,7 +50,7 @@ public class PlayerChanger : MonoBehaviour
     public void ChangePlayer(int playerSelect)
     {
         CharacterSelect = playerSelect;
-        
+       
         //player Movement
         WindDragon.GetComponent<CharacterMovement>().setPlayerActive();
         EarthDragon.GetComponent<CharacterMovement>().setPlayerActive();
@@ -60,20 +67,27 @@ public class PlayerChanger : MonoBehaviour
             ActivePlayer = FireDragon;
         }
         SetCamera();
+        SetNavMesh();
     }
 
     public void SetNavMesh()
     {
         if (CharacterSelect == 1)
         {
-           
+            WindNav.updateRotation = false;
+            WindNav.updatePosition = false;
+            WindNav.isStopped = true;
 
         } else if (CharacterSelect == 2)
         {
-            
+            EarthNav.updateRotation = false;
+            EarthNav.updatePosition = false;
+            EarthNav.isStopped = true;
         } else if (CharacterSelect == 3)
         {
-            
+            FireNav.updateRotation = false;
+            FireNav.updatePosition = false;
+            FireNav.isStopped = true;
         }
         
         
