@@ -30,6 +30,6 @@ public class Player_Stats : MonoBehaviour
 
     void Die()
     {
-        gameObject.transform.position = Checkpoint.GetActiveCheckPointPosition();
+        PlayerChanger.ActivePlayer.transform.position = Checkpoint.GetActiveCheckPointPosition();
     }
 }

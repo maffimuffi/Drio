@@ -15,16 +15,11 @@ public class Kill : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Stats>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Damage");
             player.TakeDamage(damage);
         }
     }
