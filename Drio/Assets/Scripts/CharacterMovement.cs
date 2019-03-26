@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     
-    float moveSpeed = 0.2f;
-    float jumpSpeed = 150f;
+    float moveSpeed = 8f;
+    float jumpForce = 4f;
     //private float rotateSpeed = 5f;
     public GameObject playerTransform;
     private bool jumpedCounter = false;
@@ -16,12 +16,17 @@ public class CharacterMovement : MonoBehaviour
     private bool characterMovementActive = false;
     private GameObject thisPlayer;
     public CharacterController controller;
-    
+    private float jCounter;
+
+    private Vector3 movement;
+
+    private float gravityScale = 1;
    
     
     // Start is called before the first frame update
     void Start()
     {
+        controller = GetComponent<CharacterController>();
         thisPlayer = gameObject;
            setPlayerActive();
     }
@@ -46,7 +51,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (jumpedCounter)
+       /* if (jumpedCounter)
         {
             timer += Time.deltaTime;
             if (timer >= 0.5)
@@ -56,9 +61,11 @@ public class CharacterMovement : MonoBehaviour
                 jumpedCounter = false;
             }
         }
+        */
         if (characterMovementActive)
         {
-            if (Input.GetKey(KeyCode.W))
+          
+           /* if (Input.GetKey(KeyCode.W))
             {
                 transform.position += playerTransform.transform.forward * moveSpeed;
                 transform.rotation = playerTransform.transform.rotation;
@@ -81,9 +88,10 @@ public class CharacterMovement : MonoBehaviour
                 transform.position += playerTransform.transform.right * moveSpeed;
                 transform.rotation = playerTransform.transform.rotation;
             }
+            */
 
            
-
+/*
             //Debuggaus speed yms
             //Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
             if (jumped && gameObject.GetComponent<Rigidbody>().velocity.magnitude >= 0 &&
@@ -93,20 +101,47 @@ public class CharacterMovement : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * (jumpSpeed / 2), ForceMode.Impulse);
                 jumped = false;
             }
+  */
+            
+            
+            //Script by Antti
+            float yStore = movement.y;
+            movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
+            movement = movement.normalized * moveSpeed;
+            movement.y = yStore;
+            
+            if (controller.isGrounded)
+            {
+                movement.y = 0f;
+                jCounter = 0;
 
+                if (Input.GetButtonDown("Jump"))
+                {
+                    movement.y = jumpForce;
+                    jCounter++;
+                }
+            }
+
+            else if (!controller.isGrounded && jCounter < 2)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    movement.y = jumpForce;
+                    jCounter++;
+                }
+            }
+            
+            movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
+            
+            controller.Move(movement * Time.deltaTime);
+/*
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //not working
                 Debug.DrawRay(transform.position, Vector3.down, Color.green, 0.5f);
                 RaycastHit ground;
 
-                if (Physics.Raycast(transform.position, Vector3.down, out ground, 0.5f) || doubleJump)
-                {
-
-
-                    gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
-
-                    jumpedCounter = true;
+               
                     if (PlayerChanger.CharacterSelect == 1)
                     {
                         if (doubleJump)
@@ -118,12 +153,15 @@ public class CharacterMovement : MonoBehaviour
                             doubleJump = true;
 
                         }
-                    }
+                    
 
                 }
             }
+            */
         }
+        
     }
+    
 
     private void OnCollisionEnter(Collision other)
     {

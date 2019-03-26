@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1631948025990190237}
   - component: {fileID: 1631948025990190234}
   - component: {fileID: 2235050815078959034}
+  - component: {fileID: 361188886}
   m_Layer: 9
   m_Name: WindDragon
   m_TagString: Player
@@ -107,6 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
+  controller: {fileID: 0}
+  gravityScale: 0
 --- !u!54 &1631948025990190234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,3 +139,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+--- !u!143 &361188886
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631948025990190215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 25
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

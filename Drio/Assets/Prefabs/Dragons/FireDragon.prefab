@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5442103723244837503}
   - component: {fileID: 5442103723244837472}
   - component: {fileID: 5442103723244837499}
-  - component: {fileID: 5442103723244837500}
   - component: {fileID: 1549541455727378651}
+  - component: {fileID: 9107039482242828179}
   m_Layer: 9
   m_Name: FireDragon
   m_TagString: Player
@@ -107,22 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
---- !u!54 &5442103723244837500
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5442103723244837473}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 1
+  controller: {fileID: 0}
+  gravityScale: 0
 --- !u!114 &1549541455727378651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +122,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+--- !u!143 &9107039482242828179
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442103723244837473}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 25
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
