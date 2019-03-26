@@ -15,6 +15,7 @@ public class CharacterMovement : MonoBehaviour
     private bool doubleJump;
     private bool characterMovementActive = false;
     private GameObject thisPlayer;
+    public CharacterController controller;
     
    
     
