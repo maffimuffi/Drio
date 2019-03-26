@@ -8,24 +8,24 @@ public class Checkpoint : MonoBehaviour
     // Is checkpoint activated
     public bool Activated = false;
 
-    public static Vector3 originalPos;
-
-    private GameObject[] players;
-    public GameObject currentPlayer;
-
-
     //private Animator thisAnimator;
 
-    
     // List with all checkpoints in the scene
     public static GameObject[] CheckPointsList;
 
+    void Start()
+    {
+        //thisAnimator = GetComponent<Animator>();
+
+        // We search all the checkpoints in the current scene
+        CheckPointsList = GameObject.FindGameObjectsWithTag("Checkpoint");
+    }
 
     /// Get position of the last activated checkpoint
     public static Vector3 GetActiveCheckPointPosition()
     {
         // If player die without activate any checkpoint, we will return a default position
-        Vector3 result = originalPos;
+        Vector3 result = new Vector3(0, 0, 0);
 
         if (CheckPointsList != null)
         {
@@ -56,17 +56,6 @@ public class Checkpoint : MonoBehaviour
         // We activated the current checkpoint
         Activated = true;
         //thisAnimator.SetBool("Active", true);
-    }
-
-    void Start()
-    {
-        currentPlayer = PlayerChanger.ActivePlayer;
-        //thisAnimator = GetComponent<Animator>();
-        players = GameObject.FindGameObjectsWithTag("Player");
-        originalPos = currentPlayer.transform.position;
-
-        // We search all the checkpoints in the current scene
-        CheckPointsList = GameObject.FindGameObjectsWithTag("Checkpoint");
     }
 
     void OnTriggerEnter(Collider other)

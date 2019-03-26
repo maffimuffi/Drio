@@ -6,16 +6,12 @@ using UnityEngine.SceneManagement;
 public class Player_Stats : MonoBehaviour
 {
 
-    public delegate void MyDelegate();
-    public event MyDelegate onDeath;
-
     public int hp;
 
     // Start is called before the first frame update
     void Start()
     {
         hp = 1;
-        
     }
 
     // Update is called once per frame
@@ -34,6 +30,6 @@ public class Player_Stats : MonoBehaviour
 
     void Die()
     {
-        onDeath.Invoke();
+        gameObject.transform.position = Checkpoint.GetActiveCheckPointPosition();
     }
 }
