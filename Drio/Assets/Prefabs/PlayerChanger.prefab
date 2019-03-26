@@ -49,3 +49,6 @@ MonoBehaviour:
   WindDragon: {fileID: 0}
   EarthDragon: {fileID: 0}
   FireDragon: {fileID: 0}
+  WindNav: {fileID: 0}
+  EarthNav: {fileID: 0}
+  FireNav: {fileID: 0}
