@@ -7,6 +7,7 @@ public class TestMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public CharacterController controller;
+    private float jCounter;
 
     private Vector3 movement;
 
@@ -28,10 +29,21 @@ public class TestMovement : MonoBehaviour
         if (controller.isGrounded)
         {
             movement.y = 0f;
+            jCounter = 0;
 
             if (Input.GetButtonDown("Jump"))
             {
                 movement.y = jumpForce;
+                jCounter++;
+            }
+        }
+
+        else if (!controller.isGrounded && jCounter < 2)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                movement.y = jumpForce;
+                jCounter++;
             }
         }
 
