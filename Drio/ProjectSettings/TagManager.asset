@@ -7,6 +7,8 @@ TagManager:
   - Terrain
   - PlayerTransformPoint
   - Checkpoint
+  - Boulder
+  - EarthDragon
   layers:
   - Default
   - TransparentFX
