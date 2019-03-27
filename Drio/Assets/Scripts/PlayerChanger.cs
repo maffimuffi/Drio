@@ -20,11 +20,14 @@ public class PlayerChanger : MonoBehaviour
     public NavMeshAgent EarthNav;
     public NavMeshAgent FireNav;
 
+    public static bool PlayerFollowActive;
+    
     public static GameObject ActivePlayer;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerFollowActive = true;
         WindCamera = GameObject.Find("WindCam");
         EarthCamera = GameObject.Find("EarthCam");
         FireCamera = GameObject.Find("FireCam");
@@ -44,6 +47,24 @@ SetNavMesh();
     // Update is called once per frame
     void Update()
     {
+        //Player follow change
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PlayerFollowActive = !PlayerFollowActive;
+            foreach (Vector3 asd in WindNav.path.corners)
+            {
+                Debug.DrawLine(asd,Vector3.up,Color.blue,10f);
+            }
+            WindNav.ResetPath();
+            
+            Debug.Log(WindNav.path.corners);
+            Debug.Log(FireNav.path.corners);
+            Debug.Log(EarthNav.path.corners);
+            
+            EarthNav.ResetPath();
+            FireNav.ResetPath();
+        }
+        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangePlayer(1);
@@ -83,6 +104,7 @@ SetNavMesh();
     {
         if (CharacterSelect == 1)
         {
+            
             WindNav.updateRotation = false;
             WindNav.updatePosition = false;
             WindNav.isStopped = true;
