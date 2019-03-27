@@ -56,5 +56,15 @@ public class TestMovement : MonoBehaviour
         controller.Move(movement * Time.deltaTime);
     }
 
-   
-}
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("PU"))
+        {
+            collision.gameObject.SetActive(false);
+           
+        }
+    }
+
+
+    }
