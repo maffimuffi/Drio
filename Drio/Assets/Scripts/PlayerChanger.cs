@@ -7,6 +7,7 @@ public class PlayerChanger : MonoBehaviour
     ///<see cref="1=Wind,2=Earth,3=Fire"/>
     public static int CharacterSelect;
 
+    //ei piilotettu että nullreferenssit löytöö
     public GameObject WindCamera;
     public GameObject EarthCamera;
     public GameObject FireCamera;
@@ -19,11 +20,22 @@ public class PlayerChanger : MonoBehaviour
     public NavMeshAgent EarthNav;
     public NavMeshAgent FireNav;
 
+    public static bool PlayerFollowActive;
+    
     public static GameObject ActivePlayer;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerFollowActive = true;
+        WindCamera = GameObject.Find("WindCam");
+        EarthCamera = GameObject.Find("EarthCam");
+        FireCamera = GameObject.Find("FireCam");
+
+        WindDragon = GameObject.Find("WindDragon");
+        EarthDragon = GameObject.Find("EarthDragon");
+        FireDragon = GameObject.Find("FireDragon");
+        
         FireNav = FireDragon.GetComponent<NavMeshAgent>();
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
@@ -35,6 +47,33 @@ SetNavMesh();
     // Update is called once per frame
     void Update()
     {
+        //Player follow change
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PlayerFollowActive = !PlayerFollowActive;
+            foreach (Vector3 asd in WindNav.path.corners)
+            {
+                Debug.DrawLine(asd,Vector3.up,Color.blue,10f);
+            }
+            foreach (Vector3 asd in FireNav.path.corners)
+            {
+                Debug.DrawLine(asd,Vector3.up,Color.red,10f);
+            }
+            foreach (Vector3 asd in EarthNav.path.corners)
+            {
+                Debug.DrawLine(asd,Vector3.up,Color.green,10f);
+            }
+            
+            
+            Debug.Log(WindNav.path.corners);
+            Debug.Log(FireNav.path.corners);
+            Debug.Log(EarthNav.path.corners);
+            
+            /*WindNav.ResetPath();
+            EarthNav.ResetPath();
+            FireNav.ResetPath();
+        */}
+        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangePlayer(1);
@@ -74,21 +113,19 @@ SetNavMesh();
     {
         if (CharacterSelect == 1)
         {
-            WindNav.updateRotation = false;
-            WindNav.updatePosition = false;
+            
+           
             WindNav.isStopped = true;
             WindDragon.GetComponent<NavMeshObstacle>().enabled = true;
 
         } else if (CharacterSelect == 2)
         {
-            EarthNav.updateRotation = false;
-            EarthNav.updatePosition = false;
+            
             EarthNav.isStopped = true;
             EarthDragon.GetComponent<NavMeshObstacle>().enabled = true;
         } else if (CharacterSelect == 3)
         {
-            FireNav.updateRotation = false;
-            FireNav.updatePosition = false;
+           
             FireNav.isStopped = true;
             FireDragon.GetComponent<NavMeshObstacle>().enabled = true;
         }

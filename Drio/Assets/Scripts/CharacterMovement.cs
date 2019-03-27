@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     
     float moveSpeed = 8f;
-    float jumpForce = 4f;
+    float jumpForce = 6f;
     //private float rotateSpeed = 5f;
     public GameObject playerTransform;
     private bool jumpedCounter = false;
@@ -125,7 +125,7 @@ public class CharacterMovement : MonoBehaviour
                 }
             }
 
-            else if (!controller.isGrounded && jCounter < 2)
+            else if (!controller.isGrounded && jCounter < 2 && PlayerChanger.CharacterSelect == 1)
             {
                 if (Input.GetButtonDown("Jump"))
                 {

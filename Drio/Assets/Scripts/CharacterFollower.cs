@@ -8,14 +8,21 @@ public class CharacterFollower : MonoBehaviour
     [HideInInspector]
     public Transform chaseTPoint;
     [HideInInspector]
-    public NavMeshAgent navMeshAgent;
+    private NavMeshAgent navMeshAgent;
 
+    private NavMeshPath lastnavMeshAgentPath;
+    private Vector3 lastnavMeshAgentVelocity;
+    private Vector3 lastnavMeshAgentDestination;
     private bool right;
     private Vector3 newPosition;
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        lastnavMeshAgentDestination = navMeshAgent.destination;
+        lastnavMeshAgentVelocity = navMeshAgent.velocity;
+        lastnavMeshAgentPath = navMeshAgent.path;
+       
     }
 
     // Update is called once per frame
@@ -71,7 +78,7 @@ public class CharacterFollower : MonoBehaviour
                 }
             }
 
-            Vector3 pos = Vector3.one;
+            Vector3 pos = gameObject.transform.position;
             if (right)
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
@@ -81,17 +88,30 @@ public class CharacterFollower : MonoBehaviour
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               -PlayerChanger.ActivePlayer.transform.right * 3;
             }
+
             
             navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
             
-            navMeshAgent.isStopped = false;
-            navMeshAgent.updateRotation = true;
-            navMeshAgent.updatePosition = true;
-            gameObject.GetComponent<NavMeshObstacle>().enabled = false;
+            if(!PlayerChanger.PlayerFollowActive)
+            {
+               // pause();
+                
+                navMeshAgent.isStopped = true;
+            }
+            if (PlayerChanger.PlayerFollowActive)
+            {
+               
+                navMeshAgent.isStopped = false;
+                gameObject.GetComponent<NavMeshObstacle>().enabled = false;
+                //navMeshAgent.path.corners[0] = gameObject.transform.position;
+            }
+            
         }
         else
         {
+            //navMeshAgent.destination = transform.position;
             navMeshAgent.isStopped = true;
         }
     }
+   
 }
