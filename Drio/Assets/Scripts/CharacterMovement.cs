@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     float moveSpeed = 8f;
     float jumpForce = 6f;
     //private float rotateSpeed = 5f;
+    
+    [HideInInspector]
     public GameObject playerTransform;
     private bool jumpedCounter = false;
     private bool jumped = false;
@@ -15,6 +17,8 @@ public class CharacterMovement : MonoBehaviour
     private bool doubleJump;
     private bool characterMovementActive = false;
     private GameObject thisPlayer;
+
+    [HideInInspector]
     public CharacterController controller;
     private float jCounter;
 
@@ -29,6 +33,17 @@ public class CharacterMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         thisPlayer = gameObject;
            setPlayerActive();
+
+        if (thisPlayer.name == "WindDragon")
+        {
+            playerTransform = GameObject.Find("WindTransformPoint");
+        } else if (thisPlayer.name == "FireDragon")
+        {
+            playerTransform = GameObject.Find("FireTransformPoint");
+        } else if (thisPlayer.name == "EarthDragon")
+        {
+            playerTransform = GameObject.Find("EarthTransformPoint");
+        }
     }
 
     public void setPlayerActive()
