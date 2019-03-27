@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2613e1203f544dacf81b011d24b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
+  activePlayer: {fileID: 0}
 --- !u!143 &9107039482242828179
 CharacterController:
   m_ObjectHideFlags: 0

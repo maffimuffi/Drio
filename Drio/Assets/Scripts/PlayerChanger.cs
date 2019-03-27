@@ -49,6 +49,7 @@ SetNavMesh();
     // Update is called once per frame
     void Update()
     {
+        
         //Player follow change
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -67,14 +68,9 @@ SetNavMesh();
             }
             
             
-            Debug.Log(WindNav.path.corners);
-            Debug.Log(FireNav.path.corners);
-            Debug.Log(EarthNav.path.corners);
             
-            /*WindNav.ResetPath();
-            EarthNav.ResetPath();
-            FireNav.ResetPath();
-        */}
+            
+         }
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -153,8 +149,8 @@ SetNavMesh();
         } else if (CharacterSelect == 3)
         {
             EarthCamera.SetActive(false);
-            FireCamera.SetActive(true);
             WindCamera.SetActive(false);
+            FireCamera.SetActive(true);
         }
         else
         {
