@@ -19,7 +19,8 @@ public class CameraMovement : MonoBehaviour
     {
         float h = horizontalSpeed * Input.GetAxis("Mouse X");
         float v = verticalSpeed * Input.GetAxis("Mouse Y");
-        transform.position = player.transform.position;
+        transform.localPosition = player.transform.position;
+       
         transform.Rotate(0,h,0);
         
     }

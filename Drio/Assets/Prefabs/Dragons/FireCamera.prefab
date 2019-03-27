@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9026457460498000158}
   m_Layer: 0
-  m_Name: PlayerTransformPoint
+  m_Name: FireTransformPoint
   m_TagString: PlayerTransformPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -106,7 +106,7 @@ public class CharacterMovement : MonoBehaviour
             
             //Script by Antti
             float yStore = movement.y;
-            movement = (playerTransform.transform.forward * Input.GetAxisRaw("Vertical")) + (playerTransform.transform.right * Input.GetAxisRaw("Horizontal"));
+            movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
             movement = movement.normalized * moveSpeed;
             movement.y = yStore;
             if (movement.x > 0 || movement.z > 0 || movement.x < 0 || movement.z < 0)
