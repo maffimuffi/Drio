@@ -5,44 +5,48 @@ using UnityEngine;
 public class Kill : MonoBehaviour
 {
 
-    private GameObject fireDragon;
-    private GameObject earthDragon;
-    private GameObject windDragon;
+    public Vector3 spawnPosition;
 
-    private Player_Stats fireStats;
-    private Player_Stats earthStats;
-    private Player_Stats windStats;
+    private Transform fireDragon;
+    private Transform earthDragon;
+    private Transform windDragon;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        fireDragon = GameObject.Find("FireDragon");
-        earthDragon = GameObject.Find("EarthDragon");
-        windDragon = GameObject.Find("WindDragon");
+        spawnPosition = Checkpoint.GetActiveCheckPointPosition();
 
-        fireStats = fireDragon.GetComponent<Player_Stats>();
-        earthStats = earthDragon.GetComponent<Player_Stats>();
-        windStats = windDragon.GetComponent<Player_Stats>();
+        fireDragon = GameObject.Find("FireDragon").GetComponent<Transform>();
+        earthDragon = GameObject.Find("EarthDragon").GetComponent<Transform>();
+        windDragon = GameObject.Find("WindDragon").GetComponent<Transform>();
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        spawnPosition = Checkpoint.GetActiveCheckPointPosition();
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "FireDragon")
+        if (other.gameObject.name == "WindDragon")
         {
-            Debug.Log("FireDragon Damage");
-            fireStats.TakeDamage();
+            Debug.Log("WindDragon damage");
+            windDragon.transform.position = spawnPosition;
+            // Possible Death Sound
         }
 
-        else if(other.gameObject.name == "EarthDragon")
+        else if (other.gameObject.name == "EarthDragon")
         {
-            Debug.Log("EarthDragon Damage");
-            earthStats.TakeDamage();
+            Debug.Log("EarthDragon damage");
+            earthDragon.transform.position = spawnPosition;
+            // Possible Death Sound
         }
 
-        else if(other.gameObject.name == "WindDragon")
+        else if (other.gameObject.name == "FireDragon")
         {
-            Debug.Log("WindDragon Damage");
-            windStats.TakeDamage();
+            Debug.Log("FireDragon damage");
+            fireDragon.transform.position = spawnPosition;
+            // Possible Death Sound
         }
     }
 }
