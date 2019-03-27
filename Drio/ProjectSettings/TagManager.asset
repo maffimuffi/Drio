@@ -12,6 +12,8 @@ TagManager:
   - EarthShot
   - Object
   - PU
+  - Door
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

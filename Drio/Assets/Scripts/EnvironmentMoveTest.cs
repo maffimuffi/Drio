@@ -7,49 +7,82 @@ public class EnvironmentMoveTest : MonoBehaviour
 
     public Transform obstacle;
 
-    //public float moveTime = 2;
-    public float smoothTime = 0.5f;
+    public PlayerChanger changer;
 
-    public bool onTrigger;
+    // How fast movement happends
+    public float smoothTime;
 
+    // Obstacle turning
+    
+
+    // Boolean for triggers that only earth dragon can trigger
+    public bool onlyEarthTrigger;
+    public bool turningObstacle;
+
+    // Obstacle moving
     private Vector3 velocity = Vector3.zero;
     public Vector3 obstacleTargetOffset;
     public Vector3 obstacleStart;
     public Vector3 obstacleTarget;
     public Vector3 obstacleTargetNew;
 
+    // Obstacle rotating
+
+
     void Start()
     {
+
         obstacleStart = obstacle.transform.position;
         obstacleTarget = obstacleStart + obstacleTargetOffset;
         obstacleTargetNew = obstacleTarget - obstacleTargetOffset;
-        onTrigger = false;
+
+        changer = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
+        onlyEarthTrigger = false;
     }
 
     private void Update()
     {
-        if(!onTrigger)
+        if(!onlyEarthTrigger)
         {
             obstacle.transform.position = Vector3.SmoothDamp(obstacle.transform.position, obstacleTargetNew, ref velocity, smoothTime);
         }
 
-        else if(onTrigger)
+        else if(onlyEarthTrigger)
         {
             obstacle.transform.position = Vector3.SmoothDamp(obstacle.transform.position, obstacleTarget, ref velocity, smoothTime);
         }
+
+        if(!turningObstacle)
+        {
+            Quaternion backRotation = Quaternion.AngleAxis(0, Vector3.up);
+            obstacle.transform.rotation = Quaternion.Slerp(transform.rotation, backRotation, 0.2f);
+        }
+        else if(turningObstacle)
+        {
+            Quaternion newRotation = Quaternion.AngleAxis(90, Vector3.up);
+            obstacle.transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * speed);
+        }
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        // Trigger that only Earth Dragon can activate
+        if (other.gameObject.name == "EarthDragon" && obstacle.tag == "MovingPlatform")
         {
-            onTrigger = true;
+            onlyEarthTrigger = true;
+        }
+        
+        if(other.gameObject.tag == "Player" && obstacle.tag == "Door")
+        {
+            turningObstacle = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        onTrigger = false;
+        onlyEarthTrigger = false;
+        turningObstacle = false;
     }
 
 }
