@@ -6,7 +6,7 @@ public class Boulder : MonoBehaviour
 {
 
     public bool move;
-    float moveSpeed = 0.005f;
+    float moveSpeed = 0.2f;
     public GameObject player;
     public Rigidbody rb;
 
@@ -30,24 +30,36 @@ public class Boulder : MonoBehaviour
 
 
 
-    public void OnCollisionEnter(Collision other)
+    public void OnTriggerEnter(Collider collider)
     {
-        if (other.collider.CompareTag("EarthDragon"))
-        {
+        if (collider.name == "EarthDragon" && Grab.grab == true){ 
             move = true;
         }
 
-        else if(!other.collider.CompareTag("EarthDragon"))
+       
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.name == "EarthDragon")
         {
             move = false;
         }
     }
 
+
+
     void FixedUpdate()
     {
-        if (move == true)
+        if (move == true && Input.GetKey(KeyCode.W))
         {
-            rb.AddRelativeForce(Vector3.forward * moveSpeed);
+           
+            rb.AddRelativeForce(player.transform.forward * moveSpeed);
+        }
+
+        else if (move == true && Input.GetKey(KeyCode.S))
+        {
+            rb.AddRelativeForce( 3* -player.transform.forward * moveSpeed);
         }
         
     }

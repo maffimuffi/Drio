@@ -13,6 +13,8 @@ public class TestMovement : MonoBehaviour
 
     public float gravityScale;
 
+    public bool grab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,8 @@ public class TestMovement : MonoBehaviour
                 jCounter++;
             }
         }
+
+
 
         movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
 
