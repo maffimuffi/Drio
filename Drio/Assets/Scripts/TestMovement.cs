@@ -62,9 +62,21 @@ public class TestMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("PU"))
         {
             collision.gameObject.SetActive(false);
-           
+
         }
     }
 
+    void OnCollisionStay(Collision hit)
+    {
+        if (hit.gameObject.tag == "mPlateform")
+        {
+            transform.parent = hit.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
+
 
     }
+}

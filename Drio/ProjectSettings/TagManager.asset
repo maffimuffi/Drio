@@ -10,6 +10,8 @@ TagManager:
   - Boulder
   - EarthDragon
   - EarthShot
+  - Object
+  - PU
   layers:
   - Default
   - TransparentFX
