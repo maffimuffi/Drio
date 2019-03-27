@@ -55,15 +55,24 @@ SetNavMesh();
             {
                 Debug.DrawLine(asd,Vector3.up,Color.blue,10f);
             }
-            WindNav.ResetPath();
+            foreach (Vector3 asd in FireNav.path.corners)
+            {
+                Debug.DrawLine(asd,Vector3.up,Color.red,10f);
+            }
+            foreach (Vector3 asd in EarthNav.path.corners)
+            {
+                Debug.DrawLine(asd,Vector3.up,Color.green,10f);
+            }
+            
             
             Debug.Log(WindNav.path.corners);
             Debug.Log(FireNav.path.corners);
             Debug.Log(EarthNav.path.corners);
             
+            /*WindNav.ResetPath();
             EarthNav.ResetPath();
             FireNav.ResetPath();
-        }
+        */}
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -105,21 +114,18 @@ SetNavMesh();
         if (CharacterSelect == 1)
         {
             
-            WindNav.updateRotation = false;
-            WindNav.updatePosition = false;
+           
             WindNav.isStopped = true;
             WindDragon.GetComponent<NavMeshObstacle>().enabled = true;
 
         } else if (CharacterSelect == 2)
         {
-            EarthNav.updateRotation = false;
-            EarthNav.updatePosition = false;
+            
             EarthNav.isStopped = true;
             EarthDragon.GetComponent<NavMeshObstacle>().enabled = true;
         } else if (CharacterSelect == 3)
         {
-            FireNav.updateRotation = false;
-            FireNav.updatePosition = false;
+           
             FireNav.isStopped = true;
             FireDragon.GetComponent<NavMeshObstacle>().enabled = true;
         }

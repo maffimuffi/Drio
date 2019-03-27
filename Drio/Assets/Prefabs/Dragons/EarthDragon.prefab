@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseTPoint: {fileID: 0}
-  navMeshAgent: {fileID: 0}
 --- !u!208 &9107039482101349076
 NavMeshObstacle:
   m_ObjectHideFlags: 0

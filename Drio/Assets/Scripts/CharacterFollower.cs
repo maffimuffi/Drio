@@ -91,6 +91,7 @@ public class CharacterFollower : MonoBehaviour
 
             
             navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
+            
             if(!PlayerChanger.PlayerFollowActive)
             {
                // pause();
@@ -101,35 +102,16 @@ public class CharacterFollower : MonoBehaviour
             {
                
                 navMeshAgent.isStopped = false;
-                navMeshAgent.updateRotation = true;
-                navMeshAgent.updatePosition = true;
                 gameObject.GetComponent<NavMeshObstacle>().enabled = false;
-                navMeshAgent.path.corners[0] = gameObject.transform.position;
+                //navMeshAgent.path.corners[0] = gameObject.transform.position;
             }
             
         }
         else
         {
-            navMeshAgent.destination = transform.position;
+            //navMeshAgent.destination = transform.position;
             navMeshAgent.isStopped = true;
         }
     }
-   /*void pause() {
-        lastnavMeshAgentVelocity = navMeshAgent.velocity;
-        lastnavMeshAgentPath = navMeshAgent.path;
-        navMeshAgent.velocity = Vector3.zero;
-        navMeshAgent.ResetPath();
-    }
-     
-    void resume() {
-        if (navMeshAgent.destination == lastnavMeshAgentDestination) {
-            navMeshAgent.SetPath(lastnavMeshAgentPath);
-        }
-        else {
-            navMeshAgent.SetDestination(lastnavMeshAgentDestination);
-        }
- 
-        navMeshAgent.velocity = lastnavMeshAgentVelocity;
-    }
-    */
+   
 }

@@ -477,10 +477,6 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 292500341}
-    - target: {fileID: 361188887, guid: 10efa9bab2614744285c7a6bdf7c883e, type: 3}
-      propertyPath: m_AutoRepath
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10efa9bab2614744285c7a6bdf7c883e, type: 3}
 --- !u!1001 &3883379037466025450
@@ -555,11 +551,6 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 5025756045168741424}
-    - target: {fileID: 6521410912956973625, guid: 658c1f01bf28f2c47a4944d7e6d9856f,
-        type: 3}
-      propertyPath: m_AutoRepath
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658c1f01bf28f2c47a4944d7e6d9856f, type: 3}
 --- !u!1001 &4106008812491007277
