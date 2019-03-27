@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grab : MonoBehaviour
+public class PU : MonoBehaviour
 {
-    public static bool grab;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,20 +13,17 @@ public class Grab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        if (Input.GetKey(KeyCode.Mouse2))
-        {
-            grab = true;
-            
-
-        }
-
-        else
-        {
-            grab = false;
-        }
-
-
+        
     }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+            Destroy(this.gameObject);
+        }
+    }
+
 }
