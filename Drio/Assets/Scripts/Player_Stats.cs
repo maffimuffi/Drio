@@ -7,7 +7,11 @@ public class Player_Stats : MonoBehaviour
 {
 
     public Vector3 spawnPosition;
+
     public GameObject activePlayer;
+    private GameObject fireDragon;
+    private GameObject earthDragon;
+    private GameObject windDragon;
 
     private bool damageTaken;
     private float time;
@@ -18,7 +22,11 @@ public class Player_Stats : MonoBehaviour
         time = 1f;
         spawnPosition = Checkpoint.GetActiveCheckPointPosition();
         damageTaken = false;
-        activePlayer = GameObject.Find(PlayerChanger.ActivePlayer.name);
+        activePlayer = PlayerChanger.ActivePlayer;
+
+        fireDragon = GameObject.Find("FireDragon");
+        earthDragon = GameObject.Find("EarthDragon");
+        windDragon = GameObject.Find("WindDragon");
     }
 
     // Update is called once per frame
@@ -28,7 +36,7 @@ public class Player_Stats : MonoBehaviour
 
         if(damageTaken)
         {
-            if(activePlayer.name == "WindDragon" || activePlayer.name == "EarthDragon" || activePlayer.name == "FireDragon")
+            if(activePlayer == windDragon || activePlayer == earthDragon || activePlayer == fireDragon)
             {
                 Die();
             }
