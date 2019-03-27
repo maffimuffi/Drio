@@ -90,8 +90,7 @@ public class CharacterFollower : MonoBehaviour
             }
 
             
-            navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
-            
+           
             if(!PlayerChanger.PlayerFollowActive)
             {
                // pause();
@@ -105,7 +104,8 @@ public class CharacterFollower : MonoBehaviour
                 gameObject.GetComponent<NavMeshObstacle>().enabled = false;
                 //navMeshAgent.path.corners[0] = gameObject.transform.position;
             }
-            
+            navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
+
         }
         else
         {
