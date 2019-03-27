@@ -262,12 +262,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f287546dfcaf8ed4080b914f868e7dbc, type: 3}
---- !u!1 &1738797563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 673929989124407481, guid: 1ca3e939ed874eb4eb6ef8795a833882,
-    type: 3}
-  m_PrefabInstance: {fileID: 673929989617201474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &673929989617201474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,11 +403,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1408885022530283580, guid: 119904ce5cc1c474390cb9a8331776da,
-        type: 3}
-      propertyPath: WindCamera
-      value: 
-      objectReference: {fileID: 1738797563}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119904ce5cc1c474390cb9a8331776da, type: 3}
 --- !u!1001 &1631948026183211657
