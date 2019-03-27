@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.UIElements;
 using UnityEngine;
 using UnityEngine.AI;
 public class PlayerChanger : MonoBehaviour
@@ -22,7 +23,7 @@ public class PlayerChanger : MonoBehaviour
     public NavMeshAgent FireNav;
 
     public static bool PlayerFollowActive;
-    
+    public GameObject ActivePlayerRightNow;
     public static GameObject ActivePlayer;
 
     // Start is called before the first frame update
@@ -106,6 +107,8 @@ SetNavMesh();
         {
             ActivePlayer = FireDragon;
         }
+
+        ActivePlayerRightNow = ActivePlayer;
         SetCamera();
         SetNavMesh();
     }

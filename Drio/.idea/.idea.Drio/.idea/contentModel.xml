@@ -152,12 +152,15 @@
           <e p="CharacterFollower.cs" t="Include" />
           <e p="CharacterMovement.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
+          <e p="EarthShot.cs" t="Include" />
           <e p="EnvironmentMoveTest.cs" t="Include" />
           <e p="Grab.cs" t="Include" />
           <e p="Kill.cs" t="Include" />
           <e p="Player_Stats.cs" t="Include" />
           <e p="PlayerChanger.cs" t="Include" />
+          <e p="PU.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
+          <e p="Smash.cs" t="Include" />
           <e p="TestMovement.cs" t="Include" />
         </e>
         <e p="Stylized Mushroom" t="Include">
