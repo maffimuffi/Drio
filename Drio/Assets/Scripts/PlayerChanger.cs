@@ -16,6 +16,7 @@ public class PlayerChanger : MonoBehaviour
     public GameObject EarthDragon;
     public GameObject FireDragon;
 
+    //NavMeshes
     public NavMeshAgent WindNav;
     public NavMeshAgent EarthNav;
     public NavMeshAgent FireNav;
