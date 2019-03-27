@@ -7,6 +7,7 @@ public class PlayerChanger : MonoBehaviour
     ///<see cref="1=Wind,2=Earth,3=Fire"/>
     public static int CharacterSelect;
 
+    //ei piilotettu että nullreferenssit löytöö
     public GameObject WindCamera;
     public GameObject EarthCamera;
     public GameObject FireCamera;
@@ -24,6 +25,14 @@ public class PlayerChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WindCamera = GameObject.Find("WindCam");
+        EarthCamera = GameObject.Find("EarthCam");
+        FireCamera = GameObject.Find("FireCam");
+
+        WindDragon = GameObject.Find("WindDragon");
+        EarthDragon = GameObject.Find("EarthDragon");
+        FireDragon = GameObject.Find("FireDragon");
+        
         FireNav = FireDragon.GetComponent<NavMeshAgent>();
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();

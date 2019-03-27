@@ -153,6 +153,7 @@
           <e p="CharacterMovement.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
           <e p="EnvironmentMoveTest.cs" t="Include" />
+          <e p="Grab.cs" t="Include" />
           <e p="Kill.cs" t="Include" />
           <e p="Player_Stats.cs" t="Include" />
           <e p="PlayerChanger.cs" t="Include" />

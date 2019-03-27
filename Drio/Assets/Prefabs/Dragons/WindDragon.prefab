@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 361188886}
   - component: {fileID: 361188887}
   - component: {fileID: 361188888}
+  - component: {fileID: 361188880}
   m_Layer: 9
   m_Name: WindDragon
   m_TagString: Player
@@ -151,7 +152,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -177,3 +178,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseTPoint: {fileID: 0}
   navMeshAgent: {fileID: 0}
+--- !u!208 &361188880
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631948025990190215}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
