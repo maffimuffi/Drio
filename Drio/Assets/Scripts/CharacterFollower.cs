@@ -94,23 +94,27 @@ public class CharacterFollower : MonoBehaviour
             if(!PlayerChanger.PlayerFollowActive)
             {
                // pause();
-                
-                navMeshAgent.isStopped = true;
+                navMeshAgent.enabled = false;
+                //navMeshAgent.isStopped = true;
             }
             if (PlayerChanger.PlayerFollowActive)
             {
-               
-                navMeshAgent.isStopped = false;
+                navMeshAgent.enabled = true;
+                //navMeshAgent.isStopped = false;
                 gameObject.GetComponent<NavMeshObstacle>().enabled = false;
                 //navMeshAgent.path.corners[0] = gameObject.transform.position;
             }
-            navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
 
+            if (navMeshAgent.enabled)
+            {
+                navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
+            }
         }
         else
         {
             //navMeshAgent.destination = transform.position;
-            navMeshAgent.isStopped = true;
+            navMeshAgent.enabled = false;
+//            navMeshAgent.isStopped = true;
         }
     }
    
