@@ -114,7 +114,7 @@ public class Tester : MonoBehaviour
         if (collision.gameObject.CompareTag("Bounce"))
         {
             
-            Debug.Log("Jippii");
+            
 
 
             rb.AddForce(jump * jumpForce * 1.7f, ForceMode.Impulse);
