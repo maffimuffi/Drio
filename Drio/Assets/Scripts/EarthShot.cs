@@ -45,12 +45,5 @@ public class EarthShot : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Object"))
-        {
-
-            Destroy(this.gameObject);
-        }
-    }
+    
 }

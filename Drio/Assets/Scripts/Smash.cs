@@ -30,6 +30,7 @@ public class Smash : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("EarthShot"))
         {
+            Debug.Log("pum");
             //sound.GetComponent<smashSound>().on = true;
             destroy = true;
         }
