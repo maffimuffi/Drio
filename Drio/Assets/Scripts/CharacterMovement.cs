@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     
-    public float moveSpeed = 4f;
-    float jumpForce = 2f;
+    public float moveSpeed = 6f;
+    float jumpForce = 1.8f;
     //private float rotateSpeed = 5f;
     
     [HideInInspector]
@@ -87,6 +87,44 @@ public class CharacterMovement : MonoBehaviour
         */
         if (characterMovementActive)
         {
+            
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            
+            
+            Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
+            Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
+            
+            //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
+            Vector3 pMovement = horMovement + verMovement;
+            Vector3 pushVer = new Vector3(0, 0.0f, -moveVertical) * moveSpeed * Time.deltaTime;
+            
+            if (!Grab.grab || PlayerChanger.CharacterSelect != 2)
+            {
+
+                rb.MovePosition(transform.position + pMovement);
+                
+
+            } else if (Grab.grab && PlayerChanger.CharacterSelect == 2)
+            {
+                
+                rb.MovePosition(transform.position + pushVer);
+            }
+
+            if(Input.GetKey(KeyCode.W))
+            {
+                moving = true;
+
+
+            }
+
+            else
+            {
+                moving = false;
+            }
+
+            
+            /*
             if (!Grab.grab)
             {
                 if (Input.GetKey(KeyCode.W))
@@ -116,12 +154,13 @@ public class CharacterMovement : MonoBehaviour
             {
                 transform.position += playerTransform.transform.forward * moveSpeed;
             }
-
+*/
             if (Input.GetButtonDown("Jump") && jCount < 2)
             {
+                
+
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 jCount++;
-            
 
             }
             
