@@ -13,12 +13,14 @@ public class TestMovement : MonoBehaviour
 
     public float gravityScale;
 
-    public bool grab;
-
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        controller.detectCollisions = false;
+
+        Physics.IgnoreCollision(controller.GetComponent<Collider>(), GetComponent<Collider>());
     }
     // Update is called once per frame
     void Update()
@@ -27,6 +29,8 @@ public class TestMovement : MonoBehaviour
         movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
         movement = movement.normalized * moveSpeed;
         movement.y = yStore;
+
+        
 
         if (controller.isGrounded)
         {
@@ -64,19 +68,45 @@ public class TestMovement : MonoBehaviour
             collision.gameObject.SetActive(false);
 
         }
+
+        if (collision.gameObject.CompareTag("Bounce"))
+        {
+            Debug.Log("Jippii");
+           
+            movement.y = movement.y * 10;
+
+        }
+
+        else
+        {
+            
+        }
+
     }
 
-    void OnCollisionStay(Collision hit)
+    private void OnCollisionExit(Collision collision)
     {
-        if (hit.gameObject.tag == "mPlateform")
+        if (collision.gameObject.CompareTag("Bounce"))
         {
+            Debug.Log("Jippii2");
+            movement.y += 0;
+
+        }
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "mPlatform")
+        {
+            
+            print("collision detected");
+           
             transform.parent = hit.transform;
         }
+        
         else
         {
             transform.parent = null;
         }
-
-
     }
 }

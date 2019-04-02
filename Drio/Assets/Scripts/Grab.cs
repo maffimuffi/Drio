@@ -16,11 +16,11 @@ public class Grab : MonoBehaviour
     {
 
 
-        if (Input.GetKey(KeyCode.Mouse2))
+        if (Input.GetKey(KeyCode.F))
         {
             grab = true;
             
-
+            
         }
 
         else

@@ -25,8 +25,8 @@ public class Shooting : MonoBehaviour {
             
             lastFire = Time.time + fireRate;
             GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
-            Destroy(ammoInstance, 1.5f);
-            ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 70, ForceMode.Impulse);
+            Destroy(ammoInstance, 0.2f);
+            ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 30, ForceMode.Impulse);
 
         }
 

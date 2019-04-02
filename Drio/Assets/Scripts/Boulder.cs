@@ -5,10 +5,11 @@ using UnityEngine;
 public class Boulder : MonoBehaviour
 {
 
-    public bool move;
-    float moveSpeed = 0.2f;
+
     public GameObject player;
     public Rigidbody rb;
+
+    public bool Push { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +22,7 @@ public class Boulder : MonoBehaviour
     {
        
 
-        if(move == true)
-        {
-            transform.position += player.transform.forward * moveSpeed;
-        }
+        
         
     }
 
@@ -32,8 +30,18 @@ public class Boulder : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (collider.name == "EarthDragon" && Grab.grab == true){ 
-            move = true;
+
+        if(collider.name == "Push")
+        {
+            
+            Push = true;
+        }
+
+        if (collider.name == "EarthDragon2" && Grab.grab == true && Push == true){
+            
+            transform.parent = collider.transform;
+
+
         }
 
        
@@ -41,28 +49,21 @@ public class Boulder : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        if (collider.name == "EarthDragon")
-        {
-            move = false;
-        }
-    }
 
-
-
-    void FixedUpdate()
-    {
-        if (move == true && Input.GetKey(KeyCode.W))
+        if (collider.name == "Push")
         {
            
-            rb.AddRelativeForce(player.transform.forward * moveSpeed);
+            Push = false;
+            transform.parent = null;
         }
 
-        else if (move == true && Input.GetKey(KeyCode.S))
+        if (collider.name == "EarthDragon2")
         {
-            rb.AddRelativeForce( 3* -player.transform.forward * moveSpeed);
+            transform.parent = null;
         }
-        
     }
+
+
 
 }
 

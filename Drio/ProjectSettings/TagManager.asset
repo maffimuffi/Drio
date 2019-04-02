@@ -12,6 +12,9 @@ TagManager:
   - EarthShot
   - Object
   - PU
+  - mPlatform
+  - Bounce
+  - Push
   layers:
   - Default
   - TransparentFX
@@ -23,7 +26,7 @@ TagManager:
   - 
   - PostProcessing
   - Player
-  - 
+  - BoulderLimits
   - 
   - 
   - 

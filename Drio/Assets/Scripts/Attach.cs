@@ -5,22 +5,16 @@ using UnityEngine;
 public class Attach : MonoBehaviour
 {
     public GameObject player;
-    public bool works;
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (other.gameObject == player){
-            player.transform.parent = this.transform;
-        }
+        if (collision.gameObject == player)
+            player.transform.parent = transform;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider collision)
     {
-        if (other.gameObject == player)
-        {
+        if (collision.gameObject.tag == "Player")
             player.transform.parent = null;
-        }
-
     }
 
 
