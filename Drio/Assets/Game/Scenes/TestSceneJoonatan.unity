@@ -112,34 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 20de6aaba6e129c4686b3cfc8d27580d, type: 2}
---- !u!1 &292500341 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 673929989907972663, guid: 1ca3e939ed874eb4eb6ef8795a833882,
-    type: 3}
-  m_PrefabInstance: {fileID: 673929989617201474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &361188878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1631948025990190215, guid: 10efa9bab2614744285c7a6bdf7c883e,
     type: 3}
   m_PrefabInstance: {fileID: 1631948026183211657}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &361188882
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361188878}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &513153392
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,22 +346,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1262160706}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1301223403
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301223399}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1335466953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -690,11 +652,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1631948025990190237, guid: 10efa9bab2614744285c7a6bdf7c883e,
-        type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 292500341}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10efa9bab2614744285c7a6bdf7c883e, type: 3}
 --- !u!1 &5025756045525469843 stripped
