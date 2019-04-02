@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 34609001872291253}
   - component: {fileID: 34609001872291246}
   - component: {fileID: 9086083288730872068}
-  - component: {fileID: 9107039482101349073}
   - component: {fileID: 9107039482101349082}
   - component: {fileID: 9107039482101349076}
   m_Layer: 9
@@ -108,8 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a580afbd9559d32419d3ae99dbe8d6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 8
   playerTransform: {fileID: 0}
-  controller: {fileID: 0}
+  jump: {x: 0, y: 0, z: 0}
+  moving: 0
 --- !u!195 &9086083288730872068
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -132,24 +133,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!143 &9107039482101349073
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34609001872291252}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 25
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9107039482101349082
 MonoBehaviour:
   m_ObjectHideFlags: 0

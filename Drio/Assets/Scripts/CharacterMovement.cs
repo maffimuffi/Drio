@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     
-    float moveSpeed = 8f;
-    float jumpForce = 6f;
+    public float moveSpeed = 4f;
+    float jumpForce = 2f;
     //private float rotateSpeed = 5f;
     
     [HideInInspector]
@@ -14,12 +14,18 @@ public class CharacterMovement : MonoBehaviour
     private bool jumpedCounter = false;
     private bool jumped = false;
     private float timer = 0;
+    public Vector3 jump;
+    private Rigidbody rb;
+    public bool moving;
     private bool doubleJump;
+    int jCount;
+    
+    
     private bool characterMovementActive = false;
     private GameObject thisPlayer;
 
     [HideInInspector]
-    public CharacterController controller;
+    
     private float jCounter;
 
     private Vector3 movement;
@@ -30,8 +36,10 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        
         thisPlayer = gameObject;
+        rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
            setPlayerActive();
 
         if (thisPlayer.name == "WindDragon")
@@ -64,7 +72,7 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
        /* if (jumpedCounter)
         {
@@ -79,33 +87,46 @@ public class CharacterMovement : MonoBehaviour
         */
         if (characterMovementActive)
         {
-          
-           /* if (Input.GetKey(KeyCode.W))
+            if (!Grab.grab)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    transform.position += playerTransform.transform.forward * moveSpeed;
+                    transform.rotation = playerTransform.transform.rotation;
+                }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    transform.position += -playerTransform.transform.forward * moveSpeed;
+                    transform.rotation = playerTransform.transform.rotation;
+                }
+
+                if (Input.GetKey(KeyCode.A))
+                {
+                    transform.position += -playerTransform.transform.right * moveSpeed;
+                    transform.rotation = playerTransform.transform.rotation;
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    transform.position += playerTransform.transform.right * moveSpeed;
+                    transform.rotation = playerTransform.transform.rotation;
+                }
+            } else if (Grab.grab)
             {
                 transform.position += playerTransform.transform.forward * moveSpeed;
-                transform.rotation = playerTransform.transform.rotation;
             }
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetButtonDown("Jump") && jCount < 2)
             {
-                transform.position += -playerTransform.transform.forward * moveSpeed;
-                transform.rotation = playerTransform.transform.rotation;
-            }
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                jCount++;
+            
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.position += -playerTransform.transform.right * moveSpeed;
-                transform.rotation = playerTransform.transform.rotation;
             }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                transform.position += playerTransform.transform.right * moveSpeed;
-                transform.rotation = playerTransform.transform.rotation;
-            }
-            */
-
-           
+            
+            
+            
 /*
             //Debuggaus speed yms
             //Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
@@ -120,7 +141,7 @@ public class CharacterMovement : MonoBehaviour
             
             
             //Script by Antti
-            float yStore = movement.y;
+           /* float yStore = movement.y;
             movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
             movement = movement.normalized * moveSpeed;
             movement.y = yStore;
@@ -141,7 +162,8 @@ public class CharacterMovement : MonoBehaviour
                 }
             }
 
-            else if(!controller.isGrounded)
+            else if
+            (!controller.isGrounded)
             {
                 // Gliding with left shift
                 if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -163,7 +185,7 @@ public class CharacterMovement : MonoBehaviour
             movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
             
             controller.Move(movement * Time.deltaTime);
-
+*/
 
 /*
             if (Input.GetKeyDown(KeyCode.Space))
@@ -193,11 +215,82 @@ public class CharacterMovement : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.collider.CompareTag("Terrain"))
+        if (collision.gameObject.CompareTag("Object"))
         {
-            doubleJump = false;
-        } 
+            
+            jCount = 0;
+
+        }
+
+        if (collision.gameObject.CompareTag("Terrain"))
+        {
+
+            jCount = 0;
+
+        }
+
+        if (collision.gameObject.CompareTag("Boulder"))
+        {
+
+            jCount = 0;
+
+        }
+
+        if (collision.gameObject.CompareTag("Push"))
+        {
+
+            jCount = 0;
+
+        }
+
+
+        if (collision.gameObject.CompareTag("PU"))
+        {
+            collision.gameObject.SetActive(false);
+
+        }
+
+        if (collision.gameObject.CompareTag("Bounce"))
+        {
+            
+            Debug.Log("Jippii");
+
+
+            rb.AddForce(jump * jumpForce * 1.7f, ForceMode.Impulse);
+
+        }
+
+        
+
+    }
+    
+    void OnTriggerStay(Collider other)
+    {
+
+        if (other.gameObject.tag == "mPlatform" && moving == false)
+        {
+
+            
+
+            transform.parent = other.transform;
+            
+
+        }
+
+        
+    }
+
+
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "mPlatform")
+        {
+           
+            transform.parent = null;
+
+        }
     }
 }

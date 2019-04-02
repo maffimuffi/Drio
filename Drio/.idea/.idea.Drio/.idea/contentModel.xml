@@ -159,11 +159,13 @@
           <e p="EarthShot.cs" t="Include" />
           <e p="Grab.cs" t="Include" />
           <e p="Kill.cs" t="Include" />
+          <e p="MPlatform.cs" t="Include" />
           <e p="PlayerChanger.cs" t="Include" />
           <e p="PU.cs" t="Include" />
           <e p="PuzzleTrigger.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
           <e p="Smash.cs" t="Include" />
+          <e p="Tester.cs" t="Include" />
           <e p="TestMovement.cs" t="Include" />
         </e>
         <e p="Stylized Mushroom" t="Include">
