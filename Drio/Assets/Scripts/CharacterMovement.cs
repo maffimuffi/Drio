@@ -132,11 +132,22 @@ public class CharacterMovement : MonoBehaviour
             {
                 movement.y = 0f;
                 jCounter = 0;
+                gravityScale = 1;
             
                 if (Input.GetButtonDown("Jump"))
                 {
                     movement.y = jumpForce;
                     jCounter++;
+                }
+            }
+
+            else if(!controller.isGrounded)
+            {
+                // Gliding with left shift
+                if (Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    gravityScale = 0.25f;
+                    movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
                 }
             }
 
@@ -148,10 +159,12 @@ public class CharacterMovement : MonoBehaviour
                     jCounter++;
                 }
             }
-            
+
             movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
             
             controller.Move(movement * Time.deltaTime);
+
+
 /*
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -179,7 +192,6 @@ public class CharacterMovement : MonoBehaviour
         }
         
     }
-    
 
     private void OnCollisionEnter(Collision other)
     {

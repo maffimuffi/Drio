@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1631948025990190233}
   - component: {fileID: 1631948025990190214}
   - component: {fileID: 1631948025990190237}
-  - component: {fileID: 2235050815078959034}
   - component: {fileID: 361188886}
   - component: {fileID: 361188887}
   - component: {fileID: 361188888}
@@ -111,20 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   controller: {fileID: 0}
---- !u!114 &2235050815078959034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631948025990190215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a2613e1203f544dacf81b011d24b15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPosition: {x: 0, y: 0, z: 0}
-  activePlayer: {fileID: 0}
 --- !u!143 &361188886
 CharacterController:
   m_ObjectHideFlags: 0

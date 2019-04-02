@@ -61,7 +61,7 @@ public class Checkpoint : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // If the player passes through the checkpoint, we activate it
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             ActivateCheckPoint();
         }
