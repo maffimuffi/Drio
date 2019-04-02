@@ -31,6 +31,17 @@ public class MPlatform : MonoBehaviour
         {
             timer = 0;
         }
+
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            
+
+
+        }
+
     }
+
+
 
 }
