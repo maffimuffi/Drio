@@ -16,9 +16,10 @@ public class CharacterMovement : MonoBehaviour
     private float timer = 0;
     public Vector3 jump;
     private Rigidbody rb;
-    public bool moving;
+    
     private bool doubleJump;
     int jCount;
+    public bool rotating;
     
     
     private bool characterMovementActive = false;
@@ -71,6 +72,12 @@ public class CharacterMovement : MonoBehaviour
             characterMovementActive = false;
         }
     }
+
+    private void LateUpdate()
+    {
+        
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -97,11 +104,11 @@ public class CharacterMovement : MonoBehaviour
             
             //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
             Vector3 pMovement = horMovement + verMovement;
-            Vector3 pushVer = new Vector3(0, 0.0f, -moveVertical) * moveSpeed * Time.deltaTime;
+            Vector3 pushVer = new Vector3(0, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
             
             if (!Grab.grab || PlayerChanger.CharacterSelect != 2)
             {
-
+                
                 rb.MovePosition(transform.position + pMovement);
                 
 
@@ -109,20 +116,32 @@ public class CharacterMovement : MonoBehaviour
             {
                 
                 rb.MovePosition(transform.position + pushVer);
+                
             }
 
-            if(Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
+                Input.GetKey(KeyCode.D))
             {
-                moving = true;
-
-
+                rotating = true;
             }
-
             else
             {
-                moving = false;
+                rotating = false;
             }
 
+            if (rotating)
+            {
+                if (Grab.grab)
+                {
+                    
+                //en saa rotaatiota toimimaan grabatessa
+                }
+                else
+                {
+                    rb.MoveRotation(playerTransform.transform.rotation); 
+                    
+                }
+            }
             
             /*
             if (!Grab.grab)
@@ -304,7 +323,7 @@ public class CharacterMovement : MonoBehaviour
         
 
     }
-    
+    /*
     void OnTriggerStay(Collider other)
     {
 
@@ -332,4 +351,5 @@ public class CharacterMovement : MonoBehaviour
 
         }
     }
+*/
 }
