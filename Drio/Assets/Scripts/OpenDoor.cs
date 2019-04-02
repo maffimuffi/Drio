@@ -21,7 +21,7 @@ public class OpenDoor : MonoBehaviour
 
         if (timer > 0 && timer < 4)
         {
-            transform.Rotate(0, 5 * speed * Time.deltaTime, 0, Space.Self);
+            transform.Rotate(0, 5 * speed * Time.deltaTime, 0, Space.World);
         }
     }
 
