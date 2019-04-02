@@ -279,17 +279,17 @@ PrefabInstance:
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[0].value
-      value: 0.9610596
+      value: 0.91327286
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[0].outSlope
-      value: 0.039297663
+      value: 0.11599841
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
@@ -299,12 +299,12 @@ PrefabInstance:
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
+      value: 0.21962732
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[1].inSlope
-      value: 0.039297663
+      value: 0.090856776
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
@@ -329,17 +329,17 @@ PrefabInstance:
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[0].inSlope
-      value: 0.039297663
+      value: 0.11599841
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[1].outSlope
-      value: 0.039297663
+      value: 0.090856776
       objectReference: {fileID: 0}
     - target: {fileID: 3190105682269131038, guid: 3123da49cb81147489b444f2749aba47,
         type: 3}
       propertyPath: UVModule.frameOverTime.maxCurve.m_Curve.Array.data[0].time
-      value: 0.009090424
+      value: 0.045452118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3123da49cb81147489b444f2749aba47, type: 3}
@@ -413,6 +413,10 @@ PrefabInstance:
     - target: {fileID: 5442103723244837499, guid: 658c1f01bf28f2c47a4944d7e6d9856f,
         type: 3}
       propertyPath: moving
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227951386, guid: 658c1f01bf28f2c47a4944d7e6d9856f, type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -526,7 +530,7 @@ MonoBehaviour:
   moveSpeed: 6
   playerTransform: {fileID: 0}
   jump: {x: 0, y: 0, z: 0}
-  moving: 1
+  rotating: 0
 --- !u!114 &1645878131
 MonoBehaviour:
   m_ObjectHideFlags: 0
