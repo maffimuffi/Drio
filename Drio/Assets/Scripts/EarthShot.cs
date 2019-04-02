@@ -36,10 +36,10 @@ public class EarthShot : MonoBehaviour
 
             GameObject ammoInstance4 = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
             Destroy(ammoInstance4, 0.5f);
-            ammoInstance4.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 15 + transform.right * 20, ForceMode.Impulse);
+            ammoInstance4.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 10 + transform.right * 12, ForceMode.Impulse);
             GameObject ammoInstance5 = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
             Destroy(ammoInstance5, 0.5f);
-            ammoInstance5.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 15 + transform.right * -10, ForceMode.Impulse);
+            ammoInstance5.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 10 + transform.right * -12, ForceMode.Impulse);
 
         }
 
