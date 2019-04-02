@@ -18,14 +18,15 @@ public class WindBreath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetButton("Fire2"))
+        if(PlayerChanger.CharacterSelect == 1)
         {
+            if (Input.GetButton("Fire2"))
+            {
 
-            GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, transform.rotation * Quaternion.Euler(90f, 0f, 0f));
-            Destroy(ammoInstance, 0.02f);
-            ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 15, ForceMode.Impulse);
+                GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, transform.rotation * Quaternion.Euler(90f, 0f, 0f));
+                Destroy(ammoInstance, 0.02f);
+                ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 15, ForceMode.Impulse);
+            }
         }
-
     }
 }
