@@ -7,7 +7,6 @@ public class WindBreath : MonoBehaviour
     public GameObject ammoSpawn;
     public GameObject ammo;
     public CapsuleCollider capsule;
-    public float fireRate;
 
     // Start is called before the first frame update
     void Start()
