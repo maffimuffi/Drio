@@ -157,6 +157,7 @@
           <e p="CharacterMovement.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
           <e p="EarthShot.cs" t="Include" />
+          <e p="FireShot.cs" t="Include" />
           <e p="Grab.cs" t="Include" />
           <e p="Kill.cs" t="Include" />
           <e p="MPlatform.cs" t="Include" />

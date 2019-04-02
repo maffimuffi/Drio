@@ -29,6 +29,7 @@ public class PlayerChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Etsii kamerat, dragonit ja navmeshit scenestä
         PlayerFollowActive = true;
         WindCamera = GameObject.Find("WindCam");
         EarthCamera = GameObject.Find("EarthCam");
@@ -54,6 +55,8 @@ SetNavMesh();
         if (Input.GetKeyDown(KeyCode.Q))
         {
             PlayerFollowActive = !PlayerFollowActive;
+            
+            //Debuggausta ainoastaan navmeshin vaihtoon
             foreach (Vector3 asd in WindNav.path.corners)
             {
                 Debug.DrawLine(asd,Vector3.up,Color.blue,10f);
@@ -71,7 +74,7 @@ SetNavMesh();
             
             
          }
-        
+        //Pelaajan vaihto
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangePlayer(1);
@@ -83,6 +86,8 @@ SetNavMesh();
             ChangePlayer(3);
         }
     }
+    
+    
     ///<see cref="ChangePlayer vaihtaa pelaajaa. playerSelect 1=Wind,2=Earth,3=Fire"/>
     public void ChangePlayer(int playerSelect)
     {
@@ -108,7 +113,7 @@ SetNavMesh();
         SetCamera();
         SetNavMesh();
     }
-
+//Laittaa pelaajan navmeshin "Stand by" tilaan
     public void SetNavMesh()
     {
         if (CharacterSelect == 1)
@@ -132,7 +137,7 @@ SetNavMesh();
         
         
     }
-    
+    //Vaihtaa käytettävää kameraa
     public void SetCamera()
     {
         if (CharacterSelect == 1)
