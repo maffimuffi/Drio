@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject player;
     private float horizontalSpeed = 2.0f;
-    [HideInInspector]
+    //[HideInInspector]
     public PlayerChanger playerChanger;
     private float verticalSpeed = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
-        playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
+       // playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
         if (PlayerChanger.CharacterSelect == 1)
         {
             player = GameObject.Find("WindDragon");
@@ -24,6 +24,12 @@ public class CameraMovement : MonoBehaviour
         {
             player = GameObject.Find("FireDragon");
         }
+        else
+        {
+            Debug.Log("ei löydy");
+        }
+        
+      
     }
 
     // Update is called once per frame
