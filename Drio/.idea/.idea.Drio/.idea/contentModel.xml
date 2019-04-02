@@ -7,6 +7,9 @@
     <e p="C:\Users\joona\Documents\Unity\git\Drio\Drio" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Butterfly (Animated)" t="Include">
+          <e p="Butterfly (Animated).txt" t="Include" />
+        </e>
         <e p="Crates And Barrels Pack Volume 1 - Free Version" t="Include">
           <e p="manual.txt" t="Include" />
         </e>
@@ -146,6 +149,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Attach.cs" t="Include" />
           <e p="Boulder.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="CameraMovement.cs" t="Include" />
@@ -153,12 +157,11 @@
           <e p="CharacterMovement.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
           <e p="EarthShot.cs" t="Include" />
-          <e p="EnvironmentMoveTest.cs" t="Include" />
           <e p="Grab.cs" t="Include" />
           <e p="Kill.cs" t="Include" />
-          <e p="Player_Stats.cs" t="Include" />
           <e p="PlayerChanger.cs" t="Include" />
           <e p="PU.cs" t="Include" />
+          <e p="PuzzleTrigger.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
           <e p="Smash.cs" t="Include" />
           <e p="TestMovement.cs" t="Include" />
