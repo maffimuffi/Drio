@@ -7,13 +7,16 @@ public class WindHit : MonoBehaviour
 
     // Animation stuff
 
-    //public WindBreath wind;
+    private GameObject wind;
+    public GameObject windStart;
+    public GameObject windEnd;
 
     private float windSpeed;
 
     private void Awake()
     {
         windSpeed = 1;
+        wind = GameObject.FindGameObjectWithTag("Wind");
         
     }
 
@@ -35,7 +38,9 @@ public class WindHit : MonoBehaviour
         // Trigger to move object with wind
         if(other.tag == "Test")
         {
-            float dis = Vector3.Distance(other.transform.position, PlayerChanger.ActivePlayer.transform.position);
+            // Min = 0.43, max = 3.536
+            //float dis = Vector3.Distance(other.transform.position, windSpawn.transform.position);
+            //Debug.Log("Distance: " + dis);
             //float forceMult =
             //other.GetComponent<Rigidbody>().AddForce();
 
