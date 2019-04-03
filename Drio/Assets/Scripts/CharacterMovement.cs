@@ -32,13 +32,15 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 movement;
     private Vector3 spin;
 
+    private bool pushing;
+
     //private float gravityScale = 1;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pushing = false;
         thisPlayer = gameObject;
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
@@ -116,12 +118,12 @@ public class CharacterMovement : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
                 Debug.Log("Hups!");
             }
-            
-            if (!Grab.grab || PlayerChanger.CharacterSelect != 2)
+
+            if (!Grab.grab && pushing == false || PlayerChanger.CharacterSelect != 2)
             {
-                
+
                 rb.MovePosition(transform.position + pMovement);
-                
+
 
             } else if (Grab.grab && PlayerChanger.CharacterSelect == 2)
             {
@@ -306,6 +308,7 @@ public class CharacterMovement : MonoBehaviour
         {
 
             jCount = 0;
+            pushing = true;
 
         }
 
@@ -336,6 +339,19 @@ public class CharacterMovement : MonoBehaviour
         
 
     }
+
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Boulder"))
+        {
+
+            
+            pushing = false;
+
+        }
+    }
+
     /*
     void OnTriggerStay(Collider other)
     {

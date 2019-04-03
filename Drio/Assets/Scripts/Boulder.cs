@@ -9,6 +9,7 @@ public class Boulder : MonoBehaviour
     public GameObject player;
     public Rigidbody rb;
 
+
     public bool Push { get; private set; }
 
     // Start is called before the first frame update
@@ -37,10 +38,9 @@ public class Boulder : MonoBehaviour
             Push = true;
         }
 
-        if (collider.name == "EarthDragon" && Grab.grab == true && Push == true){
+        if ((Input.GetKey(KeyCode.W) && collider.name == "EarthDragon" && Grab.grab == true && Push == true)){
             
             transform.parent = collider.transform;
-
 
         }
 
