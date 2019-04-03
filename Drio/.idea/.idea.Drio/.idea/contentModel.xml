@@ -25,6 +25,7 @@
             <e p="OpenDoor.cs" t="Include" />
             <e p="PlayerChanger.cs" t="Include" />
             <e p="PU.cs" t="Include" />
+            <e p="PutOutFire.cs" t="Include" />
             <e p="PuzzleTrigger.cs" t="Include" />
             <e p="Shooting.cs" t="Include" />
             <e p="Smash.cs" t="Include" />
