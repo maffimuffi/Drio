@@ -37,7 +37,7 @@ public class Boulder : MonoBehaviour
             Push = true;
         }
 
-        if (collider.name == "EarthDragon2" && Grab.grab == true && Push == true){
+        if (collider.name == "EarthDragon" && Grab.grab == true && Push == true){
             
             transform.parent = collider.transform;
 
@@ -57,7 +57,7 @@ public class Boulder : MonoBehaviour
             transform.parent = null;
         }
 
-        if (collider.name == "EarthDragon2")
+        if (collider.name == "EarthDragon")
         {
             transform.parent = null;
         }

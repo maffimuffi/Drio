@@ -148,6 +148,9 @@
             </e>
           </e>
         </e>
+        <e p="PollyPrivateers" t="Include">
+          <e p="README.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Attach.cs" t="Include" />
           <e p="Boulder.cs" t="Include" />
@@ -158,9 +161,11 @@
           <e p="Checkpoint.cs" t="Include" />
           <e p="EarthShot.cs" t="Include" />
           <e p="FireShot.cs" t="Include" />
+          <e p="Follower.cs" t="Include" />
           <e p="Grab.cs" t="Include" />
           <e p="Kill.cs" t="Include" />
           <e p="MPlatform.cs" t="Include" />
+          <e p="OpenDoor.cs" t="Include" />
           <e p="PlayerChanger.cs" t="Include" />
           <e p="PU.cs" t="Include" />
           <e p="PuzzleTrigger.cs" t="Include" />
@@ -168,6 +173,9 @@
           <e p="Smash.cs" t="Include" />
           <e p="Tester.cs" t="Include" />
           <e p="TestMovement.cs" t="Include" />
+          <e p="Torch.cs" t="Include" />
+          <e p="WindBreath.cs" t="Include" />
+          <e p="WindHit.cs" t="Include" />
         </e>
         <e p="Stylized Mushroom" t="Include">
           <e p="Shader" t="Include">

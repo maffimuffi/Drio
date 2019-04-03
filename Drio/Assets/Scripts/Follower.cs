@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CharacterFollower : MonoBehaviour
+public class Follower : MonoBehaviour
 {
     [HideInInspector]
     public Transform chaseTPoint;
@@ -22,7 +22,7 @@ public class CharacterFollower : MonoBehaviour
         lastnavMeshAgentDestination = navMeshAgent.destination;
         lastnavMeshAgentVelocity = navMeshAgent.velocity;
         lastnavMeshAgentPath = navMeshAgent.path;
-       
+
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class CharacterFollower : MonoBehaviour
 
     void Chase()
     {
-       
+
         if (gameObject != PlayerChanger.ActivePlayer)
         {
             if (PlayerChanger.CharacterSelect == 1)
@@ -74,7 +74,7 @@ public class CharacterFollower : MonoBehaviour
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
-                    
+
                 }
             }
 
@@ -83,17 +83,18 @@ public class CharacterFollower : MonoBehaviour
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               PlayerChanger.ActivePlayer.transform.right * 3;
-            } else if (!right)
+            }
+            else if (!right)
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               -PlayerChanger.ActivePlayer.transform.right * 3;
             }
 
-            
-           
-            if(!PlayerChanger.PlayerFollowActive)
+
+
+            if (!PlayerChanger.PlayerFollowActive)
             {
-               // pause();
+                // pause();
                 navMeshAgent.enabled = false;
                 //navMeshAgent.isStopped = true;
             }
@@ -107,15 +108,25 @@ public class CharacterFollower : MonoBehaviour
 
             if (navMeshAgent.enabled)
             {
-                navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos;
+                Vector3 up = new Vector3(0, 0.1f, 0);
+                navMeshAgent.destination = PlayerChanger.ActivePlayer.transform.position + pos + up;
+                
             }
+
+            else
+            {
+                //navMeshAgent.destination = transform.position;
+                navMeshAgent.enabled = false;
+                //            navMeshAgent.isStopped = true;
+            }
+
         }
         else
         {
             //navMeshAgent.destination = transform.position;
             navMeshAgent.enabled = false;
-//            navMeshAgent.isStopped = true;
+            //            navMeshAgent.isStopped = true;
         }
     }
-   
+
 }

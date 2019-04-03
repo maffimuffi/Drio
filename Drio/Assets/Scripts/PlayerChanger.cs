@@ -29,6 +29,7 @@ public class PlayerChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         //Etsii kamerat, dragonit ja navmeshit scenestä
         PlayerFollowActive = true;
         WindCamera = GameObject.Find("WindCam");
@@ -42,9 +43,8 @@ public class PlayerChanger : MonoBehaviour
         FireNav = FireDragon.GetComponent<NavMeshAgent>();
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
-     SetCamera();
         ChangePlayer(1);
-SetNavMesh();        
+    
     }
 
     // Update is called once per frame
@@ -75,13 +75,13 @@ SetNavMesh();
             
          }
         //Pelaajan vaihto
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && CharacterSelect != 1)
         {
             ChangePlayer(1);
-        } else if (Input.GetKeyDown(KeyCode.Alpha2))
+        } else if (Input.GetKeyDown(KeyCode.Alpha2) && CharacterSelect != 2)
         {
             ChangePlayer(2);
-        }else if (Input.GetKeyDown(KeyCode.Alpha3))
+        }else if (Input.GetKeyDown(KeyCode.Alpha3) && CharacterSelect != 3)
         {
             ChangePlayer(3);
         }
@@ -92,6 +92,7 @@ SetNavMesh();
     public void ChangePlayer(int playerSelect)
     {
         CharacterSelect = playerSelect;
+        Debug.Log(CharacterSelect);
        
         //player Movement
         WindDragon.GetComponent<CharacterMovement>().setPlayerActive();
@@ -118,20 +119,25 @@ SetNavMesh();
     {
         if (CharacterSelect == 1)
         {
-            
-           
-            WindNav.isStopped = true;
+            EarthNav.enabled = true;
+            FireNav.enabled = true;
+            WindNav.enabled = false;
+//            WindNav.isStopped = true;
             WindDragon.GetComponent<NavMeshObstacle>().enabled = true;
 
         } else if (CharacterSelect == 2)
         {
-            
-            EarthNav.isStopped = true;
+            EarthNav.enabled = false;
+            FireNav.enabled = true;
+            WindNav.enabled = true;
+            //EarthNav.isStopped = true;
             EarthDragon.GetComponent<NavMeshObstacle>().enabled = true;
         } else if (CharacterSelect == 3)
         {
-           
-            FireNav.isStopped = true;
+            WindNav.enabled = true;
+            FireNav.enabled = false;
+            EarthNav.enabled = true;
+            //FireNav.isStopped = true;
             FireDragon.GetComponent<NavMeshObstacle>().enabled = true;
         }
         
@@ -159,6 +165,7 @@ SetNavMesh();
         }
         else
         {
+            Debug.Log("ei mitään");
             CharacterSelect = 1;
             EarthCamera.SetActive(false);
             FireCamera.SetActive(false);
