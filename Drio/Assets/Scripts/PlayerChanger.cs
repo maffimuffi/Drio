@@ -75,13 +75,13 @@ public class PlayerChanger : MonoBehaviour
             
          }
         //Pelaajan vaihto
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && CharacterSelect != 1)
         {
             ChangePlayer(1);
-        } else if (Input.GetKeyDown(KeyCode.Alpha2))
+        } else if (Input.GetKeyDown(KeyCode.Alpha2) && CharacterSelect != 2)
         {
             ChangePlayer(2);
-        }else if (Input.GetKeyDown(KeyCode.Alpha3))
+        }else if (Input.GetKeyDown(KeyCode.Alpha3) && CharacterSelect != 3)
         {
             ChangePlayer(3);
         }

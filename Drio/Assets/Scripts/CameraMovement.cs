@@ -13,21 +13,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
-        if (PlayerChanger.CharacterSelect == 1)
-        {
-            player = GameObject.Find("WindDragon");
-        } else if (PlayerChanger.CharacterSelect == 2)
-        {
-            player = GameObject.Find("EarthDragon");
-        } else if (PlayerChanger.CharacterSelect == 3)
-        {
-            player = GameObject.Find("FireDragon");
-        }
-        else
-        {
-            Debug.Log("ei löydy");
-        }
+       
         
       
     }
@@ -35,8 +21,28 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-            float h = horizontalSpeed * Input.GetAxis("Mouse X");
+        // playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
+        if (PlayerChanger.CharacterSelect == 1)
+        {
+            player = GameObject.Find("WindDragon");
+            //Debug.Log("Wind");
+        }
+        else if (PlayerChanger.CharacterSelect == 2)
+        {
+            player = GameObject.Find("EarthDragon");
+            //Debug.Log("Earth");
+        }
+        else if (PlayerChanger.CharacterSelect == 3)
+        {
+            //Debug.Log("Fire");
+            player = GameObject.Find("FireDragon");
+        }
+        else
+        {
+            Debug.Log("ei löydy");
+        }
+
+        float h = horizontalSpeed * Input.GetAxis("Mouse X");
             float v = verticalSpeed * Input.GetAxis("Mouse Y");
             transform.position = player.transform.position;
         

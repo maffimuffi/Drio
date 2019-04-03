@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
     private Vector3 movement;
 
-    private float gravityScale = 1;
+    //private float gravityScale = 1;
    
     
     // Start is called before the first frame update
@@ -104,7 +104,13 @@ public class CharacterMovement : MonoBehaviour
             
             //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
             Vector3 pMovement = horMovement + verMovement;
-            Vector3 pushVer = new Vector3(0, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
+            Vector3 pushVer = new Vector3(0, 0.0f, -moveVertical) * moveSpeed * Time.deltaTime;
+
+            if(transform.position.y < -1)
+            {
+                transform.position = new Vector3(transform.position.x,0,transform.position.y);
+                Debug.Log("Hups!");
+            }
             
             if (!Grab.grab || PlayerChanger.CharacterSelect != 2)
             {
@@ -316,7 +322,7 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log("Jippii");
 
 
-            rb.AddForce(jump * jumpForce * 1.7f, ForceMode.Impulse);
+            rb.AddForce(jump * jumpForce * 3f, ForceMode.Impulse);
 
         }
 
