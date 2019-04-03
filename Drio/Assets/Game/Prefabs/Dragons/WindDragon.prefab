@@ -49,7 +49,6 @@ GameObject:
   - component: {fileID: 6644013924942184734}
   - component: {fileID: 1368981870}
   - component: {fileID: 5589197863381519046}
-  - component: {fileID: 9075948476673149226}
   - component: {fileID: 1368981881}
   m_Layer: 9
   m_Name: WindDragon
@@ -226,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a30c7820e82d2d48b1f9c6367a6a610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoSpawn: {fileID: 0}
+  ammoSpawn: {fileID: 74714013}
   ammo: {fileID: 7075425163422706619, guid: 7e0025a1248e65c4a9660ca5b6d7da8d, type: 3}
   fireRate: 1
 --- !u!114 &5589197863381519046
@@ -244,21 +243,6 @@ MonoBehaviour:
   ammoSpawn: {fileID: 74714013}
   ammo: {fileID: 804619427020609688, guid: 9b7e35136d1e1774f89123f7316ac525, type: 3}
   capsule: {fileID: 0}
---- !u!114 &9075948476673149226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631948025990190215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a30c7820e82d2d48b1f9c6367a6a610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammoSpawn: {fileID: 0}
-  ammo: {fileID: 7075425163422706619, guid: 7e0025a1248e65c4a9660ca5b6d7da8d, type: 3}
-  fireRate: 1
 --- !u!114 &1368981881
 MonoBehaviour:
   m_ObjectHideFlags: 0
