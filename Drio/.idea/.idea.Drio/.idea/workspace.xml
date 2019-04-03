@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/Tutorial Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/Tutorial Level.unity" afterDir="false" />
-    </list>
+    <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,14 +100,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-45">
               <folding>
-                <marker date="1554283545756" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554283545756" expanded="true" signature="123:1470" ph="{...}" />
-                <marker date="1554283545756" expanded="true" signature="395:431" ph="{...}" />
-                <marker date="1554283545756" expanded="true" signature="489:1468" ph="{...}" />
-                <marker date="1554283545756" expanded="true" signature="634:739" ph="{...}" />
-                <marker date="1554283545756" expanded="true" signature="792:899" ph="{...}" />
-                <marker date="1554283545756" expanded="true" signature="952:1057" ph="{...}" />
-                <marker date="1554283545756" expanded="true" signature="1070:1125" ph="{...}" />
+                <marker date="1554291383020" expanded="false" signature="6:78" ph="..." />
+                <marker date="1554291383020" expanded="true" signature="123:1498" ph="{...}" />
+                <marker date="1554291383020" expanded="true" signature="395:459" ph="{...}" />
+                <marker date="1554291383020" expanded="true" signature="517:1496" ph="{...}" />
+                <marker date="1554291383020" expanded="true" signature="662:767" ph="{...}" />
+                <marker date="1554291383020" expanded="true" signature="820:927" ph="{...}" />
+                <marker date="1554291383020" expanded="true" signature="980:1085" ph="{...}" />
+                <marker date="1554291383020" expanded="true" signature="1098:1153" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -394,14 +392,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
           <folding>
-            <marker date="1554283545756" expanded="false" signature="6:78" ph="..." />
-            <marker date="1554283545756" expanded="true" signature="123:1470" ph="{...}" />
-            <marker date="1554283545756" expanded="true" signature="395:431" ph="{...}" />
-            <marker date="1554283545756" expanded="true" signature="489:1468" ph="{...}" />
-            <marker date="1554283545756" expanded="true" signature="634:739" ph="{...}" />
-            <marker date="1554283545756" expanded="true" signature="792:899" ph="{...}" />
-            <marker date="1554283545756" expanded="true" signature="952:1057" ph="{...}" />
-            <marker date="1554283545756" expanded="true" signature="1070:1125" ph="{...}" />
+            <marker date="1554291383020" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554291383020" expanded="true" signature="123:1498" ph="{...}" />
+            <marker date="1554291383020" expanded="true" signature="395:459" ph="{...}" />
+            <marker date="1554291383020" expanded="true" signature="517:1496" ph="{...}" />
+            <marker date="1554291383020" expanded="true" signature="662:767" ph="{...}" />
+            <marker date="1554291383020" expanded="true" signature="820:927" ph="{...}" />
+            <marker date="1554291383020" expanded="true" signature="980:1085" ph="{...}" />
+            <marker date="1554291383020" expanded="true" signature="1098:1153" ph="{...}" />
           </folding>
         </state>
       </provider>
