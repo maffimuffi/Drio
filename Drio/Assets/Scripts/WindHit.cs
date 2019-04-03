@@ -40,7 +40,7 @@ public class WindHit : MonoBehaviour
         {
             // Min = 0.43, max = 3.536
             //float dis = Vector3.Distance(other.transform.position, windSpawn.transform.position);
-            Debug.Log("Distance: " + dis);
+            //Debug.Log("Distance: " + dis);
             //float forceMult =
             //other.GetComponent<Rigidbody>().AddForce();
 
