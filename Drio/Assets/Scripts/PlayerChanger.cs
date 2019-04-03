@@ -54,6 +54,7 @@ public class PlayerChanger : MonoBehaviour
         //Player follow change
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
             PlayerFollowActive = !PlayerFollowActive;
             
             //Debuggausta ainoastaan navmeshin vaihtoon

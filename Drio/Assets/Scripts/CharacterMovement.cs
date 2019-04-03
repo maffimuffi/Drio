@@ -30,10 +30,11 @@ public class CharacterMovement : MonoBehaviour
     private float jCounter;
 
     private Vector3 movement;
+    private Vector3 spin;
 
     //private float gravityScale = 1;
-   
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,10 @@ public class CharacterMovement : MonoBehaviour
         {
             playerTransform = GameObject.Find("EarthTransformPoint");
         }
+
+
+        spin = new Vector3(0, 100, 0);
+
     }
 
     public void setPlayerActive()
@@ -108,7 +113,7 @@ public class CharacterMovement : MonoBehaviour
 
             if(transform.position.y < -1)
             {
-                transform.position = new Vector3(transform.position.x,0,transform.position.y);
+                transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
                 Debug.Log("Hups!");
             }
             
@@ -140,8 +145,9 @@ public class CharacterMovement : MonoBehaviour
             {
                 if (Grab.grab)
                 {
-                    
-                //en saa rotaatiota toimimaan grabatessa
+                    Quaternion deltaRotation = Quaternion.Euler(spin * Time.deltaTime);
+                    rb.MoveRotation(deltaRotation);
+                    //en saa rotaatiota toimimaan grabatessa
                 }
                 else
                 {
