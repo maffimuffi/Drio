@@ -57,7 +57,7 @@ public class Boulder : MonoBehaviour
             transform.parent = null;
         }
 
-        if (collider.name == "EarthDragon2")
+        if (collider.name == "EarthDragon")
         {
             transform.parent = null;
         }
