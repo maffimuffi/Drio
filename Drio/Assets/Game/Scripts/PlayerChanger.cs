@@ -93,7 +93,7 @@ public class PlayerChanger : MonoBehaviour
     public void ChangePlayer(int playerSelect)
     {
         CharacterSelect = playerSelect;
-        Debug.Log(CharacterSelect);
+        //Debug.Log(CharacterSelect);
        
         //player Movement
         WindDragon.GetComponent<CharacterMovement>().setPlayerActive();
