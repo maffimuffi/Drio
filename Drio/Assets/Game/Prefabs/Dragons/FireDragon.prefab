@@ -49,6 +49,8 @@ GameObject:
   - component: {fileID: 1301223403}
   - component: {fileID: 1301223400}
   - component: {fileID: 1593649480}
+  - component: {fileID: 7633315362075286442}
+  - component: {fileID: 1593649492}
   m_Layer: 9
   m_Name: FireDragon
   m_TagString: Player
@@ -143,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   playerTransform: {fileID: 0}
-  jump: {x: 0, y: 0, z: 0}
+  jump: {x: 0, y: 2, z: 0}
   rotating: 0
 --- !u!195 &6521410912956973625
 NavMeshAgent:
@@ -174,7 +176,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5442103723244837473}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 248f254ca1df29d4389e81a3f368d985, type: 3}
   m_Name: 
@@ -242,3 +244,31 @@ MonoBehaviour:
   ammoSpawn: {fileID: 1227951385}
   ammo: {fileID: 7075425163422706619, guid: 7e0025a1248e65c4a9660ca5b6d7da8d, type: 3}
   fireRate: 1
+--- !u!114 &7633315362075286442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442103723244837473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a30c7820e82d2d48b1f9c6367a6a610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoSpawn: {fileID: 1227951385}
+  ammo: {fileID: 7075425163422706619, guid: 7e0025a1248e65c4a9660ca5b6d7da8d, type: 3}
+  fireRate: 1
+--- !u!114 &1593649492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442103723244837473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff384ccad64ef94587a9ef910a46698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseTPoint: {fileID: 0}
