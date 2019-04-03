@@ -98,7 +98,7 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 2
+    agentHeight: 1
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: f45f4cf877cb394459bde06dae2d8022, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 81acbcfd423ae014bb19bbe4efdd87f5, type: 2}
 --- !u!1 &46099494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1757244489917308, guid: 7241cd952027be340a075a8d8f6f7250,
@@ -4258,6 +4258,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 991134788018033390, guid: f287546dfcaf8ed4080b914f868e7dbc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 991134788018033362, guid: f287546dfcaf8ed4080b914f868e7dbc,
         type: 3}
