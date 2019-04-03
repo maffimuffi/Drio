@@ -20,7 +20,7 @@ public class FireShot : MonoBehaviour
     {
 
 
-        if (Input.GetButton("Fire2") && Time.time > lastFire)
+        if (Input.GetButton("Fire2") && Time.time > lastFire && PlayerChanger.CharacterSelect == 3)
         {
 
             lastFire = Time.time + fireRate;
