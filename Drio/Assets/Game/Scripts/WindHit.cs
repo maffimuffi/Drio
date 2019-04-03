@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class WindHit : MonoBehaviour
 {
-
     // Animation stuff
 
-    private GameObject wind;
-    public GameObject windStart;
-    public GameObject windEnd;
+    private GameObject windStart;
 
     private float windSpeed;
+    private float windMult;
+    private float dis;
+
+    private bool windPush;
 
     private void Awake()
     {
         windSpeed = 1;
-        wind = GameObject.FindGameObjectWithTag("Wind");
-        
-    }
+        windMult = 0;
+        windStart = GameObject.Find("WindStart");
+        windPush = false;
 
-    private void FixedUpdate()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,13 +34,42 @@ public class WindHit : MonoBehaviour
         }
 
         // Trigger to move object with wind
-        if(other.tag == "Test")
+        if (other.tag == "Test")
         {
-            // Min = 0.43, max = 3.536
-            //float dis = Vector3.Distance(other.transform.position, windSpawn.transform.position);
-            //Debug.Log("Distance: " + dis);
-            //float forceMult =
-            //other.GetComponent<Rigidbody>().AddForce();
+            dis = Vector3.Distance(windStart.transform.position, other.transform.position);
+
+            // Set the ranges to increase how effective the wind is
+            if(dis >= 5.8f)
+            {
+                dis = 5.7f;
+                windMult = 1.0f;
+            }
+            else if(dis < 5.8f && dis >= 5.0f)
+            {
+                windMult = 1.0f;
+            }
+            else if(dis < 5.0f && dis >= 4.0f)
+            {
+                windMult = 1.5f;
+            }
+            else if(dis < 4.0 && dis >= 3.0f)
+            {
+                windMult = 2.0f;
+            }
+            else if(dis < 3 && dis >= 2)
+            {
+                windMult = 2.5f;
+            }
+            else if(dis < 2 && dis >= 1)
+            {
+                windMult = 3.0f;
+            }
+            else if(dis < 1)
+            {
+                windMult = 3.5f;
+            }
+            
+            // Script to push the object with wind
 
         }
     }
