@@ -123,6 +123,7 @@ public class CharacterMovement : MonoBehaviour
                 
                 rb.MovePosition(transform.position + pushVer);
                 
+                
             }
 
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
