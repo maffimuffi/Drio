@@ -130,16 +130,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -194,21 +184,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -418,16 +393,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -483,21 +448,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!1001 &314464103
@@ -511,16 +461,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -576,21 +516,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -681,16 +606,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (26)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -745,21 +660,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -1178,16 +1078,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (32)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,21 +1132,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -1570,16 +1445,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1634,21 +1499,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -1934,16 +1784,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1999,21 +1839,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!1001 &971791834
@@ -2027,16 +1852,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (28)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -2092,21 +1907,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -2357,16 +2157,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (34)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2421,21 +2211,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -2542,16 +2317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2606,21 +2371,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -2763,16 +2513,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2828,21 +2568,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!1001 &1150063405
@@ -2856,16 +2581,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (31)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -2922,21 +2637,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!114 &1180068438 stripped
@@ -2968,16 +2668,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (22)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -3033,21 +2723,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -3319,16 +2994,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3384,21 +3049,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!1001 &1351613881
@@ -3412,16 +3062,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -3477,21 +3117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -3772,16 +3397,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (35)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3836,21 +3451,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -3969,16 +3569,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4033,21 +3623,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
@@ -4595,16 +4170,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smash (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4660,21 +4225,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!4 &2003038994 stripped
@@ -4694,16 +4244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -4760,21 +4300,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
 --- !u!1001 &2019661475
@@ -4788,16 +4313,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smash (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684347, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
         type: 3}
@@ -4853,21 +4368,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268023234525684326, guid: 0c904085a98d86f43a8c4bba9d607ade,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c904085a98d86f43a8c4bba9d607ade, type: 3}
