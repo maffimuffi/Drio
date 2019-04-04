@@ -11,19 +11,23 @@ public class CharacterMovement : MonoBehaviour
     
     [HideInInspector]
     public GameObject playerTransform;
+    private GameObject thisPlayer;
+
     private bool jumpedCounter = false;
     private bool jumped = false;
-    private float timer = 0;
-    public Vector3 jump;
-    private Rigidbody rb;
     private bool allowJump;
     private bool doubleJump;
-    private int jCount;
     public bool rotating;
-    
-    
     private bool characterMovementActive = false;
-    private GameObject thisPlayer;
+
+    private float timer = 0;
+    private float gravityScale;
+
+    public Vector3 jump;
+
+    private Rigidbody rb;
+
+    private int jCount;
 
     [HideInInspector]
     
@@ -39,7 +43,7 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        gravityScale = Physics.gravity.y;
         thisPlayer = gameObject;
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
@@ -222,10 +226,6 @@ public class CharacterMovement : MonoBehaviour
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                     jCount++;    
                 }
-                
-
-                
-
             }
             
             
@@ -323,6 +323,12 @@ public class CharacterMovement : MonoBehaviour
         
     }
 
+    void Glide()
+    {
+        gravityScale = 0.25f;
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * gravityScale, rb.velocity.z);
+    }
     
     void OnCollisionEnter(Collision collision)
     {
