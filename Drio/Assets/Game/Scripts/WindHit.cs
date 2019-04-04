@@ -13,15 +13,12 @@ public class WindHit : MonoBehaviour
     private float windMult;
     private float dis;
 
-    private bool windPush;
-
     private void Awake()
     {
         windStart = GameObject.Find("WindStart");
         player = GameObject.Find(PlayerChanger.ActivePlayer.name);
         windSpeed = 10f;
         windMult = 0f;
-        windPush = false;
 
     }
 
@@ -35,8 +32,8 @@ public class WindHit : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        // Trigger to move object with wind
-        if (other.tag == "Test")
+        // Trigger to move object with the tag WindPush with wind ability
+        if (other.tag == "WindPush")
         {
             dis = Vector3.Distance(windStart.transform.position, other.transform.position);
             Rigidbody otherRB = other.GetComponent<Rigidbody>();
@@ -61,17 +58,21 @@ public class WindHit : MonoBehaviour
             }
             else if(dis < 3 && dis >= 2)
             {
-                windMult = 2.5f;
+                windMult = 3.0f;
             }
             else if(dis < 2 && dis >= 1)
             {
-                windMult = 3.0f;
+                windMult = 4.0f;
             }
             else if(dis < 1)
             {
-                windMult = 3.5f;
+                windMult = 5.0f;
             }
+
+            // Take the forward direction the player is facing
             Vector3 playerForward = player.transform.forward;
+
+            // Move the object with tag WindPush
             otherRB.AddForce(playerForward * windSpeed * windMult);
 
         }

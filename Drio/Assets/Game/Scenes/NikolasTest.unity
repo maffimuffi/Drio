@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 1138891310}
   m_Layer: 0
   m_Name: TestCube
-  m_TagString: Test
+  m_TagString: WindPush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 1279434393}
   m_Layer: 0
   m_Name: TriggerTest
-  m_TagString: Test
+  m_TagString: WindPush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
