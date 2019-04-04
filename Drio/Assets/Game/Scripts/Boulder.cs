@@ -24,7 +24,7 @@ public class Boulder : MonoBehaviour
     {
        if(pusher == true && Push == true)
         {
-            rb.MovePosition(transform.position + new Vector3(0,0,-2) * Time.deltaTime);
+            rb.MovePosition(transform.position + new Vector3(0,0,2) * Time.deltaTime);
         }
 
         
