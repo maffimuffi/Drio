@@ -10,11 +10,16 @@ public class CameraMovement : MonoBehaviour
     //[HideInInspector]
     public PlayerChanger playerChanger;
     private float verticalSpeed = 2.0f;
+
+
+   
+
     // Start is called before the first frame update
     void Start()
     {
 
         Cursor.lockState = CursorLockMode.Locked;
+        
 
     }
 
@@ -49,6 +54,11 @@ public class CameraMovement : MonoBehaviour
             //Debug.Log(player.name + PlayerChanger.ActivePlayer.transform.position.y);
 
             transform.Rotate(0, h, 0);
-            
-    }
+
+        
+    } 
+
+    
+
 }
+
