@@ -32,17 +32,7 @@ public class Boulder : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("BoulderTrigger"))
-        {
-
-            OpenDoor.trigger++;
-            Debug.Log(OpenDoor.trigger);
-
-
-        }
-    }
+    
 
 
     public void OnTriggerEnter(Collider collider)
