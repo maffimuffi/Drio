@@ -13,6 +13,7 @@
             <e p="Boulder.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="CameraMovement.cs" t="Include" />
+            <e p="CamMove.cs" t="Include" />
             <e p="CharacterFollower.cs" t="Include" />
             <e p="CharacterMovement.cs" t="Include" />
             <e p="Checkpoint.cs" t="Include" />

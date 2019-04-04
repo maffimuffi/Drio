@@ -18,7 +18,7 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody rb;
     private bool allowJump;
     private bool doubleJump;
-    int jCount;
+    private int jCount;
     public bool rotating;
     
     
@@ -212,12 +212,13 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                  if (jCount < 1)
-                {
+                 {
+                     rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                     jCount++; 
                 }else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
                  {
-                     rb.velocity = Vector3.zero;
+                     rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                     jCount++;    
                 }
