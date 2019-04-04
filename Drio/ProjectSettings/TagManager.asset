@@ -21,6 +21,7 @@ TagManager:
   - PlayerTransformPoint
   - CameraTarget
   - WindPush
+  - BoulderTrigger
   layers:
   - Default
   - TransparentFX

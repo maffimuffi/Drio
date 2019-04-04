@@ -9,6 +9,7 @@ public class Boulder : MonoBehaviour
     public GameObject player;
     public Rigidbody rb;
     public bool pusher;
+    public int doorNum;
 
 
     public bool Push { get; private set; }
@@ -31,6 +32,17 @@ public class Boulder : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("BoulderTrigger"))
+        {
+
+            OpenDoor.trigger++;
+            Debug.Log(OpenDoor.trigger);
+
+
+        }
+    }
 
 
     public void OnTriggerEnter(Collider collider)
@@ -50,8 +62,19 @@ public class Boulder : MonoBehaviour
 
         }
 
-       
+        if (collider.name == "PushBlock")
+        {
+
+            OpenDoor.trigger = doorNum;
+            
+
+
+        }
+
+
     }
+
+    
 
     void OnTriggerExit(Collider collider)
     {
@@ -68,6 +91,8 @@ public class Boulder : MonoBehaviour
             //transform.parent = null;
             pusher = false;
         }
+
+       
     }
 
 
