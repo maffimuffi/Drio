@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
     private float timer = 0;
     public Vector3 jump;
     private Rigidbody rb;
-    
+    private bool allowJump;
     private bool doubleJump;
     int jCount;
     public bool rotating;
@@ -85,7 +85,7 @@ public class CharacterMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
        /* if (jumpedCounter)
         {
@@ -98,9 +98,30 @@ public class CharacterMovement : MonoBehaviour
             }
         }
         */
+        
+        //Draw hyppy mahd
+        
+
         if (characterMovementActive)
         {
             
+            Debug.DrawRay(transform.position,-transform.up,Color.blue,0.5f);
+            RaycastHit hit;
+
+            //tämä pieni paska sen takia koska jcountin chekkaaminen paljon kevyempää kuin kaikkien kolmen.
+            if (jCount != 0)
+            {
+                if (Physics.Raycast(transform.position, -transform.up, out hit, 0.6f) && rb.velocity.y <= 0)
+                {
+
+                    if (hit.transform.tag == "Object" || hit.transform.tag == "Terrain" ||
+                        hit.transform.tag == "Boulder" || hit.transform.tag == "Push")
+                    {
+                        jCount = 0;
+                    }
+                }
+            }
+
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
             
@@ -110,7 +131,7 @@ public class CharacterMovement : MonoBehaviour
             
             //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
             Vector3 pMovement = horMovement + verMovement;
-            Vector3 pushVer = new Vector3(0, 0.0f, -moveVertical) * moveSpeed * Time.deltaTime;
+            Vector3 pushVer = new Vector3(0, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
 
             if(transform.position.y < -1)
             {
@@ -188,14 +209,24 @@ public class CharacterMovement : MonoBehaviour
                 transform.position += playerTransform.transform.forward * moveSpeed;
             }
 */
-            if (Input.GetButtonDown("Jump") && jCount < 2)
+            if (Input.GetButtonDown("Jump"))
             {
+                 if (jCount < 1)
+                {
+                    rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                    jCount++; 
+                }else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
+                 {
+                     rb.velocity = Vector3.zero;
+                    rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                    jCount++;    
+                }
                 
 
-                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-                jCount++;
+                
 
             }
+            
             
             
             
@@ -284,12 +315,17 @@ public class CharacterMovement : MonoBehaviour
             }
             */
         }
+        else
+        {
+            jCount = 0;
+        }
         
     }
 
+    
     void OnCollisionEnter(Collision collision)
     {
-        
+        /*
         if (collision.gameObject.CompareTag("Object"))
         {
             
@@ -318,8 +354,7 @@ public class CharacterMovement : MonoBehaviour
             jCount = 0;
 
         }
-
-
+*/
         if (collision.gameObject.CompareTag("PU"))
         {
             collision.gameObject.SetActive(false);
@@ -340,6 +375,10 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
+    public void ResetJump()
+    {
+        jCount = 0;
+    }
 
    
 
