@@ -42,7 +42,7 @@ public class Boulder : MonoBehaviour
             Push = true;
         }
 
-        if ((Input.GetKey(KeyCode.W) && collider.name == "EarthDragon" && Grab.grab == true && Push == true)){
+        if ((collider.name == "EarthDragon" && Grab.grab == true && Push == true)){
 
             //transform.parent = collider.transform;
             pusher = true;
