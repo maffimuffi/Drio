@@ -7,6 +7,7 @@ public class WindHit : MonoBehaviour
     // Animation stuff
 
     private GameObject windStart;
+    private GameObject player;
 
     private float windSpeed;
     private float windMult;
@@ -16,9 +17,10 @@ public class WindHit : MonoBehaviour
 
     private void Awake()
     {
-        windSpeed = 1;
-        windMult = 0;
         windStart = GameObject.Find("WindStart");
+        player = GameObject.Find(PlayerChanger.ActivePlayer.name);
+        windSpeed = 10f;
+        windMult = 0f;
         windPush = false;
 
     }
@@ -37,6 +39,7 @@ public class WindHit : MonoBehaviour
         if (other.tag == "Test")
         {
             dis = Vector3.Distance(windStart.transform.position, other.transform.position);
+            Rigidbody otherRB = other.GetComponent<Rigidbody>();
 
             // Set the ranges to increase how effective the wind is
             if(dis >= 5.8f)
@@ -68,8 +71,8 @@ public class WindHit : MonoBehaviour
             {
                 windMult = 3.5f;
             }
-            
-            // Script to push the object with wind
+            Vector3 playerForward = player.transform.forward;
+            otherRB.AddForce(playerForward * windSpeed * windMult);
 
         }
     }
