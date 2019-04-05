@@ -122,6 +122,7 @@ public class CharacterMovement : MonoBehaviour
                         hit.transform.tag == "Boulder" || hit.transform.tag == "Push")
                     {
                         jCount = 0;
+                        Physics.gravity = new Vector3(0, -9.8f, 0);
                     }
                 }
             }
@@ -227,6 +228,23 @@ public class CharacterMovement : MonoBehaviour
                     jCount++;    
                 }
             }
+
+            /*if (Input.GetButton("Jump") && PlayerChanger.CharacterSelect == 1 && jCount < 2 && jCount > 1)
+            {
+                Physics.gravity = new Vector3(0, -5, 0);
+            }
+            */
+
+           if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                if (PlayerChanger.CharacterSelect == 1)
+                {
+                    Physics.gravity = new Vector3(0,-5,0);
+                    
+                }
+            }
+
+           
             
             
             
