@@ -22,6 +22,7 @@ TagManager:
   - CameraTarget
   - WindPush
   - BoulderTrigger
+  - Ammo
   layers:
   - Default
   - TransparentFX
