@@ -9,7 +9,8 @@ public class Boulder : MonoBehaviour
     public GameObject player;
     public Rigidbody rb;
     public bool pusher;
-    public int doorNum;
+    public int doorNum = 1;
+    public bool open;
 
 
     public bool Push { get; private set; }
@@ -28,7 +29,12 @@ public class Boulder : MonoBehaviour
             rb.MovePosition(transform.position + new Vector3(0,0,2) * Time.deltaTime);
         }
 
-        
+        if(open == true && doorNum < 2)
+        {
+            Debug.Log("test");
+            doorNum = 2;
+            OpenDoor.trigger += 1;
+        }
         
     }
 
@@ -55,8 +61,8 @@ public class Boulder : MonoBehaviour
         if (collider.name == "PushBlock")
         {
 
-            OpenDoor.trigger = doorNum;
-            
+            //OpenDoor.trigger = doorNum;
+            open = true;
 
 
         }

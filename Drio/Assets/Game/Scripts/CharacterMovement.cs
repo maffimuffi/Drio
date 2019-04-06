@@ -239,7 +239,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
-                    Physics.gravity = new Vector3(0,-5,0);
+                    Physics.gravity = new Vector3(0,-7,0);
                     
                 }
             }
