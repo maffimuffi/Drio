@@ -18,17 +18,17 @@ public class Shooting : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+       
+            if (Input.GetButton("Fire1") && Time.time > lastFire && PlayerChanger.CharacterSelect == 1)
+            {
 
+                lastFire = Time.time + fireRate;
+                GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
+                Destroy(ammoInstance, 0.2f);
+                ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 30, ForceMode.Impulse);
 
-        if (Input.GetButton("Fire1") && Time.time > lastFire)
-        {
-            
-            lastFire = Time.time + fireRate;
-            GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
-            Destroy(ammoInstance, 0.2f);
-            ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 30, ForceMode.Impulse);
-
-        }
+            }
+       
 
     }
 }

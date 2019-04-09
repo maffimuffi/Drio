@@ -93,12 +93,21 @@ public class PlayerChanger : MonoBehaviour
     public void ChangePlayer(int playerSelect)
     {
         CharacterSelect = playerSelect;
-        Debug.Log(CharacterSelect);
+        //Debug.Log(CharacterSelect);
        
         //player Movement
-        WindDragon.GetComponent<CharacterMovement>().setPlayerActive();
-        EarthDragon.GetComponent<CharacterMovement>().setPlayerActive();
-        FireDragon.GetComponent<CharacterMovement>().setPlayerActive();
+        CharacterMovement windMove = WindDragon.GetComponent<CharacterMovement>();
+        windMove.setPlayerActive();
+        windMove.ResetJump();
+        
+        CharacterMovement earthMove = EarthDragon.GetComponent<CharacterMovement>();
+        earthMove.setPlayerActive();
+        earthMove.ResetJump();
+        
+        CharacterMovement fireMove = FireDragon.GetComponent<CharacterMovement>();
+        fireMove.setPlayerActive();
+        fireMove.ResetJump();
+        
         if (CharacterSelect == 1)
         {
             ActivePlayer = WindDragon;

@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 9107039482101349073}
   - component: {fileID: 1965409431}
   - component: {fileID: 1965409444}
+  - component: {fileID: 7850623480273054672}
   m_Layer: 9
   m_Name: EarthDragon
   m_TagString: Player
@@ -269,3 +270,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseTPoint: {fileID: 0}
+--- !u!114 &7850623480273054672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34609001872291252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9b117df2eb0dc448987ff39f45d198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

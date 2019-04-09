@@ -17,6 +17,12 @@ TagManager:
   - onFire
   - Wind
   - Test
+  - mPlatform
+  - PlayerTransformPoint
+  - CameraTarget
+  - WindPush
+  - BoulderTrigger
+  - Ammo
   layers:
   - Default
   - TransparentFX
@@ -26,7 +32,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 

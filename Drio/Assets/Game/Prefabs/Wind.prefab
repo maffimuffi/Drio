@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8018281278340602548}
   - component: {fileID: 6841444750522215865}
   - component: {fileID: 2738149171538055562}
-  - component: {fileID: 57214694109425632}
+  - component: {fileID: 4139980596830896651}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Wind
@@ -150,7 +150,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804619427020609688}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -171,8 +171,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &57214694109425632
+  m_CollisionDetection: 1
+--- !u!114 &4139980596830896651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,5 +184,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6f9e095baf2954185f61c6854fe762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windStart: {fileID: 0}
-  windEnd: {fileID: 0}

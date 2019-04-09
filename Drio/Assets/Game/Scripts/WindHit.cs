@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class WindHit : MonoBehaviour
 {
-
     // Animation stuff
 
-    private GameObject wind;
-    public GameObject windStart;
-    public GameObject windEnd;
+    private GameObject windStart;
+    private GameObject player;
 
     private float windSpeed;
+    private float windMult;
+    private float dis;
 
     private void Awake()
     {
-        windSpeed = 1;
-        wind = GameObject.FindGameObjectWithTag("Wind");
-        
-    }
+        windStart = GameObject.Find("WindStart");
+        player = GameObject.Find(PlayerChanger.ActivePlayer.name);
+        windSpeed = 10f;
+        windMult = 0f;
 
-    private void FixedUpdate()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,14 +32,48 @@ public class WindHit : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        // Trigger to move object with wind
-        if(other.tag == "Test")
+        // Trigger to move object with the tag WindPush with wind ability
+        if (other.tag == "WindPush")
         {
-            // Min = 0.43, max = 3.536
-            //float dis = Vector3.Distance(other.transform.position, windSpawn.transform.position);
-            //Debug.Log("Distance: " + dis);
-            //float forceMult =
-            //other.GetComponent<Rigidbody>().AddForce();
+            dis = Vector3.Distance(windStart.transform.position, other.transform.position);
+            Rigidbody otherRB = other.GetComponent<Rigidbody>();
+
+            // Set the ranges to increase how effective the wind is
+            if(dis >= 5.8f)
+            {
+                dis = 5.7f;
+                windMult = 1.0f;
+            }
+            else if(dis < 5.8f && dis >= 5.0f)
+            {
+                windMult = 1.0f;
+            }
+            else if(dis < 5.0f && dis >= 4.0f)
+            {
+                windMult = 1.5f;
+            }
+            else if(dis < 4.0 && dis >= 3.0f)
+            {
+                windMult = 2.0f;
+            }
+            else if(dis < 3 && dis >= 2)
+            {
+                windMult = 3.0f;
+            }
+            else if(dis < 2 && dis >= 1)
+            {
+                windMult = 4.0f;
+            }
+            else if(dis < 1)
+            {
+                windMult = 5.0f;
+            }
+
+            // Take the forward direction the player is facing
+            Vector3 playerForward = player.transform.forward;
+
+            // Move the object with tag WindPush
+            otherRB.AddForce(playerForward * windSpeed * windMult);
 
         }
     }

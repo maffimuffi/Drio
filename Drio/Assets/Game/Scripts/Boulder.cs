@@ -8,6 +8,9 @@ public class Boulder : MonoBehaviour
 
     public GameObject player;
     public Rigidbody rb;
+    public bool pusher;
+    public int doorNum = 1;
+    public bool open;
 
 
     public bool Push { get; private set; }
@@ -21,12 +24,21 @@ public class Boulder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       if(pusher == true && Push == true)
+        {
+            rb.MovePosition(transform.position + new Vector3(0,0,2) * Time.deltaTime);
+        }
 
-        
+        if(open == true && doorNum < 2)
+        {
+            Debug.Log("test");
+            doorNum = 2;
+            OpenDoor.trigger += 1;
+        }
         
     }
 
+    
 
 
     public void OnTriggerEnter(Collider collider)
@@ -38,14 +50,27 @@ public class Boulder : MonoBehaviour
             Push = true;
         }
 
-        if ((Input.GetKey(KeyCode.W) && collider.name == "EarthDragon" && Grab.grab == true && Push == true)){
+        if ((collider.name == "EarthDragon" && Grab.grab == true && Push == true)){
+
+            //transform.parent = collider.transform;
+            pusher = true;
             
-            transform.parent = collider.transform;
 
         }
 
-       
+        if (collider.name == "PushBlock")
+        {
+
+            //OpenDoor.trigger = doorNum;
+            open = true;
+
+
+        }
+
+
     }
+
+    
 
     void OnTriggerExit(Collider collider)
     {
@@ -54,13 +79,16 @@ public class Boulder : MonoBehaviour
         {
            
             Push = false;
-            transform.parent = null;
+            //transform.parent = null;
         }
 
         if (collider.name == "EarthDragon")
         {
-            transform.parent = null;
+            //transform.parent = null;
+            pusher = false;
         }
+
+       
     }
 
 
