@@ -8,6 +8,7 @@ public class FireShot : MonoBehaviour
     public GameObject ammo;
     private float lastFire = 0.5f;
     public float fireRate;
+    public AudioSource fireSound;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,16 @@ public class FireShot : MonoBehaviour
 
             
 
+        }
+
+        if (Input.GetButtonDown("Fire2") && PlayerChanger.CharacterSelect == 3)
+        {
+            fireSound.Play();
+        }
+
+        if (Input.GetButtonUp("Fire2") && PlayerChanger.CharacterSelect == 3)
+        {
+            fireSound.Stop();
         }
 
     }
