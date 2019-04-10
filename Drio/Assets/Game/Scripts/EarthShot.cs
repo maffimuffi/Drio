@@ -8,8 +8,6 @@ public class EarthShot : MonoBehaviour
     public GameObject ammo;
     private float lastFire = 0.5f;
     public float fireRate;
-    public AudioSource earthSound;
-
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +20,9 @@ public class EarthShot : MonoBehaviour
     {
 
 
-        if (Input.GetButtonDown("Fire2") && Time.time > lastFire && PlayerChanger.CharacterSelect == 2)
+        if (Input.GetButton("Fire2") && Time.time > lastFire && PlayerChanger.CharacterSelect == 2)
         {
-            earthSound.Play();
+
             lastFire = Time.time + fireRate;
             GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
             Destroy(ammoInstance, 0.5f);
@@ -42,11 +40,8 @@ public class EarthShot : MonoBehaviour
             GameObject ammoInstance5 = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
             Destroy(ammoInstance5, 0.5f);
             ammoInstance5.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 10 + transform.right * -12, ForceMode.Impulse);
-            
+
         }
-
-       
-
 
     }
 

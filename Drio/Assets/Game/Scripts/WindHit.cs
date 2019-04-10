@@ -75,8 +75,6 @@ public class WindHit : MonoBehaviour
             // Move the object with tag WindPush
             otherRB.AddForce(playerForward * windSpeed * windMult);
 
-
-
         }
     }
 }

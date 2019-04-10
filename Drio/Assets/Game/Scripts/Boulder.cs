@@ -11,7 +11,6 @@ public class Boulder : MonoBehaviour
     public bool pusher;
     public int doorNum = 1;
     public bool open;
-    public AudioSource Bsound;
 
 
     public bool Push { get; private set; }
@@ -28,7 +27,6 @@ public class Boulder : MonoBehaviour
        if(pusher == true && Push == true)
         {
             rb.MovePosition(transform.position + new Vector3(0,0,2) * Time.deltaTime);
-            
         }
 
         if(open == true && doorNum < 2)
@@ -53,7 +51,7 @@ public class Boulder : MonoBehaviour
         }
 
         if ((collider.name == "EarthDragon" && Grab.grab == true && Push == true)){
-            Bsound.Play();
+
             //transform.parent = collider.transform;
             pusher = true;
             
@@ -87,7 +85,6 @@ public class Boulder : MonoBehaviour
         if (collider.name == "EarthDragon")
         {
             //transform.parent = null;
-            Bsound.Stop();
             pusher = false;
         }
 

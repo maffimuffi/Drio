@@ -23,7 +23,6 @@ public class PU : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            HUD_PU.amount++;
             PUS.Play();
             Destroy(this.gameObject);
         }
