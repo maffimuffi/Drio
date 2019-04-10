@@ -4513,7 +4513,6 @@ GameObject:
   - component: {fileID: 1924884431371189929}
   - component: {fileID: 1540431596353793321}
   - component: {fileID: 4318249106288122636}
-  - component: {fileID: 1076062696507701641}
   m_Layer: 0
   m_Name: FireShot
   m_TagString: FireShot
@@ -4610,15 +4609,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1076062696507701641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846891563656761275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1776b90ee59f4584898fa48ad2683148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

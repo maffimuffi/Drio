@@ -4354,10 +4354,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1063789345469058, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
-      propertyPath: m_TagString
-      value: Torch
-      objectReference: {fileID: 0}
     - target: {fileID: 4931201405076982, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.45
@@ -7124,11 +7120,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 4528255162989151186, guid: 3481c72d4a22e88439d58592c15989bf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Torch
-      objectReference: {fileID: 0}
     - target: {fileID: 4529588996684750236, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7390,11 +7381,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528255162989151186, guid: 3481c72d4a22e88439d58592c15989bf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Torch
       objectReference: {fileID: 0}
     - target: {fileID: 4529588996684750236, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
@@ -7708,11 +7694,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528255162989151186, guid: 3481c72d4a22e88439d58592c15989bf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Torch
       objectReference: {fileID: 0}
     - target: {fileID: 4529588996684750236, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
@@ -10390,10 +10371,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1063789345469058, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
-      propertyPath: m_TagString
-      value: Torch
-      objectReference: {fileID: 0}
     - target: {fileID: 4931201405076982, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.941
@@ -10992,11 +10969,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528255162989151186, guid: 3481c72d4a22e88439d58592c15989bf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Torch
       objectReference: {fileID: 0}
     - target: {fileID: 4529588996684750236, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
@@ -13251,10 +13223,6 @@ PrefabInstance:
     - target: {fileID: 1063789345469058, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
       propertyPath: m_Name
       value: Candle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063789345469058, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
-      propertyPath: m_TagString
-      value: Torch
       objectReference: {fileID: 0}
     - target: {fileID: 4931201405076982, guid: f0317d1736c8360418370bd5dd25470a, type: 3}
       propertyPath: m_LocalPosition.x

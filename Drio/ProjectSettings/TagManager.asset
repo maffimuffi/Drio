@@ -23,7 +23,6 @@ TagManager:
   - WindPush
   - BoulderTrigger
   - Ammo
-  - Torch
   layers:
   - Default
   - TransparentFX

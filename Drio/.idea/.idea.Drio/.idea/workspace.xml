@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Import/Conifers [BOTD]/VSPro_CTIShaderController.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,19 +26,27 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="4" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="cs" value="7651" />
+=======
+          <entry key="cs" value="7579" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="C#" value="7651" />
+=======
+          <entry key="C#" value="7579" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -72,20 +89,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <marker date="1554882475787" expanded="false" signature="6:113" ph="..." />
-                <marker date="1554882475787" expanded="true" signature="152:888" ph="{...}" />
-                <marker date="1554882475787" expanded="true" signature="856:879" ph="{...}" />
-                <marker date="1554882475787" expanded="true" signature="856:886" ph="{...}" />
+                <marker date="1554803315054" expanded="false" signature="6:113" ph="..." />
+                <marker date="1554803315054" expanded="true" signature="152:591" ph="{...}" />
+                <marker date="1554803315054" expanded="true" signature="253:266" ph="{...}" />
+                <marker date="1554803315054" expanded="true" signature="324:337" ph="{...}" />
+                <marker date="1554803315054" expanded="true" signature="386:589" ph="{...}" />
+                <marker date="1554803315054" expanded="true" signature="448:582" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
                 <marker date="1554812727627" expanded="true" signature="6:135" ph="..." />
                 <marker date="1554812727627" expanded="true" signature="173:449" ph="{...}" />
@@ -97,6 +116,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,14 +135,16 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <marker date="1554881543210" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554881543210" expanded="true" signature="116:1726" ph="{...}" />
-                <marker date="1554881543210" expanded="true" signature="1715:1721" ph="{...}" />
+                <marker date="1554803315052" expanded="false" signature="6:78" ph="..." />
+                <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
+                <marker date="1554803315052" expanded="true" signature="1618:1624" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -196,7 +218,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -212,8 +233,11 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/CharacterMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/endgame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs" />
         <option value="$PROJECT_DIR$/Assets/FireShotAmmo.cs" />
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
       </list>
     </option>
   </component>
@@ -234,13 +258,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,12 +319,19 @@
       <workItem from="1554275726657" duration="4715000" />
       <workItem from="1554362733159" duration="5467000" />
       <workItem from="1554812128030" duration="739000" />
+<<<<<<< HEAD
       <workItem from="1554882744908" duration="560000" />
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="64087000" />
+=======
+    <option name="totallyTimeSpent" value="63527000" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -313,9 +344,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.147651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14563759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -372,7 +402,6 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerChanger.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterFollower.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/endgame.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/CharacterMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3345">
@@ -390,6 +419,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/LevelEnd.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -402,13 +432,21 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
+<<<<<<< HEAD
             <marker date="1554881543210" expanded="false" signature="6:78" ph="..." />
             <marker date="1554881543210" expanded="true" signature="116:1726" ph="{...}" />
             <marker date="1554881543210" expanded="true" signature="1715:1721" ph="{...}" />
+=======
+            <marker date="1554803315052" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
+            <marker date="1554803315052" expanded="true" signature="1618:1624" ph="{...}" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
           </folding>
         </state>
       </provider>
@@ -457,10 +495,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/endgame.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/LevelEnd.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1554803315054" expanded="false" signature="6:113" ph="..." />
+            <marker date="1554803315054" expanded="true" signature="152:591" ph="{...}" />
+            <marker date="1554803315054" expanded="true" signature="253:266" ph="{...}" />
+            <marker date="1554803315054" expanded="true" signature="324:337" ph="{...}" />
+            <marker date="1554803315054" expanded="true" signature="386:589" ph="{...}" />
+            <marker date="1554803315054" expanded="true" signature="448:582" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <marker date="1554812727627" expanded="true" signature="6:135" ph="..." />
             <marker date="1554812727627" expanded="true" signature="173:449" ph="{...}" />
@@ -471,6 +530,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/FireShotAmmo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -494,5 +554,7 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
   </component>
 </project>
