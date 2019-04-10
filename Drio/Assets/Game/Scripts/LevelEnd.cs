@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelEnd : MonoBehaviour
 {
     public string nextLevel;
+    public AudioSource end;
+    float timer;
+    bool ending;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,18 @@ public class LevelEnd : MonoBehaviour
     void Update()
     {
 
+        if(ending == true)
+        {
+            timer += Time.deltaTime;
+
+            if (timer > 2)
+            {
+                Debug.Log("Loppu");
+                SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+            }
+        }
+
+
     }
 
 
@@ -24,8 +39,14 @@ public class LevelEnd : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Loppu");
-            SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+            
+                end.Play();
+
+
+
+            ending = true;
+
+            
             
         }
 
