@@ -3784,7 +3784,7 @@ PrefabInstance:
     - target: {fileID: 390652200233884537, guid: de4088a95f2ad6d4ea850c5df81ac374,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 91.26
+      value: 88.1
       objectReference: {fileID: 0}
     - target: {fileID: 390652200233884537, guid: de4088a95f2ad6d4ea850c5df81ac374,
         type: 3}
@@ -12044,16 +12044,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4526713439137550958, guid: 3481c72d4a22e88439d58592c15989bf,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.2835573
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526713439137550958, guid: 3481c72d4a22e88439d58592c15989bf,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.011914432
-      objectReference: {fileID: 0}
     - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
       propertyPath: Tsound
@@ -12068,6 +12058,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526713439137550958, guid: 3481c72d4a22e88439d58592c15989bf,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.2835573
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526713439137550958, guid: 3481c72d4a22e88439d58592c15989bf,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.011914432
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3481c72d4a22e88439d58592c15989bf, type: 3}
@@ -27492,6 +27492,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: JukeBox
       objectReference: {fileID: 0}
+    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 95d92b17ff2271040886063c136e1bef, type: 3}
+    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
+        type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
+        type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3893302389668736293, guid: 5387385e2188c3a4aab6f74752ba1196,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27546,31 +27571,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 95d92b17ff2271040886063c136e1bef, type: 3}
-    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
-        type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
-        type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
-        type: 3}
-      propertyPath: Priority
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507542859420839990, guid: 5387385e2188c3a4aab6f74752ba1196,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5387385e2188c3a4aab6f74752ba1196, type: 3}
@@ -28387,7 +28387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951258242}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: -24.431005, z: 1.7}
+  m_LocalPosition: {x: 0.21, y: -24.431005, z: 80.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 194830547}
