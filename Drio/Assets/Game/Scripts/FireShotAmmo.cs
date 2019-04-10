@@ -17,7 +17,7 @@ public class FireShotAmmo : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Torch")
+        if (!other.gameObject.CompareTag("Torch"))
         {
             Destroy(this);
         }

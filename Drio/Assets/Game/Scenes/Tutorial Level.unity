@@ -11712,6 +11712,11 @@ PrefabInstance:
       propertyPath: fireSound
       value: 
       objectReference: {fileID: 1336287837}
+    - target: {fileID: 1301223400, guid: 658c1f01bf28f2c47a4944d7e6d9856f, type: 3}
+      propertyPath: ammo
+      value: 
+      objectReference: {fileID: 1846891563656761275, guid: 98a4988e177b11c4db4df0a2dfc66a20,
+        type: 3}
     - target: {fileID: 7633315362075286442, guid: 658c1f01bf28f2c47a4944d7e6d9856f,
         type: 3}
       propertyPath: m_Enabled
