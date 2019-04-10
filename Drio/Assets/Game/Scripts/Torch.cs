@@ -6,6 +6,7 @@ public class Torch : MonoBehaviour
 {
     public ParticleSystem system;
     bool ani;
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Torch : MonoBehaviour
      {
             if (collision.gameObject.CompareTag("FireShot") && ani == false)
             {
+                sound.Play();
                 OpenDoor.trigger += 1;
                 //sound.GetComponent<smashSound>().on = true;
                 Debug.Log(OpenDoor.trigger);
