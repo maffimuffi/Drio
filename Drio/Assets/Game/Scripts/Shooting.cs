@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
-{
+public class Shooting : MonoBehaviour { 
 
     public GameObject ammoSpawn;
     public GameObject ammo;
@@ -13,37 +12,23 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+            if (Input.GetButton("Fire1") && Time.time > lastFire && PlayerChanger.CharacterSelect == 1)
+            {
 
-        if (Input.GetButton("Fire1") && Time.time > lastFire && PlayerChanger.CharacterSelect == 1)
-        {
+                lastFire = Time.time + fireRate;
+                GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
+                Destroy(ammoInstance, 0.2f);
+                ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 30, ForceMode.Impulse);
 
-            lastFire = Time.time + fireRate;
-            GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
-            Destroy(ammoInstance, 0.2f);
-            ammoInstance.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 30, ForceMode.Impulse);
-
-        }
-
-
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-
-        if (collision.gameObject.name == "Smash" || collision.gameObject.name == "DoorMover")
-        {
-
-            Destroy(this.gameObject);
-
-        }
-
+            }
+       
 
     }
-
 }

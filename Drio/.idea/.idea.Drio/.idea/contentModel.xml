@@ -42,10 +42,8 @@
             <e p="EarthShot.cs" t="Include" />
             <e p="endgame.cs" t="Include" />
             <e p="FireShot.cs" t="Include" />
-            <e p="FireShotAmmo.cs" t="Include" />
             <e p="Follower.cs" t="Include" />
             <e p="Grab.cs" t="Include" />
-            <e p="HUD_PU.cs" t="Include" />
             <e p="Kill.cs" t="Include" />
             <e p="LevelEnd.cs" t="Include" />
             <e p="MPlatform.cs" t="Include" />
