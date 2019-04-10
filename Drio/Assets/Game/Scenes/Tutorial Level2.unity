@@ -11772,6 +11772,11 @@ PrefabInstance:
       propertyPath: Tsound
       value: 
       objectReference: {fileID: 1453753475}
+    - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1453753475}
     - target: {fileID: 4588510265089953122, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
       propertyPath: m_Enabled
@@ -12042,6 +12047,11 @@ PrefabInstance:
     - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
       propertyPath: Tsound
+      value: 
+      objectReference: {fileID: 1453753475}
+    - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
+        type: 3}
+      propertyPath: sound
       value: 
       objectReference: {fileID: 1453753475}
     - target: {fileID: 4588510265089953122, guid: 3481c72d4a22e88439d58592c15989bf,
@@ -12345,6 +12355,11 @@ PrefabInstance:
     - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
       propertyPath: Tsound
+      value: 
+      objectReference: {fileID: 1453753475}
+    - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
+        type: 3}
+      propertyPath: sound
       value: 
       objectReference: {fileID: 1453753475}
     m_RemovedComponents: []
@@ -13374,6 +13389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 717851789}
+  sound: {fileID: 1453753475}
 --- !u!65 &1079971305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15640,6 +15656,11 @@ PrefabInstance:
     - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
         type: 3}
       propertyPath: Tsound
+      value: 
+      objectReference: {fileID: 1453753475}
+    - target: {fileID: 4526713439137550953, guid: 3481c72d4a22e88439d58592c15989bf,
+        type: 3}
+      propertyPath: sound
       value: 
       objectReference: {fileID: 1453753475}
     - target: {fileID: 4588510265089953122, guid: 3481c72d4a22e88439d58592c15989bf,
@@ -28185,6 +28206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 1485808638}
+  sound: {fileID: 1453753475}
 --- !u!65 &1916549739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28564,6 +28586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 1803077486}
+  sound: {fileID: 1453753475}
 --- !u!4 &1970330716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4931201405076982, guid: f0317d1736c8360418370bd5dd25470a,

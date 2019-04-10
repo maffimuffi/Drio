@@ -8,6 +8,7 @@ public class FireShot : MonoBehaviour
     public GameObject ammo;
     private float lastFire = 0.5f;
     public float fireRate;
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class FireShot : MonoBehaviour
 
         if (Input.GetButton("Fire2") && Time.time > lastFire && PlayerChanger.CharacterSelect == 3)
         {
-
+          
             lastFire = Time.time + fireRate;
             GameObject ammoInstance = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
             Destroy(ammoInstance, 0.4f);
@@ -35,6 +36,21 @@ public class FireShot : MonoBehaviour
             ammoInstance3.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 10 + transform.right * -0.5f, ForceMode.Impulse);
 
             
+
+        }
+
+        if (Input.GetButtonDown("Fire2") && PlayerChanger.CharacterSelect == 3)
+        {
+            sound.Play();
+            
+
+
+
+        }
+
+        if (Input.GetButtonUp("Fire2") &&  PlayerChanger.CharacterSelect == 3)
+        {
+            sound.Stop();
 
         }
 
