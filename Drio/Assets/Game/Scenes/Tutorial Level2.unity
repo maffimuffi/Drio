@@ -3445,6 +3445,11 @@ PrefabInstance:
       propertyPath: earthSound
       value: 
       objectReference: {fileID: 1360499696}
+    - target: {fileID: 9107039482101349073, guid: 4bedc849773d2fb47be52bca1d744879,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1360499696}
     - target: {fileID: 1965409431, guid: 4bedc849773d2fb47be52bca1d744879, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -21146,6 +21151,10 @@ PrefabInstance:
       propertyPath: fireSound
       value: 
       objectReference: {fileID: 1336287837}
+    - target: {fileID: 1301223400, guid: 658c1f01bf28f2c47a4944d7e6d9856f, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1336287837}
     - target: {fileID: 7633315362075286442, guid: 658c1f01bf28f2c47a4944d7e6d9856f,
         type: 3}
       propertyPath: m_Enabled
@@ -27714,6 +27723,11 @@ PrefabInstance:
     - target: {fileID: 5589197863381519046, guid: 10efa9bab2614744285c7a6bdf7c883e,
         type: 3}
       propertyPath: windSound
+      value: 
+      objectReference: {fileID: 73780500}
+    - target: {fileID: 5589197863381519046, guid: 10efa9bab2614744285c7a6bdf7c883e,
+        type: 3}
+      propertyPath: sound
       value: 
       objectReference: {fileID: 73780500}
     m_RemovedComponents: []
