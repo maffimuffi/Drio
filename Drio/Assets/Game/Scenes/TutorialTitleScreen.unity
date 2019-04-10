@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fafce79b42a38946838e710662f43c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Tutorial Level
+  nextLevel: Tutorial Level2
   music: {fileID: 587617108}
   transision: {fileID: 1780236810}
   change: 0
