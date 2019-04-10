@@ -54,5 +54,10 @@ public class FireShot : MonoBehaviour
 
         }
 
+        if (PlayerChanger.CharacterSelect != 3)
+        {
+            sound.Stop();
+        }
+
     }
 }

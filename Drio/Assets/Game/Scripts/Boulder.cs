@@ -11,6 +11,7 @@ public class Boulder : MonoBehaviour
     public bool pusher;
     public int doorNum = 1;
     public bool open;
+    public AudioSource sound;
 
 
     public bool Push { get; private set; }
@@ -54,7 +55,8 @@ public class Boulder : MonoBehaviour
 
             //transform.parent = collider.transform;
             pusher = true;
-            
+            sound.Play();
+
 
         }
 
@@ -86,6 +88,7 @@ public class Boulder : MonoBehaviour
         {
             //transform.parent = null;
             pusher = false;
+            sound.Stop();
         }
 
        

@@ -44,5 +44,10 @@ public class WindBreath : MonoBehaviour
 
         }
 
+        if(PlayerChanger.CharacterSelect != 1)
+        {
+            sound.Stop();
+        }
+
     }
 }
