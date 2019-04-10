@@ -37,7 +37,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="cs" value="7651" />
+=======
+          <entry key="cs" value="7579" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
           <entry key="cs" value="7579" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
@@ -58,7 +62,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="C#" value="7651" />
+=======
+          <entry key="C#" value="7579" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
           <entry key="C#" value="7579" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
@@ -144,6 +152,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,6 +171,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
@@ -270,8 +281,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs" />
         <option value="$PROJECT_DIR$/Assets/FireShotAmmo.cs" />
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
@@ -365,7 +379,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1554882744908" duration="560000" />
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
@@ -382,7 +399,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="64087000" />
+=======
+    <option name="totallyTimeSpent" value="63527000" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
     <option name="totallyTimeSpent" value="63527000" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
@@ -486,6 +507,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/LevelEnd.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -506,6 +528,8 @@
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -514,9 +538,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <marker date="1554881543210" expanded="false" signature="6:78" ph="..." />
             <marker date="1554881543210" expanded="true" signature="116:1726" ph="{...}" />
             <marker date="1554881543210" expanded="true" signature="1715:1721" ph="{...}" />
+=======
+            <marker date="1554803315052" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
+            <marker date="1554803315052" expanded="true" signature="1618:1624" ph="{...}" />
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
             <marker date="1554803315052" expanded="false" signature="6:78" ph="..." />
             <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
@@ -624,6 +654,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/FireShotAmmo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -647,6 +678,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
