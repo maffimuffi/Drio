@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77896676-2760-4f30-9873-6afeca172fc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drio/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Import/Conifers [BOTD]/VSPro_CTIShaderController.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
@@ -15,7 +17,7 @@
     <session id="-1807979196">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -27,23 +29,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="7444" />
+          <entry key="cs" value="7579" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="7444" />
+          <entry key="C#" value="7579" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="21" />
+          <entry key="cs" value="22" />
           <entry key="shader" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="21" />
+          <entry key="C#" value="22" />
           <entry key="ShaderLab" value="1" />
         </counts>
       </usages-collector>
@@ -87,15 +89,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/endgame.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="375">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
-                <marker date="1554812532915" expanded="true" signature="6:78" ph="..." />
-                <marker date="1554812532915" expanded="true" signature="116:313" ph="{...}" />
-                <marker date="1554812532915" expanded="true" signature="211:232" ph="{...}" />
-                <marker date="1554812532915" expanded="true" signature="290:311" ph="{...}" />
+                <marker date="1554812727627" expanded="true" signature="6:135" ph="..." />
+                <marker date="1554812727627" expanded="true" signature="173:449" ph="{...}" />
+                <marker date="1554812727627" expanded="true" signature="250:271" ph="{...}" />
+                <marker date="1554812727627" expanded="true" signature="329:350" ph="{...}" />
+                <marker date="1554812727627" expanded="true" signature="380:447" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -178,10 +181,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/PlayerChanger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/endgame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/LevelEnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -196,6 +199,7 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/PlayerChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/CharacterMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/endgame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs" />
       </list>
     </option>
   </component>
@@ -276,12 +280,12 @@
       <workItem from="1554190024138" duration="12357000" />
       <workItem from="1554275726657" duration="4715000" />
       <workItem from="1554362733159" duration="5467000" />
-      <workItem from="1554812128030" duration="398000" />
+      <workItem from="1554812128030" duration="739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63186000" />
+    <option name="totallyTimeSpent" value="63527000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,7 +298,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14563759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -371,7 +374,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1554803315052" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
+            <marker date="1554803315052" expanded="true" signature="1618:1624" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/CameraMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -417,6 +428,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/endgame.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/LevelEnd.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -431,15 +449,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/endgame.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/endgame.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
-            <marker date="1554812532915" expanded="true" signature="6:78" ph="..." />
-            <marker date="1554812532915" expanded="true" signature="116:313" ph="{...}" />
-            <marker date="1554812532915" expanded="true" signature="211:232" ph="{...}" />
-            <marker date="1554812532915" expanded="true" signature="290:311" ph="{...}" />
+            <marker date="1554812727627" expanded="true" signature="6:135" ph="..." />
+            <marker date="1554812727627" expanded="true" signature="173:449" ph="{...}" />
+            <marker date="1554812727627" expanded="true" signature="250:271" ph="{...}" />
+            <marker date="1554812727627" expanded="true" signature="329:350" ph="{...}" />
+            <marker date="1554812727627" expanded="true" signature="380:447" ph="{...}" />
           </folding>
         </state>
       </provider>
