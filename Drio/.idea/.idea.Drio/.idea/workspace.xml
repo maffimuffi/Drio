@@ -39,6 +39,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="cs" value="7651" />
 =======
           <entry key="cs" value="7579" />
@@ -58,10 +59,14 @@
 =======
           <entry key="cs" value="7579" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+          <entry key="cs" value="7579" />
+>>>>>>> parent of 2ba9b0b... gjj
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +92,9 @@
 =======
           <entry key="C#" value="7579" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+          <entry key="C#" value="7579" />
+>>>>>>> parent of 2ba9b0b... gjj
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -162,6 +170,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -192,6 +201,8 @@
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+>>>>>>> parent of 2ba9b0b... gjj
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -294,6 +305,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/FireShot.cs" />
         <option value="$PROJECT_DIR$/Assets/FireShotAmmo.cs" />
 =======
@@ -308,6 +320,8 @@
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+>>>>>>> parent of 2ba9b0b... gjj
       </list>
     </option>
   </component>
@@ -395,6 +409,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1554882744908" duration="560000" />
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
@@ -408,10 +423,13 @@
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+>>>>>>> parent of 2ba9b0b... gjj
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -437,6 +455,9 @@
 =======
     <option name="totallyTimeSpent" value="63527000" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+    <option name="totallyTimeSpent" value="63527000" />
+>>>>>>> parent of 2ba9b0b... gjj
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,6 +551,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/LevelEnd.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -554,10 +576,13 @@
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+>>>>>>> parent of 2ba9b0b... gjj
     <entry file="file://$PROJECT_DIR$/Assets/Game/Scripts/Boulder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -597,6 +622,11 @@
             <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
             <marker date="1554803315052" expanded="true" signature="1618:1624" ph="{...}" />
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+            <marker date="1554803315052" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554803315052" expanded="true" signature="116:1629" ph="{...}" />
+            <marker date="1554803315052" expanded="true" signature="1618:1624" ph="{...}" />
+>>>>>>> parent of 2ba9b0b... gjj
           </folding>
         </state>
       </provider>
@@ -686,6 +716,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/FireShotAmmo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -721,5 +752,7 @@
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
 =======
 >>>>>>> parent of b4bd709... paljon muutoksia fireshottiin
+=======
+>>>>>>> parent of 2ba9b0b... gjj
   </component>
 </project>
