@@ -13,14 +13,14 @@ public class CharacterMovement : MonoBehaviour
     public GameObject playerTransform;
     private GameObject thisPlayer;
 
-    private bool jumpedCounter = false;
-    private bool jumped = false;
+//    private bool jumpedCounter = false;
+//    private bool jumped = false;
     private bool allowJump;
     private bool doubleJump;
     public bool rotating;
     private bool characterMovementActive = false;
 
-    private float timer = 0;
+//    private float timer = 0;
     private float gravityScale;
 
     public Vector3 jump;
