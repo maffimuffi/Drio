@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     
     public float moveSpeed = 6f;
-    float jumpForce = 1.8f;
+    float jumpForce = 30f;
     //private float rotateSpeed = 5f;
     
     [HideInInspector]
@@ -122,13 +122,13 @@ public class CharacterMovement : MonoBehaviour
                         hit.transform.tag == "Boulder" || hit.transform.tag == "Push")
                     {
                         jCount = 0;
-                        Physics.gravity = new Vector3(0, -9.8f, 0);
+                        Physics.gravity = new Vector3(0, -9.81f, 0);
                     }
                 }
             }
 
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
+            float moveHorizontal = Input.GetAxisRaw("Horizontal");
+            float moveVertical = Input.GetAxisRaw("Vertical");
             
             
             Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
@@ -239,8 +239,16 @@ public class CharacterMovement : MonoBehaviour
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
-                    Physics.gravity = new Vector3(0,-7,0);
-                    
+                    var localVel = transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity);
+                    if (localVel.y <= 0)
+                    {
+                        Physics.gravity = new Vector3(0, -7, 0);
+                    }
+                    else
+                    {
+                        Physics.gravity = new Vector3(0, -9.81f, 0);
+                    }
+
                 }
             }
 
