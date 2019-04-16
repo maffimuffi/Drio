@@ -6,21 +6,21 @@ public class CharacterMovement : MonoBehaviour
 {
     
     public float moveSpeed = 6f;
-    float jumpForce = 1.8f;
+    float jumpForce = 250f;
     //private float rotateSpeed = 5f;
     
     [HideInInspector]
     public GameObject playerTransform;
     private GameObject thisPlayer;
 
-    private bool jumpedCounter = false;
-    private bool jumped = false;
+//    private bool jumpedCounter = false;
+//    private bool jumped = false;
     private bool allowJump;
     private bool doubleJump;
     public bool rotating;
     private bool characterMovementActive = false;
 
-    private float timer = 0;
+//    private float timer = 0;
     private float gravityScale;
 
     public Vector3 jump;
@@ -122,13 +122,13 @@ public class CharacterMovement : MonoBehaviour
                         hit.transform.tag == "Boulder" || hit.transform.tag == "Push")
                     {
                         jCount = 0;
-                        Physics.gravity = new Vector3(0, -9.8f, 0);
+                        Physics.gravity = new Vector3(0, -9.81f, 0);
                     }
                 }
             }
 
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
+            float moveHorizontal = Input.GetAxisRaw("Horizontal");
+            float moveVertical = Input.GetAxisRaw("Vertical");
             
             
             Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
@@ -235,12 +235,22 @@ public class CharacterMovement : MonoBehaviour
             }
             */
 
-           if (Input.GetKeyDown(KeyCode.LeftShift))
+           if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
-                    Physics.gravity = new Vector3(0,-7,0);
+                    var localVel = transform.InverseTransformDirection(rb.velocity);
                     
+                    if (localVel.y < 0 && jCount > 0)
+                    {
+                        
+                        Physics.gravity = new Vector3(0, -5, 0);
+                    }
+                    else
+                    {
+                        Physics.gravity = new Vector3(0, -9.81f, 0);
+                    }
+
                 }
             }
 

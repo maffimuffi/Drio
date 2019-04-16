@@ -16,7 +16,10 @@ public class endgame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            BackToMenu();
+        }
     }
 
     public void BackToMenu()

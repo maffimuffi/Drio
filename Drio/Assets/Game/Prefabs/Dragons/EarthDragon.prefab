@@ -146,8 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   playerTransform: {fileID: 0}
-  jump: {x: 0, y: 2, z: 0}
   rotating: 0
+  jump: {x: 0, y: 2, z: 0}
 --- !u!195 &9086083288730872068
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -207,14 +207,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34609001872291252}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3744854076889207279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +242,7 @@ MonoBehaviour:
   ammoSpawn: {fileID: 1058553252}
   ammo: {fileID: 8076030701388722464, guid: 43e22e0139481e044a838347a2af2036, type: 3}
   fireRate: 1
+  sound: {fileID: 0}
 --- !u!114 &1965409431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34609001872291252}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a30c7820e82d2d48b1f9c6367a6a610, type: 3}
   m_Name: 
@@ -282,3 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9b117df2eb0dc448987ff39f45d198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoSpawn: {fileID: 1058553252}
+  ammo: {fileID: 7075425163422706619, guid: 7e0025a1248e65c4a9660ca5b6d7da8d, type: 3}
+  fireRate: 1
