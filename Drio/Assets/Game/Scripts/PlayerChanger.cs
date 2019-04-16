@@ -135,14 +135,16 @@ public class PlayerChanger : MonoBehaviour
 //            WindNav.isStopped = true;
             WindDragon.GetComponent<NavMeshObstacle>().enabled = true;
 
-        } else if (CharacterSelect == 2)
+        }
+        else if (CharacterSelect == 2)
         {
             EarthNav.enabled = false;
             FireNav.enabled = true;
             WindNav.enabled = true;
             //EarthNav.isStopped = true;
             EarthDragon.GetComponent<NavMeshObstacle>().enabled = true;
-        } else if (CharacterSelect == 3)
+        }
+        else if (CharacterSelect == 3)
         {
             WindNav.enabled = true;
             FireNav.enabled = false;
@@ -162,12 +164,14 @@ public class PlayerChanger : MonoBehaviour
             FireCamera.SetActive(false);
             WindCamera.SetActive(true);
             
-        } else if (CharacterSelect == 2)
+        }
+        else if (CharacterSelect == 2)
         {
             EarthCamera.SetActive(true);
             FireCamera.SetActive(false);
             WindCamera.SetActive(false);
-        } else if (CharacterSelect == 3)
+        }
+        else if (CharacterSelect == 3)
         {
             EarthCamera.SetActive(false);
             WindCamera.SetActive(false);
