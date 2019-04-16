@@ -18,7 +18,7 @@ public class CameraHolder : MonoBehaviour
     {
         if(hit)
         {
-            gameObject.transform.ro
+            //gameObject.transform.ro
         }
     }
 
