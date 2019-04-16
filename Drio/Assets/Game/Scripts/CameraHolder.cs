@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CameraHolder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    private bool hit = false;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(hit)
+        {
+           // gameObject.transform.rotation = Quaternion.Lerp(0,);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        hit = true;
     }
 }
