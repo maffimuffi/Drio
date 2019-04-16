@@ -26,7 +26,7 @@ public class WindHit : MonoBehaviour
     {
 
         // Trigger to shut down fire
-        if (other.tag == "onFire")
+        if (other.tag == "OnFire")
         {
             // Animation?
             Destroy(other.gameObject);

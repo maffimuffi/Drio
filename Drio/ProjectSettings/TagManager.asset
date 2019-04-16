@@ -14,7 +14,6 @@ TagManager:
   - Object
   - Checkpoint
   - FireShot
-  - onFire
   - Wind
   - Test
   - mPlatform
@@ -23,6 +22,7 @@ TagManager:
   - WindPush
   - BoulderTrigger
   - Ammo
+  - OnFire
   layers:
   - Default
   - TransparentFX
