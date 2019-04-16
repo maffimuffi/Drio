@@ -3439,6 +3439,11 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 1360499696}
+    - target: {fileID: 9107039482101349075, guid: 4bedc849773d2fb47be52bca1d744879,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bedc849773d2fb47be52bca1d744879, type: 3}
 --- !u!1001 &409176024
@@ -21135,6 +21140,10 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 1336287837}
+    - target: {fileID: 1301223403, guid: 658c1f01bf28f2c47a4944d7e6d9856f, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658c1f01bf28f2c47a4944d7e6d9856f, type: 3}
 --- !u!1001 &1563526047
@@ -27606,6 +27615,11 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 73780500}
+    - target: {fileID: 6644013924942184734, guid: 10efa9bab2614744285c7a6bdf7c883e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10efa9bab2614744285c7a6bdf7c883e, type: 3}
 --- !u!1001 &1830647553

@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     
     public float moveSpeed = 6f;
-    float jumpForce = 30f;
+    float jumpForce = 250f;
     //private float rotateSpeed = 5f;
     
     [HideInInspector]
@@ -235,14 +235,16 @@ public class CharacterMovement : MonoBehaviour
             }
             */
 
-           if (Input.GetKeyDown(KeyCode.LeftShift))
+           if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
-                    var localVel = transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity);
-                    if (localVel.y <= 0)
+                    var localVel = transform.InverseTransformDirection(rb.velocity);
+                    
+                    if (localVel.y < 0 && jCount > 0)
                     {
-                        Physics.gravity = new Vector3(0, -7, 0);
+                        
+                        Physics.gravity = new Vector3(0, -5, 0);
                     }
                     else
                     {
