@@ -40,6 +40,7 @@
             <e p="CharacterFollower.cs" t="Include" />
             <e p="CharacterMovement.cs" t="Include" />
             <e p="Checkpoint.cs" t="Include" />
+            <e p="EarthAmmo.cs" t="Include" />
             <e p="EarthShot.cs" t="Include" />
             <e p="endgame.cs" t="Include" />
             <e p="FireShot.cs" t="Include" />

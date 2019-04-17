@@ -17,6 +17,7 @@ public class UITextPopup : MonoBehaviour
     private bool exiting;
     public TextMeshProUGUI text;
     public float maxSize;
+    
 
     public float minSize;
 
@@ -25,7 +26,7 @@ public class UITextPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
         popupCounter = 0;
         backroundMat = GetComponent<RawImage>();
         text = GetComponentInChildren<TextMeshProUGUI>();
@@ -55,7 +56,7 @@ public class UITextPopup : MonoBehaviour
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x >= maxSize)
             {
                 backroundMat.transform.localScale =
-                    new Vector3(maxSize,maxSize, 0);
+                new Vector3(maxSize,maxSize, 0);
                 entering = false;
                 entered = true;
                 popupCounter = 0;
@@ -89,7 +90,7 @@ public class UITextPopup : MonoBehaviour
         entering = true;
         exiting = false;
     }
-
+    
     public void TextChange(int x)
     {
         if (x == 0)
