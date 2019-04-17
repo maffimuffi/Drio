@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+
+    //animation stuff
+    public Animator anim;
+
+
     
+
+
     public float moveSpeed = 6f;
     float jumpForce = 250f;
     //private float rotateSpeed = 5f;
@@ -36,7 +43,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 movement;
     private Vector3 spin;
 
-    Animator anim;
+    
 
     int jumpHashFD = Animator.StringToHash("FD_Jump");
     int runStateHash = Animator.StringToHash("Base Layer.Run");
@@ -170,6 +177,9 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
                 Input.GetKey(KeyCode.D))
             {
+                //kokeilu
+                anim.SetBool("isRunning", true);
+
                 rotating = true;
                 
             }
@@ -369,6 +379,10 @@ public class CharacterMovement : MonoBehaviour
         gravityScale = 0.25f;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * gravityScale, rb.velocity.z);
+    }
+    public bool IsPlayerActive()
+    {
+        return characterMovementActive;
     }
     
     void OnCollisionEnter(Collision collision)
