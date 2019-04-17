@@ -11,7 +11,6 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
     void Start()
     {
         uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
-        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
       
     }
 

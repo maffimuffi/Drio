@@ -37,7 +37,7 @@ public class UITextPopup : MonoBehaviour
         backroundMat.transform.localScale =
             new Vector3(backroundMat.transform.localScale.x -1 + minSize,
                 backroundMat.transform.localScale.y -1 + minSize, 0);
-        
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -83,12 +83,14 @@ public class UITextPopup : MonoBehaviour
                 entering = false;
                 exiting = false;
                 popupCounter = 0;
+                backroundMat.enabled = false;
             }
         } 
     }
 
     public void EnterSite()
     {
+        backroundMat.enabled = true;
         entering = true;
         exiting = false;
     }
