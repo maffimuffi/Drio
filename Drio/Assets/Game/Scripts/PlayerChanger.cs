@@ -26,13 +26,13 @@ public class PlayerChanger : MonoBehaviour
     public GameObject ActivePlayerRightNow;
     public static GameObject ActivePlayer;
 
-    private UITextPopup uiText;
+    
 
-    private int scrollSpeed;
+    
     // Start is called before the first frame update
     void Start()
     {
-        scrollSpeed = 0;
+        
         //Etsii kamerat, dragonit ja navmeshit scenestä
         PlayerFollowActive = true;
         //cam = GameObject.Find("MainCamera");
@@ -47,7 +47,7 @@ public class PlayerChanger : MonoBehaviour
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
         ChangePlayer(1);
-        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
+        
         
     }
 
@@ -97,8 +97,7 @@ public class PlayerChanger : MonoBehaviour
         //Scroll wheel
         if (Input.mouseScrollDelta.y > 0)
         {
-            if (scrollSpeed == 0)
-            {
+            
                 if (CharacterSelect == 1)
                 {
                     ChangePlayer(2);
@@ -112,17 +111,12 @@ public class PlayerChanger : MonoBehaviour
                     ChangePlayer(1);
                 }
 
-                scrollSpeed++;
-            }
-            else
-            {
-                scrollSpeed = 0;
-            }
+            
+            
 
         } else if (Input.mouseScrollDelta.y < 0)
         {
-            if (scrollSpeed == 0)
-            {
+            
                 
             if (CharacterSelect == 1)
                 {
@@ -135,12 +129,7 @@ public class PlayerChanger : MonoBehaviour
                     ChangePlayer(2);
                 }
             
-                scrollSpeed++;
-            }
-            else
-            {
-                scrollSpeed = 0;
-            }
+           
         }
     }
     

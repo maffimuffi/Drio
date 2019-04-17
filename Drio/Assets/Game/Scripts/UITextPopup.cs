@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,17 +10,19 @@ public class UITextPopup : MonoBehaviour
     private RawImage backroundMat;
     private bool entering;
     private bool entered;
-    public float popupCounter;
-    public float maxTime;
-    public float popupSpeed;
-    public float maxTransperency;
-    public float transperencyChangeSpeed;
+    
+    private float popupCounter;
+    private float maxTime = 1;
+    private float popupSpeed = 0.1f;
+    private float popupSpeed2 = 0.2f;
+    private float maxTransperency;
+    private float transperencyChangeSpeed;
     private bool exiting;
-    public TextMeshProUGUI text;
-    public float maxSize;
+    private TextMeshProUGUI text;
+    private float maxSize = 1;
     
 
-    public float minSize;
+    private float minSize = 0.5f;
 
     public float transperency;
     
@@ -37,7 +40,7 @@ public class UITextPopup : MonoBehaviour
         backroundMat.transform.localScale =
             new Vector3(backroundMat.transform.localScale.x -1 + minSize,
                 backroundMat.transform.localScale.y -1 + minSize, 0);
-        
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -49,8 +52,8 @@ public class UITextPopup : MonoBehaviour
             popupCounter += Time.deltaTime;
             
                 backroundMat.transform.localScale =
-                    new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed,
-                        backroundMat.transform.localScale.y + popupCounter * popupSpeed, 0);
+                    new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed2,
+                        backroundMat.transform.localScale.y + popupCounter * popupSpeed2, 0);
             
 
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x >= maxSize)
@@ -67,11 +70,13 @@ public class UITextPopup : MonoBehaviour
         if (exiting && (entering || entered))
         {
             popupCounter += Time.deltaTime;
-            
+            if (popupCounter > maxTime / 2)
+            {
                 backroundMat.transform.localScale =
                     new Vector3(backroundMat.transform.localScale.x - popupCounter * popupSpeed,
                         backroundMat.transform.localScale.y - popupCounter * popupSpeed, 0);
-            
+            }
+
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x <= minSize)
             {
                 backroundMat.transform.localScale =
@@ -81,24 +86,26 @@ public class UITextPopup : MonoBehaviour
                 entering = false;
                 exiting = false;
                 popupCounter = 0;
+                gameObject.SetActive(false);
             }
         } 
     }
 
     public void EnterSite()
     {
+        gameObject.SetActive(true);
         entering = true;
         exiting = false;
     }
     
-    public void TextChange(int x)
+    public void TextChange(string x)
     {
-        if (x == 0)
+        if(!String.IsNullOrEmpty(x)){
+            text.text = x;
+        }
+        else
         {
-            text.text = "Howdy, this is a test text!";
-        } else if (x == 1)
-        {
-            text.text = "Hello world. Today is a fine day.";
+            text.text = "TEXT IS NULL, PLEASE ASSIGN IT IN INSPECTOR";
         }
     }
 

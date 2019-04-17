@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
     bool isRunning;
 
     
+    private UITextPopup uiText;
 
 
     public float moveSpeed = 6f;
@@ -61,7 +62,7 @@ public class CharacterMovement : MonoBehaviour
         isGrounded = true;
         isRunning = false;
 
-
+        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
 
         gravityScale = Physics.gravity.y;
         thisPlayer = gameObject;
@@ -89,6 +90,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void setPlayerActive()
     {
+        
         if (thisPlayer.name == "EarthDragon" && PlayerChanger.CharacterSelect == 2)
         {
             characterMovementActive = true;
@@ -103,12 +105,9 @@ public class CharacterMovement : MonoBehaviour
         {
             characterMovementActive = false;
         }
+        uiText.ExitSite();
     }
 
-    private void LateUpdate()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
