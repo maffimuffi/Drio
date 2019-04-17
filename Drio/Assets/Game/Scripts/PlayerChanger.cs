@@ -28,11 +28,11 @@ public class PlayerChanger : MonoBehaviour
 
     
 
-    private int scrollSpeed;
+    
     // Start is called before the first frame update
     void Start()
     {
-        scrollSpeed = 0;
+        
         //Etsii kamerat, dragonit ja navmeshit scenestä
         PlayerFollowActive = true;
         //cam = GameObject.Find("MainCamera");
@@ -97,8 +97,7 @@ public class PlayerChanger : MonoBehaviour
         //Scroll wheel
         if (Input.mouseScrollDelta.y > 0)
         {
-            if (scrollSpeed == 0)
-            {
+            
                 if (CharacterSelect == 1)
                 {
                     ChangePlayer(2);
@@ -112,17 +111,12 @@ public class PlayerChanger : MonoBehaviour
                     ChangePlayer(1);
                 }
 
-                scrollSpeed++;
-            }
-            else
-            {
-                scrollSpeed = 0;
-            }
+            
+            
 
         } else if (Input.mouseScrollDelta.y < 0)
         {
-            if (scrollSpeed == 0)
-            {
+            
                 
             if (CharacterSelect == 1)
                 {
@@ -135,12 +129,7 @@ public class PlayerChanger : MonoBehaviour
                     ChangePlayer(2);
                 }
             
-                scrollSpeed++;
-            }
-            else
-            {
-                scrollSpeed = 0;
-            }
+           
         }
     }
     
