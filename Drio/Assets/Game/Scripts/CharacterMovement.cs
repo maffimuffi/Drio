@@ -130,6 +130,12 @@ public class CharacterMovement : MonoBehaviour
 
         if (isGrounded) {
             anim.SetBool("isGliding", false);
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isRunningJump", false); 
+        }
+
+        if (isRunning) {
+            anim.SetBool("isRunning", true); 
         }
 
         if (characterMovementActive)
@@ -199,7 +205,9 @@ public class CharacterMovement : MonoBehaviour
             else
             {
                 rotating = false;
+                
                 anim.SetBool("isRunning", false);
+                isRunning = false; 
             }
 
             if (rotating)
@@ -255,10 +263,10 @@ public class CharacterMovement : MonoBehaviour
                     isGrounded = false; 
                 }
 
-                if (isRunning == false)
+               else  if (isRunning == false)
                 {
                     anim.SetBool("isJumping", true);
-                    anim.SetBool("isRunningJumping", false);
+                    //anim.SetBool("isRunningJumping", false);
                     isGrounded = false;
                 }
                 if (jCount < 1)

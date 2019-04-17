@@ -4245,7 +4245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a580afbd9559d32419d3ae99dbe8d6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 585190985}
   moveSpeed: 8
   playerTransform: {fileID: 0}
   rotating: 0
@@ -4263,6 +4263,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.6198378, y: 6.281626, z: 9.049011}
   m_Center: {x: 0.4107213, y: 2.6408129, z: 0.2598977}
+--- !u!95 &585190985 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 65d180996a050814a866c4bec22a4e9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 266944440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &585190986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400282, guid: 65d180996a050814a866c4bec22a4e9d,
