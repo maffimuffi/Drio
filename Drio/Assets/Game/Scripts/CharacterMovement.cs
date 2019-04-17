@@ -90,6 +90,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void setPlayerActive()
     {
+        
         if (thisPlayer.name == "EarthDragon" && PlayerChanger.CharacterSelect == 2)
         {
             characterMovementActive = true;
@@ -104,12 +105,9 @@ public class CharacterMovement : MonoBehaviour
         {
             characterMovementActive = false;
         }
+        uiText.ExitSite();
     }
 
-    private void LateUpdate()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
