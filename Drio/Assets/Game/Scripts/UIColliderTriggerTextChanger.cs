@@ -10,7 +10,7 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
         uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
       
     }
@@ -39,10 +39,10 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //if (other.GetComponent<CharacterMovement>().IsPlayerActive())
-            //{
+            if (other.GetComponent<CharacterMovement>().IsPlayerActive())
+            {
                 uiText.ExitSite();
-            //}
+            }
         }
     }
 }

@@ -67,11 +67,13 @@ public class UITextPopup : MonoBehaviour
         if (exiting && (entering || entered))
         {
             popupCounter += Time.deltaTime;
-            
+            if (popupCounter > maxTime / 2)
+            {
                 backroundMat.transform.localScale =
                     new Vector3(backroundMat.transform.localScale.x - popupCounter * popupSpeed,
                         backroundMat.transform.localScale.y - popupCounter * popupSpeed, 0);
-            
+            }
+
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x <= minSize)
             {
                 backroundMat.transform.localScale =

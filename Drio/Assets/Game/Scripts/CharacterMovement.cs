@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
     bool isRunning;
 
     
+    private UITextPopup uiText;
 
 
     public float moveSpeed = 6f;

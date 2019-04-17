@@ -26,7 +26,7 @@ public class PlayerChanger : MonoBehaviour
     public GameObject ActivePlayerRightNow;
     public static GameObject ActivePlayer;
 
-    private UITextPopup uiText;
+    
 
     private int scrollSpeed;
     // Start is called before the first frame update
@@ -47,7 +47,7 @@ public class PlayerChanger : MonoBehaviour
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
         ChangePlayer(1);
-        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
+        
         
     }
 
