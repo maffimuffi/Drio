@@ -25,10 +25,17 @@ public class UITextPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
         popupCounter = 0;
         backroundMat = GetComponent<RawImage>();
         text = GetComponentInChildren<TextMeshProUGUI>();
+        
+        
+        
+        
+        backroundMat.transform.localScale =
+            new Vector3(backroundMat.transform.localScale.x -1 + minSize,
+                backroundMat.transform.localScale.y -1 + minSize, 0);
         
     }
 
@@ -39,8 +46,16 @@ public class UITextPopup : MonoBehaviour
         if (entering && !exiting)
         {
             popupCounter += Time.deltaTime;
-            if (popupCounter >= maxTime)
+            
+                backroundMat.transform.localScale =
+                    new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed,
+                        backroundMat.transform.localScale.y + popupCounter * popupSpeed, 0);
+            
+
+            if (popupCounter >= maxTime || backroundMat.transform.localScale.x >= maxSize)
             {
+                backroundMat.transform.localScale =
+                    new Vector3(maxSize,maxSize, 0);
                 entering = false;
                 entered = true;
                 popupCounter = 0;
@@ -50,9 +65,17 @@ public class UITextPopup : MonoBehaviour
 
         if (exiting && (entering || entered))
         {
-            popupCounter -= Time.deltaTime;
-            if (popupCounter <= 0)
+            popupCounter += Time.deltaTime;
+            
+                backroundMat.transform.localScale =
+                    new Vector3(backroundMat.transform.localScale.x - popupCounter * popupSpeed,
+                        backroundMat.transform.localScale.y - popupCounter * popupSpeed, 0);
+            
+            if (popupCounter >= maxTime || backroundMat.transform.localScale.x <= minSize)
             {
+                backroundMat.transform.localScale =
+                    new Vector3(minSize,
+                        minSize, 0);
                 entered = false;
                 entering = false;
                 exiting = false;

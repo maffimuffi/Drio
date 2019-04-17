@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 
     //animation stuff
     public Animator anim;
+    bool isGrounded; 
 
 
     
@@ -55,6 +56,12 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //animation stuff
+        // anim.SetBool("isJumping", false);
+        isGrounded = true; 
+
+
+
         gravityScale = Physics.gravity.y;
         thisPlayer = gameObject;
         rb = GetComponent<Rigidbody>();
@@ -186,6 +193,7 @@ public class CharacterMovement : MonoBehaviour
             else
             {
                 rotating = false;
+                anim.SetBool("isRunning", false);
             }
 
             if (rotating)
@@ -236,13 +244,26 @@ public class CharacterMovement : MonoBehaviour
 */
             if (Input.GetButtonDown("Jump"))
             {
-                
+
+                anim.SetBool("isJumping", true);
+                isGrounded = false; 
+
                 if (jCount < 1)
                  {
+
+
+
                      rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                     jCount++;
                     anim.SetTrigger(jumpHashFD);
+                    //animaatio
+                    /*
+                    if (isGrounded == false) {
+                        anim.SetBool("isJumping", true);
+                        Debug.Log("meneeks tä ikinä tänne?");
+                    }
+                    */
                 }
                 else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
                  {
@@ -387,6 +408,22 @@ public class CharacterMovement : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
+
+
+
+        //animation stuff 
+        if (collision.gameObject.tag == "Terrain") {
+
+            isGrounded = true;
+            anim.SetBool("isJumping", false);
+            Debug.Log("Isgrounde on true"); 
+        }
+
+
+
+
+
+
         /*
         if (collision.gameObject.CompareTag("Object"))
         {

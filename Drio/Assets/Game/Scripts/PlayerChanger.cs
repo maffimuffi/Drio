@@ -9,9 +9,9 @@ public class PlayerChanger : MonoBehaviour
     public static int CharacterSelect;
 
     //ei piilotettu että nullreferenssit löytöö
-    public GameObject WindCamera;
-    public GameObject EarthCamera;
-    public GameObject FireCamera;
+    //public GameObject cam;
+    //public GameObject EarthCamera;
+    //public GameObject FireCamera;
 
     public GameObject WindDragon;
     public GameObject EarthDragon;
@@ -32,9 +32,9 @@ public class PlayerChanger : MonoBehaviour
         
         //Etsii kamerat, dragonit ja navmeshit scenestä
         PlayerFollowActive = true;
-        WindCamera = GameObject.Find("WindCam");
-        EarthCamera = GameObject.Find("EarthCam");
-        FireCamera = GameObject.Find("FireCam");
+        //cam = GameObject.Find("MainCamera");
+        //EarthCamera = GameObject.Find("EarthCam");
+        //FireCamera = GameObject.Find("FireCam");
 
         WindDragon = GameObject.Find("WindDragon");
         EarthDragon = GameObject.Find("EarthDragon");
@@ -44,7 +44,7 @@ public class PlayerChanger : MonoBehaviour
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
         ChangePlayer(1);
-    
+        //cam.SetActive(true);
     }
 
     // Update is called once per frame
@@ -79,10 +79,12 @@ public class PlayerChanger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && CharacterSelect != 1)
         {
             ChangePlayer(1);
-        } else if (Input.GetKeyDown(KeyCode.Alpha2) && CharacterSelect != 2)
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && CharacterSelect != 2)
         {
             ChangePlayer(2);
-        }else if (Input.GetKeyDown(KeyCode.Alpha3) && CharacterSelect != 3)
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && CharacterSelect != 3)
         {
             ChangePlayer(3);
         }
@@ -112,16 +114,18 @@ public class PlayerChanger : MonoBehaviour
         {
             ActivePlayer = WindDragon;
 
-        } else if (CharacterSelect == 2)
+        }
+        else if (CharacterSelect == 2)
         {
             ActivePlayer = EarthDragon;
-        } else if (CharacterSelect == 3)
+        }
+        else if (CharacterSelect == 3)
         {
             ActivePlayer = FireDragon;
         }
 
         ActivePlayerRightNow = ActivePlayer;
-        SetCamera();
+        //SetCamera();
         SetNavMesh();
     }
 //Laittaa pelaajan navmeshin "Stand by" tilaan
@@ -135,14 +139,16 @@ public class PlayerChanger : MonoBehaviour
 //            WindNav.isStopped = true;
             WindDragon.GetComponent<NavMeshObstacle>().enabled = true;
 
-        } else if (CharacterSelect == 2)
+        }
+        else if (CharacterSelect == 2)
         {
             EarthNav.enabled = false;
             FireNav.enabled = true;
             WindNav.enabled = true;
             //EarthNav.isStopped = true;
             EarthDragon.GetComponent<NavMeshObstacle>().enabled = true;
-        } else if (CharacterSelect == 3)
+        }
+        else if (CharacterSelect == 3)
         {
             WindNav.enabled = true;
             FireNav.enabled = false;
@@ -154,32 +160,8 @@ public class PlayerChanger : MonoBehaviour
         
     }
     //Vaihtaa käytettävää kameraa
-    public void SetCamera()
-    {
-        if (CharacterSelect == 1)
-        {
-            EarthCamera.SetActive(false);
-            FireCamera.SetActive(false);
-            WindCamera.SetActive(true);
-            
-        } else if (CharacterSelect == 2)
-        {
-            EarthCamera.SetActive(true);
-            FireCamera.SetActive(false);
-            WindCamera.SetActive(false);
-        } else if (CharacterSelect == 3)
-        {
-            EarthCamera.SetActive(false);
-            WindCamera.SetActive(false);
-            FireCamera.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("ei mitään");
-            CharacterSelect = 1;
-            EarthCamera.SetActive(false);
-            FireCamera.SetActive(false);
-            WindCamera.SetActive(true);
-        }
-    }
+    //public void SetCamera()
+    //{
+    //    cam.SetActive(true);
+    //}
 }

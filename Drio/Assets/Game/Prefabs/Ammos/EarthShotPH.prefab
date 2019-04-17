@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5272744673289917229}
   - component: {fileID: 374957082733790416}
   - component: {fileID: 8925465865853470601}
+  - component: {fileID: 40480357410873338}
   m_Layer: 0
   m_Name: EarthShotPH
   m_TagString: EarthShot
@@ -108,3 +109,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &40480357410873338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076030701388722464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d898e0683f6dd9f4f9b1d16d31a52479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
