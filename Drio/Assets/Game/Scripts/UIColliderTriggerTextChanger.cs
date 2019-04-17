@@ -24,8 +24,11 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            uiText.TextChange(changerText);
-            uiText.EnterSite();
+            if (other.GetComponent<CharacterMovement>().IsPlayerActive())
+            {
+                uiText.TextChange(changerText);
+                uiText.EnterSite();
+            }
         }
     }
 
