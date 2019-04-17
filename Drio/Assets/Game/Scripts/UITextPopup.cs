@@ -55,7 +55,7 @@ public class UITextPopup : MonoBehaviour
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x >= maxSize)
             {
                 backroundMat.transform.localScale =
-                    new Vector3(maxSize,maxSize, 0);
+                new Vector3(maxSize,maxSize, 0);
                 entering = false;
                 entered = true;
                 popupCounter = 0;
