@@ -43,12 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259a41103c02c9f4ca3bcdfd1f157ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WindCamera: {fileID: 0}
-  EarthCamera: {fileID: 0}
-  FireCamera: {fileID: 0}
   WindDragon: {fileID: 0}
   EarthDragon: {fileID: 0}
   FireDragon: {fileID: 0}
   WindNav: {fileID: 0}
   EarthNav: {fileID: 0}
   FireNav: {fileID: 0}
+  ActivePlayerRightNow: {fileID: 0}

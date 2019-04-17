@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
         Cursor.lockState = CursorLockMode.Locked;
         cameraHolder = GameObject.Find("CameraHolder");
     }
