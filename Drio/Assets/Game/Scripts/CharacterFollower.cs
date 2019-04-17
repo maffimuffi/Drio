@@ -40,13 +40,13 @@ public class CharacterFollower : MonoBehaviour
             {
                 if (gameObject.name == "FireDragon")
                 {
-                    newPosition = new Vector3(-4f, 0.5f, -3f);
+                    newPosition = new Vector3(-4f, 0.5f, -4f);
                     right = false;
                 }
                 else if (gameObject.name == "EarthDragon")
                 {
                     right = true;
-                    newPosition = new Vector3(4f, 0.5f, -3f);
+                    newPosition = new Vector3(4f, 0.5f, -4f);
                 }
 
             }
