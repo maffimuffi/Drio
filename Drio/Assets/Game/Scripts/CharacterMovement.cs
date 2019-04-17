@@ -36,6 +36,11 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 movement;
     private Vector3 spin;
 
+    Animator anim;
+
+    int jumpHashFD = Animator.StringToHash("FD_Jump");
+    int runStateHash = Animator.StringToHash("Base Layer.Run");
+
 
     //private float gravityScale = 1;
 
@@ -62,6 +67,8 @@ public class CharacterMovement : MonoBehaviour
 
 
         spin = new Vector3(0, 100, 0);
+
+        anim = GetComponent<Animator>();
 
     }
 
@@ -133,7 +140,9 @@ public class CharacterMovement : MonoBehaviour
             
             Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
             Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
-            
+
+            //anim.SetFloat("Speed", move);
+
             //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
             Vector3 pMovement = horMovement + verMovement;
             Vector3 pushVer = new Vector3(0, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
@@ -162,6 +171,7 @@ public class CharacterMovement : MonoBehaviour
                 Input.GetKey(KeyCode.D))
             {
                 rotating = true;
+                
             }
             else
             {
@@ -216,12 +226,15 @@ public class CharacterMovement : MonoBehaviour
 */
             if (Input.GetButtonDown("Jump"))
             {
-                 if (jCount < 1)
+                
+                if (jCount < 1)
                  {
                      rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-                    jCount++; 
-                }else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
+                    jCount++;
+                    anim.SetTrigger(jumpHashFD);
+                }
+                else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
                  {
                      rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
