@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UIColliderTriggerTextChanger : MonoBehaviour
 {
-    public int changerText;
-    
+   
+    public string uiTextObject;
     private UITextPopup uiText;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
-                uiText.TextChange(changerText);
+                uiText.TextChange(uiTextObject);
                 uiText.EnterSite();
             }
         }
