@@ -62,7 +62,7 @@ public class CharacterMovement : MonoBehaviour
         isGrounded = true;
         isRunning = false;
 
-
+        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
 
         gravityScale = Physics.gravity.y;
         thisPlayer = gameObject;
