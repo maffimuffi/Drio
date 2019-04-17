@@ -7,8 +7,8 @@ public class CharacterMovement : MonoBehaviour
 
     //animation stuff
     public Animator anim;
-    bool isGrounded; 
-
+    bool isGrounded;
+    bool isRunning;
 
     
 
@@ -58,7 +58,8 @@ public class CharacterMovement : MonoBehaviour
     {
         //animation stuff
         // anim.SetBool("isJumping", false);
-        isGrounded = true; 
+        isGrounded = true;
+        isRunning = false;
 
 
 
@@ -112,20 +113,24 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if (jumpedCounter)
-        {
-            timer += Time.deltaTime;
-            if (timer >= 0.5)
-            {
-                timer = 0;
-                jumped = true;
-                jumpedCounter = false;
-            }
-        }
-        */
-        
+        /* if (jumpedCounter)
+         {
+             timer += Time.deltaTime;
+             if (timer >= 0.5)
+             {
+                 timer = 0;
+                 jumped = true;
+                 jumpedCounter = false;
+             }
+         }
+         */
+
         //Draw hyppy mahd
-        
+
+
+        if (isGrounded) {
+            anim.SetBool("isGliding", false);
+        }
 
         if (characterMovementActive)
         {
@@ -186,6 +191,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 //kokeilu
                 anim.SetBool("isRunning", true);
+                isRunning = true; 
 
                 rotating = true;
                 
@@ -244,10 +250,17 @@ public class CharacterMovement : MonoBehaviour
 */
             if (Input.GetButtonDown("Jump"))
             {
+                if (isRunning) {
+                    anim.SetBool("isRunningJumping", true);
+                    isGrounded = false; 
+                }
 
-                anim.SetBool("isJumping", true);
-                isGrounded = false; 
-
+                if (isRunning == false)
+                {
+                    anim.SetBool("isJumping", true);
+                    anim.SetBool("isRunningJumping", false);
+                    isGrounded = false;
+                }
                 if (jCount < 1)
                  {
 
@@ -279,19 +292,24 @@ public class CharacterMovement : MonoBehaviour
             }
             */
 
+            //Only wind dragon can fly 
            if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
+                    
+
                     var localVel = transform.InverseTransformDirection(rb.velocity);
                     
                     if (localVel.y < 0 && jCount > 0)
                     {
-                        
+                        anim.SetBool("isGliding", true);
                         Physics.gravity = new Vector3(0, -5, 0);
                     }
                     else
                     {
+
+                        //anim.SetBool("isGliding", false);
                         Physics.gravity = new Vector3(0, -9.81f, 0);
                     }
 
@@ -316,7 +334,7 @@ public class CharacterMovement : MonoBehaviour
   */
             
             
-            //Script by Antti
+            //Script by Don Antti
            /* float yStore = movement.y;
             movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
             movement = movement.normalized * moveSpeed;
@@ -400,6 +418,7 @@ public class CharacterMovement : MonoBehaviour
         gravityScale = 0.25f;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * gravityScale, rb.velocity.z);
+        Debug.Log("gliding");
     }
     public bool IsPlayerActive()
     {
@@ -416,6 +435,8 @@ public class CharacterMovement : MonoBehaviour
 
             isGrounded = true;
             anim.SetBool("isJumping", false);
+            anim.SetBool("isRunningJumping", false);
+
             Debug.Log("Isgrounde on true"); 
         }
 
