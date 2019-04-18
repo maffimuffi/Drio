@@ -12,6 +12,9 @@ public class UITextPopup : MonoBehaviour
     private bool entered;
     
     private float popupCounter;
+    
+    public float exitCounter = 0;
+    private float exitTimeMax = 10;
     private float maxTime = 1;
     private float popupSpeed = 0.1f;
     private float popupSpeed2 = 0.2f;
@@ -23,7 +26,7 @@ public class UITextPopup : MonoBehaviour
    
     private float minSize = 0.5f;
 
-    public float transperency;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -45,24 +48,22 @@ public class UITextPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transperency = backroundMat.color.a;
+        
         if (entering && !exiting)
         {
             popupCounter += Time.deltaTime;
             
-                backroundMat.transform.localScale =
-                    new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed2,
+            backroundMat.transform.localScale =
+                new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed2,
                         backroundMat.transform.localScale.y + popupCounter * popupSpeed2, 0);
             
-
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x >= maxSize)
             {
                 backroundMat.transform.localScale =
                 new Vector3(maxSize,maxSize, 0);
                 entering = false;
                 entered = true;
-                popupCounter = 0;
-                
+                popupCounter = 0; 
             }
         }
 
@@ -87,7 +88,16 @@ public class UITextPopup : MonoBehaviour
                 popupCounter = 0;
                 gameObject.SetActive(false);
             }
-        } 
+        }
+
+        if (entered && !exiting)
+        {
+            exitCounter += Time.deltaTime;
+            if (exitCounter >= exitTimeMax)
+            {
+                ExitSite();
+            }
+        }
     }
 
     public void EnterSite()
@@ -98,8 +108,9 @@ public class UITextPopup : MonoBehaviour
     }
     
     public void TextChange(string x)
-    {
-        if(!String.IsNullOrEmpty(x)){
+        {
+        if(!String.IsNullOrEmpty(x))
+        {
             text.text = x;
         }
         else
@@ -110,7 +121,7 @@ public class UITextPopup : MonoBehaviour
 
     public void ExitSite()
     {
-        
         exiting = true;
+        exitCounter = 0;
     }
 }
