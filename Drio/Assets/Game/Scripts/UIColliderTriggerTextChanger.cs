@@ -7,11 +7,11 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
    
     public string uiTextObject;
     private UITextPopup uiText;
+    
     // Start is called before the first frame update
     void Start()
     {
         uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
-      
     }
 
     // Update is called once per frame
