@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public static float amount = 0;
+    public float max;
     Text orbs;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,6 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        orbs.text = "Orbs: " + amount + "/15";
+        orbs.text = "Orbs: " + amount + "/" + max;
     }
 }
