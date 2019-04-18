@@ -65,6 +65,7 @@
             <e p="TestMovement.cs" t="Include" />
             <e p="Torch.cs" t="Include" />
             <e p="UIColliderTriggerTextChanger.cs" t="Include" />
+            <e p="UIDialogue.cs" t="Include" />
             <e p="UITextPopup.cs" t="Include" />
             <e p="WindBreath.cs" t="Include" />
             <e p="WindHit.cs" t="Include" />
