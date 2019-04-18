@@ -147,17 +147,17 @@ PrefabInstance:
     - target: {fileID: 7243084559071507272, guid: 7c25980f608f2e8438efb0359277c8a5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7243084559071507272, guid: 7c25980f608f2e8438efb0359277c8a5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7243084559071507272, guid: 7c25980f608f2e8438efb0359277c8a5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7243084559071507272, guid: 7c25980f608f2e8438efb0359277c8a5,
         type: 3}
@@ -19972,6 +19972,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 102
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1550192330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7243084559071507279, guid: 7c25980f608f2e8438efb0359277c8a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3013901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1563526047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23631,6 +23637,11 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 73780500}
+    - target: {fileID: 279284204040797032, guid: ba15c64741e41024b973135e3c4ab30b,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1550192330}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba15c64741e41024b973135e3c4ab30b, type: 3}
 --- !u!1001 &2162547507642604661
@@ -23705,6 +23716,11 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 1336287837}
+    - target: {fileID: 2162547507311674549, guid: 572a972fe2286954babca5e2bfef7abc,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1550192330}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 572a972fe2286954babca5e2bfef7abc, type: 3}
 --- !u!1001 &2779178760908562854
@@ -24124,5 +24140,10 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 1360499696}
+    - target: {fileID: 7690577588273832519, guid: f2dd68067864b0642a3774506082e0b1,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1550192330}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2dd68067864b0642a3774506082e0b1, type: 3}
