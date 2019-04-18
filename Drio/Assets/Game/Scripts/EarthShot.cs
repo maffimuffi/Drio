@@ -54,13 +54,6 @@ public class EarthShot : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Smash")
-        {
-            
-            Destroy(this.gameObject);
-        }
-    }
+    
 
 }

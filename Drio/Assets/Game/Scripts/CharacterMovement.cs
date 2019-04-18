@@ -7,9 +7,11 @@ public class CharacterMovement : MonoBehaviour
 
     //animation stuff
     public Animator anim;
-
+    bool isGrounded;
+    bool isRunning;
 
     
+    private UITextPopup uiText;
 
 
     public float moveSpeed = 6f;
@@ -55,6 +57,13 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //animation stuff
+        // anim.SetBool("isJumping", false);
+        isGrounded = true;
+        isRunning = false;
+
+        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
+
         gravityScale = Physics.gravity.y;
         thisPlayer = gameObject;
         rb = GetComponent<Rigidbody>();
@@ -81,6 +90,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void setPlayerActive()
     {
+        
         if (thisPlayer.name == "EarthDragon" && PlayerChanger.CharacterSelect == 2)
         {
             characterMovementActive = true;
@@ -95,30 +105,37 @@ public class CharacterMovement : MonoBehaviour
         {
             characterMovementActive = false;
         }
+        uiText.ExitSite();
     }
 
-    private void LateUpdate()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-       /* if (jumpedCounter)
-        {
-            timer += Time.deltaTime;
-            if (timer >= 0.5)
-            {
-                timer = 0;
-                jumped = true;
-                jumpedCounter = false;
-            }
-        }
-        */
-        
+        /* if (jumpedCounter)
+         {
+             timer += Time.deltaTime;
+             if (timer >= 0.5)
+             {
+                 timer = 0;
+                 jumped = true;
+                 jumpedCounter = false;
+             }
+         }
+         */
+
         //Draw hyppy mahd
-        
+
+
+        if (isGrounded) {
+            anim.SetBool("isGliding", false);
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isRunningJump", false); 
+        }
+
+        if (isRunning) {
+            anim.SetBool("isRunning", true); 
+        }
 
         if (characterMovementActive)
         {
@@ -179,6 +196,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 //kokeilu
                 anim.SetBool("isRunning", true);
+                isRunning = true; 
 
                 rotating = true;
                 
@@ -186,6 +204,9 @@ public class CharacterMovement : MonoBehaviour
             else
             {
                 rotating = false;
+                
+                anim.SetBool("isRunning", false);
+                isRunning = false; 
             }
 
             if (rotating)
@@ -202,7 +223,53 @@ public class CharacterMovement : MonoBehaviour
                     
                 }
             }
-            
+
+            if (Input.GetKey(KeyCode.W)){
+                Quaternion forw = Quaternion.Euler(0, 0, 0);
+                transform.rotation = forw;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                Quaternion back = Quaternion.Euler(0, 180, 0);
+                transform.rotation = back;
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                Quaternion right = Quaternion.Euler(0, 90, 0);
+                transform.rotation = right;
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                Quaternion left = Quaternion.Euler(0, 270, 0);
+                transform.rotation = left;
+            }
+
+            if(Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.D))){
+                Quaternion ne = Quaternion.Euler(0, 45, 0);
+                transform.rotation = ne;
+            }
+
+            if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.D)))
+            {
+                Quaternion se = Quaternion.Euler(0, 135, 0);
+                transform.rotation = se;
+            }
+
+            if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A)))
+            {
+                Quaternion sw = Quaternion.Euler(0, 225, 0);
+                transform.rotation = sw;
+            }
+
+            if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A)))
+            {
+                Quaternion nw = Quaternion.Euler(0, 315, 0);
+                transform.rotation = nw;
+            }
+
             /*
             if (!Grab.grab)
             {
@@ -236,13 +303,33 @@ public class CharacterMovement : MonoBehaviour
 */
             if (Input.GetButtonDown("Jump"))
             {
-                
+                if (isRunning) {
+                    anim.SetBool("isRunningJumping", true);
+                    isGrounded = false; 
+                }
+
+               else  if (isRunning == false)
+                {
+                    anim.SetBool("isJumping", true);
+                    //anim.SetBool("isRunningJumping", false);
+                    isGrounded = false;
+                }
                 if (jCount < 1)
                  {
+
+
+
                      rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                     jCount++;
                     anim.SetTrigger(jumpHashFD);
+                    //animaatio
+                    /*
+                    if (isGrounded == false) {
+                        anim.SetBool("isJumping", true);
+                        Debug.Log("meneeks tä ikinä tänne?");
+                    }
+                    */
                 }
                 else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
                  {
@@ -258,19 +345,24 @@ public class CharacterMovement : MonoBehaviour
             }
             */
 
+            //Only wind dragon can fly 
            if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
+                    
+
                     var localVel = transform.InverseTransformDirection(rb.velocity);
                     
                     if (localVel.y < 0 && jCount > 0)
                     {
-                        
+                        anim.SetBool("isGliding", true);
                         Physics.gravity = new Vector3(0, -5, 0);
                     }
                     else
                     {
+
+                        //anim.SetBool("isGliding", false);
                         Physics.gravity = new Vector3(0, -9.81f, 0);
                     }
 
@@ -295,7 +387,7 @@ public class CharacterMovement : MonoBehaviour
   */
             
             
-            //Script by Antti
+            //Script by Don Antti
            /* float yStore = movement.y;
             movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
             movement = movement.normalized * moveSpeed;
@@ -379,6 +471,7 @@ public class CharacterMovement : MonoBehaviour
         gravityScale = 0.25f;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * gravityScale, rb.velocity.z);
+        Debug.Log("gliding");
     }
     public bool IsPlayerActive()
     {
@@ -387,6 +480,24 @@ public class CharacterMovement : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
+
+
+
+        //animation stuff 
+        if (collision.gameObject.tag == "Terrain") {
+
+            isGrounded = true;
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isRunningJumping", false);
+
+            Debug.Log("Isgrounde on true"); 
+        }
+
+
+
+
+
+
         /*
         if (collision.gameObject.CompareTag("Object"))
         {

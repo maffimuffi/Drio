@@ -4,29 +4,31 @@ using UnityEngine;
 
 public class UIColliderTriggerTextChanger : MonoBehaviour
 {
-    public int changerText;
+   
+    public string uiTextObject;
     private UITextPopup uiText;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
         uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
+
+  
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
-                uiText.TextChange(changerText);
+                uiText.TextChange(uiTextObject);
                 uiText.EnterSite();
             }
         }
@@ -34,9 +36,12 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            uiText.ExitSite();
+            if (other.GetComponent<CharacterMovement>().IsPlayerActive())
+            {
+                uiText.ExitSite();
+            }
         }
     }
 }

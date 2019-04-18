@@ -26,6 +26,9 @@ public class PlayerChanger : MonoBehaviour
     public GameObject ActivePlayerRightNow;
     public static GameObject ActivePlayer;
 
+    
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +47,8 @@ public class PlayerChanger : MonoBehaviour
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
         ChangePlayer(1);
-        //cam.SetActive(true);
+        
+        
     }
 
     // Update is called once per frame
@@ -56,6 +60,7 @@ public class PlayerChanger : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
             PlayerFollowActive = !PlayerFollowActive;
+            
             
             //Debuggausta ainoastaan navmeshin vaihtoon
             foreach (Vector3 asd in WindNav.path.corners)
@@ -88,6 +93,44 @@ public class PlayerChanger : MonoBehaviour
         {
             ChangePlayer(3);
         }
+
+        //Scroll wheel
+        if (Input.mouseScrollDelta.y > 0)
+        {
+            
+                if (CharacterSelect == 1)
+                {
+                    ChangePlayer(2);
+                }
+                else if (CharacterSelect == 2)
+                {
+                    ChangePlayer(3);
+                }
+                else if (CharacterSelect == 3)
+                {
+                    ChangePlayer(1);
+                }
+
+            
+            
+
+        } else if (Input.mouseScrollDelta.y < 0)
+        {
+            
+                
+            if (CharacterSelect == 1)
+                {
+                    ChangePlayer(3);
+                } else if (CharacterSelect == 2)
+                {
+                    ChangePlayer(1);
+                } else if (CharacterSelect == 3)
+                {
+                    ChangePlayer(2);
+                }
+            
+           
+        }
     }
     
     
@@ -96,7 +139,7 @@ public class PlayerChanger : MonoBehaviour
     {
         CharacterSelect = playerSelect;
         //Debug.Log(CharacterSelect);
-       
+        
         //player Movement
         CharacterMovement windMove = WindDragon.GetComponent<CharacterMovement>();
         windMove.setPlayerActive();
@@ -127,6 +170,7 @@ public class PlayerChanger : MonoBehaviour
         ActivePlayerRightNow = ActivePlayer;
         //SetCamera();
         SetNavMesh();
+        //uiText.ExitSite();
     }
 //Laittaa pelaajan navmeshin "Stand by" tilaan
     public void SetNavMesh()
