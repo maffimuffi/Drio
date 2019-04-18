@@ -223,7 +223,53 @@ public class CharacterMovement : MonoBehaviour
                     
                 }
             }
-            
+
+            if (Input.GetKey(KeyCode.W)){
+                Quaternion forw = Quaternion.Euler(0, 0, 0);
+                transform.rotation = forw;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                Quaternion back = Quaternion.Euler(0, 180, 0);
+                transform.rotation = back;
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                Quaternion right = Quaternion.Euler(0, 90, 0);
+                transform.rotation = right;
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                Quaternion left = Quaternion.Euler(0, 270, 0);
+                transform.rotation = left;
+            }
+
+            if(Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.D))){
+                Quaternion ne = Quaternion.Euler(0, 45, 0);
+                transform.rotation = ne;
+            }
+
+            if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.D)))
+            {
+                Quaternion se = Quaternion.Euler(0, 135, 0);
+                transform.rotation = se;
+            }
+
+            if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A)))
+            {
+                Quaternion sw = Quaternion.Euler(0, 225, 0);
+                transform.rotation = sw;
+            }
+
+            if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A)))
+            {
+                Quaternion nw = Quaternion.Euler(0, 315, 0);
+                transform.rotation = nw;
+            }
+
             /*
             if (!Grab.grab)
             {
