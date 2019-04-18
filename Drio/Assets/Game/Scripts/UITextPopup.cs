@@ -20,8 +20,7 @@ public class UITextPopup : MonoBehaviour
     private bool exiting;
     private TextMeshProUGUI text;
     private float maxSize = 1;
-    
-
+   
     private float minSize = 0.5f;
 
     public float transperency;
