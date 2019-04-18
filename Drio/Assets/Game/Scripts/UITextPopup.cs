@@ -23,7 +23,11 @@ public class UITextPopup : MonoBehaviour
     private bool exiting;
     private TextMeshProUGUI text;
     private float maxSize = 1;
-   
+    private bool dialogueActive;
+    private int lineCount;
+    private int maxLineCount;
+    private string[] dialogueLines;
+    private int countz = 0;
     private float minSize = 0.5f;
 
     
@@ -90,6 +94,22 @@ public class UITextPopup : MonoBehaviour
             }
         }
 
+        if (dialogueActive)
+        {
+            exitCounter += Time.deltaTime;
+            if (exitCounter >= exitTimeMax)
+            {
+                TextChange(dialogueLines[countz]); 
+                lineCount++;
+                
+                if (lineCount >= maxLineCount)
+                {
+                    entered = true;
+                    dialogueActive = false;
+                }
+            }
+        }
+
         if (entered && !exiting)
         {
             exitCounter += Time.deltaTime;
@@ -98,6 +118,7 @@ public class UITextPopup : MonoBehaviour
                 ExitSite();
             }
         }
+        
     }
 
     public void EnterSite()
@@ -105,6 +126,21 @@ public class UITextPopup : MonoBehaviour
         gameObject.SetActive(true);
         entering = true;
         exiting = false;
+    }
+
+    public void Dialogue(int howManyLines, string[] lines)
+    {
+        maxLineCount = howManyLines;
+        countz = 0;
+        foreach (var linea in lines)
+        {
+//Debug.Log(linea);
+            
+           dialogueLines[countz] = linea;
+            countz++;
+        }
+        countz = 0;
+        
     }
     
     public void TextChange(string x)
