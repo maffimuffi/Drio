@@ -14,7 +14,7 @@ public class UITextPopup : MonoBehaviour
     private float popupCounter;
     
     public float exitCounter = 0;
-    private float exitTimeMax = 10;
+    private float exitTimeMax = 5;
     private float maxTime = 1;
     private float popupSpeed = 0.1f;
     private float popupSpeed2 = 0.2f;
