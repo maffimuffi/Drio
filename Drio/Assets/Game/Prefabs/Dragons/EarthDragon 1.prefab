@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 7690577588273832512}
   - component: {fileID: 7690577588273832513}
   - component: {fileID: 7690577588273832514}
-  - component: {fileID: 7690577588273832517}
   - component: {fileID: 7690577588273832518}
   - component: {fileID: 7690577588273832519}
   m_Layer: 8
@@ -165,19 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ec72771e2341a42bb128cf24b36b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7690577588273832517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7690577587955667968}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 248f254ca1df29d4389e81a3f368d985, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseTPoint: {fileID: 0}
 --- !u!195 &7690577588273832518
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -212,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a580afbd9559d32419d3ae99dbe8d6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 7690577587948283608}
   moveSpeed: 8
   playerTransform: {fileID: 0}
   rotating: 0
