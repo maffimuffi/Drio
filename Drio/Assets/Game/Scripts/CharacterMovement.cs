@@ -391,7 +391,7 @@ public class CharacterMovement : MonoBehaviour
             anim.SetBool("isJumping", false);
             anim.SetBool("isRunningJumping", false);
 
-           
+
         }
 
 
