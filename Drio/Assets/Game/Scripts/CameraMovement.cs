@@ -113,6 +113,7 @@ public class CameraMovement : MonoBehaviour
         {
             GameObject notPlayer = null;
             MeshRenderer rend = null;
+            Debug.Log(hit.transform.gameObject.name);
             if (hit.collider.gameObject.tag == "Player")
             {
                 canSeePlayer = true;

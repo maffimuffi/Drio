@@ -119,17 +119,15 @@ public class PlayerChanger : MonoBehaviour
             
                 
             if (CharacterSelect == 1)
-            {
-                ChangePlayer(3);
-            }
-            else if (CharacterSelect == 2)
-            {
-                ChangePlayer(1);
-            }
-            else if (CharacterSelect == 3)
-            {
-                ChangePlayer(2);
-            }
+                {
+                    ChangePlayer(3);
+                } else if (CharacterSelect == 2)
+                {
+                    ChangePlayer(1);
+                } else if (CharacterSelect == 3)
+                {
+                    ChangePlayer(2);
+                }
             
            
         }
