@@ -23496,6 +23496,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de4088a95f2ad6d4ea850c5df81ac374, type: 3}
+--- !u!95 &2107892054 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2162547508818130876, guid: 572a972fe2286954babca5e2bfef7abc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2162547507642604661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &104129989528773881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23716,6 +23722,11 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 1336287837}
+    - target: {fileID: 2162547507311674569, guid: 572a972fe2286954babca5e2bfef7abc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2107892054}
     - target: {fileID: 2162547507311674549, guid: 572a972fe2286954babca5e2bfef7abc,
         type: 3}
       propertyPath: cam
