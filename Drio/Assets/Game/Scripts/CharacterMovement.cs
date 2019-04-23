@@ -11,7 +11,6 @@ public class CharacterMovement : MonoBehaviour
     bool isRunning;
 
     
-    private UITextPopup uiText;
 
 
     public float moveSpeed = 6f;
@@ -49,7 +48,10 @@ public class CharacterMovement : MonoBehaviour
 
     int jumpHashFD = Animator.StringToHash("FD_Jump");
     int runStateHash = Animator.StringToHash("Base Layer.Run");
+    private float yaw = 0f;
+    private float cSpeed = 2f;
 
+    public GameObject cam;
 
     //private float gravityScale = 1;
 
@@ -62,7 +64,7 @@ public class CharacterMovement : MonoBehaviour
         isGrounded = true;
         isRunning = false;
 
-        uiText = GameObject.Find("TextPopup").GetComponent<UITextPopup>();
+
 
         gravityScale = Physics.gravity.y;
         thisPlayer = gameObject;
@@ -90,7 +92,6 @@ public class CharacterMovement : MonoBehaviour
 
     public void setPlayerActive()
     {
-        
         if (thisPlayer.name == "EarthDragon" && PlayerChanger.CharacterSelect == 2)
         {
             characterMovementActive = true;
@@ -105,9 +106,12 @@ public class CharacterMovement : MonoBehaviour
         {
             characterMovementActive = false;
         }
-        uiText.ExitSite();
     }
 
+    private void LateUpdate()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -124,17 +128,14 @@ public class CharacterMovement : MonoBehaviour
          }
          */
 
+        yaw += cSpeed * Input.GetAxis("Mouse X");
+        //transform.eulerAngles = new Vector3(0, yaw, 0);
+
         //Draw hyppy mahd
 
 
         if (isGrounded) {
             anim.SetBool("isGliding", false);
-            anim.SetBool("isJumping", false);
-            anim.SetBool("isRunningJump", false); 
-        }
-
-        if (isRunning) {
-            anim.SetBool("isRunning", true); 
         }
 
         if (characterMovementActive)
@@ -187,8 +188,12 @@ public class CharacterMovement : MonoBehaviour
             {
                 
                 rb.MovePosition(transform.position + pushVer);
-                
-                
+                transform.eulerAngles = new Vector3(0, 0, 0);
+
+                //Väliaikainen ratkaisu sille ettei kameraa voi kääntää, kun työnnetään!
+                cam.transform.eulerAngles = new Vector3(0, 0, 0);
+
+
             }
 
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
@@ -204,9 +209,7 @@ public class CharacterMovement : MonoBehaviour
             else
             {
                 rotating = false;
-                
                 anim.SetBool("isRunning", false);
-                isRunning = false; 
             }
 
             if (rotating)
@@ -224,37 +227,7 @@ public class CharacterMovement : MonoBehaviour
                 }
             }
             
-            /*
-            if (!Grab.grab)
-            {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    transform.position += playerTransform.transform.forward * moveSpeed;
-                    transform.rotation = playerTransform.transform.rotation;
-                }
-
-                if (Input.GetKey(KeyCode.S))
-                {
-                    transform.position += -playerTransform.transform.forward * moveSpeed;
-                    transform.rotation = playerTransform.transform.rotation;
-                }
-
-                if (Input.GetKey(KeyCode.A))
-                {
-                    transform.position += -playerTransform.transform.right * moveSpeed;
-                    transform.rotation = playerTransform.transform.rotation;
-                }
-
-                if (Input.GetKey(KeyCode.D))
-                {
-                    transform.position += playerTransform.transform.right * moveSpeed;
-                    transform.rotation = playerTransform.transform.rotation;
-                }
-            } else if (Grab.grab)
-            {
-                transform.position += playerTransform.transform.forward * moveSpeed;
-            }
-*/
+            
             if (Input.GetButtonDown("Jump"))
             {
                 if (isRunning) {
@@ -262,10 +235,10 @@ public class CharacterMovement : MonoBehaviour
                     isGrounded = false; 
                 }
 
-               else  if (isRunning == false)
+                if (isRunning == false)
                 {
                     anim.SetBool("isJumping", true);
-                    //anim.SetBool("isRunningJumping", false);
+                    anim.SetBool("isRunningJumping", false);
                     isGrounded = false;
                 }
                 if (jCount < 1)
@@ -293,11 +266,7 @@ public class CharacterMovement : MonoBehaviour
                 }
             }
 
-            /*if (Input.GetButton("Jump") && PlayerChanger.CharacterSelect == 1 && jCount < 2 && jCount > 1)
-            {
-                Physics.gravity = new Vector3(0, -5, 0);
-            }
-            */
+            
 
             //Only wind dragon can fly 
            if (Input.GetKey(KeyCode.LeftShift))
@@ -328,96 +297,74 @@ public class CharacterMovement : MonoBehaviour
             
             
             
-/*
-            //Debuggaus speed yms
-            //Debug.Log("Rigidbody speed: " + gameObject.GetComponent<Rigidbody>().velocity.magnitude + " jumped: " + jumped);
-            if (jumped && gameObject.GetComponent<Rigidbody>().velocity.magnitude >= 0 &&
-                gameObject.GetComponent<Rigidbody>().velocity.magnitude <= 0.5)
-            {
-                //impulse huono. näyttää epärealistiselta.
-                gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * (jumpSpeed / 2), ForceMode.Impulse);
-                jumped = false;
-            }
-  */
-            
-            
-            //Script by Don Antti
-           /* float yStore = movement.y;
-            movement = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
-            movement = movement.normalized * moveSpeed;
-            movement.y = yStore;
-            if (movement.x > 0 || movement.z > 0 || movement.x < 0 || movement.z < 0)
-            {
-                transform.rotation = playerTransform.transform.rotation;
-            }
-            if (controller.isGrounded)
-            {
-                movement.y = 0f;
-                jCounter = 0;
-                gravityScale = 1;
-            
-                if (Input.GetButtonDown("Jump"))
-                {
-                    movement.y = jumpForce;
-                    jCounter++;
-                }
-            }
-
-            else if
-            (!controller.isGrounded)
-            {
-                // Gliding with left shift
-                if (Input.GetKeyDown(KeyCode.LeftShift))
-                {
-                    gravityScale = 0.25f;
-                    movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
-                }
-            }
-
-            else if (!controller.isGrounded && jCounter < 2 && PlayerChanger.CharacterSelect == 1)
-            {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    movement.y = jumpForce;
-                    jCounter++;
-                }
-            }
-
-            movement.y = movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
-            
-            controller.Move(movement * Time.deltaTime);
-*/
-
-/*
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                //not working
-                Debug.DrawRay(transform.position, Vector3.down, Color.green, 0.5f);
-                RaycastHit ground;
-
-               
-                    if (PlayerChanger.CharacterSelect == 1)
-                    {
-                        if (doubleJump)
-                        {
-                            doubleJump = false;
-                        }
-                        else if (!doubleJump)
-                        {
-                            doubleJump = true;
-
-                        }
-                    
-
-                }
-            }
-            */
         }
         else
         {
             jCount = 0;
         }
-        
+
+
+        Quaternion camera = cam.transform.rotation;
+
+        if (Input.GetKey(KeyCode.W) && characterMovementActive == true)
+        {
+            Quaternion forw = Quaternion.Euler(0, 0 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = forw;
+        }
+
+
+
+        if (Input.GetKey(KeyCode.S) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion back = Quaternion.Euler(0, 180 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = back;
+        }
+
+
+
+
+
+        if (Input.GetKey(KeyCode.D) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion right = Quaternion.Euler(0, 90 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = right;
+        }
+
+
+
+
+        if (Input.GetKey(KeyCode.A) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion left = Quaternion.Euler(0, 270 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = left;
+        }
+
+        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.D)) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion ne = Quaternion.Euler(0, 45 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = ne;
+        }
+
+
+
+        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A)) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion nw = Quaternion.Euler(0, 315 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = nw;
+        }
+
+        if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A)) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion sw = Quaternion.Euler(0, 225 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = sw;
+        }
+
+        if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.D)) && !Grab.grab && characterMovementActive == true)
+        {
+            Quaternion se = Quaternion.Euler(0, 135 + cam.transform.eulerAngles.y, 0);
+            transform.rotation = se;
+        }
+
     }
 
     void Glide()
@@ -444,44 +391,10 @@ public class CharacterMovement : MonoBehaviour
             anim.SetBool("isJumping", false);
             anim.SetBool("isRunningJumping", false);
 
-            Debug.Log("Isgrounde on true"); 
+           
         }
 
 
-
-
-
-
-        /*
-        if (collision.gameObject.CompareTag("Object"))
-        {
-            
-            jCount = 0;
-
-        }
-
-        if (collision.gameObject.CompareTag("Terrain"))
-        {
-
-            jCount = 0;
-
-        }
-
-        if (collision.gameObject.CompareTag("Boulder"))
-        {
-
-            jCount = 0;
-            
-
-        }
-
-        if (collision.gameObject.CompareTag("Push"))
-        {
-
-            jCount = 0;
-
-        }
-*/
         if (collision.gameObject.CompareTag("PU"))
         {
             collision.gameObject.SetActive(false);

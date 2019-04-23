@@ -12,6 +12,9 @@ public class UITextPopup : MonoBehaviour
     private bool entered;
     
     private float popupCounter;
+    
+    public float exitCounter = 0;
+    private float exitTimeMax = 5;
     private float maxTime = 1;
     private float popupSpeed = 0.1f;
     private float popupSpeed2 = 0.2f;
@@ -20,11 +23,14 @@ public class UITextPopup : MonoBehaviour
     private bool exiting;
     private TextMeshProUGUI text;
     private float maxSize = 1;
-    
-
+    private bool dialogueActive;
+    private int lineCount;
+    private int maxLineCount;
+    private string[] dialogueLines;
+    private int countz = 0;
     private float minSize = 0.5f;
 
-    public float transperency;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -46,24 +52,22 @@ public class UITextPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transperency = backroundMat.color.a;
+        
         if (entering && !exiting)
         {
             popupCounter += Time.deltaTime;
             
-                backroundMat.transform.localScale =
-                    new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed2,
+            backroundMat.transform.localScale =
+                new Vector3(backroundMat.transform.localScale.x + popupCounter * popupSpeed2,
                         backroundMat.transform.localScale.y + popupCounter * popupSpeed2, 0);
             
-
             if (popupCounter >= maxTime || backroundMat.transform.localScale.x >= maxSize)
             {
                 backroundMat.transform.localScale =
                 new Vector3(maxSize,maxSize, 0);
                 entering = false;
                 entered = true;
-                popupCounter = 0;
-                
+                popupCounter = 0; 
             }
         }
 
@@ -88,7 +92,33 @@ public class UITextPopup : MonoBehaviour
                 popupCounter = 0;
                 gameObject.SetActive(false);
             }
-        } 
+        }
+
+        if (dialogueActive)
+        {
+            exitCounter += Time.deltaTime;
+            if (exitCounter >= exitTimeMax)
+            {
+                TextChange(dialogueLines[countz]); 
+                lineCount++;
+                
+                if (lineCount >= maxLineCount)
+                {
+                    entered = true;
+                    dialogueActive = false;
+                }
+            }
+        }
+
+        if (entered && !exiting)
+        {
+            exitCounter += Time.deltaTime;
+            if (exitCounter >= exitTimeMax)
+            {
+                ExitSite();
+            }
+        }
+        
     }
 
     public void EnterSite()
@@ -97,10 +127,26 @@ public class UITextPopup : MonoBehaviour
         entering = true;
         exiting = false;
     }
+
+    public void Dialogue(int howManyLines, string[] lines)
+    {
+        maxLineCount = howManyLines;
+        countz = 0;
+        foreach (var linea in lines)
+        {
+//Debug.Log(linea);
+            
+           dialogueLines[countz] = linea;
+            countz++;
+        }
+        countz = 0;
+        
+    }
     
     public void TextChange(string x)
-    {
-        if(!String.IsNullOrEmpty(x)){
+        {
+        if(!String.IsNullOrEmpty(x))
+        {
             text.text = x;
         }
         else
@@ -111,7 +157,7 @@ public class UITextPopup : MonoBehaviour
 
     public void ExitSite()
     {
-        
         exiting = true;
+        exitCounter = 0;
     }
 }

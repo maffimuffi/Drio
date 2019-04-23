@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4480046, g: 0.49800998, b: 0.5755086, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -12310,8 +12310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddfab51671f9d74cbb4c420182ff82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoSpawn: {fileID: 1596523214}
-  ammo: {fileID: 804619427020609688, guid: 9b7e35136d1e1774f89123f7316ac525, type: 3}
+  ammoSpawn: {fileID: 1000012882023006, guid: 5ca4c580b3888314581688fa46fb142d, type: 3}
+  ammo: {fileID: 1000012882023006, guid: 5ca4c580b3888314581688fa46fb142d, type: 3}
   capsule: {fileID: 0}
   sound: {fileID: 73780500}
 --- !u!114 &1042596276
@@ -12540,6 +12540,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 2754137113123634142, guid: 6c3996902b6f43f458ed558e1da295f4,
+        type: 3}
+      propertyPath: doorNum
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754137113123634142, guid: 6c3996902b6f43f458ed558e1da295f4,
+        type: 3}
+      propertyPath: Bsound
+      value: 
+      objectReference: {fileID: 1509507107}
+    - target: {fileID: 2754137113123634142, guid: 6c3996902b6f43f458ed558e1da295f4,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1509507107}
     - target: {fileID: 2754137113123634117, guid: 6c3996902b6f43f458ed558e1da295f4,
         type: 3}
       propertyPath: m_Size.x
@@ -12560,21 +12575,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.00023940008
       objectReference: {fileID: 0}
-    - target: {fileID: 2754137113123634142, guid: 6c3996902b6f43f458ed558e1da295f4,
-        type: 3}
-      propertyPath: doorNum
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2754137113123634142, guid: 6c3996902b6f43f458ed558e1da295f4,
-        type: 3}
-      propertyPath: Bsound
-      value: 
-      objectReference: {fileID: 1509507107}
-    - target: {fileID: 2754137113123634142, guid: 6c3996902b6f43f458ed558e1da295f4,
-        type: 3}
-      propertyPath: sound
-      value: 
-      objectReference: {fileID: 1509507107}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c3996902b6f43f458ed558e1da295f4, type: 3}
 --- !u!1 &1046257652
