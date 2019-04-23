@@ -189,6 +189,9 @@ public class CharacterMovement : MonoBehaviour
                 rb.MovePosition(transform.position + pushVer);
                 transform.eulerAngles = new Vector3(0, 0, 0);
 
+                //Väliaikainen ratkaisu sille ettei kameraa voi kääntää, kun työnnetään!
+                cam.transform.eulerAngles = new Vector3(0, 0, 0);
+
 
             }
 

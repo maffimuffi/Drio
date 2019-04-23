@@ -49,7 +49,7 @@ public class Follower : MonoBehaviour
             {
                 if (gameObject.name == "FireDragon")
                 {
-                    ///anim.SetBool("isRunning", true);
+                    
                     newPosition = new Vector3(-3f, 0.5f, -2f);
                     right = false;
                 }
@@ -57,7 +57,7 @@ public class Follower : MonoBehaviour
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
-                    //anim.SetBool("isRunning", true);
+                    
                 }
 
             }
@@ -67,13 +67,13 @@ public class Follower : MonoBehaviour
                 {
                     right = false;
                     newPosition = new Vector3(-3f, 0.5f, -2f);
-                    //anim.SetBool("isRunning", true);
+                    
                 }
                 else if (gameObject.name == "WindDragon")
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
-                    //anim.SetBool("isRunning", true);
+                    
                 }
             }
             else if (PlayerChanger.CharacterSelect == 3)
@@ -82,37 +82,34 @@ public class Follower : MonoBehaviour
                 {
                     right = false;
                     newPosition = new Vector3(-3f, 0.5f, -2f);
-                    //anim.SetBool("isRunning", true);
+                    
                 }
                 else if (gameObject.name == "EarthDragon")
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
-                    //anim.SetBool("isRunning", true);
+                    
 
                 }
             }
 
             Vector3 pos = gameObject.transform.position;
+            Vector3 direction = (PlayerChanger.ActivePlayer.transform.position - transform.position).normalized;
             if (right)
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               PlayerChanger.ActivePlayer.transform.right * 3;
-                //anim.SetBool("isRunning", true);
-                //following = true;
+                
             }
             else if (!right)
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               -PlayerChanger.ActivePlayer.transform.right * 3;
-                //anim.SetBool("isRunning", true);
-                //following = true;
+                
+
             }
 
-            else
-            {
-                //following = false;
-            }
+            
 
             
 
@@ -129,6 +126,8 @@ public class Follower : MonoBehaviour
             {
                 anim.SetBool("isRunning", false);
                 isRunning = false;
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 30);
             }
 
 
@@ -161,7 +160,7 @@ public class Follower : MonoBehaviour
                 //navMeshAgent.destination = transform.position;
                 navMeshAgent.enabled = false;
                 //            navMeshAgent.isStopped = true;
-                anim.SetBool("isRunning", false);
+                
             }
 
         }
@@ -170,7 +169,7 @@ public class Follower : MonoBehaviour
             //navMeshAgent.destination = transform.position;
             navMeshAgent.enabled = false;
             //            navMeshAgent.isStopped = true;
-            anim.SetBool("isRunning", false);
+            
         }
     }
 
