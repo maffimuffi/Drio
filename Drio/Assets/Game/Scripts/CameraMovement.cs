@@ -6,9 +6,11 @@ public class CameraMovement : MonoBehaviour
 {
 
     private GameObject player;
-    private Camera cam;
 
     private float horizontalSpeed = 2.0f;
+    public float smoothTime; // 0.3f?
+
+    private Vector3 velocity = Vector3.zero;
 
     private PlayerChanger playerChanger;
 
@@ -43,6 +45,7 @@ public class CameraMovement : MonoBehaviour
 
         cameraPos1 = GameObject.Find("DefaultPos").GetComponent<Transform>();
         cameraPos2 = GameObject.Find("UpPos").GetComponent<Transform>();
+        
 
 
     }
@@ -82,20 +85,18 @@ public class CameraMovement : MonoBehaviour
 
         if(!canSeePlayer)
         {
-            cameraTrans.transform.position = cameraPos2.transform.position;
+            // Camera movement to up position
+            cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos2.transform.position, ref velocity, smoothTime);
+
+            // Camera rotation
             cameraTrans.transform.rotation = cameraPos2.transform.rotation;
-            //if(!moved)
-            //{
-            //    MoveTowards();
-            //}
+
         }
         else if(canSeePlayer)
         {
-            cameraTrans.transform.position = cameraPos1.transform.position;
-            //if(moved)
-            //{
-            //    MoveBack();
-            //}
+            // Camera movement to default position
+            cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos1.transform.position, ref velocity, smoothTime);
+
         }
 
 
@@ -107,37 +108,17 @@ public class CameraMovement : MonoBehaviour
         if (Physics.Raycast(raycast, out hit, 200))
         {
             //GameObject notPlayer = null;
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Wind" || hit.collider.gameObject.tag == "EarthShot" || hit.collider.gameObject.tag == "FireShot")
             {
                 canSeePlayer = true;
             }
-            else if (hit.collider.gameObject.tag != "Player")
+
+            else
             {
                 canSeePlayer = false;
-                //lastHit = hit.collider.gameObject;
-                //notPlayer = hit.transform.gameObject;
+
             }
-            //if(lastHit != null)
-            //{
-            //    if (lastHit.GetComponent<MeshRenderer>().enabled == false && hit.collider.gameObject != notPlayer)
-            //    {
-            //        lastHit.GetComponent<MeshRenderer>().enabled = true;
-            //    }
-            //}
-
         }
-
-        //void MoveTowards()
-        //{
-            
-        //    moved = true;
-        //}
-
-        //void MoveBack()
-        //{
-
-            
-        //}
     }
 }
 
