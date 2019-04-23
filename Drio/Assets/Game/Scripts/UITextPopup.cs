@@ -29,9 +29,11 @@ public class UITextPopup : MonoBehaviour
     private bool dialogueActive;
     private int lineCount = 0;
     private int maxLineCount;
-    
+    private Color32[] colors = new Color32[3]{Color.cyan,Color.green,Color.red};
+    private Color32 activeColor;
     private int countz = 0;
     private float minSize = 0.5f;
+    private bool changeColor;
 
     
     private string[] dialogueLines = new string[10];
@@ -40,7 +42,7 @@ public class UITextPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        activeColor = Color.white;
         popupCounter = 0;
         backroundMat = GetComponent<RawImage>();
         text = GetComponentInChildren<TextMeshProUGUI>();
@@ -111,7 +113,7 @@ public class UITextPopup : MonoBehaviour
             
             dialogueCounter += Time.deltaTime;
             
-            
+
             if ((float)lineList[lineCount].Length / 9 <= 2.5f)
             {
                 dialogueMaxTime = 2.5f;
@@ -162,7 +164,7 @@ public class UITextPopup : MonoBehaviour
         popupCounter = 0;
         lineCount = 0;
         dialogueCounter = 0;
-        
+        text.color = Color.cyan;
         dialogueActive = false;
     }
 
@@ -196,14 +198,80 @@ public class UITextPopup : MonoBehaviour
     
     public void TextChange(string x)
         {
-        if(!String.IsNullOrEmpty(x))
-        {
-            text.text = x;
-        }
-        else
+            if (!String.IsNullOrEmpty(x))
+            {
+                
+                    text.text = x;
+
+                   
+                
+            }
+            else
         {
             text.text = "TEXT IS NULL, PLEASE ASSIGN IT IN INSPECTOR";
         }
+/*
+            
+                TMP_WordInfo info = text.textInfo.wordInfo[0];
+                if (info.GetWord() == "Gust")
+                {
+                    activeColor = colors[0];
+                    changeColor = true;
+                }
+                else if (info.GetWord() == "Terra")
+                {
+                    activeColor = colors[1];
+                    changeColor = true;
+                }
+                else if (info.GetWord() == "Fierre")
+                {
+                    activeColor = colors[2];
+                    changeColor = true;
+                }
+                else
+                {
+                    activeColor = Color.white;
+                    changeColor = true;
+
+                }
+
+                if (changeColor)
+                {
+                    for (int i = 0; i < info.characterCount + 1; ++i)
+                    {
+                        int charIndex = info.firstCharacterIndex + i;
+                        int meshIndex = text.textInfo.characterInfo[charIndex].materialReferenceIndex;
+                        int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
+                        Debug.Log(info.GetWord());
+
+
+                        Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
+                        vertexColors[vertexIndex + 0] = activeColor;
+                        vertexColors[vertexIndex + 1] = activeColor;
+                        vertexColors[vertexIndex + 2] = activeColor;
+                        vertexColors[vertexIndex + 3] = activeColor;
+                    }
+
+                    for (int i = info.characterCount + 1; i < text.text.Length; ++i)
+                    {
+
+                        activeColor = Color.white;
+                            int charIndex = info.firstCharacterIndex + i;
+                            int meshIndex = text.textInfo.characterInfo[charIndex].materialReferenceIndex;
+                            int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
+                            
+
+
+                            Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
+                            vertexColors[vertexIndex + 0] = activeColor;
+                            vertexColors[vertexIndex + 1] = activeColor;
+                            vertexColors[vertexIndex + 2] = activeColor;
+                            vertexColors[vertexIndex + 3] = activeColor;
+                    }
+                }
+
+                text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
+            */
 
             TEXTSHOWING = text.text;
         }
@@ -212,10 +280,31 @@ public class UITextPopup : MonoBehaviour
     {
         priorityText = true;
     }
+
     public void ExitSite()
     {
         priorityText = false;
         exiting = true;
         exitCounter = 0;
+        /*
+        if (text.textInfo.wordInfo[0].GetWord() != null)
+        {
+            TMP_WordInfo info = text.textInfo.wordInfo[0];
+            activeColor = Color.white;
+            for (int i = 0; i < text.text.Length; ++i)
+            {
+                int charIndex = info.firstCharacterIndex + i;
+                int meshIndex = text.textInfo.characterInfo[charIndex].materialReferenceIndex;
+                int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
+                Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
+                vertexColors[vertexIndex + 0] = activeColor;
+                vertexColors[vertexIndex + 1] = activeColor;
+                vertexColors[vertexIndex + 2] = activeColor;
+                vertexColors[vertexIndex + 3] = activeColor;
+
+                text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
+            }
+        }
+        */
     }
 }
