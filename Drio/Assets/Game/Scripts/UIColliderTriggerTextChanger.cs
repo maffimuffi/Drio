@@ -28,6 +28,7 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
+                uiText.PriorityText();
                 uiText.TextChange(uiTextObject);
                 uiText.EnterSite();
             }

@@ -34,4 +34,15 @@ public class UIDialogue : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (other.GetComponent<CharacterMovement>().IsPlayerActive())
+            {
+                uiText.ExitSite();
+                uiText.ResetDialogue();
+            }
+        }
+    }
 }
