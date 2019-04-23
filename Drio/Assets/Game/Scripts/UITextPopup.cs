@@ -75,6 +75,10 @@ public class UITextPopup : MonoBehaviour
                 popupCounter = 0; 
             }
         }
+        
+        
+        
+        
 
         if (exiting && (entering || entered))
         {
@@ -91,6 +95,7 @@ public class UITextPopup : MonoBehaviour
                 backroundMat.transform.localScale =
                     new Vector3(minSize,
                         minSize, 0);
+                ResetDialogue();
                 entered = false;
                 entering = false;
                 exiting = false;
@@ -107,14 +112,21 @@ public class UITextPopup : MonoBehaviour
             dialogueCounter += Time.deltaTime;
             
             
-            if (lineList[lineCount].Length / 10 < 1)
+            if ((float)lineList[lineCount].Length / 9 <= 2.5f)
             {
-                dialogueMaxTime = 1;
+                dialogueMaxTime = 2.5f;
+            } else if ((float)lineList[lineCount].Length / 9 >= 15)
+            {
+                dialogueMaxTime = (float)lineList[lineCount].Length / 20;
+            } else if ((float)lineList[lineCount].Length / 9 >= 7)
+            {
+                dialogueMaxTime = (float)lineList[lineCount].Length / 11;
             }
             else
             {
-                dialogueMaxTime = lineList[lineCount].Length / 10;
+                dialogueMaxTime = (float)lineList[lineCount].Length / 9;
             }
+            Debug.Log("Linelist length: " + lineList[lineCount].Length + " Max Time: " + dialogueMaxTime);
             if (dialogueCounter >= dialogueMaxTime)
             {
                  
@@ -126,9 +138,10 @@ public class UITextPopup : MonoBehaviour
                 {
                     
                     //pelaaja on lukenut kaikki popupit
-                    entered = true;
+                    
                     dialogueActive = false;
                     lineCount = 0;
+                    ExitSite();
                 }
             }
         }
