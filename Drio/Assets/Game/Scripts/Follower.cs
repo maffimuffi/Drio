@@ -15,6 +15,14 @@ public class Follower : MonoBehaviour
     private Vector3 lastnavMeshAgentDestination;
     private bool right;
     private Vector3 newPosition;
+
+
+    public Animator anim;
+    bool isGrounded;
+    bool isRunning;
+
+    //public bool following;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +30,7 @@ public class Follower : MonoBehaviour
         lastnavMeshAgentDestination = navMeshAgent.destination;
         lastnavMeshAgentVelocity = navMeshAgent.velocity;
         lastnavMeshAgentPath = navMeshAgent.path;
+        anim = GetComponent<Animator>();
 
     }
 
@@ -40,6 +49,7 @@ public class Follower : MonoBehaviour
             {
                 if (gameObject.name == "FireDragon")
                 {
+                    ///anim.SetBool("isRunning", true);
                     newPosition = new Vector3(-3f, 0.5f, -2f);
                     right = false;
                 }
@@ -47,6 +57,7 @@ public class Follower : MonoBehaviour
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
+                    //anim.SetBool("isRunning", true);
                 }
 
             }
@@ -56,11 +67,13 @@ public class Follower : MonoBehaviour
                 {
                     right = false;
                     newPosition = new Vector3(-3f, 0.5f, -2f);
+                    //anim.SetBool("isRunning", true);
                 }
                 else if (gameObject.name == "WindDragon")
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
+                    //anim.SetBool("isRunning", true);
                 }
             }
             else if (PlayerChanger.CharacterSelect == 3)
@@ -69,11 +82,13 @@ public class Follower : MonoBehaviour
                 {
                     right = false;
                     newPosition = new Vector3(-3f, 0.5f, -2f);
+                    //anim.SetBool("isRunning", true);
                 }
                 else if (gameObject.name == "EarthDragon")
                 {
                     right = true;
                     newPosition = new Vector3(3f, 0.5f, -2f);
+                    //anim.SetBool("isRunning", true);
 
                 }
             }
@@ -83,11 +98,37 @@ public class Follower : MonoBehaviour
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               PlayerChanger.ActivePlayer.transform.right * 3;
+                //anim.SetBool("isRunning", true);
+                //following = true;
             }
             else if (!right)
             {
                 pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
                               -PlayerChanger.ActivePlayer.transform.right * 3;
+                //anim.SetBool("isRunning", true);
+                //following = true;
+            }
+
+            else
+            {
+                //following = false;
+            }
+
+            
+
+            Vector3 standing = new Vector3 (0,0,0);
+
+            if(navMeshAgent.velocity != Vector3.zero)
+            {
+                anim.SetBool("isRunning", true);
+                isRunning = true;
+            }
+
+
+            else
+            {
+                anim.SetBool("isRunning", false);
+                isRunning = false;
             }
 
 
@@ -97,6 +138,7 @@ public class Follower : MonoBehaviour
                 // pause();
                 navMeshAgent.enabled = false;
                 //navMeshAgent.isStopped = true;
+                anim.SetBool("isRunning", false);
             }
             if (PlayerChanger.PlayerFollowActive)
             {
@@ -104,6 +146,7 @@ public class Follower : MonoBehaviour
                 //navMeshAgent.isStopped = false;
                 gameObject.GetComponent<NavMeshObstacle>().enabled = false;
                 //navMeshAgent.path.corners[0] = gameObject.transform.position;
+                
             }
 
             if (navMeshAgent.enabled)
@@ -118,6 +161,7 @@ public class Follower : MonoBehaviour
                 //navMeshAgent.destination = transform.position;
                 navMeshAgent.enabled = false;
                 //            navMeshAgent.isStopped = true;
+                anim.SetBool("isRunning", false);
             }
 
         }
@@ -126,6 +170,7 @@ public class Follower : MonoBehaviour
             //navMeshAgent.destination = transform.position;
             navMeshAgent.enabled = false;
             //            navMeshAgent.isStopped = true;
+            anim.SetBool("isRunning", false);
         }
     }
 
