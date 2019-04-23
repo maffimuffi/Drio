@@ -10,11 +10,14 @@ public class UITextPopup : MonoBehaviour
     private RawImage backroundMat;
     private bool entering;
     private bool entered;
-    
+
+    private float dialogueMaxTime;
+    public string TEXTSHOWING;
     private float popupCounter;
-    
+    private bool priorityText = false;
     public float exitCounter = 0;
     private float exitTimeMax = 5;
+    private float dialogueCounter;
     private float maxTime = 1;
     private float popupSpeed = 0.1f;
     private float popupSpeed2 = 0.2f;
@@ -24,13 +27,15 @@ public class UITextPopup : MonoBehaviour
     private TextMeshProUGUI text;
     private float maxSize = 1;
     private bool dialogueActive;
-    private int lineCount;
+    private int lineCount = 0;
     private int maxLineCount;
-    private string[] dialogueLines;
+    
     private int countz = 0;
     private float minSize = 0.5f;
 
     
+    private string[] dialogueLines = new string[10];
+    private List<string> lineList = new List<string>();
     
     // Start is called before the first frame update
     void Start()
@@ -94,23 +99,41 @@ public class UITextPopup : MonoBehaviour
             }
         }
 
-        if (dialogueActive)
+        if (dialogueActive && !priorityText)
         {
-            exitCounter += Time.deltaTime;
-            if (exitCounter >= exitTimeMax)
+            
+            TextChange(lineList[lineCount]); 
+            
+            dialogueCounter += Time.deltaTime;
+            
+            
+            if (lineList[lineCount].Length / 10 < 1)
             {
-                TextChange(dialogueLines[lineCount]); 
+                dialogueMaxTime = 1;
+            }
+            else
+            {
+                dialogueMaxTime = lineList[lineCount].Length / 10;
+            }
+            if (dialogueCounter >= dialogueMaxTime)
+            {
+                 
                 lineCount++;
+                dialogueCounter = 0;
+                
                 
                 if (lineCount >= maxLineCount)
                 {
+                    
+                    //pelaaja on lukenut kaikki popupit
                     entered = true;
                     dialogueActive = false;
+                    lineCount = 0;
                 }
             }
         }
 
-        if (entered && !exiting)
+        if (entered && !exiting && !dialogueActive)
         {
             exitCounter += Time.deltaTime;
             if (exitCounter >= exitTimeMax)
@@ -119,6 +142,15 @@ public class UITextPopup : MonoBehaviour
             }
         }
         
+    }
+
+    public void ResetDialogue()
+    {
+        popupCounter = 0;
+        lineCount = 0;
+        dialogueCounter = 0;
+        
+        dialogueActive = false;
     }
 
     public void EnterSite()
@@ -130,17 +162,19 @@ public class UITextPopup : MonoBehaviour
 
     public void Dialogue(int howManyLines, string[] lines)
     {
-        
+
         maxLineCount = howManyLines;
+        lineList.Clear();
         countz = 0;
-        Debug.Log(maxLineCount);
+       
         
         foreach (var linea in lines)
         {
-            Debug.Log(linea);
-            dialogueLines[countz] = linea;
-            Debug.Log(dialogueLines[countz]);
-            Debug.Log(countz);
+            
+            lineList.Add(linea);
+            
+
+           
             countz++;
         }
         countz = 0;
@@ -157,10 +191,17 @@ public class UITextPopup : MonoBehaviour
         {
             text.text = "TEXT IS NULL, PLEASE ASSIGN IT IN INSPECTOR";
         }
-    }
 
+            TEXTSHOWING = text.text;
+        }
+
+    public void PriorityText()
+    {
+        priorityText = true;
+    }
     public void ExitSite()
     {
+        priorityText = false;
         exiting = true;
         exitCounter = 0;
     }
