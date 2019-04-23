@@ -99,7 +99,7 @@ public class UITextPopup : MonoBehaviour
             exitCounter += Time.deltaTime;
             if (exitCounter >= exitTimeMax)
             {
-                TextChange(dialogueLines[countz]); 
+                TextChange(dialogueLines[lineCount]); 
                 lineCount++;
                 
                 if (lineCount >= maxLineCount)
@@ -130,17 +130,21 @@ public class UITextPopup : MonoBehaviour
 
     public void Dialogue(int howManyLines, string[] lines)
     {
+        
         maxLineCount = howManyLines;
         countz = 0;
+        Debug.Log(maxLineCount);
+        
         foreach (var linea in lines)
         {
-//Debug.Log(linea);
-            
-           dialogueLines[countz] = linea;
+            Debug.Log(linea);
+            dialogueLines[countz] = linea;
+            Debug.Log(dialogueLines[countz]);
+            Debug.Log(countz);
             countz++;
         }
         countz = 0;
-        
+        dialogueActive = true;
     }
     
     public void TextChange(string x)
