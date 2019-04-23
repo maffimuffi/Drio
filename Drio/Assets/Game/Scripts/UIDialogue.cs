@@ -41,7 +41,7 @@ public class UIDialogue : MonoBehaviour
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
                 uiText.ExitSite();
-                uiText.ResetDialogue();
+                
             }
         }
     }
