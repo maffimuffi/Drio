@@ -4,48 +4,51 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    //[HideInInspector]
-    public GameObject player;
-    private float horizontalSpeed = 2.0f;
-    //[HideInInspector]
-    public PlayerChanger playerChanger;
-    //private float verticalSpeed = 2.0f;
-    private GameObject cameraHolder;
-    private Transform cameraTrans;
 
+    private GameObject player;
+    private Camera cam;
+
+    private float horizontalSpeed = 2.0f;
+
+    private PlayerChanger playerChanger;
+
+    private Transform playerTrans;
+    private Transform cameraTrans;
+    private Transform cameraPos1;
+    private Transform cameraPos2;
 
     //56.85 rotation
     private bool canSeePlayer;
     private bool moved;
-    private bool moving;
 
-    public GameObject ray;
-
-    private float smooth = 2.0f;
-    private float holderX;
-
+    private GameObject ray;
     private GameObject lastHit;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
-        Cursor.lockState = CursorLockMode.Locked;
-        cameraHolder = GameObject.Find("CameraHolder");
-        cameraTrans = GameObject.Find("CameraHolder").GetComponent<Transform>();
-        holderX = cameraTrans.transform.rotation.x;
-        lastHit = null;
 
+        //cam.transform.position = cameraPos1.transform.position;
         ray = GameObject.Find("Ray");
         player = PlayerChanger.ActivePlayer;
         canSeePlayer = true;
         moved = false;
-        moving = false;
+
+        playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
+        Cursor.lockState = CursorLockMode.Locked;
+        playerTrans = player.GetComponent<Transform>();
+        cameraTrans = GameObject.Find("Cam").GetComponent<Transform>();
+        lastHit = null;
+
+        cameraPos1 = GameObject.Find("DefaultPos").GetComponent<Transform>();
+        cameraPos2 = GameObject.Find("UpPos").GetComponent<Transform>();
+
+
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (PlayerChanger.CharacterSelect == 1)
         {
@@ -63,45 +66,37 @@ public class CameraMovement : MonoBehaviour
         {
             Debug.Log("ERROR 404");
         }
+
+        playerTrans = player.GetComponent<Transform>();
+
         // Mouse Input to rotate
         float h = horizontalSpeed * Input.GetAxisRaw("Mouse X");
+
 
         //float v = verticalSpeed * Input.GetAxis("Mouse Y");
         transform.position = player.transform.position;
 
+        cameraTrans.transform.LookAt(playerTrans);
 
         transform.Rotate(0, h, 0);
 
-        //if (!canSeePlayer)
-        //{
-        //    if(!moved)
-        //    {
-        //        MoveUp();
-        //        if(!moving)
-        //        {
-        //            moved = true;
-        //        }
-        //    }
-        //    else if(moved)
-        //    {
-        //        // Kameran kääntö eri akselilla
-        //    }  
-        //}
-        //else if (canSeePlayer)
-        //{
-        //    if(!moved)
-        //    {
-        //        // Kameran kääntö normaalisti
-        //    }
-        //    else if(moved)
-        //    {
-        //        MoveBack();
-        //        if(!moving)
-        //        {
-        //            moved = true;
-        //        }
-        //    }
-        //}
+        if(!canSeePlayer)
+        {
+            cameraTrans.transform.position = cameraPos2.transform.position;
+            cameraTrans.transform.rotation = cameraPos2.transform.rotation;
+            //if(!moved)
+            //{
+            //    MoveTowards();
+            //}
+        }
+        else if(canSeePlayer)
+        {
+            cameraTrans.transform.position = cameraPos1.transform.position;
+            //if(moved)
+            //{
+            //    MoveBack();
+            //}
+        }
 
 
 
@@ -111,9 +106,7 @@ public class CameraMovement : MonoBehaviour
         Ray raycast = new Ray(ray.transform.position, player.transform.position - ray.transform.position);
         if (Physics.Raycast(raycast, out hit, 200))
         {
-            GameObject notPlayer = null;
-            MeshRenderer rend = null;
-            Debug.Log(hit.transform.gameObject.name);
+            //GameObject notPlayer = null;
             if (hit.collider.gameObject.tag == "Player")
             {
                 canSeePlayer = true;
@@ -121,64 +114,30 @@ public class CameraMovement : MonoBehaviour
             else if (hit.collider.gameObject.tag != "Player")
             {
                 canSeePlayer = false;
-                lastHit = hit.collider.gameObject;
-                notPlayer = hit.transform.gameObject;
+                //lastHit = hit.collider.gameObject;
+                //notPlayer = hit.transform.gameObject;
             }
-            if(lastHit != null)
-            {
-                if (lastHit.GetComponent<MeshRenderer>().enabled == false && hit.collider.gameObject != notPlayer)
-                {
-                    lastHit.GetComponent<MeshRenderer>().enabled = true;
-                }
-            }
+            //if(lastHit != null)
+            //{
+            //    if (lastHit.GetComponent<MeshRenderer>().enabled == false && hit.collider.gameObject != notPlayer)
+            //    {
+            //        lastHit.GetComponent<MeshRenderer>().enabled = true;
+            //    }
+            //}
 
         }
 
-    //void MoveUp()
-    //{
+        //void MoveTowards()
+        //{
+            
+        //    moved = true;
+        //}
 
-    //    if (holderX < 0)
-    //    {
-    //        holderX = 0;
-    //    }
-    //    else if (holderX > 56)
-    //    {
-    //        holderX = 56;
-    //    }
+        //void MoveBack()
+        //{
 
-    //    if (holderX < 56f)
-    //    {
-    //        cameraHolder.transform.Rotate(1f, 0, 0);
-    //        moving = true;
-    //    }
-    //    else if(holderX == 0 || holderX == 56)
-    //    {
-    //        moving = false;
-    //    }
-    //}
-
-    //void MoveBack()
-    //{
-
-    //    if(holderX < 0)
-    //    {
-    //        holderX = 0;
-    //    }
-    //    else if(holderX > 56)
-    //    {
-    //        holderX = 56;
-    //    }
-
-    //    if (holderX > 0)
-    //    {
-    //        cameraHolder.transform.Rotate(-1, 0, 0);
-    //        moving = true;
-    //    }
-    //    else
-    //    {
-    //        moving = false;
-    //    }
-    //}
-}
+            
+        //}
+    }
 }
 
