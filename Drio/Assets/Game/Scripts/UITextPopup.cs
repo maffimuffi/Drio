@@ -37,6 +37,11 @@ public class UITextPopup : MonoBehaviour
     private int countz = 0;
     private float minSize = 0.5f;
     private bool changeColor;
+    
+    ///<see cref="0=None,1=Wind,2=Earth,3=Fire"/>
+    private int whoIsTalking;
+
+    private int whoLastSpoke;
 
     
     private string[] dialogueLines = new string[10];
@@ -112,9 +117,28 @@ public class UITextPopup : MonoBehaviour
         if (dialogueActive && !priorityText && !isDialogueWaiting)
         {
             
-            TextChange(lineList[lineCount]); 
-            
+            TextChange(lineList[lineCount]);
             dialogueCounter += Time.deltaTime;
+            var asd = lineList[lineCount][0];
+            if (asd == 'F' && lineList[lineCount][6] == ':')
+            {
+                whoIsTalking = 3;
+                
+            } else if (asd == 'G' && lineList[lineCount][4] == ':')
+            {
+                whoIsTalking = 1;
+               
+            } else if (asd == 'T' && lineList[lineCount][5] == ':')
+            {
+                whoIsTalking = 2;
+                
+            }
+            else
+            {
+                whoIsTalking = 0;
+            }
+            
+
             
 
             if ((float)lineList[lineCount].Length / 9 <= 2.5f)
@@ -131,7 +155,7 @@ public class UITextPopup : MonoBehaviour
             {
                 dialogueMaxTime = (float)lineList[lineCount].Length / 9;
             }
-            Debug.Log("Linelist length: " + lineList[lineCount].Length + " Max Time: " + dialogueMaxTime);
+            Debug.Log("Line char length: " + lineList[lineCount].Length + " Max Time for next line: " + dialogueMaxTime);
             if (dialogueCounter >= dialogueMaxTime)
             {
                  
@@ -170,7 +194,8 @@ public class UITextPopup : MonoBehaviour
         popupCounter = 0;
         lineCount = 0;
         dialogueCounter = 0;
-        
+        whoLastSpoke = 0;
+        whoIsTalking = 0;
         dialogueActive = false;
     }
 
@@ -186,6 +211,9 @@ public class UITextPopup : MonoBehaviour
         isDialogueWaiting = true;
         dialogueActive = false;
         exitCounter = 0;
+        whoLastSpoke = whoIsTalking;
+        whoIsTalking = 0;
+
     }
 
     public void DialogueContinue()
@@ -195,6 +223,8 @@ public class UITextPopup : MonoBehaviour
         priorityText = false;
         isDialogueWaiting = false;
         dialogueActive = true;
+        whoIsTalking = whoLastSpoke;
+        whoLastSpoke = 0;
     }
     public void Dialogue(int howManyLines, string[] lines)
     {
@@ -221,11 +251,25 @@ public class UITextPopup : MonoBehaviour
         {
             if (!String.IsNullOrEmpty(x))
             {
-                
+                if (whoIsTalking != 0)
+                {
+                    if (whoIsTalking == 1)
+                    {
+                        text.text = "<#7becd8>" + x.Remove(4,x.Length-4) + "</color>" + x.Remove(0,4);
+                    }  else if (whoIsTalking == 2)
+                    {
+                        text.text = "<#146f0b>"+ x.Remove(5,x.Length-5) + "</color>" + x.Remove(0,5);
+                    } else if (whoIsTalking == 3)
+                    {
+                        text.text = "<#e33939>"+ x.Remove(6,x.Length-6) + "</color>" + x.Remove(0,6);
+                    }
+                }
+                else
+                {
                     text.text = x;
+                }
 
-                   
-                
+
             }
             else
         {

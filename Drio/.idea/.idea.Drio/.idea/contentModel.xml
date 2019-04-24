@@ -33,10 +33,8 @@
           <e p="Scripts" t="Include">
             <e p="Attach.cs" t="Include" />
             <e p="Boulder.cs" t="Include" />
-            <e p="CameraController.cs" t="Include" />
             <e p="CameraMovement.cs" t="Include" />
             <e p="CameraTrigger.cs" t="Include" />
-            <e p="CamMove.cs" t="Include" />
             <e p="CharacterFollower.cs" t="Include" />
             <e p="CharacterMovement.cs" t="Include" />
             <e p="Checkpoint.cs" t="Include" />
@@ -56,6 +54,7 @@
             <e p="PU.cs" t="Include" />
             <e p="PutOutFire.cs" t="Include" />
             <e p="PuzzleTrigger.cs" t="Include" />
+            <e p="Rush.cs" t="Include" />
             <e p="Shooting.cs" t="Include" />
             <e p="Shooting2.cs" t="Include" />
             <e p="Shooting3.cs" t="Include" />
