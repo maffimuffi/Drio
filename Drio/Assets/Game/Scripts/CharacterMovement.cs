@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     
 
 
-    public float moveSpeed = 6f;
+    public static float moveSpeed = 8f;
     float jumpForce = 250f;
     //private float rotateSpeed = 5f;
     
@@ -304,10 +304,12 @@ public class CharacterMovement : MonoBehaviour
             jCount = 0;
         }
 
+       
+
 
         Quaternion camera = cam.transform.rotation;
 
-        if (Input.GetKey(KeyCode.W) && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.W) && characterMovementActive == true && !Grab.grab)
         {
             Quaternion forw = Quaternion.Euler(0, 0 + cam.transform.eulerAngles.y, 0);
             transform.rotation = forw;
@@ -366,6 +368,8 @@ public class CharacterMovement : MonoBehaviour
             transform.rotation = se;
         }
 
+        
+
     }
 
     void Glide()
@@ -408,7 +412,7 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log("Jippii");
 
 
-            rb.AddForce(jump * jumpForce * 3f, ForceMode.Impulse);
+            rb.AddForce(jump * jumpForce * 1.2f, ForceMode.Impulse);
 
         }
 
