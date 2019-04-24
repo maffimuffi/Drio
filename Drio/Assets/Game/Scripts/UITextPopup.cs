@@ -164,7 +164,7 @@ public class UITextPopup : MonoBehaviour
         popupCounter = 0;
         lineCount = 0;
         dialogueCounter = 0;
-        text.color = Color.cyan;
+        
         dialogueActive = false;
     }
 
