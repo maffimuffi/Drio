@@ -28,9 +28,21 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
-                uiText.PriorityText();
-                uiText.TextChange(uiTextObject);
-                uiText.EnterSite();
+                if (uiText.isDialogueWaiting || uiText.dialogueActive)
+                {
+                    uiText.DialoguePause();
+                    uiText.PriorityText();
+                    uiText.TextChange(uiTextObject);
+
+                }
+                else
+                {
+                    
+                    uiText.PriorityText();
+                    uiText.TextChange(uiTextObject);
+                    uiText.EnterSite();
+                }
+                
             }
         }
     }
@@ -41,7 +53,17 @@ public class UIColliderTriggerTextChanger : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
-                uiText.ExitSite();
+                if (uiText.isDialogueWaiting && !uiText.dialogueActive)
+                {
+                    uiText.DialogueContinue();
+                } else if (uiText.dialogueActive)
+                {
+                    
+                }
+                else
+                {
+                    uiText.ExitSite();
+                }
             }
         }
     }

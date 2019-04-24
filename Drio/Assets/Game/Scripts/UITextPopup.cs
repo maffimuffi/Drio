@@ -11,6 +11,9 @@ public class UITextPopup : MonoBehaviour
     private bool entering;
     private bool entered;
 
+
+    public bool isDialogueWaiting;
+    
     private float dialogueMaxTime;
     public string TEXTSHOWING;
     private float popupCounter;
@@ -26,7 +29,7 @@ public class UITextPopup : MonoBehaviour
     private bool exiting;
     private TextMeshProUGUI text;
     private float maxSize = 1;
-    private bool dialogueActive;
+    public bool dialogueActive;
     private int lineCount = 0;
     private int maxLineCount;
     private Color32[] colors = new Color32[3]{Color.cyan,Color.green,Color.red};
@@ -106,7 +109,7 @@ public class UITextPopup : MonoBehaviour
             }
         }
 
-        if (dialogueActive && !priorityText)
+        if (dialogueActive && !priorityText && !isDialogueWaiting)
         {
             
             TextChange(lineList[lineCount]); 
@@ -151,7 +154,10 @@ public class UITextPopup : MonoBehaviour
         if (entered && !exiting && !dialogueActive)
         {
             exitCounter += Time.deltaTime;
-            if (exitCounter >= exitTimeMax)
+            if (exitCounter >= exitTimeMax && isDialogueWaiting)
+            {
+                DialogueContinue();
+            } else if (exitCounter >= exitTimeMax)
             {
                 ExitSite();
             }
@@ -175,6 +181,21 @@ public class UITextPopup : MonoBehaviour
         exiting = false;
     }
 
+    public void DialoguePause()
+    {
+        isDialogueWaiting = true;
+        dialogueActive = false;
+        exitCounter = 0;
+    }
+
+    public void DialogueContinue()
+    {
+        exitCounter = 0;
+        dialogueCounter = 0;
+        priorityText = false;
+        isDialogueWaiting = false;
+        dialogueActive = true;
+    }
     public void Dialogue(int howManyLines, string[] lines)
     {
 
