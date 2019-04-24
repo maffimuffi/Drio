@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1924884431371189929}
   - component: {fileID: 1540431596353793321}
   - component: {fileID: 4318249106288122636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireShot
   m_TagString: FireShot
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4499646094872471475}
   - component: {fileID: 4327618445774368787}
   - component: {fileID: 5582748329476392175}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

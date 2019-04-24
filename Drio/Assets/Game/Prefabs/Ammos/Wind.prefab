@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451797134}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WindStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1839673374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WindEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 6841444750522215865}
   - component: {fileID: 2738149171538055562}
   - component: {fileID: 4139980596830896651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wind
   m_TagString: Wind
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 1766623148115272733}
   - component: {fileID: 4747784732534316719}
   - component: {fileID: 7773530642594314668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

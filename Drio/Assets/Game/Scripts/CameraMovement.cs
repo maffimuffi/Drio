@@ -29,6 +29,8 @@ public class CameraMovement : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
+    public LayerMask myLayerMask;
+
 
     // Start is called before the first frame update
     void Start()
@@ -105,9 +107,10 @@ public class CameraMovement : MonoBehaviour
         // defaultCameraPoscasting too see if player is visible
         Debug.DrawRay(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position, Color.red, 0.2f);
         Ray raycast = new Ray(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position);
-        if (Physics.Raycast(raycast, out hit, 200))
+        if (Physics.Raycast(raycast, out hit, 200, myLayerMask))
         {
-            if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Wind" || hit.collider.gameObject.tag == "EarthShot" || hit.collider.gameObject.tag == "FireShot")
+            // || hit.collider.gameObject.tag == "Wind" || hit.collider.gameObject.tag == "EarthShot" || hit.collider.gameObject.tag == "FireShot"
+            if (hit.collider.gameObject.tag == "Player")
             {
                 canSeePlayer = true;
             }
