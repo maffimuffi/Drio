@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class CameraTrigger : MonoBehaviour
 {
-    //[HideInInspector]
+    [HideInInspector]
     public bool camTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        camTriggered = true; 
+        if(other.gameObject.tag != "Player" || other.gameObject.tag != "Wind" || other.gameObject.tag != "EarthShot" || other.gameObject.tag != "FireShot")
+        {
+            camTriggered = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)

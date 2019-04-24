@@ -9,9 +9,10 @@ public class CameraMovement : MonoBehaviour
     private Camera cam;
 
     private float horizontalSpeed = 2.0f;
-    private float smoothTime = 0.5f;
+    private float smoothTime = 0.4f;
 
     private PlayerChanger playerChanger;
+    private CameraTrigger cameraTrigger;
 
     private Transform playerTrans;
     private Transform cameraTrans;
@@ -20,7 +21,6 @@ public class CameraMovement : MonoBehaviour
 
     //56.85 rotation
     private bool canSeePlayer;
-    private bool moved;
 
     private GameObject defaultCameraPos;
 
@@ -38,9 +38,9 @@ public class CameraMovement : MonoBehaviour
         defaultCameraPos = GameObject.Find("DefaultPos");
         player = PlayerChanger.ActivePlayer;
         canSeePlayer = true;
-        moved = false;
 
         playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
+        cameraTrigger = GameObject.Find("DefaultPos").GetComponent<CameraTrigger>();
         Cursor.lockState = CursorLockMode.Locked;
         playerTrans = player.GetComponent<Transform>();
         cameraTrans = GameObject.Find("Cam").GetComponent<Transform>();
@@ -54,6 +54,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        Debug.Log(cameraTrigger.camTriggered);
         if (PlayerChanger.CharacterSelect == 1)
         {
             player = GameObject.Find("WindDragon");
@@ -84,7 +85,7 @@ public class CameraMovement : MonoBehaviour
 
         transform.Rotate(0, h, 0);
 
-        if(!canSeePlayer)
+        if(!canSeePlayer || cameraTrigger.camTriggered == true)
         {
             // Camera movement to up position
             cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos2.transform.position, ref velocity, smoothTime);
@@ -92,7 +93,7 @@ public class CameraMovement : MonoBehaviour
             // Camera rotation
             cameraTrans.transform.rotation = cameraPos2.transform.rotation;
         }
-        else if(canSeePlayer)
+        else if(canSeePlayer && cameraTrigger.camTriggered == false)
         {
             // Camera movement to default position
             cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos1.transform.position, ref velocity, smoothTime);
@@ -109,7 +110,7 @@ public class CameraMovement : MonoBehaviour
             {
                 canSeePlayer = true;
             }
-            else if (hit.collider.gameObject.tag != "Player")
+            else if (hit.collider.gameObject.tag != "Player" || hit.collider.gameObject.tag != "Wind" || hit.collider.gameObject.tag != "EarthShot" || hit.collider.gameObject.tag != "FireShot")
             {
                 canSeePlayer = false;
             }
