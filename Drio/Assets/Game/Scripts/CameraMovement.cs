@@ -54,7 +54,6 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Debug.Log(cameraTrigger.camTriggered);
         if (PlayerChanger.CharacterSelect == 1)
         {
             player = GameObject.Find("WindDragon");
