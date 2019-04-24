@@ -206,7 +206,7 @@ public class CharacterMovement : MonoBehaviour
                 isRunning = true; 
 
                 rotating = true;
-                //transform.parent = null;
+                transform.parent = null;
 
             }
             else
@@ -381,14 +381,15 @@ public class CharacterMovement : MonoBehaviour
     {
         return characterMovementActive;
     }
-    
+
     void OnCollisionEnter(Collision collision)
     {
 
 
 
         //animation stuff 
-        if (collision.gameObject.tag == "Terrain") {
+        if (collision.gameObject.tag == "Terrain")
+        {
 
             isGrounded = true;
             anim.SetBool("isJumping", false);
@@ -406,7 +407,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bounce"))
         {
-            
+
             Debug.Log("Jippii");
 
 
@@ -414,22 +415,85 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-        
+    }
+
+    void OnCollisionStay(Collision collision) { 
+    float moveHorizontal = Input.GetAxisRaw("Horizontal");
+    float moveVertical = Input.GetAxisRaw("Vertical");
+
+
+    Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
+    Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
+
+    //anim.SetFloat("Speed", move);
+
+    //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
+    Vector3 pMovement = horMovement + verMovement;
+
+        if (collision.gameObject.tag == "mPlatform")
+        {
+
+
+            if (isRunning == false)
+            {
+                transform.parent = collision.transform;
+            }
+
+            else
+            {
+                transform.parent = null;
+            }
+
+
+        }
+
+        else if (Input.GetKey(KeyCode.W) && collision.gameObject.tag == "mPlatform")
+        {
+            transform.parent = null;
+            rb.MovePosition(transform.position + pMovement);
+        }
+
+
 
     }
 
-    public void ResetJump()
+    void OnCollisionExit(Collider collision)
+{
+    if (collision.gameObject.tag == "mPlatform")
+    {
+
+        transform.parent = null;
+
+    }
+
+
+
+}
+
+public void ResetJump()
     {
         jCount = 0;
     }
 
    
 
-    /*
-    void OnTriggerStay(Collider other)
+    
+    void OnCollisionEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "mPlatform" && moving == false)
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
+
+
+        Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
+        Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
+
+        //anim.SetFloat("Speed", move);
+
+        //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
+        Vector3 pMovement = horMovement + verMovement;
+
+        if (other.gameObject.tag == "mPlatform")
         {
 
             
@@ -439,12 +503,19 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-        
+        else if(Input.GetKey(KeyCode.W) && other.gameObject.tag == "mPlatform")
+        {
+            transform.parent = null;
+            rb.MovePosition(transform.position + pMovement);
+        }
+
+
+
     }
 
 
 
-    void OnTriggerExit(Collider other)
+   /*void OnCollisionExit(Collider other)
     {
         if (other.gameObject.tag == "mPlatform")
         {
@@ -452,6 +523,10 @@ public class CharacterMovement : MonoBehaviour
             transform.parent = null;
 
         }
+
+        
+
     }
-*/
+    */
+
 }

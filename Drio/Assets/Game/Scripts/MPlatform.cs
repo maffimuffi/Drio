@@ -5,11 +5,12 @@ using UnityEngine;
 public class MPlatform : MonoBehaviour
 {
     float timer = 0;
+    public Rigidbody rb;
 
     // Use this for initialization
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -19,13 +20,16 @@ public class MPlatform : MonoBehaviour
 
         if (timer > 0 && timer < 2)
         {
-            transform.Translate(0, 0, 0.05f);
+            //transform.Translate(0, 0, 0.05f);
+            rb.MovePosition(new Vector3(0, 0, 2));
         }
 
         else if (timer > 2 && timer < 4)
         {
-            transform.Translate(0, 0, -0.05f);
+            //transform.Translate(0, 0, -0.05f);
+            rb.MovePosition(new Vector3(0, 0, 2f));
         }
+    
 
         else if (timer > 5)
         {
@@ -33,12 +37,7 @@ public class MPlatform : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            
-
-
-        }
+        
 
     }
 
