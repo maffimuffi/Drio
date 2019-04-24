@@ -9,6 +9,7 @@ public class CharacterMovement : MonoBehaviour
     public Animator anim;
     bool isGrounded;
     bool isRunning;
+    bool isGliding;
 
     
 
@@ -63,6 +64,7 @@ public class CharacterMovement : MonoBehaviour
         // anim.SetBool("isJumping", false);
         isGrounded = true;
         isRunning = false;
+        isGliding = false;
 
 
 
@@ -204,7 +206,8 @@ public class CharacterMovement : MonoBehaviour
                 isRunning = true; 
 
                 rotating = true;
-                
+                //transform.parent = null;
+
             }
             else
             {
@@ -407,7 +410,7 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log("Jippii");
 
 
-            rb.AddForce(jump * jumpForce * 3f, ForceMode.Impulse);
+            rb.AddForce(jump * jumpForce * 1.2f, ForceMode.Impulse);
 
         }
 
