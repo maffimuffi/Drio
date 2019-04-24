@@ -9,7 +9,6 @@ public class CharacterMovement : MonoBehaviour
     public Animator anim;
     bool isGrounded;
     bool isRunning;
-    bool isGliding;
 
     
 
@@ -64,7 +63,6 @@ public class CharacterMovement : MonoBehaviour
         // anim.SetBool("isJumping", false);
         isGrounded = true;
         isRunning = false;
-        isGliding = false;
 
 
 
@@ -201,18 +199,18 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
                 Input.GetKey(KeyCode.D))
             {
-                //kokeilu
+               
                 anim.SetBool("isRunning", true);
                 isRunning = true; 
 
                 rotating = true;
-                transform.parent = null;
-
+                
             }
             else
             {
                 rotating = false;
                 anim.SetBool("isRunning", false);
+                isRunning = false;
             }
 
             if (rotating)
@@ -381,15 +379,14 @@ public class CharacterMovement : MonoBehaviour
     {
         return characterMovementActive;
     }
-
+    
     void OnCollisionEnter(Collision collision)
     {
 
 
 
         //animation stuff 
-        if (collision.gameObject.tag == "Terrain")
-        {
+        if (collision.gameObject.tag == "Terrain") {
 
             isGrounded = true;
             anim.SetBool("isJumping", false);
@@ -407,93 +404,30 @@ public class CharacterMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bounce"))
         {
-
+            
             Debug.Log("Jippii");
 
 
-            rb.AddForce(jump * jumpForce * 1.2f, ForceMode.Impulse);
+            rb.AddForce(jump * jumpForce * 3f, ForceMode.Impulse);
 
         }
 
-    }
-
-    void OnCollisionStay(Collision collision) { 
-    float moveHorizontal = Input.GetAxisRaw("Horizontal");
-    float moveVertical = Input.GetAxisRaw("Vertical");
-
-
-    Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
-    Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
-
-    //anim.SetFloat("Speed", move);
-
-    //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
-    Vector3 pMovement = horMovement + verMovement;
-
-        if (collision.gameObject.tag == "mPlatform")
-        {
-
-
-            if (isRunning == false)
-            {
-                transform.parent = collision.transform;
-            }
-
-            else
-            {
-                transform.parent = null;
-            }
-
-
-        }
-
-        else if (Input.GetKey(KeyCode.W) && collision.gameObject.tag == "mPlatform")
-        {
-            transform.parent = null;
-            rb.MovePosition(transform.position + pMovement);
-        }
-
-
+        
 
     }
 
-    void OnCollisionExit(Collider collision)
-{
-    if (collision.gameObject.tag == "mPlatform")
-    {
-
-        transform.parent = null;
-
-    }
-
-
-
-}
-
-public void ResetJump()
+    public void ResetJump()
     {
         jCount = 0;
     }
 
    
 
-    
-    void OnCollisionEnter(Collider other)
+    /*
+    void OnTriggerStay(Collider other)
     {
 
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
-
-
-        Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
-        Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
-
-        //anim.SetFloat("Speed", move);
-
-        //Vector3 pMovement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
-        Vector3 pMovement = horMovement + verMovement;
-
-        if (other.gameObject.tag == "mPlatform")
+        if (other.gameObject.tag == "mPlatform" && moving == false)
         {
 
             
@@ -503,19 +437,12 @@ public void ResetJump()
 
         }
 
-        else if(Input.GetKey(KeyCode.W) && other.gameObject.tag == "mPlatform")
-        {
-            transform.parent = null;
-            rb.MovePosition(transform.position + pMovement);
-        }
-
-
-
+        
     }
 
 
 
-   /*void OnCollisionExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "mPlatform")
         {
@@ -523,10 +450,6 @@ public void ResetJump()
             transform.parent = null;
 
         }
-
-        
-
     }
-    */
-
+*/
 }
