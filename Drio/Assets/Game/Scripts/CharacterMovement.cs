@@ -136,7 +136,6 @@ public class CharacterMovement : MonoBehaviour
 
         if (isGrounded) {
             anim.SetBool("isGliding", false);
-            anim.SetBool("isDoubleJumping", false);
         }
 
         if (characterMovementActive)
@@ -264,8 +263,7 @@ public class CharacterMovement : MonoBehaviour
                  {
                      rb.velocity = new Vector3(0,0.01f,0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-                    jCount++;
-                    anim.SetBool("isDoubleJumping", true);
+                    jCount++;    
                 }
             }
 
