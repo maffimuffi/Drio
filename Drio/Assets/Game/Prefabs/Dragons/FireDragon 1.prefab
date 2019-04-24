@@ -5432,7 +5432,7 @@ Animator:
   m_GameObject: {fileID: 2162547508827637176}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6e3bb2e8c75890048a87bf348a069bed, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8f243f781472fc34494bcc941666e006, type: 2}
+  m_Controller: {fileID: 9100000, guid: 74cf42507fd30d841bd87b0b04a4a852, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5499,6 +5499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseTPoint: {fileID: 0}
+  anim: {fileID: 2162547508818130876}
 --- !u!114 &2162547507311674568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5550,6 +5551,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   rotating: 0
   jump: {x: 0, y: 2, z: 0}
+  cam: {fileID: 0}
 --- !u!114 &2162547507311674547
 MonoBehaviour:
   m_ObjectHideFlags: 0
