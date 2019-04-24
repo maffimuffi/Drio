@@ -107,11 +107,11 @@ public class CameraMovement : MonoBehaviour
         Ray raycast = new Ray(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position);
         if (Physics.Raycast(raycast, out hit, 200))
         {
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Wind" || hit.collider.gameObject.tag == "EarthShot" || hit.collider.gameObject.tag == "FireShot")
             {
                 canSeePlayer = true;
             }
-            else if (hit.collider.gameObject.tag != "Player" || hit.collider.gameObject.tag != "Wind" || hit.collider.gameObject.tag != "EarthShot" || hit.collider.gameObject.tag != "FireShot")
+            else if (hit.collider.gameObject.tag != "Player")
             {
                 canSeePlayer = false;
             }
