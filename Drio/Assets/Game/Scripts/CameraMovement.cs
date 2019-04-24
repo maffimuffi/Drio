@@ -84,6 +84,7 @@ public class CameraMovement : MonoBehaviour
 
         transform.Rotate(0, h, 0);
 
+        // Check if raycast can see player or default position hits a wall, move camera on top of player
         if(!canSeePlayer || cameraTrigger.camTriggered == true)
         {
             // Camera movement to up position
@@ -92,6 +93,7 @@ public class CameraMovement : MonoBehaviour
             // Camera rotation
             cameraTrans.transform.rotation = cameraPos2.transform.rotation;
         }
+        // Check if raycast can see player and default position isn't hitting a wall, move the camera to default position
         else if(canSeePlayer && cameraTrigger.camTriggered == false)
         {
             // Camera movement to default position
