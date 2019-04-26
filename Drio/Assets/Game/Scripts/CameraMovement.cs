@@ -6,10 +6,10 @@ public class CameraMovement : MonoBehaviour
 {
 
     private GameObject player;
-    private Camera cam;
 
     private float horizontalSpeed = 2.0f;
     private float smoothTime = 0.4f;
+    public float smoothRot = 2.5f;
 
     private PlayerChanger playerChanger;
     private CameraTrigger cameraTrigger;
@@ -82,7 +82,7 @@ public class CameraMovement : MonoBehaviour
         //float v = verticalSpeed * Input.GetAxis("Mouse Y");
         transform.position = player.transform.position;
 
-        cameraTrans.transform.LookAt(playerTrans);
+        //cameraTrans.transform.LookAt(playerTrans);
 
         transform.Rotate(0, h, 0);
 
@@ -93,13 +93,18 @@ public class CameraMovement : MonoBehaviour
             cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos2.transform.position, ref velocity, smoothTime);
 
             // Camera rotation
-            cameraTrans.transform.rotation = cameraPos2.transform.rotation;
+            cameraTrans.transform.rotation = Quaternion.Lerp(cameraTrans.transform.rotation, cameraPos2.transform.rotation, Time.deltaTime * smoothRot);
+            //cameraTrans.transform.rotation = cameraPos2.transform.rotation;
         }
         // Check if raycast can see player and default position isn't hitting a wall, move the camera to default position
         else if(canSeePlayer && cameraTrigger.camTriggered == false)
         {
             // Camera movement to default position
             cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos1.transform.position, ref velocity, smoothTime);
+
+            // Camera rotation
+            cameraTrans.transform.rotation = Quaternion.Lerp(cameraTrans.transform.rotation, cameraPos1.transform.rotation, Time.deltaTime * smoothRot);
+            //cameraTrans.transform.rotation = cameraPos1.transform.rotation;
         }
 
 
