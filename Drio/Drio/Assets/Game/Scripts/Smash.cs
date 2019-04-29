@@ -6,6 +6,7 @@ public class Smash : MonoBehaviour
 {
 
     public GameObject ammo;
+    public GameObject replacement;
     bool destroy;
  
     //GameObject sound;
@@ -32,6 +33,7 @@ public class Smash : MonoBehaviour
         {
             Debug.Log("pum");
             //sound.GetComponent<smashSound>().on = true;
+            GameObject.Instantiate(replacement, transform.position, transform.rotation);
             destroy = true;
         }
     }

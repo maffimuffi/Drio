@@ -97,14 +97,14 @@ public class Follower : MonoBehaviour
             Vector3 direction = (PlayerChanger.ActivePlayer.transform.position - transform.position).normalized;
             if (right)
             {
-                pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
-                              PlayerChanger.ActivePlayer.transform.right * 3;
+                pos = -PlayerChanger.ActivePlayer.transform.forward * 8 +
+                              PlayerChanger.ActivePlayer.transform.right * 10;
                 
             }
             else if (!right)
             {
-                pos = -PlayerChanger.ActivePlayer.transform.forward * 2 +
-                              -PlayerChanger.ActivePlayer.transform.right * 3;
+                pos = -PlayerChanger.ActivePlayer.transform.forward * 8 +
+                              -PlayerChanger.ActivePlayer.transform.right * 10;
                 
 
             }
