@@ -10,6 +10,7 @@ public class CameraMovement : MonoBehaviour
     private float horizontalSpeed = 2.0f;
     private float smoothTime = 0.4f;
     public float smoothRot = 2.5f;
+    private float timer = 0f;
 
     private PlayerChanger playerChanger;
     private CameraTrigger cameraTrigger;
@@ -117,11 +118,16 @@ public class CameraMovement : MonoBehaviour
             // || hit.collider.gameObject.tag == "Wind" || hit.collider.gameObject.tag == "EarthShot" || hit.collider.gameObject.tag == "FireShot"
             if (hit.collider.gameObject.tag == "Player")
             {
+                timer = 0;
                 canSeePlayer = true;
             }
             else if (hit.collider.gameObject.tag != "Player")
             {
-                canSeePlayer = false;
+                timer += Time.deltaTime;
+                if(timer >= 0.03f)
+                {
+                    canSeePlayer = false;
+                }
             }
 
         }
