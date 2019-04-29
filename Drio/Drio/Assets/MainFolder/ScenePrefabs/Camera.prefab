@@ -291,8 +291,8 @@ MonoBehaviour:
   debugClamp: 0
   middleGrey: 0.25
   adaptionSpeed: 1.5
-  adaptiveMin: 0
-  adaptiveMax: 1
+  adaptiveMin: -0.25
+  adaptiveMax: 0.5
   adaptiveDebug: 0
   lutExposureBias: 0
   lutWhiteBalance: {r: 1, g: 1, b: 1, a: 1}
