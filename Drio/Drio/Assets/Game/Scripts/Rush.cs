@@ -17,14 +17,14 @@ public class Rush : MonoBehaviour
         {
             if(PlayerChanger.CharacterSelect == 3)
             {
-                CharacterMovement.moveSpeed = 16;
+                CharacterMovement.moveSpeed = 12;
             }
             
         }
 
         else
         {
-            CharacterMovement.moveSpeed = 10;
+            CharacterMovement.moveSpeed = 8;
         }
     }
 }

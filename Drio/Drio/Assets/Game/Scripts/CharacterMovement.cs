@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     
 
 
-    public static float moveSpeed = 10f;
+    public static float moveSpeed = 8f;
     float jumpForce = 250f;
     //private float rotateSpeed = 5f;
     
