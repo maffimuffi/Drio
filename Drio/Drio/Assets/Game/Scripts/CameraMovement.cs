@@ -124,7 +124,6 @@ public class CameraMovement : MonoBehaviour
                     canSeePlayer = false;
                 }
             }
-
         }
     }
 }
