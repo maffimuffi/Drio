@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     private float horizontalSpeed = 2.0f;
     private float smoothTime = 0.4f;
     public float smoothRot = 2.5f;
-    private float timer = 0f;
+    private float timer = 0.0f;
 
     private PlayerChanger playerChanger;
     private CameraTrigger cameraTrigger;
@@ -83,8 +83,6 @@ public class CameraMovement : MonoBehaviour
         //float v = verticalSpeed * Input.GetAxis("Mouse Y");
         transform.position = player.transform.position;
 
-        //cameraTrans.transform.LookAt(playerTrans);
-
         transform.Rotate(0, h, 0);
 
         // Check if raycast can see player or default position hits a wall, move camera on top of player
@@ -95,7 +93,6 @@ public class CameraMovement : MonoBehaviour
 
             // Camera rotation
             cameraTrans.transform.rotation = Quaternion.Lerp(cameraTrans.transform.rotation, cameraPos2.transform.rotation, Time.deltaTime * smoothRot);
-            //cameraTrans.transform.rotation = cameraPos2.transform.rotation;
         }
         // Check if raycast can see player and default position isn't hitting a wall, move the camera to default position
         else if(canSeePlayer && cameraTrigger.camTriggered == false)
@@ -105,17 +102,15 @@ public class CameraMovement : MonoBehaviour
 
             // Camera rotation
             cameraTrans.transform.rotation = Quaternion.Lerp(cameraTrans.transform.rotation, cameraPos1.transform.rotation, Time.deltaTime * smoothRot);
-            //cameraTrans.transform.rotation = cameraPos1.transform.rotation;
         }
 
 
 
-        // defaultCameraPoscasting too see if player is visible
+        // defaultCameraRaycasting too see if player is visible
         Debug.DrawRay(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position, Color.red, 0.2f);
         Ray raycast = new Ray(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position);
         if (Physics.Raycast(raycast, out hit, 200, myLayerMask))
         {
-            // || hit.collider.gameObject.tag == "Wind" || hit.collider.gameObject.tag == "EarthShot" || hit.collider.gameObject.tag == "FireShot"
             if (hit.collider.gameObject.tag == "Player")
             {
                 timer = 0;
