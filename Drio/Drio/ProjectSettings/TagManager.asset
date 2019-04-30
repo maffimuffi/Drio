@@ -23,6 +23,7 @@ TagManager:
   - BoulderTrigger
   - Ammo
   - OnFire
+  - BodyBone
   layers:
   - Default
   - TransparentFX
