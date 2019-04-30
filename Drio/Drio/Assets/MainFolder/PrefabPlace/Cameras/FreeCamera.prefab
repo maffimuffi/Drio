@@ -291,8 +291,6 @@ MonoBehaviour:
   debugClamp: 0
   middleGrey: 0.25
   adaptionSpeed: 1.5
-  adaptiveMin: -0.25
-  adaptiveMax: 0.5
   adaptiveDebug: 0
   lutExposureBias: 0
   lutWhiteBalance: {r: 1, g: 1, b: 1, a: 1}
@@ -366,7 +364,7 @@ GameObject:
   - component: {fileID: 9009103773494259543}
   - component: {fileID: 9009103773494259542}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: FreeCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

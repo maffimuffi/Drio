@@ -27,9 +27,10 @@ public class TonemappingLut : PostEffectsBase {
 	public float middleGrey = 0.18f;
 	public float adaptionSpeed = 1.5f;
 
-	public float adaptiveMin = -3.0f;
-	public float adaptiveMax = 3.0f;
-	public bool adaptiveDebug = false;
+    public static float adaptiveMin = 0.0f;
+    public static float adaptiveMax = 0.5f;
+    
+    public bool adaptiveDebug = false;
 
 	// LUT
 	public float lutExposureBias = 0.0f;
@@ -1077,5 +1078,6 @@ public class TonemappingLut : PostEffectsBase {
 			}
 			RenderTexture.ReleaseTemporary(rtSquared);
 		}
+        
 	}
 }

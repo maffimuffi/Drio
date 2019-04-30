@@ -10,25 +10,25 @@ public class CharacterMovement : MonoBehaviour
     bool isGrounded;
     bool isRunning;
 
-    
 
 
-    public static float moveSpeed = 8f;
+
+    public static float moveSpeed = 12f;
     float jumpForce = 250f;
     //private float rotateSpeed = 5f;
-    
+
     [HideInInspector]
     public GameObject playerTransform;
     private GameObject thisPlayer;
 
-//    private bool jumpedCounter = false;
-//    private bool jumped = false;
+    //    private bool jumpedCounter = false;
+    //    private bool jumped = false;
     private bool allowJump;
     private bool doubleJump;
     public bool rotating;
     private bool characterMovementActive = false;
 
-//    private float timer = 0;
+    //    private float timer = 0;
     private float gravityScale;
 
     public Vector3 jump;
@@ -38,13 +38,13 @@ public class CharacterMovement : MonoBehaviour
     private int jCount;
 
     [HideInInspector]
-    
+
     private float jCounter;
 
     private Vector3 movement;
     private Vector3 spin;
 
-    
+
 
     int jumpHashFD = Animator.StringToHash("FD_Jump");
     int runStateHash = Animator.StringToHash("Base Layer.Run");
@@ -70,15 +70,17 @@ public class CharacterMovement : MonoBehaviour
         thisPlayer = gameObject;
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
-           //setPlayerActive();
+        //setPlayerActive();
 
         if (thisPlayer.name == "WindDragon")
         {
             playerTransform = GameObject.Find("WindTransformPoint");
-        } else if (thisPlayer.name == "FireDragon")
+        }
+        else if (thisPlayer.name == "FireDragon")
         {
             playerTransform = GameObject.Find("FireTransformPoint");
-        } else if (thisPlayer.name == "EarthDragon")
+        }
+        else if (thisPlayer.name == "EarthDragon")
         {
             playerTransform = GameObject.Find("EarthTransformPoint");
         }
@@ -95,10 +97,12 @@ public class CharacterMovement : MonoBehaviour
         if (thisPlayer.name == "EarthDragon" && PlayerChanger.CharacterSelect == 2)
         {
             characterMovementActive = true;
-        } else if (thisPlayer.name == "WindDragon" && PlayerChanger.CharacterSelect == 1)
+        }
+        else if (thisPlayer.name == "WindDragon" && PlayerChanger.CharacterSelect == 1)
         {
             characterMovementActive = true;
-        } else if (thisPlayer.name == "FireDragon" && PlayerChanger.CharacterSelect == 3)
+        }
+        else if (thisPlayer.name == "FireDragon" && PlayerChanger.CharacterSelect == 3)
         {
             characterMovementActive = true;
         }
@@ -110,7 +114,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -134,14 +138,15 @@ public class CharacterMovement : MonoBehaviour
         //Draw hyppy mahd
 
 
-        if (isGrounded) {
+        if (isGrounded)
+        {
             anim.SetBool("isGliding", false);
         }
 
         if (characterMovementActive)
         {
-            
-            Debug.DrawRay(transform.position,-transform.up,Color.blue,0.5f);
+
+            Debug.DrawRay(transform.position, -transform.up, Color.blue, 0.5f);
             RaycastHit hit;
 
             //tämä pieni paska sen takia koska jcountin chekkaaminen paljon kevyempää kuin kaikkien kolmen.
@@ -161,8 +166,8 @@ public class CharacterMovement : MonoBehaviour
 
             float moveHorizontal = Input.GetAxisRaw("Horizontal");
             float moveVertical = Input.GetAxisRaw("Vertical");
-            
-            
+
+
             Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
             Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
 
@@ -172,7 +177,7 @@ public class CharacterMovement : MonoBehaviour
             Vector3 pMovement = horMovement + verMovement;
             Vector3 pushVer = new Vector3(0, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
 
-            if(transform.position.y < -1)
+            if (transform.position.y < -1)
             {
                 transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
                 Debug.Log("Hups!");
@@ -184,9 +189,10 @@ public class CharacterMovement : MonoBehaviour
                 rb.MovePosition(transform.position + pMovement);
 
 
-            } else if (Grab.grab && PlayerChanger.CharacterSelect == 2)
+            }
+            else if (Grab.grab && PlayerChanger.CharacterSelect == 2)
             {
-                
+
                 rb.MovePosition(transform.position + pushVer);
                 transform.eulerAngles = new Vector3(0, 0, 0);
 
@@ -199,12 +205,12 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
                 Input.GetKey(KeyCode.D))
             {
-               
+
                 anim.SetBool("isRunning", true);
-                isRunning = true; 
+                isRunning = true;
 
                 rotating = true;
-                
+
             }
             else
             {
@@ -223,17 +229,18 @@ public class CharacterMovement : MonoBehaviour
                 }
                 else
                 {
-                    rb.MoveRotation(playerTransform.transform.rotation); 
-                    
+                    rb.MoveRotation(playerTransform.transform.rotation);
+
                 }
             }
-            
-            
+
+
             if (Input.GetButtonDown("Jump"))
             {
-                if (isRunning) {
+                if (isRunning)
+                {
                     anim.SetBool("isRunningJumping", true);
-                    isGrounded = false; 
+                    isGrounded = false;
                 }
 
                 if (isRunning == false)
@@ -243,11 +250,11 @@ public class CharacterMovement : MonoBehaviour
                     isGrounded = false;
                 }
                 if (jCount < 1)
-                 {
+                {
 
 
 
-                     rb.velocity = new Vector3(0,0.01f,0);
+                    rb.velocity = new Vector3(0, 0.01f, 0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                     jCount++;
                     anim.SetTrigger(jumpHashFD);
@@ -260,24 +267,24 @@ public class CharacterMovement : MonoBehaviour
                     */
                 }
                 else if (PlayerChanger.CharacterSelect == 1 && jCount < 2)
-                 {
-                     rb.velocity = new Vector3(0,0.01f,0);
+                {
+                    rb.velocity = new Vector3(0, 0.01f, 0);
                     rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-                    jCount++;    
+                    jCount++;
                 }
             }
 
-            
+
 
             //Only wind dragon can fly 
-           if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (PlayerChanger.CharacterSelect == 1)
                 {
-                    
+
 
                     var localVel = transform.InverseTransformDirection(rb.velocity);
-                    
+
                     if (localVel.y < 0 && jCount > 0)
                     {
                         anim.SetBool("isGliding", true);
@@ -293,18 +300,18 @@ public class CharacterMovement : MonoBehaviour
                 }
             }
 
-           
-            
-            
-            
-            
+
+
+
+
+
         }
         else
         {
             jCount = 0;
         }
 
-       
+
 
 
         Quaternion camera = cam.transform.rotation;
@@ -368,7 +375,7 @@ public class CharacterMovement : MonoBehaviour
             transform.rotation = se;
         }
 
-        
+
 
     }
 
@@ -383,14 +390,15 @@ public class CharacterMovement : MonoBehaviour
     {
         return characterMovementActive;
     }
-    
+
     void OnCollisionEnter(Collision collision)
     {
 
 
 
         //animation stuff 
-        if (collision.gameObject.tag == "Terrain") {
+        if (collision.gameObject.tag == "Terrain")
+        {
 
             isGrounded = true;
             anim.SetBool("isJumping", false);
@@ -408,7 +416,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bounce"))
         {
-            
+
             Debug.Log("Jippii");
 
 
@@ -416,7 +424,7 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-        
+
 
     }
 
@@ -425,7 +433,7 @@ public class CharacterMovement : MonoBehaviour
         jCount = 0;
     }
 
-   
+
 
     /*
     void OnTriggerStay(Collider other)
