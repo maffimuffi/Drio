@@ -6,6 +6,7 @@ public class FpsOptimizer : MonoBehaviour
 {
     public GameObject Scene2Objects;
     public GameObject SecondGateObjects;
+    public GameObject FirstGateObjects;
 
 
 
@@ -14,6 +15,7 @@ public class FpsOptimizer : MonoBehaviour
     {
         Scene2Objects.SetActive(false);
         SecondGateObjects.SetActive(false);
+        FirstGateObjects.SetActive(true);
     }
 
     // Update is called once per frame
@@ -23,9 +25,11 @@ public class FpsOptimizer : MonoBehaviour
         {
             Scene2Objects.SetActive(true);
             SecondGateObjects.SetActive(true);
+            FirstGateObjects.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
+            FirstGateObjects.SetActive(true);
             Scene2Objects.SetActive(false);
             SecondGateObjects.SetActive(false);
         }
