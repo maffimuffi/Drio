@@ -7,6 +7,7 @@ public class CameraMovement : MonoBehaviour
 
     private GameObject player;
 
+    private float verticalSpeed = 2.0f;
     private float horizontalSpeed = 2.0f;
     private float smoothTime = 0.4f;
     public float smoothRot = 2.5f;
@@ -78,12 +79,14 @@ public class CameraMovement : MonoBehaviour
 
         // Mouse Input to rotate
         float h = horizontalSpeed * Input.GetAxisRaw("Mouse X");
+        float v = verticalSpeed * Input.GetAxisRaw("Mouse Y");
 
 
         //float v = verticalSpeed * Input.GetAxis("Mouse Y");
         transform.position = player.transform.position;
-
+        
         transform.Rotate(0, h, 0);
+        
 
         // Check if raycast can see player or default position hits a wall, move camera on top of player
         if(!canSeePlayer || cameraTrigger.camTriggered == true)
