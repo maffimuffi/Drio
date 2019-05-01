@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6519631588782921266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6519631588782921267}
+  - component: {fileID: 6519631588782921228}
+  m_Layer: 8
+  m_Name: GroundChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6519631588782921267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519631588782921266}
+  m_LocalRotation: {x: -0.015174501, y: -1.09324815e-16, z: 1.0932482e-16, w: 0.9998849}
+  m_LocalPosition: {x: 245.5, y: 21.141186, z: 251.92957}
+  m_LocalScale: {x: 41.88371, y: 41.88373, z: 41.88373}
+  m_Children:
+  - {fileID: 6519631589813376626}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6519631588782921228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519631588782921266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff5090cde7539f4cbf73b1b17677763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaycastOrigin: {fileID: 6519631588782921266}
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  bone: {fileID: 6519631589813376625}
+  TimeSpeed: 1
+  RotateIncrease: 20
+--- !u!1 &6519631589813376625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6519631589813376626}
+  m_Layer: 8
+  m_Name: Balancer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6519631589813376626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519631589813376625}
+  m_LocalRotation: {x: 0.015174501, y: 1.09324815e-16, z: -1.0932482e-16, w: 0.9998849}
+  m_LocalPosition: {x: 0, y: -0.027020112, z: -0.038551014}
+  m_LocalScale: {x: 0.009550251, y: 0.009550247, z: 0.009550247}
+  m_Children: []
+  m_Father: {fileID: 6519631588782921267}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
