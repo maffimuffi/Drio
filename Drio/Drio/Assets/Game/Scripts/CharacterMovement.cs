@@ -11,9 +11,10 @@ public class CharacterMovement : MonoBehaviour
     bool isRunning;
 
 
-    public float smoothRotation2 = 2f;
-    public float smoothRotation = 3f;
-    public static float moveSpeed = 100f;
+    public float smoothRotation2 = 0.2f;
+    public float smoothRotation = 4f;
+    public static float moveSpeed = 12f;
+    private float moveSpeedMultiply = 1.3f;
     float jumpForce = 250f;
     //private float rotateSpeed = 5f;
 
@@ -141,6 +142,7 @@ public class CharacterMovement : MonoBehaviour
         if (isGrounded)
         {
             anim.SetBool("isGliding", false);
+            
         }
 
         if (characterMovementActive)
@@ -168,8 +170,8 @@ public class CharacterMovement : MonoBehaviour
             float moveVertical = Input.GetAxisRaw("Vertical");
 
 
-            Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime;
-            Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime;
+            Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime*moveSpeedMultiply;
+            Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime*moveSpeedMultiply;
 
             //anim.SetFloat("Speed", move);
 
@@ -288,7 +290,9 @@ public class CharacterMovement : MonoBehaviour
                     if (localVel.y < 0 && jCount > 0)
                     {
                         anim.SetBool("isGliding", true);
-                        Physics.gravity = new Vector3(0, -5, 0);
+                        Physics.gravity = new Vector3(0, -1, 0);
+                        rb.AddForce(new Vector3(transform.forward.x * Time.deltaTime, 0, transform.forward.z * Time.deltaTime));
+
                     }
                     else
                     {
@@ -321,6 +325,7 @@ public class CharacterMovement : MonoBehaviour
             Quaternion forw = Quaternion.Euler(0, 0 + cam.transform.eulerAngles.y, 0);
             //Severin lisäys. Smooth rotation
             transform.rotation = Quaternion.Slerp(transform.rotation, forw, smoothRotation * Time.deltaTime);
+            
             // transform.rotation = forw;
         }
 
@@ -342,6 +347,7 @@ public class CharacterMovement : MonoBehaviour
             Quaternion right = Quaternion.Euler(0, 90 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, right, smoothRotation * Time.deltaTime);
             //transform.rotation = right;
+            
         }
 
 
@@ -383,6 +389,17 @@ public class CharacterMovement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, se, smoothRotation2 * Time.deltaTime);
             //transform.rotation = se;
         }
+        // flying rotation
+        if (isGrounded == false && Input.GetKey(KeyCode.LeftShift))
+        {
+            Quaternion flyRot_R = Quaternion.Euler(0, 0, 10f + cam.transform.eulerAngles.z);
+            float rotaatioY = transform.localRotation.y;
+            Vector3 joku = new Vector3(transform.localRotation.x, transform.localRotation.y, transform.localRotation.z);
+            float testiRotaatio = rotaatioY;
+            Debug.Log("y rotaatio" + rotaatioY);
+            //transform.localEulerAngles = rotaatioY;
+
+        }
 
 
 
@@ -393,6 +410,7 @@ public class CharacterMovement : MonoBehaviour
         gravityScale = 0.25f;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * gravityScale, rb.velocity.z);
+        
         Debug.Log("gliding");
     }
     public bool IsPlayerActive()
@@ -406,7 +424,7 @@ public class CharacterMovement : MonoBehaviour
 
 
         //animation stuff 
-        if (collision.gameObject.tag == "Terrain")
+        if (collision.gameObject.tag == "Terrain" || collision.gameObject.tag == "Boulder")
         {
 
             isGrounded = true;
