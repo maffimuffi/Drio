@@ -181,7 +181,7 @@ public class CharacterMovement : MonoBehaviour
 
             if (transform.position.y < -1)
             {
-                transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
+                transform.position = new Vector3(200f,56f, 220f);
                 Debug.Log("Hups!");
             }
 
@@ -397,7 +397,7 @@ public class CharacterMovement : MonoBehaviour
             
             float testiRotaatio = rotaatioY / 10;
             Vector3 flyRotation = new Vector3(transform.localRotation.x, transform.localRotation.y, testiRotaatio);
-            Debug.Log("y rotaatio" + rotaatioY);
+            //Debug.Log("y rotaatio" + rotaatioY);
             //transform.localEulerAngles = rotaatioY;
 
         }
