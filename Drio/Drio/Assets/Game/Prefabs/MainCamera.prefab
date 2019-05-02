@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 830996656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1051256023}
   - component: {fileID: 1051256024}
   - component: {fileID: 1051256025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DefaultPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,13 +56,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928696091}
-  m_LocalRotation: {x: 0.28527018, y: 0, z: 0, w: 0.95844716}
-  m_LocalPosition: {x: 0, y: 3.63, z: -5.74}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 5.03, z: -6.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7243084559071507272}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 33.15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!54 &1051256023
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118,10 +118,10 @@ GameObject:
   - component: {fileID: 5728650937590575286}
   - component: {fileID: 3519935127413063349}
   - component: {fileID: 7243084558005625888}
-  - component: {fileID: 2787565548638025008}
   - component: {fileID: 3740104354570181615}
   - component: {fileID: 8062001434916822889}
-  m_Layer: 0
+  - component: {fileID: 2787565548638025008}
+  m_Layer: 9
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,13 +135,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7243084558005625895}
-  m_LocalRotation: {x: 0.28527018, y: 0, z: 0, w: 0.95844716}
-  m_LocalPosition: {x: 0, y: 3.63, z: -5.74}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 6.26, z: -10.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7243084559071507272}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 33.15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!20 &7243084558005625889
 Camera:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 7243084558005625890}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 1
   antialiasingMode: 0
@@ -268,46 +268,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7243084558005625895}
-  m_Enabled: 1
---- !u!114 &2787565548638025008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7243084558005625895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweakMode: 0
-  screenBlendMode: 1
-  hdr: 1
-  sepBlurSpread: -5.95
-  quality: 1
-  bloomIntensity: 0.72
-  bloomThreshold: 0.98
-  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
-  bloomBlurIterations: 2
-  hollywoodFlareBlurIterations: 2
-  flareRotation: 0
-  lensflareMode: 1
-  hollyStretchWidth: 2.5
-  lensflareIntensity: 0
-  lensflareThreshold: 0.3
-  lensFlareSaturation: 0.75
-  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
-  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
-  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
-  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
-  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
-    type: 3}
-  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
-  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
-  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
-  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
-    type: 3}
+  m_Enabled: 0
 --- !u!114 &3740104354570181615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,8 +313,6 @@ MonoBehaviour:
   debugClamp: 0
   middleGrey: 0.25
   adaptionSpeed: 1.5
-  adaptiveMin: 0
-  adaptiveMax: 0.5
   adaptiveDebug: 0
   lutExposureBias: 0
   lutWhiteBalance: {r: 1, g: 1, b: 1, a: 1}
@@ -392,6 +351,45 @@ MonoBehaviour:
   lutHighlights: {r: 1, g: 1, b: 1, a: 1}
   tonemapperLut: {fileID: 4800000, guid: 55e85b3f702553b48892094186566f02, type: 3}
   validRenderTextureFormat: 1
+--- !u!114 &2787565548638025008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7243084558005625895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweakMode: 0
+  screenBlendMode: 1
+  hdr: 1
+  sepBlurSpread: -5.95
+  quality: 1
+  bloomIntensity: 0.72
+  bloomThreshold: 0.98
+  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
+  bloomBlurIterations: 2
+  hollywoodFlareBlurIterations: 2
+  flareRotation: 0
+  lensflareMode: 1
+  hollyStretchWidth: 2.5
+  lensflareIntensity: 0
+  lensflareThreshold: 0.3
+  lensFlareSaturation: 0.75
+  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
+  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
+  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
+  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
+  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
+    type: 3}
+  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
+  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
+  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
+  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
+    type: 3}
 --- !u!1 &7243084558722541225
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7243084558722541226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WindTransformPoint
   m_TagString: PlayerTransformPoint
   m_Icon: {fileID: 0}
@@ -431,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7243084559006841072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireTransformPoint
   m_TagString: PlayerTransformPoint
   m_Icon: {fileID: 0}
@@ -462,7 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7243084559071507272}
   - component: {fileID: 7243084559071507273}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7243084559071507279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -24.550934, y: 58.958397, z: -112.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7243084558722541226}
@@ -501,10 +499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19131007eccf6824296f9db1fb2e25de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothRot: 2.5
+  smoothRot: 5
   myLayerMask:
     serializedVersion: 2
-    m_Bits: 311
+    m_Bits: 0
 --- !u!1 &7243084559291730102
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7243084559291730103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EarthTransformPoint
   m_TagString: PlayerTransformPoint
   m_Icon: {fileID: 0}
