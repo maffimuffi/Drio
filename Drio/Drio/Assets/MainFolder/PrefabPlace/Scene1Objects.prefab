@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 6312348071852753564}
   - component: {fileID: 1822719833875017734}
   - component: {fileID: 510353941499835752}
+  - component: {fileID: 5585371976541781097}
   m_Layer: 9
   m_Name: MountainRocks01_A_LOD0
   m_TagString: Untagged
@@ -371,6 +372,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5585371976541781097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59142515402303934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300006, guid: 0b713e64eb597914eb62d41efaa123cc, type: 3}
 --- !u!1 &60705432641752835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,12 +1188,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206282557503421219}
-  m_LocalRotation: {x: -0.7071065, y: 3.3725845e-18, z: -3.5307568e-18, w: 0.7071071}
-  m_LocalPosition: {x: -0.04254177, y: 0.00017711613, z: 0.00011474197}
-  m_LocalScale: {x: 100, y: 95.699844, z: 100}
+  m_LocalRotation: {x: -0.70744544, y: -0.000000027214965, z: -0.0000000042039763,
+    w: -0.70676804}
+  m_LocalPosition: {x: 0, y: 0.028189681, z: 0.042935915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4920967272377162221}
-  m_RootOrder: 1
+  m_Father: {fileID: 2467968470280067367}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6052291539568178921
 SkinnedMeshRenderer:
@@ -13664,6 +13680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1474522589717519539}
+  - component: {fileID: 903560602424175904}
   m_Layer: 0
   m_Name: Door.L
   m_TagString: Untagged
@@ -13686,6 +13703,19 @@ Transform:
   m_Father: {fileID: 2467968470280067367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &903560602424175904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025218587583929710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005, y: 0.025, z: 0.04}
+  m_Center: {x: 0, y: 0.025, z: -0.005}
 --- !u!1 &2039661336513567100
 GameObject:
   m_ObjectHideFlags: 0
@@ -14653,6 +14683,7 @@ GameObject:
   - component: {fileID: 630103538040938948}
   - component: {fileID: 3861592500191226740}
   - component: {fileID: 2731982611386453325}
+  - component: {fileID: 63509952}
   m_Layer: 9
   m_Name: Broadleaf_Sapling_LOD0
   m_TagString: Untagged
@@ -14731,6 +14762,20 @@ Tree:
   m_SpeedTreeWindAsset: {fileID: 22800000, guid: 37d6a45b8cdf11040a56b4f050ef0712,
     type: 3}
   m_TreeData: {fileID: 0}
+--- !u!136 &63509952
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184296248551730291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 12
+  m_Direction: 1
+  m_Center: {x: 0.05, y: 5, z: -0.18}
 --- !u!1 &2190899425404961885
 GameObject:
   m_ObjectHideFlags: 0
@@ -20867,6 +20912,7 @@ Transform:
   m_Children:
   - {fileID: 1474522589717519539}
   - {fileID: 8189305289641411186}
+  - {fileID: 2302229621948669690}
   m_Father: {fileID: 4920967272377162221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33956,7 +34002,6 @@ Transform:
   m_LocalScale: {x: 0.97499996, y: 0.97499996, z: 0.97499996}
   m_Children:
   - {fileID: 2467968470280067367}
-  - {fileID: 2302229621948669690}
   m_Father: {fileID: 5459100429775691715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 46.498, z: 0}
@@ -44587,6 +44632,8 @@ GameObject:
   - component: {fileID: 6348333636304627363}
   - component: {fileID: 5963374388244924120}
   - component: {fileID: 4355433741162237498}
+  - component: {fileID: 655700258}
+  - component: {fileID: 655700259}
   m_Layer: 0
   m_Name: BrickWall
   m_TagString: Boulder
@@ -44653,6 +44700,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &655700258
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495440538479849270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2360417, y: 4.29, z: 6.19}
+  m_Center: {x: -0.0043650568, y: 2.46, z: -5.82}
+--- !u!65 &655700259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495440538479849270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2360417, y: 4.29, z: 6.394395}
+  m_Center: {x: -0.0043650568, y: 2.46, z: 5.71}
 --- !u!1 &6498205637937191138
 GameObject:
   m_ObjectHideFlags: 0
@@ -57541,6 +57614,7 @@ GameObject:
   - component: {fileID: 5459100429775691715}
   - component: {fileID: 4198553141820129638}
   - component: {fileID: 3720245813600828971}
+  - component: {fileID: 8343323700583066200}
   m_Layer: 0
   m_Name: FirstGate
   m_TagString: Boulder
@@ -57608,6 +57682,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8343323700583066200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724257470662551399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 64b80acf8ce64a04c8e6b4705e32a962, type: 3}
 --- !u!1 &8726429126702766291
 GameObject:
   m_ObjectHideFlags: 0
@@ -58385,6 +58473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8189305289641411186}
+  - component: {fileID: 2715188155768040606}
   m_Layer: 0
   m_Name: Door.R
   m_TagString: Untagged
@@ -58407,6 +58496,19 @@ Transform:
   m_Father: {fileID: 2467968470280067367}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2715188155768040606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868331480528844065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004, y: 0.024, z: 0.04}
+  m_Center: {x: 0, y: 0.025, z: 0}
 --- !u!1 &8876200456164746490
 GameObject:
   m_ObjectHideFlags: 0

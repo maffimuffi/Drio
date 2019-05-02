@@ -14473,8 +14473,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526801735222114}
-  smoothRotation2: 2
-  smoothRotation: 5
+  smoothRotation2: 0.2
+  smoothRotation: 4
   moveSpeedMultiply: 1.3
   playerTransform: {fileID: 0}
   rotating: 0
@@ -30420,8 +30420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526803180421466}
-  smoothRotation2: 2
-  smoothRotation: 5
+  smoothRotation2: 0.2
+  smoothRotation: 4
   moveSpeedMultiply: 1.3
   playerTransform: {fileID: 0}
   rotating: 0
