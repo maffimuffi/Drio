@@ -33513,6 +33513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4920967272377162221}
   - component: {fileID: 5267050425579595640}
+  - component: {fileID: 2072833432322653693}
   m_Layer: 0
   m_Name: GateDoors
   m_TagString: Untagged
@@ -33555,6 +33556,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2072833432322653693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520585852736042577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a9bd5d8616a774689ce1a4f80df5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMax: 1
+  anim: {fileID: 5267050425579595640}
 --- !u!1 &5530386293176400662
 GameObject:
   m_ObjectHideFlags: 0
@@ -55327,15 +55342,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43b6b891d791984facaab2cc6a21521, type: 3}
---- !u!1 &1479508939370474813 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: c43b6b891d791984facaab2cc6a21521,
-    type: 3}
-  m_PrefabInstance: {fileID: 1479508939370441629}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1479508939370836253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c43b6b891d791984facaab2cc6a21521,
+    type: 3}
+  m_PrefabInstance: {fileID: 1479508939370441629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1479508939370474813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c43b6b891d791984facaab2cc6a21521,
     type: 3}
   m_PrefabInstance: {fileID: 1479508939370441629}
   m_PrefabAsset: {fileID: 0}
