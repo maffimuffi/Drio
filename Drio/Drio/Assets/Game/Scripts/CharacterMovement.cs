@@ -394,8 +394,9 @@ public class CharacterMovement : MonoBehaviour
         {
             Quaternion flyRot_R = Quaternion.Euler(0, 0, 10f + cam.transform.eulerAngles.z);
             float rotaatioY = transform.localRotation.y;
-            Vector3 joku = new Vector3(transform.localRotation.x, transform.localRotation.y, transform.localRotation.z);
-            float testiRotaatio = rotaatioY;
+            
+            float testiRotaatio = rotaatioY / 10;
+            Vector3 flyRotation = new Vector3(transform.localRotation.x, transform.localRotation.y, testiRotaatio);
             Debug.Log("y rotaatio" + rotaatioY);
             //transform.localEulerAngles = rotaatioY;
 
