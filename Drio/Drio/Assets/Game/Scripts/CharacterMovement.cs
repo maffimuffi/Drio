@@ -7,10 +7,17 @@ public class CharacterMovement : MonoBehaviour
 
     //animation stuff
     public Animator anim;
+    public GameObject smoothCamera;
+    
     bool isGrounded;
     bool isRunning;
+    bool isWalking;
+    float smoothing = -10;
 
 
+    public float AccelerationDecreaser = 2f;
+    public float walkSpeedMultiply = 1;
+    float runSpeedMultiply;
     public float smoothRotation2 = 0.2f;
     public float smoothRotation = 4f;
     public static float moveSpeed = 12f;
@@ -64,7 +71,8 @@ public class CharacterMovement : MonoBehaviour
         // anim.SetBool("isJumping", false);
         isGrounded = true;
         isRunning = false;
-
+        isWalking = false;
+        runSpeedMultiply = moveSpeedMultiply;
 
 
         gravityScale = Physics.gravity.y;
@@ -97,15 +105,18 @@ public class CharacterMovement : MonoBehaviour
     {
         if (thisPlayer.name == "EarthDragon" && PlayerChanger.CharacterSelect == 2)
         {
+            smoothing = -10;
             characterMovementActive = true;
         }
         else if (thisPlayer.name == "WindDragon" && PlayerChanger.CharacterSelect == 1)
         {
+            smoothing = -10;
             characterMovementActive = true;
         }
         else if (thisPlayer.name == "FireDragon" && PlayerChanger.CharacterSelect == 3)
         {
             characterMovementActive = true;
+            smoothing = -10;
         }
         else
         {
@@ -142,7 +153,7 @@ public class CharacterMovement : MonoBehaviour
         if (isGrounded)
         {
             anim.SetBool("isGliding", false);
-            
+
         }
 
         if (characterMovementActive)
@@ -170,8 +181,8 @@ public class CharacterMovement : MonoBehaviour
             float moveVertical = Input.GetAxisRaw("Vertical");
 
 
-            Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime*moveSpeedMultiply;
-            Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime*moveSpeedMultiply;
+            Vector3 horMovement = playerTransform.transform.right * moveHorizontal * moveSpeed * Time.deltaTime * moveSpeedMultiply;
+            Vector3 verMovement = playerTransform.transform.forward * moveVertical * moveSpeed * Time.deltaTime * moveSpeedMultiply;
 
             //anim.SetFloat("Speed", move);
 
@@ -181,7 +192,7 @@ public class CharacterMovement : MonoBehaviour
 
             if (transform.position.y < -1)
             {
-                transform.position = new Vector3(200f,56f, 220f);
+                transform.position = new Vector3(200f, 56f, 220f);
                 Debug.Log("Hups!");
             }
 
@@ -204,14 +215,45 @@ public class CharacterMovement : MonoBehaviour
 
             }
 
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
-                Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
+                if (isGrounded == false)
+                {
+                    anim.SetBool("isJumping", false);
+                }
+            }
 
-                anim.SetBool("isRunning", true);
-                isRunning = true;
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift) ||
+                Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+            {
+                if (isGrounded == true)
+                {
+                    anim.SetBool("isRunning", true);
+                    isRunning = true;
+                    if (moveSpeedMultiply < runSpeedMultiply)
+                    {
+                        moveSpeedMultiply = moveSpeedMultiply + runSpeedMultiply * Time.deltaTime / AccelerationDecreaser;
+                        
+                    }
+                    
+                    /* smoothing -= Time.deltaTime;
+                    if (smoothing > -13)
+                    {
+                        smoothCamera.transform.localPosition = new Vector3(0, 6.26f, smoothing);
+                    }
+                    else
+                    {
+                        smoothCamera.transform.localPosition = new Vector3(0, 6.26f, -13);
+                    }
+                    */
 
-                rotating = true;
+                    rotating = true;
+                }
+                else
+                {
+                    isGrounded = false;
+                }
+                
 
             }
             else
@@ -219,6 +261,36 @@ public class CharacterMovement : MonoBehaviour
                 rotating = false;
                 anim.SetBool("isRunning", false);
                 isRunning = false;
+            }
+
+            if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.LeftShift) ||
+               Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.LeftShift))
+            {
+                //smoothing = -10;
+                if (isGrounded == true)
+                {
+                    anim.SetBool("isWalking", true);
+                    isWalking = true;
+
+                    moveSpeedMultiply = walkSpeedMultiply;
+                    rotating = true;
+                }
+                else
+                {
+                    isGrounded = false;
+                    isWalking = false;
+                    anim.SetBool("isWalking", false);
+                    
+                }
+                
+
+            }
+            else
+            {
+                rotating = false;
+                anim.SetBool("isWalking", false);
+                isWalking = false;
+                
             }
 
             if (rotating)
@@ -242,13 +314,20 @@ public class CharacterMovement : MonoBehaviour
                 if (isRunning)
                 {
                     anim.SetBool("isRunningJumping", true);
+                   
                     isGrounded = false;
                 }
 
-                if (isRunning == false)
+                if (isRunning == false )
                 {
                     anim.SetBool("isJumping", true);
                     anim.SetBool("isRunningJumping", false);
+                    isGrounded = false;
+                }
+                if (isWalking)
+                {
+                    //anim.SetBool("isJumping", true);
+                    
                     isGrounded = false;
                 }
                 if (jCount < 1)
@@ -279,8 +358,9 @@ public class CharacterMovement : MonoBehaviour
 
 
             //Only wind dragon can fly 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.Space) && isGrounded == false)
             {
+
                 if (PlayerChanger.CharacterSelect == 1)
                 {
 
@@ -304,6 +384,8 @@ public class CharacterMovement : MonoBehaviour
                 }
             }
 
+            
+
 
 
 
@@ -325,7 +407,7 @@ public class CharacterMovement : MonoBehaviour
             Quaternion forw = Quaternion.Euler(0, 0 + cam.transform.eulerAngles.y, 0);
             //Severin lisäys. Smooth rotation
             transform.rotation = Quaternion.Slerp(transform.rotation, forw, smoothRotation * Time.deltaTime);
-            
+
             // transform.rotation = forw;
         }
 
@@ -347,7 +429,7 @@ public class CharacterMovement : MonoBehaviour
             Quaternion right = Quaternion.Euler(0, 90 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, right, smoothRotation * Time.deltaTime);
             //transform.rotation = right;
-            
+
         }
 
 
@@ -394,13 +476,15 @@ public class CharacterMovement : MonoBehaviour
         {
             Quaternion flyRot_R = Quaternion.Euler(0, 0, 10f + cam.transform.eulerAngles.z);
             float rotaatioY = transform.localRotation.y;
-            
+
             float testiRotaatio = rotaatioY / 10;
             Vector3 flyRotation = new Vector3(transform.localRotation.x, transform.localRotation.y, testiRotaatio);
             //Debug.Log("y rotaatio" + rotaatioY);
             //transform.localEulerAngles = rotaatioY;
 
         }
+
+
 
 
 
@@ -411,7 +495,7 @@ public class CharacterMovement : MonoBehaviour
         gravityScale = 0.25f;
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * gravityScale, rb.velocity.z);
-        
+
         Debug.Log("gliding");
     }
     public bool IsPlayerActive()
@@ -431,6 +515,7 @@ public class CharacterMovement : MonoBehaviour
             isGrounded = true;
             anim.SetBool("isJumping", false);
             anim.SetBool("isRunningJumping", false);
+            
 
 
         }
@@ -466,29 +551,20 @@ public class CharacterMovement : MonoBehaviour
     /*
     void OnTriggerStay(Collider other)
     {
-
         if (other.gameObject.tag == "mPlatform" && moving == false)
         {
-
             
-
             transform.parent = other.transform;
             
-
         }
-
         
     }
-
-
-
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "mPlatform")
         {
            
             transform.parent = null;
-
         }
     }
 */

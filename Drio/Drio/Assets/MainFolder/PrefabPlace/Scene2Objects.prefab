@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 3829000569034141208}
   - component: {fileID: 5887751209878384901}
   - component: {fileID: 8186554442247153505}
+  - component: {fileID: 700666439}
   m_Layer: 0
   m_Name: CastleWall (19)
   m_TagString: Boulder
@@ -204,6 +205,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &700666439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521180802596643366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &647769219304744481
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +229,7 @@ GameObject:
   - component: {fileID: 4640486481650447496}
   - component: {fileID: 102604683489893896}
   - component: {fileID: 985893051909562120}
+  - component: {fileID: 1746340362}
   m_Layer: 0
   m_Name: CastleWall (12)
   m_TagString: Boulder
@@ -281,6 +296,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1746340362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647769219304744481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &707761894930276778
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +856,7 @@ GameObject:
   - component: {fileID: 6721584906462385854}
   - component: {fileID: 8106614703502717103}
   - component: {fileID: 2771522368831306303}
+  - component: {fileID: 1136563753}
   m_Layer: 0
   m_Name: CastleWall (8)
   m_TagString: Boulder
@@ -894,6 +923,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1136563753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831168061251284140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &2328928112268223182
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1038,7 @@ GameObject:
   - component: {fileID: 7047416595113734572}
   - component: {fileID: 839844986230777670}
   - component: {fileID: 4380525255383955878}
+  - component: {fileID: 1713856120}
   m_Layer: 0
   m_Name: CastleWall (16)
   m_TagString: Boulder
@@ -1062,6 +1105,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1713856120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470452155088892825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &2602342849692504800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1221,7 @@ GameObject:
   - component: {fileID: 8432875195292808021}
   - component: {fileID: 2433549867062128193}
   - component: {fileID: 2313620734246208833}
+  - component: {fileID: 484179006}
   m_Layer: 0
   m_Name: CastleWall (22)
   m_TagString: Boulder
@@ -1231,6 +1288,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &484179006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756962420508703984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &3493519611379369740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,8 +1539,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4183494175297272058}
-  m_LocalRotation: {x: 0.29964486, y: 0.22875993, z: 0.07414619, w: -0.9232466}
-  m_LocalPosition: {x: 398.2324, y: -119.113045, z: -45.069214}
+  m_LocalRotation: {x: 0.025850534, y: 0.83818066, z: 0.03971794, w: -0.54333}
+  m_LocalPosition: {x: 287.09396, y: -17.52067, z: 149.49655}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4793319291560655710}
@@ -1651,6 +1721,7 @@ GameObject:
   - component: {fileID: 2030268231064193697}
   - component: {fileID: 3257001077208627122}
   - component: {fileID: 5472791561891400624}
+  - component: {fileID: 1963692281}
   m_Layer: 0
   m_Name: CastleWall (13)
   m_TagString: Boulder
@@ -1718,6 +1789,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1963692281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333251775042621589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &4762827635935437377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,6 +2514,7 @@ GameObject:
   - component: {fileID: 595817163524512126}
   - component: {fileID: 5648118147107649310}
   - component: {fileID: 3568866063598447073}
+  - component: {fileID: 23188375}
   m_Layer: 0
   m_Name: CastleWall (14)
   m_TagString: Boulder
@@ -2496,6 +2581,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &23188375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919222143078699364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &4965491789679578129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,6 +2787,7 @@ GameObject:
   - component: {fileID: 2937631618183165972}
   - component: {fileID: 4885701203401645584}
   - component: {fileID: 8016395974624490369}
+  - component: {fileID: 149117714}
   m_Layer: 0
   m_Name: CastleWall (21)
   m_TagString: Boulder
@@ -2756,6 +2855,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &149117714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390385615849873474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &5556183933760405905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,6 +3100,7 @@ GameObject:
   - component: {fileID: 5004574373367305344}
   - component: {fileID: 7479566423559436993}
   - component: {fileID: 9049353666381953232}
+  - component: {fileID: 5165220}
   m_Layer: 0
   m_Name: CastleWall (20)
   m_TagString: Boulder
@@ -3054,6 +3167,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5165220
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075897946627294123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &7192247727550218507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,6 +3191,7 @@ GameObject:
   - component: {fileID: 7663871242337736791}
   - component: {fileID: 2843194652341286404}
   - component: {fileID: 5055426466032164580}
+  - component: {fileID: 922122764}
   m_Layer: 0
   m_Name: CastleWall (11)
   m_TagString: Boulder
@@ -3131,6 +3258,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &922122764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192247727550218507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &7378676962008305942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,6 +3342,7 @@ GameObject:
   - component: {fileID: 3874302951496593155}
   - component: {fileID: 8217922884400501451}
   - component: {fileID: 4304615578422999756}
+  - component: {fileID: 743426679}
   m_Layer: 0
   m_Name: CastleWall (10)
   m_TagString: Boulder
@@ -3268,6 +3409,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &743426679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480388451754035714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &7497785512313511722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,6 +3433,7 @@ GameObject:
   - component: {fileID: 5825614114805113811}
   - component: {fileID: 295799291413954885}
   - component: {fileID: 8984224434561580984}
+  - component: {fileID: 583162270}
   m_Layer: 0
   m_Name: CastleWall (18)
   m_TagString: Boulder
@@ -3345,6 +3500,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &583162270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7497785512313511722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &7788834757531166769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3447,6 +3615,7 @@ GameObject:
   - component: {fileID: 3801770220060543687}
   - component: {fileID: 7001134846126386030}
   - component: {fileID: 2870083991341414432}
+  - component: {fileID: 1173724497}
   m_Layer: 0
   m_Name: CastleWall (15)
   m_TagString: Boulder
@@ -3513,6 +3682,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1173724497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794090538332542864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &7869070962854063620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,6 +3928,7 @@ GameObject:
   - component: {fileID: 2299228418637515574}
   - component: {fileID: 7051461480051032095}
   - component: {fileID: 4789907190252822196}
+  - component: {fileID: 1582076339}
   m_Layer: 0
   m_Name: CastleWall (7)
   m_TagString: Boulder
@@ -3812,6 +3995,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1582076339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192550574572513048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &8275694497982348067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,6 +4141,7 @@ GameObject:
   - component: {fileID: 5144498357240948796}
   - component: {fileID: 6606918317547116681}
   - component: {fileID: 1225480813908127450}
+  - component: {fileID: 2013990948}
   m_Layer: 0
   m_Name: CastleWall (17)
   m_TagString: Boulder
@@ -4011,6 +4208,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2013990948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506428975994693125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1 &8510236043659805407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,6 +4324,7 @@ GameObject:
   - component: {fileID: 5551232092530394993}
   - component: {fileID: 6978908806152855737}
   - component: {fileID: 6096812724327633267}
+  - component: {fileID: 676809072}
   m_Layer: 0
   m_Name: CastleWall (9)
   m_TagString: Boulder
@@ -4180,6 +4391,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &676809072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797465783279935201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.476912, y: 2.0457008, z: 0.6}
+  m_Center: {x: 0.0006412268, y: 1.0098004, z: 0.06996737}
 --- !u!1001 &4793319290026293588
 PrefabInstance:
   m_ObjectHideFlags: 0

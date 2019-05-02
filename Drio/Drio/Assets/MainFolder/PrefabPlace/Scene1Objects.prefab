@@ -1854,6 +1854,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9175928814540943223}
+  smoothCamera: {fileID: 0}
+  AccelerationDecreaser: 2
+  walkSpeedMultiply: 1
   smoothRotation2: 2
   smoothRotation: 3
   moveSpeedMultiply: 1.3
@@ -5586,6 +5589,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  smoothCamera: {fileID: 0}
+  AccelerationDecreaser: 2
+  walkSpeedMultiply: 1
   smoothRotation2: 2
   smoothRotation: 3
   moveSpeedMultiply: 1.3
@@ -12449,6 +12455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4471732322712181437}
+  smoothCamera: {fileID: 0}
+  AccelerationDecreaser: 2
+  walkSpeedMultiply: 1
   smoothRotation2: 2
   smoothRotation: 3
   moveSpeedMultiply: 1.3
@@ -33982,7 +33991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4920967272377162221}
   - component: {fileID: 5267050425579595640}
-  - component: {fileID: 1479508940054352873}
+  - component: {fileID: 1464976918}
   m_Layer: 0
   m_Name: GateDoors
   m_TagString: Untagged
@@ -34024,7 +34033,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1479508940054352873
+--- !u!114 &1464976918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
