@@ -50,9 +50,7 @@ public class CameraMovement : MonoBehaviour
         cameraTrans = GameObject.Find("Cam").GetComponent<Transform>();
 
         cameraPos1 = GameObject.Find("DefaultPos").GetComponent<Transform>();
-        cameraPos2 = GameObject.Find("UpPos").GetComponent<Transform>();
-
-
+        cameraPos2 = GameObject.Find("ForwardPos").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -75,56 +73,50 @@ public class CameraMovement : MonoBehaviour
             Debug.Log("ERROR 404");
         }
 
-        playerTrans = player.GetComponent<Transform>();
+        if (Time.timeScale == 1) {
 
-        // Mouse Input to rotate
-        float h = horizontalSpeed * Input.GetAxisRaw("Mouse X");
-        float v = verticalSpeed * Input.GetAxisRaw("Mouse Y");
+            playerTrans = player.GetComponent<Transform>();
 
-
-        //float v = verticalSpeed * Input.GetAxis("Mouse Y");
-        transform.position = player.transform.position;
-        
-        transform.Rotate(0, h, 0);
-        
-
-        // Check if raycast can see player or default position hits a wall, move camera on top of player
-        if(!canSeePlayer || cameraTrigger.camTriggered == true)
-        {
-            // Camera movement to up position
-            cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos2.transform.position, ref velocity, smoothTime);
-
-            // Camera rotation
-            cameraTrans.transform.rotation = Quaternion.Lerp(cameraTrans.transform.rotation, cameraPos2.transform.rotation, Time.deltaTime * smoothRot);
-        }
-        // Check if raycast can see player and default position isn't hitting a wall, move the camera to default position
-        else if(canSeePlayer && cameraTrigger.camTriggered == false)
-        {
-            // Camera movement to default position
-            cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos1.transform.position, ref velocity, smoothTime);
-
-            // Camera rotation
-            cameraTrans.transform.rotation = Quaternion.Lerp(cameraTrans.transform.rotation, cameraPos1.transform.rotation, Time.deltaTime * smoothRot);
-        }
+            // Mouse Input to rotate
+            float h = horizontalSpeed * Input.GetAxisRaw("Mouse X");
+            //float v = verticalSpeed * Input.GetAxisRaw("Mouse Y");
 
 
+            //float v = verticalSpeed * Input.GetAxis("Mouse Y");
+            transform.position = player.transform.position;
 
-        // defaultCameraRaycasting too see if player is visible
-        Debug.DrawRay(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position, Color.red, 0.2f);
-        Ray raycast = new Ray(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position);
-        if (Physics.Raycast(raycast, out hit, 200, myLayerMask))
-        {
-            if (hit.collider.gameObject.tag == "Player")
+            transform.Rotate(0, h, 0);
+
+            // Check if raycast can see player or default position hits a wall, move camera on top of player
+            if (!canSeePlayer || cameraTrigger.camTriggered == true)
             {
-                timer = 0;
-                canSeePlayer = true;
+                // Camera movement to up position
+                cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos2.transform.position, ref velocity, smoothTime);
             }
-            else if (hit.collider.gameObject.tag != "Player")
+            // Check if raycast can see player and default position isn't hitting a wall, move the camera to default position
+            else if (canSeePlayer && cameraTrigger.camTriggered == false)
             {
-                timer += Time.deltaTime;
-                if(timer >= 0.03f)
+                // Camera movement to default position
+                cameraTrans.transform.position = Vector3.SmoothDamp(cameraTrans.transform.position, cameraPos1.transform.position, ref velocity, smoothTime);
+            }
+
+            // defaultCameraRaycasting too see if player is visible
+            Debug.DrawRay(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position, Color.red, 0.2f);
+            Ray raycast = new Ray(defaultCameraPos.transform.position, player.transform.position - defaultCameraPos.transform.position);
+            if (Physics.Raycast(raycast, out hit, 500, myLayerMask))
+            {
+                if (hit.collider.gameObject.tag == "Player")
                 {
-                    canSeePlayer = false;
+                    timer = 0;
+                    canSeePlayer = true;
+                }
+                else if (hit.collider.gameObject.tag != "Player")
+                {
+                    timer += Time.deltaTime;
+                    if (timer >= 0.03f)
+                    {
+                        canSeePlayer = false;
+                    }
                 }
             }
         }
