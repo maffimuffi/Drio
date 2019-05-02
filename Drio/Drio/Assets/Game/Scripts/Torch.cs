@@ -32,6 +32,7 @@ public class Torch : MonoBehaviour
             {
                 sound.Play();
                 OpenDoor.trigger += 1;
+                OpenDoorAni.trigger2 += 1;
                 //sound.GetComponent<smashSound>().on = true;
                 Debug.Log(OpenDoor.trigger);
                 ani = true;
