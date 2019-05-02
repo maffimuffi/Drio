@@ -5,7 +5,8 @@
 [Bb]uilds/
 [Ee]nvironment/
 [Ee]nvironmentScene/
-[Tt]estBuild
+[Tt]estBuild/
+[Aa]ntinTestausScene/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
