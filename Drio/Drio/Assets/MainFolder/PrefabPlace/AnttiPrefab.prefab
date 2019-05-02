@@ -8442,7 +8442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 7901526802961627988}
-  sound: {fileID: 0}
+  sound: {fileID: 3157293688122281460, guid: 2f07a17ad7eaaf541a2ac75192ef2772, type: 3}
 --- !u!1 &7901526801501216039
 GameObject:
   m_ObjectHideFlags: 0
@@ -14459,7 +14459,7 @@ MonoBehaviour:
   ammoSpawn: {fileID: 1457693458505979042}
   ammo: {fileID: 8076030701388722464, guid: 43e22e0139481e044a838347a2af2036, type: 3}
   fireRate: 1
-  sound: {fileID: 0}
+  sound: {fileID: 7194817851648781077, guid: 3bf55b121a24fbc49af09c9233ba2a2b, type: 3}
 --- !u!114 &7901526801735222105
 MonoBehaviour:
   m_ObjectHideFlags: 0
