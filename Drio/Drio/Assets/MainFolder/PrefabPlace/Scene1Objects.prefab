@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 6312348071852753564}
   - component: {fileID: 1822719833875017734}
   - component: {fileID: 510353941499835752}
+  - component: {fileID: 5585371976541781097}
   m_Layer: 9
   m_Name: MountainRocks01_A_LOD0
   m_TagString: Untagged
@@ -371,6 +372,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5585371976541781097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59142515402303934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300006, guid: 0b713e64eb597914eb62d41efaa123cc, type: 3}
 --- !u!1 &60705432641752835
 GameObject:
   m_ObjectHideFlags: 0
@@ -14653,6 +14668,7 @@ GameObject:
   - component: {fileID: 630103538040938948}
   - component: {fileID: 3861592500191226740}
   - component: {fileID: 2731982611386453325}
+  - component: {fileID: 63509952}
   m_Layer: 9
   m_Name: Broadleaf_Sapling_LOD0
   m_TagString: Untagged
@@ -14731,6 +14747,20 @@ Tree:
   m_SpeedTreeWindAsset: {fileID: 22800000, guid: 37d6a45b8cdf11040a56b4f050ef0712,
     type: 3}
   m_TreeData: {fileID: 0}
+--- !u!136 &63509952
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184296248551730291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 12
+  m_Direction: 1
+  m_Center: {x: 0.05, y: 5, z: -0.18}
 --- !u!1 &2190899425404961885
 GameObject:
   m_ObjectHideFlags: 0
@@ -44587,6 +44617,8 @@ GameObject:
   - component: {fileID: 6348333636304627363}
   - component: {fileID: 5963374388244924120}
   - component: {fileID: 4355433741162237498}
+  - component: {fileID: 655700258}
+  - component: {fileID: 655700259}
   m_Layer: 0
   m_Name: BrickWall
   m_TagString: Boulder
@@ -44653,6 +44685,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &655700258
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495440538479849270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2360417, y: 4.29, z: 6.19}
+  m_Center: {x: -0.0043650568, y: 2.46, z: -5.82}
+--- !u!65 &655700259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495440538479849270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2360417, y: 4.29, z: 6.394395}
+  m_Center: {x: -0.0043650568, y: 2.46, z: 5.71}
 --- !u!1 &6498205637937191138
 GameObject:
   m_ObjectHideFlags: 0
