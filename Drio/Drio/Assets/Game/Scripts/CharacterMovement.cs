@@ -14,7 +14,7 @@ public class CharacterMovement : MonoBehaviour
     public float smoothRotation2 = 0.2f;
     public float smoothRotation = 4f;
     public static float moveSpeed = 12f;
-    private float moveSpeedMultiply = 1.3f;
+    public float moveSpeedMultiply = 1.3f;
     float jumpForce = 250f;
     //private float rotateSpeed = 5f;
 
