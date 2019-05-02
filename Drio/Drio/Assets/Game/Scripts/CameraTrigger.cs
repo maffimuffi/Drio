@@ -9,7 +9,7 @@ public class CameraTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Player" || other.gameObject.tag != "Wind" || other.gameObject.tag != "EarthShot" || other.gameObject.tag != "FireShot")
+        if(other.gameObject.tag != "Player" || other.gameObject.layer != 9)
         {
             camTriggered = true;
         }
