@@ -11,7 +11,7 @@ public class UITextPopup : MonoBehaviour
     private bool entering;
     private bool entered;
 
-
+    public static bool talking = false;
     public bool isDialogueWaiting;
     
     private float dialogueMaxTime;
@@ -27,6 +27,7 @@ public class UITextPopup : MonoBehaviour
     private float maxTransperency;
     private float transperencyChangeSpeed;
     private bool exiting;
+    private GameObject lastHitUiCollide;
     private TextMeshProUGUI text;
     private float maxSize = 1;
     public bool dialogueActive;
@@ -106,6 +107,7 @@ public class UITextPopup : MonoBehaviour
                     new Vector3(minSize,
                         minSize, 0);
                 ResetDialogue();
+                
                 entered = false;
                 entering = false;
                 exiting = false;
@@ -118,6 +120,7 @@ public class UITextPopup : MonoBehaviour
         {
             
             TextChange(lineList[lineCount]);
+            talking = true;
             dialogueCounter += Time.deltaTime;
             var asd = lineList[lineCount][0];
             if (asd == 'F' && lineList[lineCount][6] == ':')
@@ -141,9 +144,9 @@ public class UITextPopup : MonoBehaviour
 
             
 
-            if ((float)lineList[lineCount].Length / 9 <= 2.5f)
+            if ((float)lineList[lineCount].Length / 9 <= 3f)
             {
-                dialogueMaxTime = 2.5f;
+                dialogueMaxTime = 3f;
             } else if ((float)lineList[lineCount].Length / 9 >= 15)
             {
                 dialogueMaxTime = (float)lineList[lineCount].Length / 20;
@@ -167,7 +170,12 @@ public class UITextPopup : MonoBehaviour
                 {
                     
                     //pelaaja on lukenut kaikki popupit
-                    
+
+                    if (lastHitUiCollide != null)
+                    {
+                        lastHitUiCollide.SetActive(false);
+                    }
+
                     dialogueActive = false;
                     lineCount = 0;
                     ExitSite();
@@ -191,12 +199,14 @@ public class UITextPopup : MonoBehaviour
 
     public void ResetDialogue()
     {
+        talking = false;
         popupCounter = 0;
         lineCount = 0;
         dialogueCounter = 0;
         whoLastSpoke = 0;
         whoIsTalking = 0;
         dialogueActive = false;
+        lastHitUiCollide = null;
     }
 
     public void EnterSite()
@@ -226,9 +236,9 @@ public class UITextPopup : MonoBehaviour
         whoIsTalking = whoLastSpoke;
         whoLastSpoke = 0;
     }
-    public void Dialogue(int howManyLines, string[] lines)
+    public void Dialogue(int howManyLines, string[] lines, GameObject uiCollide)
     {
-
+        lastHitUiCollide = uiCollide;
         maxLineCount = howManyLines;
         lineList.Clear();
         countz = 0;
@@ -275,68 +285,6 @@ public class UITextPopup : MonoBehaviour
         {
             text.text = "TEXT IS NULL, PLEASE ASSIGN IT IN INSPECTOR";
         }
-/*
-            
-                TMP_WordInfo info = text.textInfo.wordInfo[0];
-                if (info.GetWord() == "Gust")
-                {
-                    activeColor = colors[0];
-                    changeColor = true;
-                }
-                else if (info.GetWord() == "Terra")
-                {
-                    activeColor = colors[1];
-                    changeColor = true;
-                }
-                else if (info.GetWord() == "Fierre")
-                {
-                    activeColor = colors[2];
-                    changeColor = true;
-                }
-                else
-                {
-                    activeColor = Color.white;
-                    changeColor = true;
-
-                }
-
-                if (changeColor)
-                {
-                    for (int i = 0; i < info.characterCount + 1; ++i)
-                    {
-                        int charIndex = info.firstCharacterIndex + i;
-                        int meshIndex = text.textInfo.characterInfo[charIndex].materialReferenceIndex;
-                        int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
-                        Debug.Log(info.GetWord());
-
-
-                        Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
-                        vertexColors[vertexIndex + 0] = activeColor;
-                        vertexColors[vertexIndex + 1] = activeColor;
-                        vertexColors[vertexIndex + 2] = activeColor;
-                        vertexColors[vertexIndex + 3] = activeColor;
-                    }
-
-                    for (int i = info.characterCount + 1; i < text.text.Length; ++i)
-                    {
-
-                        activeColor = Color.white;
-                            int charIndex = info.firstCharacterIndex + i;
-                            int meshIndex = text.textInfo.characterInfo[charIndex].materialReferenceIndex;
-                            int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
-                            
-
-
-                            Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
-                            vertexColors[vertexIndex + 0] = activeColor;
-                            vertexColors[vertexIndex + 1] = activeColor;
-                            vertexColors[vertexIndex + 2] = activeColor;
-                            vertexColors[vertexIndex + 3] = activeColor;
-                    }
-                }
-
-                text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
-            */
 
             TEXTSHOWING = text.text;
         }
@@ -348,28 +296,10 @@ public class UITextPopup : MonoBehaviour
 
     public void ExitSite()
     {
+        
         priorityText = false;
         exiting = true;
         exitCounter = 0;
-        /*
-        if (text.textInfo.wordInfo[0].GetWord() != null)
-        {
-            TMP_WordInfo info = text.textInfo.wordInfo[0];
-            activeColor = Color.white;
-            for (int i = 0; i < text.text.Length; ++i)
-            {
-                int charIndex = info.firstCharacterIndex + i;
-                int meshIndex = text.textInfo.characterInfo[charIndex].materialReferenceIndex;
-                int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
-                Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
-                vertexColors[vertexIndex + 0] = activeColor;
-                vertexColors[vertexIndex + 1] = activeColor;
-                vertexColors[vertexIndex + 2] = activeColor;
-                vertexColors[vertexIndex + 3] = activeColor;
-
-                text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
-            }
-        }
-        */
+     
     }
 }

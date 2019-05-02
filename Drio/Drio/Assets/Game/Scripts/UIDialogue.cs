@@ -7,6 +7,7 @@ public class UIDialogue : MonoBehaviour
 
     
     private UITextPopup uiText;
+    private bool isVisited = false;
 
     public string[] lines;
     // Start is called before the first frame update
@@ -27,10 +28,13 @@ public class UIDialogue : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
-                uiText.EnterSite();
-                uiText.Dialogue(lines.Length,lines);
-                
-                
+                if (!isVisited)
+                {
+                    isVisited = true;
+                    uiText.EnterSite();
+                    uiText.Dialogue(lines.Length, lines, gameObject);
+                }
+
             }
         }
     }
@@ -41,6 +45,7 @@ public class UIDialogue : MonoBehaviour
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
                 //uiText.ExitSite();
+                
                 
             }
         }
