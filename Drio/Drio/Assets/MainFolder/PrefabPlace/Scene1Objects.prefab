@@ -1188,12 +1188,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206282557503421219}
-  m_LocalRotation: {x: -0.7071065, y: 3.3725845e-18, z: -3.5307568e-18, w: 0.7071071}
-  m_LocalPosition: {x: -0.04254177, y: 0.00017711613, z: 0.00011474197}
-  m_LocalScale: {x: 100, y: 95.699844, z: 100}
+  m_LocalRotation: {x: -0.70744544, y: -0.000000027214965, z: -0.0000000042039763,
+    w: -0.70676804}
+  m_LocalPosition: {x: 0, y: 0.028189681, z: 0.042935915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4920967272377162221}
-  m_RootOrder: 1
+  m_Father: {fileID: 2467968470280067367}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6052291539568178921
 SkinnedMeshRenderer:
@@ -13679,6 +13680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1474522589717519539}
+  - component: {fileID: 903560602424175904}
   m_Layer: 0
   m_Name: Door.L
   m_TagString: Untagged
@@ -13701,6 +13703,19 @@ Transform:
   m_Father: {fileID: 2467968470280067367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &903560602424175904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025218587583929710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005, y: 0.025, z: 0.04}
+  m_Center: {x: 0, y: 0.025, z: -0.005}
 --- !u!1 &2039661336513567100
 GameObject:
   m_ObjectHideFlags: 0
@@ -20897,6 +20912,7 @@ Transform:
   m_Children:
   - {fileID: 1474522589717519539}
   - {fileID: 8189305289641411186}
+  - {fileID: 2302229621948669690}
   m_Father: {fileID: 4920967272377162221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33986,7 +34002,6 @@ Transform:
   m_LocalScale: {x: 0.97499996, y: 0.97499996, z: 0.97499996}
   m_Children:
   - {fileID: 2467968470280067367}
-  - {fileID: 2302229621948669690}
   m_Father: {fileID: 5459100429775691715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 46.498, z: 0}
@@ -57599,6 +57614,7 @@ GameObject:
   - component: {fileID: 5459100429775691715}
   - component: {fileID: 4198553141820129638}
   - component: {fileID: 3720245813600828971}
+  - component: {fileID: 8343323700583066200}
   m_Layer: 0
   m_Name: FirstGate
   m_TagString: Boulder
@@ -57666,6 +57682,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8343323700583066200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724257470662551399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 64b80acf8ce64a04c8e6b4705e32a962, type: 3}
 --- !u!1 &8726429126702766291
 GameObject:
   m_ObjectHideFlags: 0
@@ -58443,6 +58473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8189305289641411186}
+  - component: {fileID: 2715188155768040606}
   m_Layer: 0
   m_Name: Door.R
   m_TagString: Untagged
@@ -58465,6 +58496,19 @@ Transform:
   m_Father: {fileID: 2467968470280067367}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2715188155768040606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868331480528844065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004, y: 0.024, z: 0.04}
+  m_Center: {x: 0, y: 0.025, z: 0}
 --- !u!1 &8876200456164746490
 GameObject:
   m_ObjectHideFlags: 0
