@@ -33513,7 +33513,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4920967272377162221}
   - component: {fileID: 5267050425579595640}
+<<<<<<< HEAD
   - component: {fileID: 1052247448}
+=======
+  - component: {fileID: 2072833432322653693}
+>>>>>>> d36acd7277f34e24f49afaae01d33f4736ecd87c
   m_Layer: 0
   m_Name: GateDoors
   m_TagString: Untagged
@@ -33556,7 +33560,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
 --- !u!114 &1052247448
+=======
+--- !u!114 &2072833432322653693
+>>>>>>> d36acd7277f34e24f49afaae01d33f4736ecd87c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
