@@ -16,7 +16,7 @@ public class LastBowl : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.M))
+        if (OpenDoor.trigger == 5)
         {
             lastBowlLit = true;
             Debug.Log("TRUE");

@@ -14471,7 +14471,7 @@ MonoBehaviour:
   ammoSpawn: {fileID: 1457693458505979042}
   ammo: {fileID: 8076030701388722464, guid: 43e22e0139481e044a838347a2af2036, type: 3}
   fireRate: 1
-  sound: {fileID: 0}
+  sound: {fileID: 7194817851648781077, guid: 3bf55b121a24fbc49af09c9233ba2a2b, type: 3}
 --- !u!114 &7901526801735222105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21883,7 +21883,7 @@ MonoBehaviour:
   ammoSpawn: {fileID: 1457693458470608104}
   ammo: {fileID: 804619427020609688, guid: 9b7e35136d1e1774f89123f7316ac525, type: 3}
   capsule: {fileID: 0}
-  sound: {fileID: 0}
+  sound: {fileID: 4577828590150156288, guid: 5e096b51b11dfe44cb32ce076e433540, type: 3}
 --- !u!1 &7901526802581792750
 GameObject:
   m_ObjectHideFlags: 0
@@ -30424,7 +30424,7 @@ MonoBehaviour:
   ammoSpawn: {fileID: 7901526801394642021}
   ammo: {fileID: 1846891563656761275, guid: 98a4988e177b11c4db4df0a2dfc66a20, type: 3}
   fireRate: 0.05
-  sound: {fileID: 0}
+  sound: {fileID: 104129988314646180, guid: aed30b44634551049bad09cd42deaaa6, type: 3}
 --- !u!114 &7901526803180421456
 MonoBehaviour:
   m_ObjectHideFlags: 0
