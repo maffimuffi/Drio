@@ -238,10 +238,13 @@ public class UITextPopup : MonoBehaviour
     }
     public void Dialogue(int howManyLines, string[] lines, GameObject uiCollide)
     {
-        if (lastHitUiCollide != uiCollide && lastHitUiCollide != null)
+        
+       
+        if (lastHitUiCollide != null)
         {
-            ResetDialogue();
+            lastHitUiCollide.SetActive(false);
         }
+        ResetDialogue();
         lastHitUiCollide = uiCollide;
         maxLineCount = howManyLines;
         lineList.Clear();
