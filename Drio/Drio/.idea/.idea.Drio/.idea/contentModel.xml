@@ -277,7 +277,9 @@
                 <e p="GroundChecker.cs" t="Include" />
               </e>
               <e p="HeadTurn.cs" t="Include" />
+              <e p="LastBowl.cs" t="Include" />
               <e p="LutBrightness.cs" t="Include" />
+              <e p="VignettePulse.cs" t="Include" />
             </e>
           </e>
           <e p="Standard Assets" t="Include">

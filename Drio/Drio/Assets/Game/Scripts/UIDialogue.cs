@@ -28,12 +28,10 @@ public class UIDialogue : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
-                if (!isVisited)
-                {
-                    isVisited = true;
+                
                     uiText.EnterSite();
                     uiText.Dialogue(lines.Length, lines, gameObject);
-                }
+                
 
             }
         }
