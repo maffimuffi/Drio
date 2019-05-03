@@ -206,11 +206,13 @@ public class CharacterMovement : MonoBehaviour
             else if (Grab.grab && PlayerChanger.CharacterSelect == 2)
             {
 
-                rb.MovePosition(transform.position + pushVer);
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                //rb.MovePosition(transform.position + pushVer);
+                rb.MovePosition(transform.position + pMovement);
+                //Quaternion forw = Quaternion.Euler(0, 0 + cam.transform.eulerAngles.y, 0);
+                //transform.eulerAngles = new Vector3(0, 0, 0);
 
                 //Väliaikainen ratkaisu sille ettei kameraa voi kääntää, kun työnnetään!
-                cam.transform.eulerAngles = new Vector3(0, 0, 0);
+                //cam.transform.eulerAngles = new Vector3(0, 0, 0);
 
 
             }
@@ -402,7 +404,7 @@ public class CharacterMovement : MonoBehaviour
 
         Quaternion camera = cam.transform.rotation;
 
-        if (Input.GetKey(KeyCode.W) && characterMovementActive == true && !Grab.grab)
+        if (Input.GetKey(KeyCode.W) && characterMovementActive == true)
         {
             Quaternion forw = Quaternion.Euler(0, 0 + cam.transform.eulerAngles.y, 0);
             //Severin lisäys. Smooth rotation
@@ -413,7 +415,7 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.S) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.S)  && characterMovementActive == true)
         {
             Quaternion back = Quaternion.Euler(0, 180 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, back, smoothRotation * Time.deltaTime);
@@ -424,7 +426,7 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.D) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.D)  && characterMovementActive == true)
         {
             Quaternion right = Quaternion.Euler(0, 90 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, right, smoothRotation * Time.deltaTime);
@@ -435,14 +437,14 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.A) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.A) && characterMovementActive == true)
         {
             Quaternion left = Quaternion.Euler(0, 270 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, left, smoothRotation * Time.deltaTime);
             //transform.rotation = left;
         }
 
-        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.D)) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.D)) && characterMovementActive == true)
         {
             Quaternion ne = Quaternion.Euler(0, 45 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, ne, smoothRotation2 * Time.deltaTime);
@@ -451,21 +453,21 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A)) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A))  && characterMovementActive == true)
         {
             Quaternion nw = Quaternion.Euler(0, 315 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, nw, smoothRotation2 * Time.deltaTime);
             //transform.rotation = nw;
         }
 
-        if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A)) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A)) &&  characterMovementActive == true)
         {
             Quaternion sw = Quaternion.Euler(0, 225 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, sw, smoothRotation2 * Time.deltaTime);
             //transform.rotation = sw;
         }
 
-        if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.D)) && !Grab.grab && characterMovementActive == true)
+        if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.D))  && characterMovementActive == true)
         {
             Quaternion se = Quaternion.Euler(0, 135 + cam.transform.eulerAngles.y, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, se, smoothRotation2 * Time.deltaTime);
