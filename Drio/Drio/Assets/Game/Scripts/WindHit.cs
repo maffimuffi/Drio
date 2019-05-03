@@ -17,7 +17,7 @@ public class WindHit : MonoBehaviour
     {
         windStart = GameObject.Find("WindStart");
         player = GameObject.Find(PlayerChanger.ActivePlayer.name);
-        windSpeed = 10f;
+        windSpeed = 100f;
         windMult = 0f;
 
     }

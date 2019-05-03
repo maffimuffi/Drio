@@ -16,12 +16,10 @@ public class CameraMovement : MonoBehaviour
     private PlayerChanger playerChanger;
     private CameraTrigger cameraTrigger;
 
-    private Transform playerTrans;
     private Transform cameraTrans;
     private Transform cameraPos1;
     private Transform cameraPos2;
 
-    //56.85 rotation
     private bool canSeePlayer;
 
     private GameObject defaultCameraPos;
@@ -46,7 +44,6 @@ public class CameraMovement : MonoBehaviour
         playerChanger = GameObject.Find("PlayerChanger").GetComponent<PlayerChanger>();
         cameraTrigger = GameObject.Find("DefaultPos").GetComponent<CameraTrigger>();
         Cursor.lockState = CursorLockMode.Locked;
-        playerTrans = player.GetComponent<Transform>();
         cameraTrans = GameObject.Find("Cam").GetComponent<Transform>();
 
         cameraPos1 = GameObject.Find("DefaultPos").GetComponent<Transform>();
@@ -74,8 +71,6 @@ public class CameraMovement : MonoBehaviour
         }
 
         if (Time.timeScale == 1) {
-
-            playerTrans = player.GetComponent<Transform>();
 
             // Mouse Input to rotate
             float h = horizontalSpeed * Input.GetAxisRaw("Mouse X");

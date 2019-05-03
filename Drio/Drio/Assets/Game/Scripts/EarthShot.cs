@@ -46,11 +46,11 @@ public class EarthShot : MonoBehaviour
 
        
 
-        if (Input.GetButtonUp("Fire2") && PlayerChanger.CharacterSelect == 2)
-        {
-            sound.Stop();
+        //if (Input.GetButtonUp("Fire2") && PlayerChanger.CharacterSelect == 2)
+        //{
+        //    sound.Stop();
 
-        }
+        //}
 
     }
 
