@@ -3010,6 +3010,8 @@ GameObject:
   - component: {fileID: 7983171497775200507}
   - component: {fileID: 3084295180434950208}
   - component: {fileID: 3877456867774395928}
+  - component: {fileID: 3928637047380339503}
+  - component: {fileID: 8217743506176582723}
   m_Layer: 0
   m_Name: Block (6)
   m_TagString: Boulder
@@ -3089,6 +3091,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.5, y: 12.55, z: 5.5}
   m_Center: {x: 0.082944036, y: 6.3483567, z: -0.0030263662}
+--- !u!65 &3928637047380339503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594106142392352354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.3, z: 4}
+  m_Center: {x: 0.08294785, y: 12.6, z: -0.0030568838}
+--- !u!114 &8217743506176582723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594106142392352354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e0b0ffc8f9a0e4bac84daba758de9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7075897946627294123
 GameObject:
   m_ObjectHideFlags: 0
