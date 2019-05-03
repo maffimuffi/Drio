@@ -500,7 +500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothRot: 5
-  canSeePlayer: 0
   myLayerMask:
     serializedVersion: 2
     m_Bits: 1335
