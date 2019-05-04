@@ -14485,7 +14485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526801735222114}
-  smoothCamera: {fileID: 0}
+  smoothCamera: {fileID: 5956644285368706495}
   AccelerationDecreaser: 2
   walkSpeedMultiply: 0.7
   smoothRotation2: 0.2
@@ -30438,7 +30438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526803180421466}
-  smoothCamera: {fileID: 0}
+  smoothCamera: {fileID: 5956644285368706495}
   AccelerationDecreaser: 2
   walkSpeedMultiply: 0.6
   smoothRotation2: 0.2
