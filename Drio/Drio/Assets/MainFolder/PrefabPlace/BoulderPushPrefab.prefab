@@ -95,6 +95,22 @@ MonoBehaviour:
   sound: {fileID: 0}
   moveX: -2
   moveZ: -1
+--- !u!208 &571204312
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811188015442711818}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.28800002, y: 0.143, z: 0.26700002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.008, y: -0.004, z: -0.009000001}
+  m_TimeToStationary: 0.5
 --- !u!1001 &4811188015231095221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,11 +122,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Push
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144272658852508889, guid: d415914876becff44ae7b8bbe2695532,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6144272658852508893, guid: d415914876becff44ae7b8bbe2695532,
         type: 3}
@@ -169,23 +180,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6144272658852508893, guid: d415914876becff44ae7b8bbe2695532,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
+      propertyPath: m_LocalScale.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6144272658852508893, guid: d415914876becff44ae7b8bbe2695532,
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4.147271
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144272658852508893, guid: d415914876becff44ae7b8bbe2695532,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144272658852508895, guid: d415914876becff44ae7b8bbe2695532,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6144272657608279883, guid: d415914876becff44ae7b8bbe2695532,
         type: 3}
@@ -201,6 +202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.31620002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144272658852508895, guid: d415914876becff44ae7b8bbe2695532,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6144272657608279925, guid: d415914876becff44ae7b8bbe2695532,
         type: 3}
