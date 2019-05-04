@@ -41,6 +41,7 @@ Transform:
   - {fileID: 5843905850580732709}
   - {fileID: 4004461371794713055}
   - {fileID: 8930886027702831671}
+  - {fileID: 4343979089719606828}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1300,6 +1301,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
     type: 3}
   m_PrefabInstance: {fileID: 4564064363272225596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7333253494756354964
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4564064363353693967}
+    m_Modifications:
+    - target: {fileID: 6452561796181923257, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_Name
+      value: MoveRockDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7799997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.2822578
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9593386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 337.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.599999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 53.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -32.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: 'Gust: Ok, why and how?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Terro: ...Don\u2019t look at me. Let me just get that out of the way..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: Earth Dragon can move platforms while holding F
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: You can change characters with numbers 1-3 and by scrolling with MOUSE
+        WHEEL
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac09ead514d5a08488d0f14a50f50bf5, type: 3}
+--- !u!4 &4343979089719606828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7333253494756354964}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7934971606801513575
 PrefabInstance:

@@ -62,6 +62,6 @@ public class SceneManagement : MonoBehaviour
 
     public void ExitToMenu()
     {
-        SceneManager.LoadScene("TutorialTitleScreen");
+        SceneManager.LoadScene("MainMenu");
     }
 }

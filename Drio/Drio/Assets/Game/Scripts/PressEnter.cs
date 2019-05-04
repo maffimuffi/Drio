@@ -10,12 +10,6 @@ public class PressEnter : MonoBehaviour
     public AudioSource music;
     public AudioSource transision;
     public bool change;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -26,16 +20,10 @@ public class PressEnter : MonoBehaviour
             music.Stop();
             transision.Play();
             change = true;
-
-
-
-            
         }
-
 
         if(change == true)
         {
-
 
             timer += Time.deltaTime;
 
@@ -43,9 +31,6 @@ public class PressEnter : MonoBehaviour
             {
                 SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
             }
-
         }
-
-
     }
 }
