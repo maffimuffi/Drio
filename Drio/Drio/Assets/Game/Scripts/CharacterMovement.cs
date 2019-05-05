@@ -8,7 +8,12 @@ public class CharacterMovement : MonoBehaviour
     //animation stuff
     public Animator anim;
     public GameObject smoothCamera;
+    public GameObject spawnpoint1;
+    public GameObject spawnpoint2;
+    public GameObject spawnpoint3;
+    public GameObject spawnpoint4;
     
+
     bool isGrounded;
     bool isRunning;
     bool isWalking;
@@ -192,9 +197,26 @@ public class CharacterMovement : MonoBehaviour
 
             if (transform.position.y < -1)
             {
-                transform.position = new Vector3(200f, 56f, 220f);
+                if (OpenDoorAni.trigger2 == 0)
+                {
+                    transform.position = spawnpoint1.transform.position;
+                }
+                if (OpenDoorAni.trigger2 == 1)
+                {
+                    transform.position = spawnpoint2.transform.position;
+                }
+                if (OpenDoorAni.trigger2 == 2 || OpenDoorAni.trigger2 == 3)
+                {
+                    transform.position = spawnpoint3.transform.position;
+                }
+                if (OpenDoorAni.trigger2 == 4)
+                {
+                    transform.position = spawnpoint4.transform.position;
+                }
+
                 Debug.Log("Hups!");
             }
+            
 
             if (!Grab.grab || PlayerChanger.CharacterSelect != 2)
             {
@@ -539,14 +561,30 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-
-
+        /* if (PlayerChanger.CharacterSelect == 1 && NavMeshToLevel2.counter == 1)
+        {
+            fireDragon.transform.position = level2spawn.transform.position;
+            earthDragon.transform.position = level2spawn.transform.position;
+        }
+        if (PlayerChanger.CharacterSelect == 2 && NavMeshToLevel2.counter == 1)
+        {
+            fireDragon.transform.position = level2spawn.transform.position;
+            windDragon.transform.position = level2spawn.transform.position;
+        }
+        if (PlayerChanger.CharacterSelect == 3 && NavMeshToLevel2.counter == 1)
+        {
+            windDragon.transform.position = level2spawn.transform.position;
+            earthDragon.transform.position = level2spawn.transform.position;
+        }
+        */
     }
 
     public void ResetJump()
     {
         jCount = 0;
     }
+
+    
 
 
 

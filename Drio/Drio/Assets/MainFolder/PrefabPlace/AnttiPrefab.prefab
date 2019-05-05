@@ -14337,7 +14337,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &7901526801735222112
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14443,7 +14443,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7901526801735222111}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Speed: 12
   m_Acceleration: 8
   avoidancePriority: 50
@@ -14486,6 +14486,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526801735222114}
   smoothCamera: {fileID: 5956644285368706495}
+  spawnpoint1: {fileID: 0}
+  spawnpoint2: {fileID: 0}
+  spawnpoint3: {fileID: 0}
+  spawnpoint4: {fileID: 0}
   AccelerationDecreaser: 1
   walkSpeedMultiply: 0.7
   smoothRotation2: 0.2
@@ -21726,7 +21730,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &7901526802570297762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21844,6 +21848,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526802570297772}
   smoothCamera: {fileID: 5956644285368706495}
+  spawnpoint1: {fileID: 0}
+  spawnpoint2: {fileID: 0}
+  spawnpoint3: {fileID: 0}
+  spawnpoint4: {fileID: 0}
   AccelerationDecreaser: 1
   walkSpeedMultiply: 0.8
   smoothRotation2: 0.2
@@ -30303,7 +30311,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &7901526803180421464
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30342,7 +30350,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -30439,6 +30447,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7901526803180421466}
   smoothCamera: {fileID: 5956644285368706495}
+  spawnpoint1: {fileID: 0}
+  spawnpoint2: {fileID: 0}
+  spawnpoint3: {fileID: 0}
+  spawnpoint4: {fileID: 0}
   AccelerationDecreaser: 1
   walkSpeedMultiply: 0.6
   smoothRotation2: 0.2
