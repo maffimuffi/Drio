@@ -37,6 +37,7 @@ public class WindHit : MonoBehaviour
         {
             dis = Vector3.Distance(windStart.transform.position, other.transform.position);
             Rigidbody otherRB = other.GetComponent<Rigidbody>();
+            otherRB.isKinematic = false;
 
             // Set the ranges to increase how effective the wind is
             if(dis >= 5.8f)
@@ -76,5 +77,7 @@ public class WindHit : MonoBehaviour
             otherRB.AddForce(playerForward * windSpeed * windMult);
 
         }
+
+        
     }
 }

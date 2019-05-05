@@ -58,7 +58,7 @@ public class PlayerChanger : MonoBehaviour
         //Player follow change
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            transform.position = new Vector3(transform.position.x, 0.415f, transform.position.y);
+            transform.position = new Vector3(transform.position.x, 0.415f, transform.position.z);
             PlayerFollowActive = !PlayerFollowActive;
             
             
@@ -156,15 +156,18 @@ public class PlayerChanger : MonoBehaviour
         if (CharacterSelect == 1)
         {
             ActivePlayer = WindDragon;
+           
 
         }
         else if (CharacterSelect == 2)
         {
             ActivePlayer = EarthDragon;
+            
         }
         else if (CharacterSelect == 3)
         {
             ActivePlayer = FireDragon;
+            
         }
 
         ActivePlayerRightNow = ActivePlayer;

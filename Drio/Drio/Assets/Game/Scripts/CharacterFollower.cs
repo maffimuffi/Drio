@@ -40,13 +40,13 @@ public class CharacterFollower : MonoBehaviour
             {
                 if (gameObject.name == "FireDragon")
                 {
-                    newPosition = new Vector3(-4f, 0.5f, -4f);
+                    newPosition = new Vector3(-3f, 0.5f, -3f);
                     right = false;
                 }
                 else if (gameObject.name == "EarthDragon")
                 {
                     right = true;
-                    newPosition = new Vector3(4f, 0.5f, -4f);
+                    newPosition = new Vector3(3f, 0.5f, -3f);
                 }
 
             }
@@ -55,12 +55,12 @@ public class CharacterFollower : MonoBehaviour
                 if (gameObject.name == "FireDragon")
                 {
                     right = false;
-                    newPosition = new Vector3(-3f, 0.5f, -2f);
+                    newPosition = new Vector3(-3f, 0.5f, -3f);
                 }
                 else if (gameObject.name == "WindDragon")
                 {
                     right = true;
-                    newPosition = new Vector3(3f, 0.5f, -2f);
+                    newPosition = new Vector3(3f, 0.5f, -3f);
                 }
             }
             else if (PlayerChanger.CharacterSelect == 3)
@@ -68,12 +68,12 @@ public class CharacterFollower : MonoBehaviour
                 if (gameObject.name == "WindDragon")
                 {
                     right = false;
-                    newPosition = new Vector3(-3f, 0.5f, -2f);
+                    newPosition = new Vector3(-3f, 0.5f, -3f);
                 }
                 else if (gameObject.name == "EarthDragon")
                 {
                     right = true;
-                    newPosition = new Vector3(3f, 0.5f, -2f);
+                    newPosition = new Vector3(3f, 0.5f, -3f);
                     
                 }
             }
