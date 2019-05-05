@@ -112,6 +112,7 @@ public class CharacterMovement : MonoBehaviour
         {
             smoothing = -10;
             characterMovementActive = true;
+            Physics.gravity = new Vector3(0, -9.81f, 0);
         }
         else if (thisPlayer.name == "WindDragon" && PlayerChanger.CharacterSelect == 1)
         {
@@ -122,6 +123,7 @@ public class CharacterMovement : MonoBehaviour
         {
             characterMovementActive = true;
             smoothing = -10;
+            Physics.gravity = new Vector3(0, -9.81f, 0);
         }
         else
         {

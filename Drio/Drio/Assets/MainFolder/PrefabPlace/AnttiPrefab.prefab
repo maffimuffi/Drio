@@ -14337,7 +14337,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!135 &7901526801735222112
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14443,10 +14443,10 @@ NavMeshAgent:
   m_GameObject: {fileID: 7901526801735222111}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.1
+  m_Radius: 0.5
   m_Speed: 12
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -21730,7 +21730,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!65 &7901526802570297762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30311,7 +30311,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!135 &7901526803180421464
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31848,6 +31848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sunShaftIntensity
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243084558005625888, guid: 7c25980f608f2e8438efb0359277c8a5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c25980f608f2e8438efb0359277c8a5, type: 3}
