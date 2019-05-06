@@ -10,6 +10,11 @@ public class VignettePulse : MonoBehaviour
     float IncreaseSpeed2 = 1;
     float timer;
     float multiplier;
+    public static bool restartValue;
+    
+
+    // Aika jona uuden scenen jälkeen menee restartValue takas falseks;
+    float timeToRestartFalse;
 
     public bool finished;
 
@@ -17,16 +22,41 @@ public class VignettePulse : MonoBehaviour
     {
         var vignette = ScriptableObject.CreateInstance<Vignette>();
         vignette.enabled.Override(true);
-        vignette.intensity.Override(1f);
+        vignette.intensity.Override(0.1f);
         timer = 0;
         finished = false;
+        restartValue = true;
         
     }
 
     void Update()
     {
+        if (restartValue == true)
+        {
+            timeToRestartFalse += Time.deltaTime;
+            var vignette = ScriptableObject.CreateInstance<Vignette>();
+            vignette.enabled.Override(true);
+            vignette.intensity.Override(0.1f);
+            var volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 10f, vignette);
+            volume.weight = 1;
+            Debug.Log("yeS29");
+            if (timeToRestartFalse > 5)
+            {
+                restartValue = false;
+            }
+        }
+        if (restartValue == false && LastBowl.lastBowlLit == false)
+        {
+            var vignette = ScriptableObject.CreateInstance<Vignette>();
+            vignette.enabled.Override(true);
+            vignette.intensity.Override(0.1f);
+            var volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 10f, vignette);
+            volume.weight = 1;
+        }
+        
         if (LastBowl.lastBowlLit == true)
         {
+            Debug.Log("ei tänne");
             timer += Time.deltaTime;
             Debug.Log(finished);
             // 5.5 speed up // 8 really fast // 20 loppu

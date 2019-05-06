@@ -46,6 +46,8 @@ public class SceneManagement : MonoBehaviour
 
         if(trigger.finished == true)
         {
+            VignettePulse.restartValue = true;
+            LastBowl.lastBowlLit = false;
             ExitToMenu();
         }
     }
@@ -70,11 +72,15 @@ public class SceneManagement : MonoBehaviour
 
     public void Restart()
     {
+        VignettePulse.restartValue = true;
+        LastBowl.lastBowlLit = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ExitToMenu()
     {
+        VignettePulse.restartValue = true;
+        LastBowl.lastBowlLit = false;
         SceneManager.LoadScene("MainMenu");
     }
 }

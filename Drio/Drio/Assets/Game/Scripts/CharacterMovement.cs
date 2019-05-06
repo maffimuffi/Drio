@@ -396,7 +396,7 @@ public class CharacterMovement : MonoBehaviour
                     if (localVel.y < 0 && jCount > 0)
                     {
                         anim.SetBool("isGliding", true);
-                        Physics.gravity = new Vector3(0, -1, 0);
+                        Physics.gravity = new Vector3(0, -4, 0);
                         rb.AddForce(new Vector3(transform.forward.x * Time.deltaTime, 0, transform.forward.z * Time.deltaTime));
 
                     }
