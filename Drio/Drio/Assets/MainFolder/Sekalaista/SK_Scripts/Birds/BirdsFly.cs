@@ -12,6 +12,9 @@ public class BirdsFly : MonoBehaviour
     public GameObject birds22;
     public GameObject birds23;
 
+    public GameObject spawner;
+    Vector3 spawnPos;
+
     private Animator anim21;
     private Animator anim22;
     private Animator anim23;
@@ -33,6 +36,8 @@ public class BirdsFly : MonoBehaviour
         anim13 = birds13.gameObject.GetComponent<Animator>();
         animCount = 0;
         startTime = 0;
+
+        spawnPos = new Vector3(spawner.transform.position.x, spawner.transform.position.y, spawner.transform.position.z);
     }
 
     // Update is called once per frame
@@ -54,15 +59,35 @@ public class BirdsFly : MonoBehaviour
             anim21.SetBool("Flying", true);
             anim22.SetBool("Flying", true);
             anim23.SetBool("Flying", true);
-            Destroy(birds11);
+            
             Destroy(birds12);
             Destroy(birds13);
         }
         if (HUD.amount == 3)
         {
+            birds11.transform.position = spawnPos;
+            if (BirdTrigger.triggered != 1 && BirdTrigger.triggered != 110)
+            {
+                anim11.SetBool("Flying", false);
+            }
+            
             Destroy(birds21);
             Destroy(birds22);
             Destroy(birds23);
         }
+
+        if (BirdTrigger.triggered == 1)
+        {
+           
+            
+            anim11.SetBool("Flying", true);
+            BirdTrigger.triggered = 110;
+            
+        }
+        if (BirdTrigger.triggered == 2)
+        {
+            //Destroy(birds11);
+        }
     }
+
 }
