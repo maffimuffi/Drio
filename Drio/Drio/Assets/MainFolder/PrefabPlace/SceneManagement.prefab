@@ -149,39 +149,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1835585734059217494, guid: a45e13b47951bf0448e70c68adf5616e,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4993942379099712045, guid: a45e13b47951bf0448e70c68adf5616e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8982030525905116345}
-    - target: {fileID: 9146454595883175145, guid: a45e13b47951bf0448e70c68adf5616e,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5299133147665743065, guid: a45e13b47951bf0448e70c68adf5616e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8982030525905116345}
-    - target: {fileID: 3646313048371149025, guid: a45e13b47951bf0448e70c68adf5616e,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3582431491278507898, guid: a45e13b47951bf0448e70c68adf5616e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8982030525905116345}
-    - target: {fileID: 8451984938724999489, guid: a45e13b47951bf0448e70c68adf5616e,
+    - target: {fileID: 6216803413030537158, guid: a45e13b47951bf0448e70c68adf5616e,
         type: 3}
-      propertyPath: m_havePropertiesChanged
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
