@@ -15,6 +15,7 @@ public class SceneManagement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        BirdTrigger.triggered = 0;
         paused = false;
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
