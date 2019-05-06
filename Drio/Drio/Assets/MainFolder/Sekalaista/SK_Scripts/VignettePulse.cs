@@ -62,11 +62,11 @@ public class VignettePulse : MonoBehaviour
             // 5.5 speed up // 8 really fast // 20 loppu
             if(timer <= 5.5f)
             {
-                multiplier = 4f;
+                multiplier = 3.3f;
             }
             else if(timer > 5.5f && timer <= 8f)
             {
-                multiplier = 1f;
+                multiplier = 0.7f;
             }
             else if(timer > 8f && timer < 8.5f)
             {
