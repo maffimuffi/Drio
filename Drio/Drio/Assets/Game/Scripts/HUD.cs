@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         orbs = GetComponent<Text>();
+        amount = 0;
     }
 
     // Update is called once per frame
