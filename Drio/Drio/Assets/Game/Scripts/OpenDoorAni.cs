@@ -23,7 +23,7 @@ public class OpenDoorAni : MonoBehaviour
         //Debug.Log(trigger);
         if (trigger2 == triggerMax)
         {
-            Debug.Log(trigger2);
+            //Debug.Log(trigger2);
             anim.SetBool("OpenDoor", true);
         }
 

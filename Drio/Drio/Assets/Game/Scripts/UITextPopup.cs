@@ -158,7 +158,7 @@ public class UITextPopup : MonoBehaviour
             {
                 dialogueMaxTime = (float)lineList[lineCount].Length / 9;
             }
-            Debug.Log("Line char length: " + lineList[lineCount].Length + " Max Time for next line: " + dialogueMaxTime);
+            //Debug.Log("Line char length: " + lineList[lineCount].Length + " Max Time for next line: " + dialogueMaxTime);
             if (dialogueCounter >= dialogueMaxTime)
             {
                  
