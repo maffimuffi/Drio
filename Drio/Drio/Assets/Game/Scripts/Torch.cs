@@ -31,8 +31,7 @@ public class Torch : MonoBehaviour
             if (collision.gameObject.CompareTag("FireShot") && ani == false)
             {
                 sound.Play();
-                OpenDoor.trigger += 1;
-                OpenDoorAni.trigger2 += 1;
+                OpenDoorAni.trigger += 1;
                 //sound.GetComponent<smashSound>().on = true;
                 Debug.Log(OpenDoor.trigger);
                 ani = true;

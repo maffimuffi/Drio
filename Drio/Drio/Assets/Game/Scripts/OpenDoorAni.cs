@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenDoorAni : MonoBehaviour
 {
     public int triggerMax;
-    public static int trigger2 = 0;
+    public static int trigger = 0;
     public Animator anim;
     
 
@@ -21,7 +21,7 @@ public class OpenDoorAni : MonoBehaviour
     void Update()
     {
         //Debug.Log(trigger);
-        if (trigger2 == triggerMax)
+        if (trigger == triggerMax)
         {
             //Debug.Log(trigger2);
             anim.SetBool("OpenDoor", true);

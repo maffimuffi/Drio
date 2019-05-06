@@ -93,12 +93,12 @@ public class BirdsFly : MonoBehaviour
         {
             //Destroy(birds11);
         }
-        if (OpenDoorAni.trigger2 == 4)
+        if (OpenDoorAni.trigger == 4)
         {
             birds11.transform.position = new Vector3(spawner2.transform.position.x - 1f, spawner2.transform.position.y, spawner2.transform.position.z);
             anim11.SetBool("Flying", false);
         }
-        if (OpenDoorAni.trigger2 == 5)
+        if (OpenDoorAni.trigger == 5)
         {
             anim11.SetBool("Flying", true);
             anim12.SetBool("Flying", true);
