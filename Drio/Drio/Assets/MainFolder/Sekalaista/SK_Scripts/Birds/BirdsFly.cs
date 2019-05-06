@@ -13,6 +13,7 @@ public class BirdsFly : MonoBehaviour
     public GameObject birds23;
 
     public GameObject spawner;
+    public GameObject spawner2;
     Vector3 spawnPos;
 
     private Animator anim21;
@@ -60,16 +61,19 @@ public class BirdsFly : MonoBehaviour
             anim22.SetBool("Flying", true);
             anim23.SetBool("Flying", true);
             
-            Destroy(birds12);
-            Destroy(birds13);
+            
         }
         if (HUD.amount == 3)
         {
             birds11.transform.position = spawnPos;
+            birds13.transform.position = spawner2.transform.position;
+            birds12.transform.position = new Vector3(spawner2.transform.position.x + 1f, spawner2.transform.position.y, spawner2.transform.position.z);
             if (BirdTrigger.triggered != 1 && BirdTrigger.triggered != 110)
             {
                 anim11.SetBool("Flying", false);
             }
+            anim12.SetBool("Flying", false);
+            anim13.SetBool("Flying", false);
             
             Destroy(birds21);
             Destroy(birds22);
@@ -87,6 +91,17 @@ public class BirdsFly : MonoBehaviour
         if (BirdTrigger.triggered == 2)
         {
             //Destroy(birds11);
+        }
+        if (OpenDoorAni.trigger2 == 4)
+        {
+            birds11.transform.position = new Vector3(spawner2.transform.position.x - 1f, spawner2.transform.position.y, spawner2.transform.position.z);
+            anim11.SetBool("Flying", false);
+        }
+        if (OpenDoorAni.trigger2 == 5)
+        {
+            anim11.SetBool("Flying", true);
+            anim12.SetBool("Flying", true);
+            anim13.SetBool("Flying", true);
         }
     }
 

@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 7806531429587530118}
-  sound: {fileID: 3157293688122281460, guid: 2f07a17ad7eaaf541a2ac75192ef2772, type: 3}
+  sound: {fileID: 0}
 --- !u!1 &7806531428035235691
 GameObject:
   m_ObjectHideFlags: 0
@@ -5986,7 +5986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 7806531428688921528}
-  sound: {fileID: 3157293688122281460, guid: 2f07a17ad7eaaf541a2ac75192ef2772, type: 3}
+  sound: {fileID: 0}
 --- !u!1 &7806531429032327991
 GameObject:
   m_ObjectHideFlags: 0

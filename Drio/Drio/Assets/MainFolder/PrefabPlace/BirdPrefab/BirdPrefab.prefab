@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &482328079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482328080}
+  m_Layer: 0
+  m_Name: BirdSpawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482328080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482328079}
+  m_LocalRotation: {x: -0, y: -0.5844358, z: -0, w: 0.81143993}
+  m_LocalPosition: {x: -415.46, y: -7.59, z: -232.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7558636991596744517}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -71.526, z: 0}
 --- !u!1 &584565629
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +367,7 @@ Transform:
   - {fileID: 720275352}
   - {fileID: 1618786768}
   - {fileID: 584565630}
+  - {fileID: 482328080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -359,6 +390,7 @@ MonoBehaviour:
   birds22: {fileID: 7558636991072897822}
   birds23: {fileID: 7558636991382956658}
   spawner: {fileID: 584565629}
+  spawner2: {fileID: 482328079}
 --- !u!1001 &7558636989929096975
 PrefabInstance:
   m_ObjectHideFlags: 0
