@@ -35,7 +35,7 @@ public class FpsOptimizer : MonoBehaviour
             Scene2Objects.SetActive(false);
             SecondGateObjects.SetActive(false);
         }
-        if (OpenDoorAni.trigger == 1)
+        if (OpenDoorAni.trigger2 == 1)
         {
             
             Scene2Objects.SetActive(true);
