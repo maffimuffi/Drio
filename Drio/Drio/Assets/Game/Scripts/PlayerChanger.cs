@@ -26,13 +26,13 @@ public class PlayerChanger : MonoBehaviour
     public GameObject ActivePlayerRightNow;
     public static GameObject ActivePlayer;
 
-    
+    public ActivePlayerText activePlayerText;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        activePlayerText = GameObject.Find("ActivePlayerText").GetComponent<ActivePlayerText>();
         //Etsii kamerat, dragonit ja navmeshit scenestä
         PlayerFollowActive = true;
         //cam = GameObject.Find("MainCamera");
@@ -46,6 +46,8 @@ public class PlayerChanger : MonoBehaviour
         FireNav = FireDragon.GetComponent<NavMeshAgent>();
         EarthNav = EarthDragon.GetComponent<NavMeshAgent>();
         WindNav = WindDragon.GetComponent<NavMeshAgent>();
+        
+        
         ChangePlayer(1);
         
         
@@ -174,6 +176,7 @@ public class PlayerChanger : MonoBehaviour
         //SetCamera();
         SetNavMesh();
         //uiText.ExitSite();
+        activePlayerText.ChangeActiveText();
     }
 //Laittaa pelaajan navmeshin "Stand by" tilaan
     public void SetNavMesh()
