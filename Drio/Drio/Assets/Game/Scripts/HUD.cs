@@ -17,6 +17,7 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        orbs.text = "Orbs: " + amount + "/" + max;
+        //orbs.text = "Orbs: " + amount + "/" + max;
+        orbs.text = "Orbs: " + amount;
     }
 }
