@@ -15341,7 +15341,7 @@ GameObject:
   - component: {fileID: 7901526801813596727}
   - component: {fileID: 7901526801813596724}
   - component: {fileID: 7901526801813596725}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30770,7 +30770,7 @@ GameObject:
   - component: {fileID: 7901526803196937867}
   - component: {fileID: 7901526803196937864}
   - component: {fileID: 7901526803196937865}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

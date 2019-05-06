@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 7806531427668923331}
   - component: {fileID: 7806531427668923330}
   - component: {fileID: 7806531427668923329}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 7806531428076315062}
   - component: {fileID: 7806531428076315061}
   - component: {fileID: 7806531428076315060}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5589,7 +5589,7 @@ GameObject:
   - component: {fileID: 7806531428730164355}
   - component: {fileID: 7806531428730164354}
   - component: {fileID: 7806531428730164353}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5760,7 +5760,7 @@ GameObject:
   - component: {fileID: 7806531428747903524}
   - component: {fileID: 7806531428747903523}
   - component: {fileID: 7806531428747903522}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6002,7 +6002,7 @@ GameObject:
   - component: {fileID: 7806531429032328011}
   - component: {fileID: 7806531429032328010}
   - component: {fileID: 7806531429032328009}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6143,7 +6143,7 @@ GameObject:
   - component: {fileID: 7806531429092965871}
   - component: {fileID: 7806531429092965870}
   - component: {fileID: 7806531429092965869}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6284,7 +6284,7 @@ GameObject:
   - component: {fileID: 7806531429478422269}
   - component: {fileID: 7806531429478422268}
   - component: {fileID: 7806531429478422267}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
