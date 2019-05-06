@@ -10804,6 +10804,7 @@ MonoBehaviour:
   ammo: {fileID: 1846891563656761275, guid: 98a4988e177b11c4db4df0a2dfc66a20, type: 3}
   fireRate: 1
   sound: {fileID: 0}
+  lightSpawn: {fileID: 0}
 --- !u!114 &5324744225402826212
 MonoBehaviour:
   m_ObjectHideFlags: 0

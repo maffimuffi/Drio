@@ -9,11 +9,12 @@ public class FireShot : MonoBehaviour
     private float lastFire = 0.5f;
     public float fireRate;
     public AudioSource sound;
+    public GameObject lightSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        lightSpawn.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class FireShot : MonoBehaviour
             GameObject ammoInstance3 = Instantiate(ammo, ammoSpawn.transform.position, Quaternion.identity);
             Destroy(ammoInstance3, 0.4f);
             ammoInstance3.GetComponent<Rigidbody>().AddForce(ammoSpawn.transform.forward * 10 + transform.right * -0.5f, ForceMode.Impulse);
-
+            lightSpawn.SetActive(true);
             
 
         }
@@ -51,12 +52,14 @@ public class FireShot : MonoBehaviour
         if (Input.GetButtonUp("Fire2") &&  PlayerChanger.CharacterSelect == 3)
         {
             sound.Stop();
+            lightSpawn.SetActive(false);
 
         }
 
         if (PlayerChanger.CharacterSelect != 3)
         {
             sound.Stop();
+            lightSpawn.SetActive(false);
         }
 
     }
