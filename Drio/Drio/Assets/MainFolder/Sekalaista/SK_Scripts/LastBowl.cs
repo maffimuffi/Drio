@@ -46,17 +46,7 @@ public class LastBowl : MonoBehaviour
 
         if (OpenDoor.trigger == 5)
         {
-            thunderTime += Time.deltaTime;
-            if (thunderTime < 0.5)
-            {
-                thunderPrefab.SetActive(true);
-                directionalLight.intensity = 0;
-            }
-            else
-            {
-                directionalLight.intensity = intensity;
-                thunderPrefab.SetActive(false);
-            }
+            
             lastBowlLit = true;
         }
     }
