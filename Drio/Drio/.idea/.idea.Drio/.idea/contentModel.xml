@@ -31,6 +31,7 @@
         </e>
         <e p="Game" t="Include">
           <e p="Scripts" t="Include">
+            <e p="ActivePlayerText.cs" t="Include" />
             <e p="Attach.cs" t="Include" />
             <e p="Boulder.cs" t="Include" />
             <e p="CameraMovement.cs" t="Include" />
@@ -268,6 +269,10 @@
               </e>
             </e>
             <e p="SK_Scripts" t="Include">
+              <e p="Birds" t="Include">
+                <e p="BirdsFly.cs" t="Include" />
+                <e p="BirdTrigger.cs" t="Include" />
+              </e>
               <e p="BlockDown.cs" t="Include" />
               <e p="FPS_Trigger.cs" t="Include" />
               <e p="FpsOptimizer" t="Include">
@@ -279,6 +284,9 @@
               <e p="HeadTurn.cs" t="Include" />
               <e p="LastBowl.cs" t="Include" />
               <e p="LutBrightness.cs" t="Include" />
+              <e p="NavMeshToLevel2" t="Include">
+                <e p="NavMeshToLevel2.cs" t="Include" />
+              </e>
               <e p="VignettePulse.cs" t="Include" />
             </e>
           </e>

@@ -176,17 +176,17 @@ PrefabInstance:
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -109.2
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.7
+      value: 18.4
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 319.8
+      value: 305.7
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5689925
+      value: 0.47439548
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -206,7 +206,7 @@ PrefabInstance:
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.82234275
+      value: 0.88031185
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -221,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 69.36
+      value: 56.64
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -236,12 +236,12 @@ PrefabInstance:
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.599999
+      value: 35.8
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 53.68
+      value: 107.19
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -541,7 +541,7 @@ PrefabInstance:
     - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: lines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -558,6 +558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: lines.Array.data[2]
       value: 'Gust: No worries, I think I can put it out.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: Wind Dragon can extinguish fire, press RIGHT MOUSE BUTTON for wind breath
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac09ead514d5a08488d0f14a50f50bf5, type: 3}
@@ -868,7 +873,7 @@ PrefabInstance:
     - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: lines.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -880,6 +885,11 @@ PrefabInstance:
       propertyPath: lines.Array.data[1]
       value: You can change characters with numbers 1-3 and by scrolling with MOUSE
         WHEEL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: You can sprint with LEFT SHIFT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac09ead514d5a08488d0f14a50f50bf5, type: 3}
@@ -1316,26 +1326,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7799997
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.2822578
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9593386
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.15
       objectReference: {fileID: 0}
@@ -1351,13 +1341,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 8.599999
+      propertyPath: m_LocalRotation.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 53.68
+      propertyPath: m_LocalRotation.y
+      value: -0.2822578
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9593386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -1366,13 +1376,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
-      propertyPath: m_LocalRotation.x
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+      propertyPath: m_LocalScale.x
+      value: 1.7799997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.599999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 53.68
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
@@ -1393,12 +1413,6 @@ PrefabInstance:
         type: 3}
       propertyPath: lines.Array.data[2]
       value: Earth Dragon can move platforms while holding F
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452561796181923259, guid: ac09ead514d5a08488d0f14a50f50bf5,
-        type: 3}
-      propertyPath: lines.Array.data[3]
-      value: You can change characters with numbers 1-3 and by scrolling with MOUSE
-        WHEEL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac09ead514d5a08488d0f14a50f50bf5, type: 3}
@@ -1539,7 +1553,7 @@ PrefabInstance:
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.83
+      value: 11.78
       objectReference: {fileID: 0}
     - target: {fileID: 6452561796181923256, guid: ac09ead514d5a08488d0f14a50f50bf5,
         type: 3}
