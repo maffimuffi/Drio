@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4370936701423116530}
   m_Layer: 0
   m_Name: OffMeshHuijaus
-  m_TagString: Untagged
+  m_TagString: Boulder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4370936703151996110}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 226.3, y: 27.39, z: 448.9}
-  m_LocalScale: {x: 25.12, y: -20.38, z: 17.9}
+  m_LocalScale: {x: 41.6, y: -20.38, z: 17.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 589c768e3aba4724290396c14a1f32ab, type: 2}
+  - {fileID: 2100000, guid: 6915530a9d2f6734c9a40c398b344378, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

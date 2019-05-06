@@ -34045,6 +34045,7 @@ MonoBehaviour:
   EarthNav: {fileID: 0}
   FireNav: {fileID: 0}
   ActivePlayerRightNow: {fileID: 0}
+  activePlayerText: {fileID: 0}
 --- !u!1 &4266114053428593117
 GameObject:
   m_ObjectHideFlags: 0

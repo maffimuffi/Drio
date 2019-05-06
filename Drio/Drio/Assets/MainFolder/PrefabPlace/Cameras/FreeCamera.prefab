@@ -199,9 +199,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableInputCapture: 1
   holdRightMouseCapture: 0
-  lookSpeed: 3
-  moveSpeed: 10
-  sprintSpeed: 60
+  lookSpeed: 0
+  moveSpeed: 0
+  sprintSpeed: 0
 --- !u!114 &18769876513376802
 MonoBehaviour:
   m_ObjectHideFlags: 0
