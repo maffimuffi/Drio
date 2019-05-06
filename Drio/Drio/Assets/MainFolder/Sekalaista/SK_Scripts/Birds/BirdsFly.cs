@@ -41,7 +41,7 @@ public class BirdsFly : MonoBehaviour
         if (HUD.amount == 0)
         {
             startTime += Time.deltaTime;
-            if (startTime > 1)
+            if (startTime > 0.8)
             {
                 anim11.SetBool("Flying", true);
                 anim12.SetBool("Flying", true);
