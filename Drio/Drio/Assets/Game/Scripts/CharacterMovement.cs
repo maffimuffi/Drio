@@ -199,19 +199,19 @@ public class CharacterMovement : MonoBehaviour
 
             if (transform.position.y < -1)
             {
-                if (OpenDoorAni.trigger2 == 0)
+                if (OpenDoorAni.trigger == 0)
                 {
                     transform.position = spawnpoint1.transform.position;
                 }
-                if (OpenDoorAni.trigger2 == 1)
+                if (OpenDoorAni.trigger == 1)
                 {
                     transform.position = spawnpoint2.transform.position;
                 }
-                if (OpenDoorAni.trigger2 == 2 || OpenDoorAni.trigger2 == 3)
+                if (OpenDoorAni.trigger == 2 || OpenDoorAni.trigger == 3)
                 {
                     transform.position = spawnpoint3.transform.position;
                 }
-                if (OpenDoorAni.trigger2 == 4)
+                if (OpenDoorAni.trigger == 4)
                 {
                     transform.position = spawnpoint4.transform.position;
                 }
