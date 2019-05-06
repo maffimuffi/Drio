@@ -13,7 +13,7 @@ public class SceneManagement : MonoBehaviour
 
     public GameObject pauseMenu;
 
-    private VignettePulse trigger;
+    public VignettePulse trigger;
 
     // Start is called before the first frame update
     void Awake()
@@ -21,7 +21,7 @@ public class SceneManagement : MonoBehaviour
         BirdTrigger.triggered = 0;
         OpenDoorAni.trigger2 = 0;
         LastBowl.lastBowlLit = false;
-        
+        trigger.finished = false;
 
         paused = false;
         pauseMenu.SetActive(false);
@@ -44,7 +44,10 @@ public class SceneManagement : MonoBehaviour
             }
         }
 
-        
+        if(trigger.finished == true)
+        {
+            ExitToMenu();
+        }
     }
 
     // Pausing the game and enabling pause menu
@@ -67,7 +70,7 @@ public class SceneManagement : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ExitToMenu()
