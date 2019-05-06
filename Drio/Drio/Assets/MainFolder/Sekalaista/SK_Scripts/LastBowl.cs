@@ -16,10 +16,9 @@ public class LastBowl : MonoBehaviour
     void Update()
     {
         
-        if (OpenDoor.trigger == 5)
+        if (OpenDoor.trigger == 1)
         {
             lastBowlLit = true;
-            Debug.Log("TRUE");
         }
     }
 }

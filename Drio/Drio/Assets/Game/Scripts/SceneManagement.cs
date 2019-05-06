@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,11 +13,16 @@ public class SceneManagement : MonoBehaviour
 
     public GameObject pauseMenu;
 
+    private VignettePulse trigger;
 
     // Start is called before the first frame update
     void Awake()
     {
         BirdTrigger.triggered = 0;
+        OpenDoorAni.trigger2 = 0;
+        LastBowl.lastBowlLit = false;
+        
+
         paused = false;
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
@@ -25,9 +32,9 @@ public class SceneManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(paused)
+            if (paused)
             {
                 Continue();
             }
@@ -36,6 +43,8 @@ public class SceneManagement : MonoBehaviour
                 OnPause();
             }
         }
+
+        
     }
 
     // Pausing the game and enabling pause menu
@@ -58,8 +67,7 @@ public class SceneManagement : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
     public void ExitToMenu()

@@ -37,7 +37,6 @@ public class BirdsFly : MonoBehaviour
         anim13 = birds13.gameObject.GetComponent<Animator>();
         animCount = 0;
         startTime = 0;
-        BirdTrigger.triggered = 0;
 
         spawnPos = new Vector3(spawner.transform.position.x, spawner.transform.position.y, spawner.transform.position.z);
     }
