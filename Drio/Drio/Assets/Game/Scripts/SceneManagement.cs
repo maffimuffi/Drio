@@ -58,6 +58,7 @@ public class SceneManagement : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        BirdTrigger.triggered = 0;
     }
 
     public void ExitToMenu()

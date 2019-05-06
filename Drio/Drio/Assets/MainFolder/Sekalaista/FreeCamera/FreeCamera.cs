@@ -4,9 +4,12 @@ public class FreeCamera : MonoBehaviour {
 	public bool enableInputCapture = true;
 	public bool holdRightMouseCapture = false;
 
-	public float lookSpeed = 5f;
-	public float moveSpeed = 5f;
-	public float sprintSpeed = 50f;
+	public float lookSpeed = 0f;
+	public float moveSpeed = 0f;
+	public float sprintSpeed = 0f;
+
+    bool isActive = false;
+    float uCounter;
 
 	bool	m_inputCaptured;
 	float	m_yaw;
@@ -51,6 +54,8 @@ public class FreeCamera : MonoBehaviour {
 	}
 
 	void Update() {
+        
+       
 		if(!m_inputCaptured) {
 			if(!holdRightMouseCapture && Input.GetMouseButtonDown(0)) 
 				CaptureInput();
@@ -80,5 +85,39 @@ public class FreeCamera : MonoBehaviour {
 		var right = speed * Input.GetAxis("Horizontal");
 		var up = speed * ((Input.GetKey(KeyCode.E) ? 1f : 0f) - (Input.GetKey(KeyCode.Q) ? 1f : 0f));
 		transform.position += transform.forward * forward + transform.right * right + Vector3.up * up;
+        if (Input.GetKey(KeyCode.U))
+        {
+            
+            if (uCounter == 0)
+            {
+                uCounter = 1;
+            }
+            else
+            {
+                uCounter = 0;
+            }
+            if (uCounter == 1)
+            {
+                isActive = true;
+            }
+            else
+            {
+                isActive = false;
+            }
+            
+            
+            if (isActive == true)
+            {
+                lookSpeed = 3f;
+                moveSpeed = 10f;
+                sprintSpeed = 60f;
+            }
+            if (isActive == false)
+            {
+                lookSpeed = 0;
+                moveSpeed = 0;
+                sprintSpeed = 0;
+            }
+        }
 	}
 }
