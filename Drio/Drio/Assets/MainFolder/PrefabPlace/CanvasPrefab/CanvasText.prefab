@@ -530,11 +530,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6720702914711532208}
     m_Modifications:
-    - target: {fileID: 7757240160843123100, guid: 2b70f486a0a96294780fff126059b68e,
-        type: 3}
-      propertyPath: m_Name
-      value: TextPopup
-      objectReference: {fileID: 0}
     - target: {fileID: 7757240160843123091, guid: 2b70f486a0a96294780fff126059b68e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -654,6 +649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757240160843123100, guid: 2b70f486a0a96294780fff126059b68e,
+        type: 3}
+      propertyPath: m_Name
+      value: TextPopup
       objectReference: {fileID: 0}
     - target: {fileID: 7757240160843123090, guid: 2b70f486a0a96294780fff126059b68e,
         type: 3}
