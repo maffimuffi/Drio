@@ -12,6 +12,7 @@ public class SceneManagement : MonoBehaviour
     private bool paused;
 
     public GameObject pauseMenu;
+    public float menuCounter;
 
     public VignettePulse trigger;
 
@@ -46,8 +47,7 @@ public class SceneManagement : MonoBehaviour
 
         if(trigger.finished == true)
         {
-            VignettePulse.restartValue = true;
-            LastBowl.lastBowlLit = false;
+            menuCounter = 1;
             ExitToMenu();
         }
     }
