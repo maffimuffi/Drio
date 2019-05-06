@@ -45,15 +45,15 @@ public class VignettePulse : MonoBehaviour
                 restartValue = false;
             }
         }
-        if (restartValue == false && LastBowl.lastBowlLit == false)
-        {
-            var vignette = ScriptableObject.CreateInstance<Vignette>();
-            vignette.enabled.Override(true);
-            vignette.intensity.Override(0.1f);
-            var volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 10f, vignette);
-            volume.weight = 1;
-        }
-        
+        //if (restartValue == false && LastBowl.lastBowlLit == false)
+        //{
+        //    var vignette = ScriptableObject.CreateInstance<Vignette>();
+        //    vignette.enabled.Override(true);
+        //    vignette.intensity.Override(0.1f);
+        //    var volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 10f, vignette);
+        //    volume.weight = 1;
+        //}
+
         if (LastBowl.lastBowlLit == true)
         {
             Debug.Log("ei tänne");
