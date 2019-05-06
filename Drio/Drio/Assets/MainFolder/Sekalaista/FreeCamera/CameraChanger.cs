@@ -27,7 +27,6 @@ public class CameraChanger : MonoBehaviour
             normalCamera.enabled = !normalCamera.enabled;
             
         }
-        }
-        
-    }
+    }    
+}
 

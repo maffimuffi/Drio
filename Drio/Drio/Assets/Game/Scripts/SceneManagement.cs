@@ -12,7 +12,6 @@ public class SceneManagement : MonoBehaviour
     private bool paused;
 
     public GameObject pauseMenu;
-    public float menuCounter;
 
     public VignettePulse trigger;
 
@@ -33,21 +32,22 @@ public class SceneManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (paused)
-            {
-                Continue();
-            }
-            else
-            {
-                OnPause();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    if (paused)
+        //    {
+        //        Continue();
+        //    }
+        //    else
+        //    {
+        //        OnPause();
+        //    }
+        //}
 
         if(trigger.finished == true)
         {
-            menuCounter = 1;
+            VignettePulse.restartValue = true;
+            LastBowl.lastBowlLit = false;
             ExitToMenu();
         }
     }

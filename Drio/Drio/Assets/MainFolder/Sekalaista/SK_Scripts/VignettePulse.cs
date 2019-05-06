@@ -31,7 +31,7 @@ public class VignettePulse : MonoBehaviour
 
     void Update()
     {
-        /* if (restartValue == true)
+        if (restartValue == true)
         {
             timeToRestartFalse += Time.deltaTime;
             var vignette = ScriptableObject.CreateInstance<Vignette>();
@@ -39,28 +39,34 @@ public class VignettePulse : MonoBehaviour
             vignette.intensity.Override(0.1f);
             var volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 10f, vignette);
             volume.weight = 1;
-            
+            Debug.Log("yeS29");
             if (timeToRestartFalse > 5)
             {
                 restartValue = false;
             }
         }
-        
-        */
-        
+        //if (restartValue == false && LastBowl.lastBowlLit == false)
+        //{
+        //    var vignette = ScriptableObject.CreateInstance<Vignette>();
+        //    vignette.enabled.Override(true);
+        //    vignette.intensity.Override(0.1f);
+        //    var volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 10f, vignette);
+        //    volume.weight = 1;
+        //}
+
         if (LastBowl.lastBowlLit == true)
         {
-            
+            Debug.Log("ei tänne");
             timer += Time.deltaTime;
             Debug.Log(finished);
             // 5.5 speed up // 8 really fast // 20 loppu
             if(timer <= 5.5f)
             {
-                multiplier = 4f;
+                multiplier = 3.3f;
             }
             else if(timer > 5.5f && timer <= 8f)
             {
-                multiplier = 1f;
+                multiplier = 0.7f;
             }
             else if(timer > 8f && timer < 8.5f)
             {
