@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1268023234525684346}
   - component: {fileID: 1268023234525684325}
   - component: {fileID: 1825325621963456777}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammo: {fileID: 8076030701388722464, guid: 43e22e0139481e044a838347a2af2036, type: 3}
+  replacement: {fileID: 0}
 --- !u!208 &1825325621963456777
 NavMeshObstacle:
   m_ObjectHideFlags: 0
