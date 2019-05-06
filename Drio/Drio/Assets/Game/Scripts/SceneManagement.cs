@@ -16,10 +16,6 @@ public class SceneManagement : MonoBehaviour
     void Awake()
     {
         BirdTrigger.triggered = 0;
-        OpenDoorAni.trigger = 0;
-        LastBowl.lastBowlLit = false;
-        //VignettePulse.vigne
-
         paused = false;
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
@@ -29,9 +25,9 @@ public class SceneManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if (paused)
+            if(paused)
             {
                 Continue();
             }
@@ -62,7 +58,8 @@ public class SceneManagement : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     public void ExitToMenu()
