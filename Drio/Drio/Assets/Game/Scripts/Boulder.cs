@@ -29,17 +29,13 @@ public class Boulder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(pusher == true && Push == true)
+        if (pusher == true && Push == true)
         {
-            
-            rb.MovePosition(transform.position + new Vector3(moveX,0,moveZ) * Time.deltaTime);
-            //sound.Play();
-        }
 
-        if(pusher == false)
-        {
-            //sound.Stop();
+            rb.MovePosition(transform.position + new Vector3(moveX, 0, moveZ) * Time.deltaTime);
         }
+            
+
 
         if(rb.IsSleeping() == true)
         {
@@ -66,17 +62,6 @@ public class Boulder : MonoBehaviour
         {
             
             Push = true;
-        }
-
-
-        if ((collider.name == "EarthDragon" ))
-        {
-            Debug.Log("Sound?");
-            //sound.Play();
-            //transform.parent = collider.transform;
-            //pusher = true;
-
-
         }
 
 
@@ -107,7 +92,7 @@ public class Boulder : MonoBehaviour
         {
             //transform.parent = null;
             pusher = false;
-            //sound.Stop();
+            
         }
 
 
