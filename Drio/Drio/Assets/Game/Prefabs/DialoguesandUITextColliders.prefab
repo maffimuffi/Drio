@@ -42,9 +42,100 @@ Transform:
   - {fileID: 4004461371794713055}
   - {fileID: 8930886027702831671}
   - {fileID: 4343979089719606828}
+  - {fileID: 5218339672700981679}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &553989454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4564064363353693967}
+    m_Modifications:
+    - target: {fileID: 5218339673254831356, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_Name
+      value: WindPushPopup (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831356, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 367.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -136.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7865849
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.61748224
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -103.73501
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 14.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218339673254831357, guid: 4b743a8d161f6f045804603b24b47cee,
+        type: 3}
+      propertyPath: uiTextObject
+      value: Wind Dragon can glide holding down SPACE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b743a8d161f6f045804603b24b47cee, type: 3}
+--- !u!4 &5218339672700981679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5218339673254831329, guid: 4b743a8d161f6f045804603b24b47cee,
+    type: 3}
+  m_PrefabInstance: {fileID: 553989454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &618580485582298781
 PrefabInstance:
   m_ObjectHideFlags: 0
