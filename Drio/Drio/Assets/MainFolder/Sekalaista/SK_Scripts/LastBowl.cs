@@ -44,7 +44,7 @@ public class LastBowl : MonoBehaviour
 
         }
 
-        if (OpenDoor.trigger == 5)
+        if (OpenDoorAni.trigger2 == 5)
         {
             
             lastBowlLit = true;
