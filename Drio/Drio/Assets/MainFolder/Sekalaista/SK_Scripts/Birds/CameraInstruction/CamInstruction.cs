@@ -42,7 +42,7 @@ public class CamInstruction : MonoBehaviour
             }
             else
             {
-                PuzzleCam.transform.position = Vector3.MoveTowards(PuzzleCam.transform.position, firstTarget.transform.position, 0.7f);
+                PuzzleCam.transform.position = Vector3.MoveTowards(PuzzleCam.transform.position, firstTarget.transform.position, 0.5f);
             }
         }
     }
