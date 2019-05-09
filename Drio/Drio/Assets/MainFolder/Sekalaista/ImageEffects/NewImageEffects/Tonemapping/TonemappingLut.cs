@@ -27,8 +27,8 @@ public class TonemappingLut : PostEffectsBase {
 	public float middleGrey = 0.18f;
 	public float adaptionSpeed = 1.5f;
 
-    public static float adaptiveMin = 0.0f;
-    public static float adaptiveMax = 0.5f;
+    public static float adaptiveMin = -0.5f;
+    public static float adaptiveMax = 0.0f;
     
     public bool adaptiveDebug = false;
 

@@ -24,7 +24,7 @@ public class UIDialogue : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && isVisited == false)
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
@@ -42,6 +42,7 @@ public class UIDialogue : MonoBehaviour
         {
             if (other.GetComponent<CharacterMovement>().IsPlayerActive())
             {
+                isVisited = true;
                 //uiText.ExitSite();
                 
                 

@@ -44,7 +44,7 @@ public class SceneManagement : MonoBehaviour
         //    }
         //}
 
-        if(trigger.finished == true)
+        if (trigger.finished == true)
         {
             VignettePulse.restartValue = true;
             LastBowl.lastBowlLit = false;
