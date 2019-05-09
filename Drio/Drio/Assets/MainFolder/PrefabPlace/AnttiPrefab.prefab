@@ -14562,10 +14562,10 @@ MonoBehaviour:
   spawnpoint3: {fileID: 0}
   spawnpoint4: {fileID: 0}
   AccelerationDecreaser: 1
-  walkSpeedMultiply: 1.4
+  walkSpeedMultiply: 1
   smoothRotation2: 0.2
   smoothRotation: 4
-  moveSpeedMultiply: 2.2
+  moveSpeedMultiply: 2
   playerTransform: {fileID: 0}
   rotating: 0
   jump: {x: 0, y: 2, z: 0}
@@ -30524,10 +30524,10 @@ MonoBehaviour:
   spawnpoint3: {fileID: 0}
   spawnpoint4: {fileID: 0}
   AccelerationDecreaser: 1
-  walkSpeedMultiply: 1.4
+  walkSpeedMultiply: 1
   smoothRotation2: 0.2
   smoothRotation: 4
-  moveSpeedMultiply: 2.2
+  moveSpeedMultiply: 2
   playerTransform: {fileID: 0}
   rotating: 0
   jump: {x: 0, y: 2, z: 0}
