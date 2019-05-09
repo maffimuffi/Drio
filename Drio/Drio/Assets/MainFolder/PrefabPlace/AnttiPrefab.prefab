@@ -14564,7 +14564,7 @@ MonoBehaviour:
   AccelerationDecreaser: 1
   walkSpeedMultiply: 1.3
   smoothRotation2: 0.2
-  smoothRotation: 4
+  smoothRotation: 8
   moveSpeedMultiply: 1.8
   playerTransform: {fileID: 0}
   rotating: 0
@@ -15419,8 +15419,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.9139808, z: 1}
+  m_Center: {x: 0, y: 0.45699045, z: 0}
 --- !u!54 &7901526801813596727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21926,7 +21926,7 @@ MonoBehaviour:
   AccelerationDecreaser: 1
   walkSpeedMultiply: 1.3
   smoothRotation2: 0.2
-  smoothRotation: 4
+  smoothRotation: 8
   moveSpeedMultiply: 1.8
   playerTransform: {fileID: 0}
   rotating: 0
@@ -30526,7 +30526,7 @@ MonoBehaviour:
   AccelerationDecreaser: 1
   walkSpeedMultiply: 1.3
   smoothRotation2: 0.2
-  smoothRotation: 4
+  smoothRotation: 8
   moveSpeedMultiply: 1.8
   playerTransform: {fileID: 0}
   rotating: 0
@@ -30848,8 +30848,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.717038, z: 1}
+  m_Center: {x: 0, y: 0.358519, z: 0}
 --- !u!54 &7901526803196937867
 Rigidbody:
   m_ObjectHideFlags: 0
