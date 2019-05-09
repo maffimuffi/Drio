@@ -11,7 +11,7 @@ public class LastBowl : MonoBehaviour
     public Light directionalLight;
     float intensity;
     
-    public GameObject thunderPrefab;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class LastBowl : MonoBehaviour
         intensity = directionalLight.intensity;
         lastBowlLit = false;
         lastLight.SetActive(false);
-        thunderPrefab.SetActive(false);
+        
         
     }
 

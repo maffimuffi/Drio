@@ -152,7 +152,7 @@ public class CharacterMovement : MonoBehaviour
          }
          */
 
-        if (CamInstruction.Instruction == true)
+        if (CamInstruction.active == true)
         {
             Debug.Log("täällä");
         }
